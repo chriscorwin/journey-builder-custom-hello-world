@@ -26,10 +26,10 @@
 	},
 	"edit": {
 		"uri": "index.html",
-		"maxHeight": 500,
-		"maxWidth": 750,
+		"maxHeight": 1000,
+		"maxWidth": 1200,
 		"minHeight": 300,
-		"minWidth": 450,
-		"steps": 1
+		"minWidth": 1010,
+		"steps": 4
 	}
 }
