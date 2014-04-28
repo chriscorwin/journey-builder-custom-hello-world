@@ -2,11 +2,11 @@ define([], function() {
 	return {
 		"icon": "images/jb-icon.jpg",
 		"iconSmall": "images/jb-icon.jpg",
-		"key": "jb-hello-world-activity-ccorwin",
+		"key": "jb-update-contact-activity-ccorwin",
 		"partnerApiObjectTypeId": "IXN.CustomActivity.REST",
 		"lang": {
 			"en-US": {
-				"name": "Hello World (ccorwin)",
+				"name": "Update Contact (RPD, ccorwin)",
 				"description": "Activity simply posts the data into an array for display on the App's home page."
 			}
 		},
@@ -14,7 +14,7 @@ define([], function() {
 		"version": "1.0",
 		"apiVersion": "1.0",
 		"execute": {
-			"uri": "https://quiet-crag-9311.herokuapp.com/ixn/activities/hello-world/execute/",
+			"uri": "https://quiet-crag-9311.herokuapp.com/ixn/activities/update-contact/execute/",
 			"inArguments": [],
 			"outArguments": [],
 			"verb": "POST",
@@ -24,7 +24,7 @@ define([], function() {
 			"timeout": 3000
 		},
 		"save": {
-			"uri": "https://quiet-crag-9311.herokuapp.com/ixn/activities/hello-world/save/",
+			"uri": "https://quiet-crag-9311.herokuapp.com/ixn/activities/update-contact/save/",
 			"verb": "POST",
 			"body": "",
 			"format": "json",
@@ -32,7 +32,7 @@ define([], function() {
 			"timeout": 3000
 		},
 		"publish": {
-			"uri": "https://quiet-crag-9311.herokuapp.com/ixn/activities/hello-world/publish/",
+			"uri": "https://quiet-crag-9311.herokuapp.com/ixn/activities/update-contact/publish/",
 			"verb": "POST",
 			"body": "",
 			"format": "json",
@@ -40,7 +40,7 @@ define([], function() {
 			"timeout": 3000
 		},
 		"validate": {
-			"uri": "https://quiet-crag-9311.herokuapp.com/ixn/activities/hello-world/validate/",
+			"uri": "https://quiet-crag-9311.herokuapp.com/ixn/activities/update-contact/validate/",
 			"verb": "POST",
 			"body": "",
 			"format": "json",
@@ -49,7 +49,7 @@ define([], function() {
 		},
 
 		"edit": {
-			"uri": "https://quiet-crag-9311.herokuapp.com/ixn/activities/hello-world/",
+			"uri": "https://quiet-crag-9311.herokuapp.com/ixn/activities/update-contact/",
 			"height": 400,
 			"width": 500
 		}
