@@ -1,0 +1,35 @@
+{
+	"key": "jb-hello-world-trigger-ccorwin",
+	"lang": {
+		"en-US": {
+			"name": "Hello World",
+			"description": "This is a simple trigger for the Hello World demo app"
+		}
+	},
+	"version": "1.0",
+	"dataExtension": {
+		"fields": [{
+			"name": "alternativeEmail",
+			"dataType": "email",
+			"maxLength": "",
+			"isNullable": false,
+			"defaultValue": ""
+		}, {
+			"name": "originEventStart",
+			"dataType": "text",
+			"maxLength": "100",
+			"isNullable": false,
+			"defaultValue": ""
+		}],
+		"sendableCustomObjectField": "alternativeEmail",
+		"sendableSubscriberField": "_SubscriberKey"
+	},
+	"edit": {
+		"uri": "index.html",
+		"maxHeight": 1000,
+		"maxWidth": 1200,
+		"minHeight": 300,
+		"minWidth": 1010,
+		"steps": 4
+	}
+}
