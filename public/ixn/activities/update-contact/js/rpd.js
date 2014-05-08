@@ -1,1037 +1,1128 @@
 var test = function test(e) {
-	console.log('test', e);
-}
+	// console.log("test", e);
+};
 
-debug.setLevel(5);
-
+// console.setLevel(5);
 
 String.prototype.endsWith = function(value) {
 	if (this.length < value.length) {
 		return false;
 	} else {
-		return Boolean(this.substr((this.length - value.length), (value.length + 1)) === value);
+		return Boolean(this.substr(this.length - value.length, value.length + 1) === value);
 	}
-}
+};
 
 String.prototype.contains = function(value, caseFlag) {
 	if (this.length < value.length) {
 		return false;
 	} else {
-		var regExPattern_value = (caseFlag === false ? new RegExp(value, '\i') : new RegExp(value));
+		var regExPattern_value = caseFlag === false ? new RegExp(value, "i") : new RegExp(value);
 		return Boolean(this.match(regExPattern_value));
 	}
-}
-
-function isArray(o) {
-	return Object.prototype.toString.call(o) === '[object Array]';
-}
+};
 
 String.prototype.beginsWith = function(string) {
-	return (this.indexOf(string) === 0);
+	return this.indexOf(string) === 0;
+};
+
+var isArray = function isArray(o) {
+	return Object.prototype.toString.call(o) === "[object Array]";
 };
 
 var hide = function hide(el) {
-	$('body').hasClass('dev');
-	if ($('body').hasClass('dev')) {
+	$("body").hasClass("dev");
+	if ($("body").hasClass("dev")) {
 		return;
 	}
-	var theElement = el,
-		theElementID = '',
-		$theElement, $hiddenNodes;
+	var thisElement = el,
+		thisElementID = "",
+		$thisElement, $hiddenNodes;
 	if (el instanceof jQuery === true) {
-		// debug.info('[hide] Argument passed in is an instance of jQuery!');
-		theElementID = el.attr('id');
-		$theElement = el;
-		theElement = theElementID;
+		thisElementID = el.attr("id");
+		$thisElement = el;
+		thisElement = thisElementID;
 	} else if (isArray(el)) {
 		$.each(el, function(index, value) {
 			hide(value);
 		});
 		return;
 	} else {
-		// debug.info("[hide] Is not an array, is not a jQuery object....");
-		// debug.info("[hide] el", el);
-		if (typeof el === 'string' && el.beginsWith('#') === false && el.beginsWith('.') === false) {
-			// debug.info("[hide] Does not begin with # nor .");
-			theElementID = "#" + el;
-			// debug.info("[hide] theElementID", theElementID);
-			$theElement = $(theElementID);
-
+		if (typeof el === "string" && el.beginsWith("#") === false && el.beginsWith(".") === false) {
+			thisElementID = "#" + el;
+			$thisElement = $(thisElementID);
 		} else {
-			$theElement = $(theElement)
-			theElementID = $theElement.attr('id')
+			$thisElement = $(thisElement);
+			thisElementID = $thisElement.attr("id");
 		}
 	}
-	$theElement.addClass('hide').hide();
+	$thisElement.addClass("hide").hide();
 };
 
 var show = function show(el) {
-	$('body').hasClass('dev');
-	if ($('body').hasClass('dev')) {
+	$("body").hasClass("dev");
+	if ($("body").hasClass("dev")) {
 		return;
 	}
-	var theElement = el,
-		theElementID = '',
-		$theElement, $hiddenNodes;
+	var thisElement = el,
+		thisElementID = "",
+		$thisElement, $hiddenNodes;
 	if (el instanceof jQuery === true) {
-		// debug.info('[show] Argument passed in is an instance of jQuery!');
-		theElementID = el.attr('id');
-		$theElement = el;
-		theElement = theElementID;
+		thisElementID = el.attr("id");
+		$thisElement = el;
+		thisElement = thisElementID;
 	} else if (isArray(el)) {
 		$.each(el, function(index, value) {
 			show(value);
 		});
 		return;
 	} else {
-		// debug.info("[show] Is not an array, is not a jQuery object....");
-		// debug.info("[show] el", el);
-		if (typeof el === 'string' && el.beginsWith('#') === false && el.beginsWith('.') === false) {
-			// debug.info("[show] Does not begin with # nor .");
-			theElementID = "#" + el;
-			// debug.info("[show] theElementID", theElementID);
-			$theElement = $(theElementID);
-
+		if (typeof el === "string" && el.beginsWith("#") === false && el.beginsWith(".") === false) {
+			thisElementID = "#" + el;
+			thisElementName = "[data-name='" + el + "']";
+			if ($(thisElementID).length !== 0) {
+				$thisElement = $(thisElementID);
+			} else if ($(thisElementName).length !== 0) {
+				// console.debug("thisElementName", thisElementName);
+				$thisElement = $(thisElementName);
+			}
 		} else {
-			$theElement = $(theElement)
-			theElementID = $theElement.attr('id')
+			$thisElement = $(thisElement);
+			thisElementID = $thisElement.attr("id");
 		}
 	}
-	$theElement.removeClass('hide').show();
+	$thisElement.removeClass("hide").show();
 };
 
-
-
 var toggle = function toggle(el) {
-	$('body').hasClass('dev');
-	if ($('body').hasClass('dev')) {
+	$("body").hasClass("dev");
+	if ($("body").hasClass("dev")) {
 		return;
 	}
-	var theElement = el,
-		theElementID = '',
-		$theElement, $hiddenNodes;
+	var thisElement = el,
+		thisElementID = "",
+		$thisElement, $hiddenNodes;
 	if (el instanceof jQuery === true) {
-		// debug.info('[toggle] Argument passed in is an instance of jQuery!');
-		theElementID = el.attr('id');
-		$theElement = el;
-		theElement = theElementID;
+		thisElementID = el.attr("id");
+		$thisElement = el;
+		thisElement = thisElementID;
 	} else if (isArray(el)) {
 		$.each(el, function(index, value) {
 			toggle(value);
 		});
 		return;
 	} else {
-		// debug.info("[toggle] Is not an array, is not a jQuery object....");
-		// debug.info("[toggle] el", el);
-		if (typeof el === 'string' && el.beginsWith('#') === false && el.beginsWith('.') === false) {
-			// debug.info("[toggle] Does not begin with # nor .");
-			theElementID = "#" + el;
-			// debug.info("[toggle] theElementID", theElementID);
-			$theElement = $(theElementID);
-
+		if (typeof el === "string" && el.beginsWith("#") === false && el.beginsWith(".") === false) {
+			thisElementID = "#" + el;
+			$thisElement = $(thisElementID);
 		} else {
-			$theElement = $(theElement)
-			theElementID = $theElement.attr('id')
+			$thisElement = $(thisElement);
+			thisElementID = $thisElement.attr("id");
 		}
 	}
-	if ($theElement.hasClass('hide')) {
-		debug.info(theElementID + ' is currently hiding, will now show.')
-		show(theElementID);
+	if ($thisElement.hasClass("hide")) {
+		show(thisElementID);
 	} else {
-		debug.info(theElementID + ' is currently visible, will now hide.')
-		hide(theElementID);
+		hide(thisElementID);
 	}
-	// $theElement.removeClass('hide').toggle();
 };
-
-
 
 var showDeep = function showDeep(el) {
-	$('body').hasClass('dev');
-	if ($('body').hasClass('dev')) {
+	$("body").hasClass("dev");
+	if ($("body").hasClass("dev")) {
 		return;
 	}
-	var theElement = el,
-		theElementID = '',
-		$theElement, $hiddenNodes;
+	var thisElement = el,
+		thisElementID = "",
+		$thisElement, $hiddenNodes;
 	if (el instanceof jQuery === true) {
-		// debug.info('[showDeep] Argument passed in is an instance of jQuery!');
-		theElementID = el.attr('id');
-		$theElement = el;
-		theElement = theElementID;
+		thisElementID = el.attr("id");
+		$thisElement = el;
+		thisElement = thisElementID;
 	} else if (isArray(el)) {
 		$.each(el, function(index, value) {
 			showDeep(value);
 		});
 		return;
 	} else {
-		// debug.info("[showDeep] Is not an array, is not a jQuery object....");
-		// debug.info("[showDeep] el", el);
-		if (typeof el === 'string' && el.beginsWith('#') === false && el.beginsWith('.') === false) {
-			// debug.info("[showDeep] Does not begin with # nor .");
-			theElementID = "#" + el;
-			// debug.info("[showDeep] theElementID", theElementID);
-			$theElement = $(theElementID);
-
+		if (typeof el === "string" && el.beginsWith("#") === false && el.beginsWith(".") === false) {
+			thisElementID = "#" + el;
+			$thisElement = $(thisElementID);
 		} else {
-			$theElement = $(theElement)
-			theElementID = $theElement.attr('id')
+			$thisElement = $(thisElement);
+			thisElementID = $thisElement.attr("id");
 		}
 	}
-	// debug.info("[showDeep] theElementID", theElementID);
-	$theElement.removeClass('hide');
-	$theElement.show();
-
-	$hiddenNodes = $theElement.find('.hide:not(.starts_hidden)');
-
-	// debug.info("[showDeep] $hiddenNodes", $hiddenNodes);
+	$thisElement.removeClass("hide");
+	$thisElement.show();
+	$hiddenNodes = $thisElement.find(".hide:not(.startshidden)");
 	$hiddenNodes.each(function(i, node) {
-		// debug.info("[showDeep] showDeep on node: ", $(node).attr('id'));
-		showDeep($(node).attr('id'));
+		showDeep($(node).attr("id"));
 	});
-	showPopupsInElement(theElementID);
-
-
-
+	showPopupsInElement(thisElementID);
 };
-
-
-
-
 
 var hideDeep = function hideDeep(el) {
-	$('body').hasClass('dev');
-	if ($('body').hasClass('dev')) {
+	$("body").hasClass("dev");
+	if ($("body").hasClass("dev")) {
 		return;
 	}
-	var theElement = el,
-		theElementID = '',
-		$theElement, $hiddenNodes;
+	var thisElement = el,
+		thisElementID = "",
+		$thisElement, $hiddenNodes;
 	if (el instanceof jQuery === true) {
-		// debug.info("[hideDeep] Argument passed in is an instance of jQuery!");
-		theElementID = el.attr('id');
-		$theElement = el;
-		theElement = theElementID;
+		thisElementID = el.attr("id");
+		$thisElement = el;
+		thisElement = thisElementID;
 	} else if (isArray(el)) {
 		$.each(el, function(index, value) {
 			showDeep(value);
 		});
 		return;
 	} else {
-		debug.info("[hideDeep] Is not an array, is not a jQuery object....");
-		debug.info("[hideDeep] el", el);
-		if (typeof el === 'string' && el.beginsWith('#') === false && el.beginsWith('.') === false) {
-			// debug.info("[hideDeep] Does not begin with # nor .");
-			theElementID = "#" + el;
-			// debug.info("[hideDeep] theElementID", theElementID);
-			$theElement = $(theElementID);
+		if (typeof el === "string" && el.beginsWith("#") === false && el.beginsWith(".") === false) {
+			thisElementID = "#" + el;
+			$thisElement = $(thisElementID);
 		} else {
-			$theElement = $(theElement)
-			theElementID = $theElement.attr('id')
+			$thisElement = $(thisElement);
+			thisElementID = $thisElement.attr("id");
 		}
 	}
-	$theElement.addClass('hide').hide();
-	hidePopupsInElement(theElementID);
+	$thisElement.addClass("hide").hide();
+	hidePopupsInElement(thisElementID);
 };
 
-
-
-
-
-
-
-
 var showPopupsInElement = function showPopupsInElement(el) {
-	$('body').hasClass('dev');
-	if ($('body').hasClass('dev')) {
+	$("body").hasClass("dev");
+	if ($("body").hasClass("dev")) {
 		return;
 	}
-	var theElement = el,
-		theElementID = '',
-		$theElement, $hiddenNodes;
+	var thisElement = el,
+		thisElementID = "",
+		$thisElement, $hiddenNodes;
 	if (el instanceof jQuery === true) {
-		// debug.debug("showPopupsInElement Argument passed in is an instance of jQuery!");
-		theElementID = el.attr('id');
-		$theElement = el;
-		theElement = theElementID;
+		thisElementID = el.attr("id");
+		$thisElement = el;
+		thisElement = thisElementID;
 	} else if (isArray(el)) {
 		$.each(el, function(index, value) {
 			showDeep(value);
 		});
 		return;
 	} else {
-		// debug.debug("showPopupsInElement Is not an array, is not a jQuery object....");
-		// debug.debug("showPopupsInElement el", el);
-		if (el.beginsWith('#') === false && el.beginsWith('.') === false) {
-			// debug.debug("showPopupsInElement Does not begin with # nor .");
-			theElementID = "#" + el;
-			// debug.debug("showPopupsInElement theElementID", theElementID);
-			$theElement = $(theElementID);
+		if (el.beginsWith("#") === false && el.beginsWith(".") === false) {
+			thisElementID = "#" + el;
+			$thisElement = $(thisElementID);
 		} else {
-			$theElement = $(theElement)
-			theElementID = $theElement.attr('id')
+			$thisElement = $(thisElement);
+			thisElementID = $thisElement.attr("id");
 		}
 	}
-	$theElement.find('.group.is_popup').removeClass('hide').show(0, function(event) {
-
-
-
+	$thisElement.find(".group.is_popup").removeClass("hide").show(0, function(event) {
 		var $elementToScrollTo = $(this).find('div[id*="popup"]');
-		var elementToScrollToID = $elementToScrollTo.attr('id');
-
-
-
-		var rootElement = '.canvas-scroll-pane';
-		if ($('title').text() === 'WebCode Document') {
-			rootElement = 'body';
+		var elementToScrollToID = $elementToScrollTo.attr("id");
+		var rootElement = ".canvas-scroll-pane";
+		if ($("title").text() === "WebCode Document") {
+			rootElement = "body";
 		}
-
-		var newTop = ($elementToScrollTo.offset().top);
-		var newLeft = ($elementToScrollTo.offset().left);
+		var newTop = $elementToScrollTo.offset().top;
+		var newLeft = $elementToScrollTo.offset().left;
 		var elementToScrollToWidth = $elementToScrollTo.width();
-
-		debug.info("$elementToScrollTo.attr('id')", $elementToScrollTo.attr('id'));
-		// debug.info("$elementToScrollTo.offset().top", $elementToScrollTo.offset().top);
-
-		newLeft = (newLeft - 200);
+		newLeft = newLeft - 200;
 		if (newLeft <= 0) {
 			newLeft = 0;
 		}
-		debug.info("newLeft", newLeft);
-		debug.info("newLeft / 160", newLeft / 160);
 		var newLeftBy160 = Math.round(newLeft / 160);
-		debug.info("newLeftBy160", newLeftBy160);
-
-
-		// $(rootElement).scrollTo({
-		//  top: ($elementToScrollTo.offset().top),
-		//  left: $elementToScrollTo.offset().left + 300
-		// }, 125);
-
-		var offsetTop = (($(rootElement).height() / 4) * -1);
-		var offsetLeft = (($(rootElement).width() / 4) * -1);
-
-		if ($('title').text() === 'WebCode Document') {
+		var offsetTop = $(rootElement).height() / 4 * -1;
+		var offsetLeft = $(rootElement).width() / 4 * -1;
+		if ($("title").text() === "WebCode Document") {
 			offsetTop = -200;
 		}
-
-
-
-
-		// debug.info("offsetTop", (offsetTop));
-		// debug.info("offsetLeft", (offsetLeft));
-
-
-		// $('.canvas-view-swim-lane-highlighted').css({
-		// 	'transform': 'translateX(' + (160 * newLeftBy160) + 'px)',
-		// 	'width': (159 * (newLeftBy160 + 1))
-		// });
-		$(rootElement).scrollTo('#' + elementToScrollToID, {
+		$(rootElement).scrollTo("#" + elementToScrollToID, {
 			duration: 500,
 			offset: {
-				top: (offsetTop),
-				left: (((offsetLeft)) + (elementToScrollToWidth / 4))
+				top: offsetTop,
+				left: offsetLeft + elementToScrollToWidth / 4
 			}
 		});
-
-		// $(rootElement).scrollTo({
-		//  top: ($elementToScrollTo.offset().top - 200),
-		//  left: $elementToScrollTo.offset().left - 300
-		// }, 500);
-
-
-
-
-		// debug.debug("$(this).find('div[id*=popup]').attr('id')", $(this).find('div[id*="popup"]').attr('id'));
-		// var $elementToScrollTo = $(this).find('div[id*="popup"]');
-		// var elementToScrollToID = $elementToScrollTo.attr('id');
-
-
-		// debug.debug("$elementToScrollTo.attr('id')", $elementToScrollTo.attr('id'));
-		// debug.debug("$elementToScrollTo.offset().top", $elementToScrollTo.offset().top);
-		// debug.debug("$elementToScrollTo.offset().left", $elementToScrollTo.offset().left);
-
-		// var $rootElement = '#scroll-pane-content';
-		// if ($('title').text() === 'WebCode Document') {
-		//  $rootElement = 'body';
-		// }
-
-		// $rootElement.scrollTo($elementToScrollTo);
-
 	});
 };
 
-
-
-
-
-
-
 var hidePopupsInElement = function hidePopupsInElement(el) {
-	$('body').hasClass('dev');
-	if ($('body').hasClass('dev')) {
+	$("body").hasClass("dev");
+	if ($("body").hasClass("dev")) {
 		return;
 	}
-	var theElement = el,
-		theElementID = '',
-		$theElement, $hiddenNodes;
+	var thisElement = el,
+		thisElementID = "",
+		$thisElement, $hiddenNodes;
 	if (el instanceof jQuery === true) {
-		// debug.debug("[hidePopupsInElement] Argument passed in is an instance of jQuery!"");
-		theElementID = el.attr('id');
-		$theElement = el;
-		theElement = theElementID;
+		thisElementID = el.attr("id");
+		$thisElement = el;
+		thisElement = thisElementID;
 	} else if (isArray(el)) {
 		$.each(el, function(index, value) {
 			showDeep(value);
 		});
 		return;
 	} else {
-		// debug.debug("[hidePopupsInElement] Is not an array, is not a jQuery object....");
-		// debug.debug("[hidePopupsInElement] el", el);
-		if (el.beginsWith('#') === false && el.beginsWith('.') === false) {
-			// debug.debug("[hidePopupsInElement] Does not begin with # nor .");
-			theElementID = "#" + el;
-			// debug.debug("[hidePopupsInElement] theElementID", theElementID);
-			$theElement = $(theElementID);
+		if (el.beginsWith("#") === false && el.beginsWith(".") === false) {
+			thisElementID = "#" + el;
+			$thisElement = $(thisElementID);
 		} else {
-			$theElement = $(theElement)
-			theElementID = $theElement.attr('id')
+			$thisElement = $(thisElement);
+			thisElementID = $thisElement.attr("id");
 		}
 	}
-	$theElement.find('.group.is_popup').addClass('hide').hide();
+	$thisElement.find(".group.is_popup").addClass("hide").hide();
 };
-
-
-
-
-
-
-
-
 
 var copyToClipboard = copyToClipboard || function copyToClipboard() {
 		window.prompt("Copy and paste this into console to get source:", "copy(rpdNodes);");
-	}
-
+	};
 
 var printHTML = printHTML || function printHTML() {
-		window.rpdNodes = $('body').html();
-		// debug.group('Source:');
-		// debug.debug(window.rpdNodes);
-		// debug.groupEnd();
+		window.rpdNodes = $("body").html();
 		copyToClipboard();
+	};
+
+
+var getElementName = function getElementName(someString) {
+	return splitIntoParams(someString).name;
+};
+
+
+var getClassNames = function getClassNames(someString) {
+	return splitIntoParams(someString).classNames;
+};
+
+var getRpdClassNames = function getRpdClassNames(someString) {
+	return splitIntoParams(someString).rpdClassNames;
+};
+
+var splitIntoParams = function splitIntoParams(someString) {
+	var toReturn = {
+		name: '',
+		classNames: [],
+		rpdClassNames: [],
+		id: ''
+	}, someStringSplit1 = [],
+		someStringSplit2 = [],
+		someStringSplit3 = [],
+		someStringSplit4 = [],
+		someStringSplitRPD = [],
+		thisElementClassNames = [],
+		thisElementRpdClassNames = [],
+		thisElementName;
+
+	// thisElementName = getElementName(someString);
+	// console.group("[splitIntoParams]: " + someString);
+
+
+	//first replace all the ____ with a marker
+	var tokens = "::::";
+	var lookFor4 = /____/gi;
+	var lookFor3 = /___/gi;
+	var lookForRPD = /rpd__/gi;
+	var lookFor2 = /__/gi;
+	var replaceWith4 = tokens + 'DIVIDER4' + tokens;
+	var replaceWith3 = tokens + 'DIVIDER3' + tokens;
+	var replaceWithRPD = tokens + 'DIVIDERRPD' + tokens;
+	var replaceWith2 = tokens + 'DIVIDER2' + tokens;
+	var modifiedString = someString;
+	var modifiedString3 = '';
+
+	modifiedString = modifiedString.replace(lookFor4, replaceWith4);
+	modifiedString = modifiedString.replace(lookFor3, replaceWith3);
+	modifiedString = modifiedString.replace(lookForRPD, replaceWithRPD);
+	modifiedString = modifiedString.replace(lookFor2, replaceWith2);
+	// console.debug("modifiedString", modifiedString);
+
+	someStringSplit4 = modifiedString.split(replaceWith4);
+	// console.debug("someStringSplit4" + someStringSplit4, someStringSplit4.length);
+	if (someStringSplit4.length == 2) {
+		// if it is more than 1 length, it has a name, grab that name, and we will work with the rest
+		// console.debug("someStringSplit4: ", someStringSplit4, someStringSplit4.length);
+		thisElementName = someStringSplit4[0];
+		modifiedString = someStringSplit4[1];
+	} else {
+		thisElementName = someString;
 	}
 
+	// console.debug("thisElementName", thisElementName);
 
-var makeAttributesFromID = function makeAttributesFromID(selectorPattern) {
-	var rootElement = '#root';
-	if ($('title').text() === 'WebCode Document') {
-		rootElement = 'body';
-	}
-	debug.log("selectorPattern", selectorPattern);
+	toReturn.name = thisElementName;
 
-	$(selectorPattern, rootElement).each(function(i, e) {
-		$e = $(e);
-		// var thisID = $(this).attr('id');
-		// var nextID = thisID.split('_goto_')[1];
-		// var prevID = $(this).attr('data-target-prev');
-		// $(this).attr('onclick', 'showDeep(\'#' + nextID + '\'); hideDeep(\'#' + thisID + '\')');
+	someStringSplit3 = modifiedString.split(replaceWith3);
+	if (someStringSplit3.length > 0) {
+		//now loop through our new array and grab all items from it when do not contain tokens --- these will be classNames
+		$.each(someStringSplit3, function(index, value) {
+			// console.group('each on someStringSplit3');
+			// console.debug(index, value);
 
-		var thisID = $e.attr('id');
-		if (typeof thisID === 'undefined') {
-			debug.warn("[makeAttributesFromID] thisID", thisID);
-			debug.warn("[makeAttributesFromID] typeof thisID", typeof thisID);
-			return true;
-		}
-		var thisIdSplit1 = thisID.split('___');
-		if (thisIdSplit1.join(' ').contains('split_d')) {
-			// debug.debug("thisIdSplit1", thisIdSplit1);
-		}
-		// $e.attr('class', thisIdSplit1.join(' '));
-		$.each(thisIdSplit1, function(index, value) {
-			$e.addClass(value);
-			if (value.beginsWith('gotostate')) {
-				var stateToGoTo = value.split('_');
-				stateToGoTo.shift();
-				stateToGoTo = "state___" + stateToGoTo.join('_');
-				// debug.debug('stateToGoTo', stateToGoTo);
-				$e.addClass('gotostate');
-				$e.attr('data-target-next', stateToGoTo);
-			}
-			if (value.beginsWith('chooseoption')) {
-				var optionToChoose = value.split('_');
-				optionToChoose.shift();
-				var dropDownRoot = $e.parents('.dropdown.options').attr('id').split('dropdown___options___').shift().join('');
-				optionToChoose = "dropdown___option___ROOT-GOES-HERE___" + optionToChoose.join('_');
-				debug.debug('optionToChoose', optionToChoose);
-				debug.debug('dropDownRoot', dropDownRoot);
-				$e.addClass('chooseoption');
-				$e.attr('data-target-option', optionToChoose);
-			}
-		});
-	});
-
-}
-
-var passChildrenAttributesFromID = function passChildrenAttributesFromID(selectorPattern) {
-	var rootElement = '#root';
-	if ($('title').text() === 'WebCode Document') {
-		rootElement = 'body';
-	}
-	debug.log("selectorPattern", selectorPattern);
-
-	$(selectorPattern, rootElement).each(function(i, e) {
-		$e = $(e);
-		// var thisID = $(this).attr('id');
-		// var nextID = thisID.split('_goto_')[1];
-		// var prevID = $(this).attr('data-target-prev');
-		// $(this).attr('onclick', 'showDeep(\'#' + nextID + '\'); hideDeep(\'#' + thisID + '\')');
-
-		var thisID = $e.attr('id');
-		if (typeof thisID === 'undefined') {
-			debug.warn("[passChildrenAttributesFromID] thisID", thisID);
-			debug.warn("[passChildrenAttributesFromID] typeof thisID", typeof thisID);
-			return true;
-		}
-		var thisIdSplit1 = thisID.split('___');
-		var newClassNames = thisIdSplit1.join(' ');
-		debug.warn("[passChildrenAttributesFromID] newClassNames", newClassNames);
-		console.log("$e.children()", $e.children());
-		// $e.children().attr('class', newClassNames);
-
-		$.each(thisIdSplit1, function(index, value) {
-			if (value.beginsWith('ancestor')) {
-
+			if (value.contains(tokens)) {
+				// this thing needs more splitting, do it later
+				modifiedString3 += value;
 			} else {
-				$e.children().addClass(value);
-				if (value.beginsWith('dropson_')) {
-					var elementToDropOn = value.split('_');
-					elementToDropOn.shift();
-					elementToDropOn = elementToDropOn.join('_');
-					console.log("elementToDropOn", elementToDropOn);
-					$e.children().addClass('drops-on-' + elementToDropOn).addClass('draggable').addClass('dropson');
-					// $e.children().addClass('');
-					$('#' + elementToDropOn).attr('data-droppable', 'true').attr('data-drop-accepts', '.drops-on-' + elementToDropOn);
-					$('#' + elementToDropOn).addClass('droppable').addClass('ui-droppable');
-					// $('#' + elementToDropOn).attr('data-drop-handler-target', ('#' + buttonName + '___whendropped'));
-					$e.children().attr('data-target-drop', '#' + elementToDropOn);
-				} else
-				if (value.beginsWith('gotostate')) {
-					var stateToGoTo = value.split('_');
-					stateToGoTo.shift();
-					stateToGoTo = "state___" + stateToGoTo.join('_');
-					$e.children().addClass('gotostate');
-					$e.children().attr('data-target-next', stateToGoTo);
-				} else
-				if (value.beginsWith('chooseoption')) {
-					var optionToChoose = value.split('_');
-					optionToChoose.shift();
-					var dropDownRoot = $e.parents('.dropdown.options').attr('id').split('dropdown___options___').shift().join('');
-					optionToChoose = "dropdown___option___ROOT-GOES-HERE___" + optionToChoose.join('_');
-					debug.debug('optionToChoose', optionToChoose);
-					debug.debug('dropDownRoot', dropDownRoot);
-					$e.children().addClass('chooseoption');
-					$e.children().attr('data-target-option', optionToChoose);
-				} else {
-					$e.children().addClass(value);
+				// this is a likely candidate for a classname
+				thisElementClassNames.push(value);
+			}
+			// console.groupEnd();
+		});
+	}
 
+	if (modifiedString3.length !== 0 && modifiedString3.contains(replaceWithRPD)) {
+		// this has RPD params in it
+		modifiedString2 = modifiedString3.replace(replaceWithRPD, '');
+
+		// console.debug("modifiedString2: ", modifiedString2);
+		someStringSplitRPD = modifiedString2.split(replaceWith2);
+		// console.debug("someStringSplitRPD: ", someStringSplitRPD, someStringSplitRPD.length);
+	} else {}
+
+
+
+
+	if (typeof someStringSplitRPD === 'object' && someStringSplitRPD.length > 0) {
+		$.each(someStringSplitRPD, function(index, value) {
+			thisElementRpdClassNames.push(value);
+		});
+		toReturn.rpdClassNames = thisElementRpdClassNames;
+	}
+	if (thisElementClassNames.length > 0) {
+		// console.debug("thisElementClassNames: ", thisElementClassNames, thisElementClassNames.length);
+		toReturn.classNames = thisElementClassNames;
+	} else {}
+
+	// console.debug("toReturn", toReturn);
+	// console.groupEnd();
+	return toReturn;
+};
+
+var applyClassNamesToElement = function applyClassNamesToElement(e, pseudoParams) {
+	var $thisElement = $(e);
+	var isAncestor = false;
+
+	var existingClassNames = $thisElement.attr('class') || '';
+	var classNames = '';
+	if (pseudoParams.length >= 1) {
+		// console.group('applyClassNamesToElement');
+		// console.debug("pseudoParams: " + pseudoParams);
+
+		var ancestorIndex = pseudoParams.indexOf('ancestor');
+		if (ancestorIndex !== -1) {
+			isAncestor = true;
+		}
+
+		$.each(pseudoParams, function(index, value) {
+			// console.debug("value", value);
+			classNames = classNames + ' ' + value;
+		});
+
+
+		var cleanedExistingClassNames = existingClassNames;
+		var cleanedClassNames = classNames;
+		cleanedExistingClassNames = cleanedExistingClassNames.replace('ancestor', '');
+		cleanedClassNames = cleanedClassNames.replace('ancestor', '');
+
+		$thisElement.attr('class', cleanedClassNames + ' ' + cleanedExistingClassNames);
+		if (isAncestor) {
+			// console.warn('isAncestor');
+			// console.warn("cleanedClassNames", cleanedClassNames);
+			// console.warn("cleanedExistingClassNames", cleanedExistingClassNames);
+			$thisElement.addClass('ancestor');
+			$thisElement.attr('data-ancestor', 'true');
+			$thisElement.attr('data-original-classnames', existingClassNames);
+			$thisElement.attr('data-applied-classnames', classNames);
+			$thisElement.children().attr('class', (cleanedClassNames + ' ' + cleanedExistingClassNames)).attr('data-descendant-of', '#' + $thisElement.attr('id'));
+		}
+
+
+		// console.groupEnd();
+	}
+
+};
+
+var applyRdpClassNamesToElement = function applyRdpClassNamesToElement(e, pseudoParams) {
+	var $thisElement = $(e);
+	var isAncestor = false;
+	var existingClassNames = $thisElement.attr('class') || '';
+	var classNames = '';
+	var dataAttribhutes = {};
+	if ($thisElement.hasClass('ancestor')) {
+		isAncestor = true;
+	}
+	if (pseudoParams.length >= 1) {
+		// console.group('applyRdpClassNamesToElement');
+		// console.debug("pseudoParams: " + pseudoParams);
+
+		$.each(pseudoParams, function(index, value) {
+
+			if (value.contains("_") === true) {
+				var valueSplit = value.split('_');
+				if (valueSplit.length === 1) {
+					// console.log("This is messed up --- how did we even get here?");
+				} else if (valueSplit.length === 2) {
+					console.debug("value has underscores: " + value);
+					console.log("// it has one underscore, it's likely applying a boolean");
+				} else if (valueSplit.length === 3) {
+					// console.log("// it has two underscores, it's likely needing an action");
+				} else if (valueSplit.length >= 4) {
+					// console.log("// it has more than three underscores, it's a special case....?");
 				}
 			}
+
+			if (value.beginsWith("onclick_") === true) {
+				// the pattern is onclick_actionToTake_onWhatItemName
+				var clickStatementArray = value.split('_');
+				if (clickStatementArray.length === 3) {
+					var theEvent = clickStatementArray[0];
+					var actionToTake = clickStatementArray[1];
+					var onWhatItemName = clickStatementArray[2];
+				}
+				// if (actionToTake === 'gotostate') {
+				// 	stateToGoTo = $('#state___' + onWhatItemName).attr('id');
+				// 	classNames = classNames + ' ' + 'gotostate';
+				// 	dataAttribhutes['data-target-next'] = stateToGoTo;
+				// } else {
+				// 	// stateToGoTo = $('#state___' + onWhatItemName).attr('id');
+				// }
+				classNames = classNames + ' ' + theEvent;
+				classNames = classNames + ' ' + actionToTake;
+				classNames = classNames + ' ' + onWhatItemName;
+				classNames = classNames + ' ' + theEvent + '-' + actionToTake + '-' + onWhatItemName;
+				dataAttribhutes['data-event-' + theEvent] = actionToTake;
+				if (onWhatItemName === 'thisname') {
+					var potentialName = getElementName($thisElement.attr('id'));
+					// console.debug("potentialName", potentialName);
+				}
+				dataAttribhutes['data-target-' + actionToTake] = onWhatItemName;
+				// console.debug("theEvent", theEvent);
+				// console.debug("actionToTake", actionToTake);
+				// console.debug("onWhatItemName", onWhatItemName);
+
+
+			} else if (value.beginsWith("on") === true) {
+				// the pattern is onclick2_actionToTake_onWhatItemName
+				var clickStatementArray = value.split('_');
+				if (clickStatementArray.length === 3) {
+					var theEvent = clickStatementArray[0];
+					var actionToTake = clickStatementArray[1];
+					var onWhatItemName = clickStatementArray[2];
+				}
+				classNames = classNames + ' ' + theEvent;
+				classNames = classNames + ' ' + actionToTake;
+				classNames = classNames + ' ' + onWhatItemName;
+				classNames = classNames + ' ' + theEvent + '-' + actionToTake + '-' + onWhatItemName;
+				dataAttribhutes['data-event-' + theEvent] = actionToTake;
+				if (onWhatItemName === 'thisname') {
+					var potentialName = getElementName($thisElement.attr('id'));
+				}
+				dataAttribhutes['data-target-' + actionToTake] = onWhatItemName;
+				// console.debug("theEvent", theEvent);
+				// console.debug("actionToTake", actionToTake);
+				// console.debug("onWhatItemName", onWhatItemName);
+
+
+			} else if (value.beginsWith("chooseoption")) {
+				var optionToChoose = value.split("_");
+				optionToChoose.shift();
+				var dropDownRoot = $thisElement.parents(".dropdown.options").attr("id").split("dropdown___options___").shift().join("");
+				optionToChoose = "dropdown___option___ROOT-GOES-HERE___" + optionToChoose.join("_");
+
+				classNames = classNames + ' ' + 'chooseoption';
+				dataAttribhutes['data-target-option'] = optionToChoose;
+
+
+			} else if (value.beginsWith("gotostate")) {
+				var stateToGoTo = value.split("_");
+				stateToGoTo.shift();
+				stateToGoTo = "state___" + stateToGoTo.join("_");
+
+				classNames = classNames + ' ' + 'gotostate';
+				dataAttribhutes['data-target-next-deprecated'] = stateToGoTo;
+
+			} else {
+				if (value.contains("_") === true) {
+
+					var clickStatementArray = value.split('_');
+					if (clickStatementArray.length === 2) {
+						var paramName = clickStatementArray[0];
+						var paramValue = clickStatementArray[1];
+						classNames = classNames + ' ' + paramName;
+						classNames = classNames + ' ' + paramValue;
+						classNames = classNames + ' ' + paramName + '-' + paramValue;
+						dataAttribhutes['data-' + paramName] = paramValue;
+						console.debug("paramName", paramName);
+						console.debug("paramValue", paramValue);
+					}
+				} else {
+					classNames = classNames + ' ' + value;
+				}
+
+			}
+
 		});
 
-	});
 
-}
+
+		var cleanedExistingClassNames = existingClassNames;
+		var cleanedClassNames = classNames;
+		cleanedExistingClassNames = cleanedExistingClassNames.replace('ancestor', '');
+		cleanedClassNames = cleanedClassNames.replace('ancestor', '');
+
+		$thisElement.attr('class', cleanedClassNames + ' ' + cleanedExistingClassNames);
+		if (isAncestor) {
+			// console.warn('isAncestor');
+			// console.warn("cleanedClassNames", cleanedClassNames);
+			// console.warn("cleanedExistingClassNames", cleanedExistingClassNames);
+
+			$thisElement.attr('data-ancestor', 'true');
+			$thisElement.attr('data-original-classnames', existingClassNames);
+			$thisElement.attr('data-applied-rdp-classnames', classNames);
+			$thisElement.addClass('ancestor');
+			$thisElement.children().attr('class', (cleanedClassNames + ' ' + cleanedExistingClassNames)).attr('data-descendant-of', '#' + $thisElement.attr('id'));
+		}
+		$.each(dataAttribhutes, function(index, value) {
+			$thisElement.attr(index, value);
+			if (isAncestor) {
+				$thisElement.children().attr(index, value);
+			}
+		});
+
+
+		// console.groupEnd();
+
+	}
+
+};
+
+var makeAttributesFromID = function makeAttributesFromID(selectorPattern) {
+	var rootElement = "#root";
+	if ($("title").text() === "WebCode Document") {
+		rootElement = "body";
+	}
+
+	$(selectorPattern, rootElement).each(function(i, e) {
+		var $thisElement = $(e);
+		var thisID, thisElementParams, thisElementName, thisElementClassNames = [],
+			thisElementRpdClassNames = [],
+			thisElementDataAttributes = {};
+		thisID = $thisElement.attr("id");
+
+		if (typeof thisID === "undefined") {
+			// only process elements that have an ID attribute
+			return true;
+		}
+
+
+
+		// console.group("[makeAttributesFromID] #" + thisID);
+
+		thisElementParams = splitIntoParams(thisID);
+		thisElementName = thisElementParams.name;
+		thisElementClassNames = thisElementParams.classNames;
+		thisElementRpdClassNames = thisElementParams.rpdClassNames;
+		thisElementDataAttributes['data-name'] = thisElementName;
+
+		$thisElement.addClass(thisElementName);
+		// console.debug("thisElementName", thisElementName);
+		// console.debug("thisElementRpdClassNames", thisElementRpdClassNames, thisElementRpdClassNames.length);
+		// console.debug("thisElementClassNames", thisElementClassNames, thisElementClassNames.length);
+
+
+		applyClassNamesToElement($thisElement, thisElementClassNames);
+		applyRdpClassNamesToElement($thisElement, thisElementRpdClassNames);
+
+
+		$.each(thisElementDataAttributes, function(index, value) {
+			// console.debug('index', index);
+			// console.debug('value', value);
+			$thisElement.attr(index, value);
+		});
+
+
+		// if ($thisElement.hasClass('ancestor')) {
+		// 	var classNames = $thisElement.attr('class').split(' ');
+		// 	$.each(classNames, function(index, value) {
+		// 		if (value.beginsWith("ancestor")) {} else {
+		// 			if (value.beginsWith("dropson_")) {
+		// 				var elementToDropOn = value.split("_");
+		// 				elementToDropOn.shift();
+		// 				elementToDropOn = elementToDropOn.join("_");
+		// 				// console.log("elementToDropOn", elementToDropOn);
+		// 				$thisElement.children().addClass("drops-on-" + elementToDropOn).addClass("draggable").addClass("dropson");
+		// 				$("#" + elementToDropOn).attr("data-droppable", "true").attr("data-drop-accepts", ".drops-on-" + elementToDropOn);
+		// 				$("#" + elementToDropOn).addClass("droppable").addClass("ui-droppable");
+		// 				$thisElement.children().attr("data-target-drop", "#" + elementToDropOn);
+		// 			} else if (value.beginsWith("gotostate")) {
+		// 				var stateToGoTo = value.split("_");
+		// 				stateToGoTo.shift();
+		// 				stateToGoTo.shift();
+		// 				stateToGoTo = "state___" + stateToGoTo.join("_");
+		// 				$thisElement.children().addClass("gotostate");
+		// 				$thisElement.children().attr("data-target-next", stateToGoTo);
+		// 			} else if (value.beginsWith("chooseoption")) {
+		// 				var optionToChoose = value.split("_");
+		// 				optionToChoose.shift();
+		// 				var dropDownRoot = $thisElement.parents(".dropdown.options").attr("id").split("dropdown___options___").shift().join("");
+		// 				optionToChoose = "dropdown___option___ROOT-GOES-HERE___" + optionToChoose.join("_");
+		// 				$thisElement.children().addClass("chooseoption");
+		// 				$thisElement.children().attr("data-target-option", optionToChoose);
+		// 			} else {
+		// 				$thisElement.children().addClass(value);
+		// 			}
+		// 		}
+		// 	});
+		// }
+		// console.groupEnd();
+	});
+};
+
+
+var passChildrenAttributesFromID = function passChildrenAttributesFromID(selectorPattern) {
+
+	// var rootElement = "#root";
+	// if ($("title").text() === "WebCode Document") {
+	// 	rootElement = "body";
+	// }
+	// $(selectorPattern, rootElement).each(function(i, e) {
+	// 	var $thisElement = $(e);
+	// 	var thisID, thisIdSplit1, thisIdSplit2, thisIdSplit3, thisElementName, thisElementType, thisElementClassNames = {}, thisElementRpdClassNames = {}, thisElementDataAttributes = {};
+	// 	thisID = $thisElement.attr("id");
+	// 	if (typeof thisID === "undefined") {
+	// 		// only process elements that have an ID attribute
+	// 		return true;
+	// 	}
+	// 	thisIdSplit1 = thisID.split("____");
+	// 	if (thisIdSplit1.length >= 2) {
+	// 		// console.debug("[passChildrenAttributesFromID] Element #" + thisID + " has a name");
+	// 		thisElementName = thisIdSplit1[0];
+	// 		thisIdSplit2 = thisIdSplit1[1].split("___");
+	// 	} else {
+	// 		thisElementName = thisID;
+	// 		thisIdSplit2 = thisID.split("___");
+	// 	}
+	// 	thisElementDataAttributes['data-name'] = thisElementName;
+
+
+
+	// 	// var thisIdSplit2 = thisID.split("___");
+	// 	var newClassNames = thisIdSplit2.join(" ");
+	// 	// console.log("$thisElement.children()", $thisElement.children());
+	// 	$.each(thisIdSplit2, function(index, value) {
+	// 		if (value.beginsWith("ancestor")) {} else {
+	// 			$thisElement.children().addClass(value);
+	// 			if (value.beginsWith("dropson_")) {
+	// 				var elementToDropOn = value.split("_");
+	// 				elementToDropOn.shift();
+	// 				elementToDropOn = elementToDropOn.join("_");
+	// 				// console.log("elementToDropOn", elementToDropOn);
+	// 				$thisElement.children().addClass("drops-on-" + elementToDropOn).addClass("draggable").addClass("dropson");
+	// 				$("#" + elementToDropOn).attr("data-droppable", "true").attr("data-drop-accepts", ".drops-on-" + elementToDropOn);
+	// 				$("#" + elementToDropOn).addClass("droppable").addClass("ui-droppable");
+	// 				$thisElement.children().attr("data-target-drop", "#" + elementToDropOn);
+	// 			} else if (value.beginsWith("gotostate")) {
+	// 				var stateToGoTo = value.split("_");
+	// 				stateToGoTo.shift();
+	// 				stateToGoTo = "state___" + stateToGoTo.join("_");
+	// 				$thisElement.children().addClass("gotostate");
+	// 				$thisElement.children().attr("data-target-next", stateToGoTo);
+	// 			} else if (value.beginsWith("chooseoption")) {
+	// 				var optionToChoose = value.split("_");
+	// 				optionToChoose.shift();
+	// 				var dropDownRoot = $thisElement.parents(".dropdown.options").attr("id").split("dropdown___options___").shift().join("");
+	// 				optionToChoose = "dropdown___option___ROOT-GOES-HERE___" + optionToChoose.join("_");
+	// 				$thisElement.children().addClass("chooseoption");
+	// 				$thisElement.children().attr("data-target-option", optionToChoose);
+	// 			} else {
+	// 				$thisElement.children().addClass(value);
+	// 			}
+	// 		}
+	// 	});
+	// });
+};
 
 
 var runIt = function runIt() {
-	var rootElement = '#root';
-	if ($('title').text() === 'WebCode Document') {
-		rootElement = 'body';
+	var rootElement = "#root";
+	if ($("title").text() === "WebCode Document") {
+		rootElement = "body";
 	}
-	passChildrenAttributesFromID("div[id^='ancestor___']");
+	// passChildrenAttributesFromID("div[id^='ancestor___']");
+	// passChildrenAttributesFromID("div[id*='___ancestor___']");
 	makeAttributesFromID("div");
-	$("div[id^='ancestor___']").attr('class', '');
-
-	$('.starts_hidden').addClass('hide');
-	$("div[id^='state___']:not(.initial").addClass('group').addClass('hide');
-	// state___isconfigured___autoproceed___gotostate_email_preview_1
-
-
-	/*
-$("div[id^='state_shared__']").addClass('state-shared');
-$("div[id^='group__']").addClass('group');
-// $("div[id$='group']").addClass('group');
-// $("div[id^='popup']").addClass('popup');
-
-// group__ispopup__startshidden__hasmobileyes__splitawait
-
-$("div[id$='popup']").addClass('popup');
-*/
-	$("div[id^='button']").addClass('button').addClass('clickable');
-	$("div.dropdown.options").addClass('starts_hidden');
-	// $(".button.gotostate").attr('data-override-target', 'this-id').addClass('override-target');
-	$(".button.gotostate").addClass('override-target');
-	$("div.button").addClass('btn');
-	// $("div:not(.group)").addClass('img');
-	/*
-$("div[id*='next_button']").addClass('next_button').addClass('button');
-$("div[id*='back_button']").addClass('back_button').addClass('button');
-$("div[id*='configured']").addClass('configured');
-$("div[id*='visited']").addClass('visited');
-$("div[id*='gotostate']").attr('data-override-target', 'this-id').addClass('override-target');
-
-$("div.group[id*='activity_bar']").addClass('state').addClass('state-shared').addClass('activity_bar');
-*/
-	// $("div.img.popup").addClass('hide').css('z-index', '3');
-	// $("div.img.button").css('z-index', '4');
-	// $("div.img.button").css('z-index', '4');
-	/*
-$("div.img.configured, div.img.visited").addClass('hide').css('z-index', '2');
-
-
-// hide stuff
-$("div.group.popup").addClass('hide');
-$("div.configured:not(.do-not-hide)").addClass('hide');
-$("div.visited:not(.do-not-hide)").addClass('hide');
-*/
-	/*
-$('.state:visible', 'body').addClass('state-shared state-initial');
-*/
+	$("div.ancestor").each(function(index) {
+		var $thisElement = $(this);
+		var thisElementClasses = $thisElement.attr('class');
+		$thisElement.attr('data-archive-class', thisElementClasses);
+		$thisElement.attr('class', '');
+	});
+	$(".hoverIndicator").addClass("startshidden");
+	$(".selectedIndicator").addClass("startshidden");
+	$("div.dropdown.options").addClass("startshidden");
+	$(".startshidden").addClass("hide");
+	$("div[id^='state___']:not(.initial,.shared)").addClass("group").addClass("hide");
+	$("div[id^='button']").addClass("button").addClass("clickable");
+	// $(".button.gotostate").addClass("override-target");
+	$("div.button").addClass("btn");
 	$("div.button").each(function(index) {
 		var $element = $(this);
-		var elementID = $element.attr('id');
-		var buttonName = $element.attr('id').split('___')[0];
-		if (elementID.beginsWith('button___')) {
-			buttonName = $element.attr('id').split('___')[1];
+		var elementID = $element.attr("id");
+		var buttonName = $element.attr("id").split("___")[0];
+		if (elementID.beginsWith("button___")) {
+			buttonName = $element.attr("id").split("___")[1];
 		}
-		$element.attr('data-name', buttonName);
+		$element.attr("data-button-name", buttonName);
 	});
-
 	$("div.dropson").each(function(index) {
-
-		// this class
-		// button dropson_attrbucket drops-on-attrbucket draggable dropson life btn ui-draggable
-
-		// sibling to show
-		// life whendropped starts_hidden hide
-
 		var $element = $(this);
-		$('body').addClass('show-draggable-outlines');
-		var elementID = $element.attr('id');
-		var buttonName = $element.attr('id').split('___')[0];
-		var siblingToShowClassNames = '.' + buttonName + '.whendropped_show';
-		// if ($(siblingToShowClassNames).length > 0) {
-		// 	$element.attr('data-toggle-show', siblingToShowClassNames);
-		// }
-		var siblingToHideClassNames = '.' + buttonName + '.whendropped_hide';
-		// if ($(siblingToHideClassNames).length > 0) {
-		// $element.attr('data-toggle-hide',  siblingToHideClassNames);
-		// }
-		$element.on('dropped', function() {
-			console.log(buttonName + " was dropped!");
-
-			if (($(siblingToHideClassNames).length === 0) === false) {
+		$("body").addClass("show-draggable-outlines");
+		var elementID = $element.attr("id");
+		var buttonName = $element.attr("id").split("___")[0];
+		var siblingToShowClassNames = "." + buttonName + ".whendropped_show";
+		var siblingToHideClassNames = "." + buttonName + ".whendropped_hide";
+		$element.on("dropped", function() {
+			// console.log(buttonName + " was dropped!");
+			if ($(siblingToHideClassNames).length === 0 === false) {
 				hideDeep(siblingToHideClassNames);
 			}
-			if (($(siblingToShowClassNames).length === 0) === false) {
+			if ($(siblingToShowClassNames).length === 0 === false) {
 				showDeep(siblingToShowClassNames);
 			}
 		});
-		// if (elementID.beginsWith('button___')) {
-		// 	buttonName = $element.attr('id').split('___')[1];
-		// }
-		// $element.attr('data-name', buttonName);
 	});
 	$("div.droppable").each(function(index) {
-
-		// this class
-		// button dropson_attrbucket drops-on-attrbucket draggable dropson life btn ui-draggable
-
-		// sibling to show
-		// life whendropped starts_hidden hide
-
 		var $element = $(this);
-		var elementID = $element.attr('id');
-		var elementName = $element.attr('id').split('___')[0];
-		var siblingToShowClassNames = '.' + elementName + '.whendropped_show';
-		// if ($(siblingToShowClassNames).length > 0) {
-		// 	$element.attr('data-toggle-show', siblingToShowClassNames);
-		// }
-		var siblingToHideClassNames = '.' + elementName + '.whendropped_hide';
-		// if ($(siblingToHideClassNames).length > 0) {
-		// $element.attr('data-toggle-hide',  siblingToHideClassNames);
-		// }
-		$element.on('droppedonto', function() {
-			console.log(elementName + " was droppedonto!");
-
-			if (($(siblingToHideClassNames).length === 0) === false) {
+		var elementID = $element.attr("id");
+		var elementName = $element.attr("id").split("___")[0];
+		var siblingToShowClassNames = "." + elementName + ".whendropped_show";
+		var siblingToHideClassNames = "." + elementName + ".whendropped_hide";
+		$element.on("droppedonto", function() {
+			// console.log(elementName + " was droppedonto!");
+			if ($(siblingToHideClassNames).length === 0 === false) {
 				hideDeep(siblingToHideClassNames);
 			}
-			if (($(siblingToShowClassNames).length === 0) === false) {
+			if ($(siblingToShowClassNames).length === 0 === false) {
 				showDeep(siblingToShowClassNames);
 			}
 		});
-		// if (elementID.beginsWith('button___')) {
-		// 	elementName = $element.attr('id').split('___')[1];
-		// }
-		// $element.attr('data-name', elementName);
 	});
 	$("div[id^='state___'].state").each(function(index) {
 		var $thisState = $(this);
 		var $nextState = $(this).next();
 		var $prevState = $(this).prev();
-		var thisStateID = $thisState.attr('id');
-		var nextStateID = $nextState.attr('id');
-		var prevStateID = $prevState.attr('id');
-
-		var onclickActionsNext = "$('#" + thisStateID + "').trigger('unvisit'); $('#" + nextStateID + "').trigger('visiting'); ";
-		var onclickActionsBack = "$('#" + prevStateID + "').trigger('visiting'); $('#" + thisStateID + "').trigger('unvisit'); ";
-
-		$(this)
-			.attr('data-toggle', 'state')
-			.attr('data-target-next', nextStateID)
-			.attr('data-target-prev', prevStateID)
-			.find(".dropdown:not(.options, .option)").on('click', function(event) {
-				debug.group("[Dropdown click]");
-				var $childDropdown = $(this).next();
-				event.stopPropagation();
-				toggle($childDropdown);
-				// $('body').on('click', function(event) {
-				// 	// hide($childDropdown);
-				// 	debug.info('body click!');
-				// });
-				debug.groupEnd();
-			}).end()
-		// .find(".dropdown.options").on('mouseover', function(event) {
-		// 	debug.group("[Dropdown options mouseover]");
-		// 	// hide($(this).next());
-		// 	debug.groupEnd();
+		var thisStateID = $thisState.attr("id");
+		var nextStateID = $nextState.attr("id");
+		var prevStateID = $prevState.attr("id");
+		var onclickActionsNext = "$('#" + nextStateID + "').trigger('gotostate'); ";
+		var onclickActionsBack = "$('#" + prevStateID + "').trigger('gotostate'); ";
+		$(this).attr("data-toggle", "state").attr("data-target-next", nextStateID).attr("data-target-prev", prevStateID).find(".dropdown:not(.options, .option)").on("click", function(event) {
+			var $childDropdown = $(this).next();
+			event.stopPropagation();
+			toggle($childDropdown);
+		}).end()
+			.find(".dropdown.options")
+			.find(".dropdown.option").on("mouseout", function(event) {}).end().end()
+			.find("div.button.next:not(.gotostate)").attr("onclick", onclickActionsNext).end()
+			.find("div.button.back").on("click", function() {}).attr("data-target-next", prevStateID).attr("data-target-prev", nextStateID).attr("onclick", onclickActionsBack).end();
+		// var onclickActionsNext = "$('#" + thisStateID + "').trigger('unvisit'); $('#" + nextStateID + "').trigger('visiting'); ";
+		// var onclickActionsBack = "$('#" + prevStateID + "').trigger('visiting'); $('#" + thisStateID + "').trigger('unvisit'); ";
+		// $(this).attr("data-toggle", "state").attr("data-target-next", nextStateID).attr("data-target-prev", prevStateID).find(".dropdown:not(.options, .option)").on("click", function(event) {
+		// 	var $childDropdown = $(this).next();
+		// 	event.stopPropagation();
+		// 	toggle($childDropdown);
 		// }).end()
-		.find(".dropdown.options").find('.dropdown.option').on('mouseout', function(event) {
-			debug.group("[Dropdown options > option mouseout]");
-			// hide($(this).parents('.dropdown.options'));
-			debug.log($(this).parents('.dropdown.options').attr('id'));
-			debug.groupEnd();
-		}).end().end()
-			.find("div[id^='button'].button.next, div[id$='next_button']").on('click', function() {
-				debug.group("[Default Next]");
-				debug.warn("[Default Next] thisStateID", thisStateID);
-				debug.warn("[Default Next] nextStateID", nextStateID);
-				debug.warn("[Default Next] prevStateID", prevStateID);
-				debug.groupEnd();
-			}).attr('data-target-next', nextStateID).attr('data-target-prev', prevStateID).attr('onclick', onclickActionsNext).end()
-			.find("div[id^='button'].button.back, div[id$='back_button']").on('click', function() {
-				debug.group("[Default Back]");
-				debug.warn("[Default Back] thisStateID", thisStateID);
-				debug.warn("[Default Back] nextStateID", nextStateID);
-				debug.warn("[Default Back] prevStateID", prevStateID);
-				debug.groupEnd();
-			}).attr('data-target-next', prevStateID).attr('data-target-prev', nextStateID).attr('onclick', onclickActionsBack).end()
-		// .find("div[id^='button'].button.custom").attr('data-target-next', $nextState.attr('id'))..attr('onclick', onclickActionsNext).end()
-		// end of stuffs
-		;
+		// 	.find(".dropdown.options")
+		// 	.find(".dropdown.option").on("mouseout", function(event) {}).end().end()
+		// 	.find("div.button.next").on("click", function() {}).attr("data-target-next", nextStateID).attr("data-target-prev", prevStateID).attr("onclick", onclickActionsNext).end()
+		// 	.find("div.button.back").on("click", function() {}).attr("data-target-next", prevStateID).attr("data-target-prev", nextStateID).attr("onclick", onclickActionsBack).end();
 	});
-
-	$('.override-target').each(function(index) {
+	$(".override-target").each(function(index) {
 		var $thisElement = $(this);
-		var thisID = $thisElement.attr('id');
-		var thisParentStateID = $thisElement.parents("[id^='state___'].state").attr('id');
+		var thisID = $thisElement.attr("id");
+		var thisParentStateID = $thisElement.parents("[id^='state___'].state").attr("id");
 		var stateToGoTo;
-		var theseClassNames = $thisElement.attr('class').split(' ');
+		var theseClassNames = $thisElement.attr("class").split(" ");
 		$.each(theseClassNames, function(index, value) {
-			if (value.beginsWith('gotostate_')) {
-				var stateToGoTo = 'state___' + value.split('gotostate_')[1];
-				$thisElement.attr('data-target-next', stateToGoTo);
+			if (value.beginsWith("gotostate_")) {
+				var stateToGoTo = "state___" + value.split("gotostate_")[1];
+				$thisElement.attr("data-target-next", stateToGoTo);
 			}
 		});
-		// var nextID = thisID.split('_goto_')[1];
-		var nextState = $thisElement.attr('data-target-next');
-		// var prevState = $thisElement.attr('data-target-prev');
-		// debug.debug("prevState", prevState);
-
-		// next actions
-
-		// $('#state___wait_email_preview_1').trigger('unvisit');
-		// $('#state___wait_email_preview_1').trigger('visited');
-		// $('state___split_has_mobile_choose').trigger('visiting');
-		// showDeep('#state___split_has_mobile_choose');
-		// hideDeep('#state___wait_email_preview_1');
-
-
-		// if (typeof prevState === 'undefined' || prevState === '') {
-		// }
+		var nextState = $thisElement.attr("data-target-next");
 		var prevState = $thisElement.parents(".state").attr("data-target-prev");
-		$thisElement.attr('data-target-prev', prevState);
-		// $thisElement.attr('onclick', 'showDeep(\'#' + nextState + '\'); hideDeep(\'#' + prevState + '\')');
-		// $thisElement.attr('onclick', 'showDeep(\'#' + nextState + '\'); hideDeep(\'#' + prevState + '\');');
-		// $thisElement.on('click', function() {
-		//     showDeep('#' + nextState);
-		//     hideDeep('#' + prevState);
-		// });
-		// var onclickActionsShared = "debug.warn('Button Clicked!'); ";
-		// var onclickActionsShared = "function(){debug.warn('prevState', prevState); }(); ";
-		// var onclickActionsShared = "function(){debug.warn('nextState', nextState); }(); ";
-		// var onclickActionsNext = "debug.warn('Next!'); ";
-		// var onclickActionsBack = "debug.warn('Back!'); ";
-		// var onclickActionsOther = "debug.warn('Other!'); ";
-		// var onclickActions = " ";
-
-		if ($thisElement.hasClass('back')) {
-			$thisElement.on('click', function() {
-				debug.group("[Overriden Back]");
-				debug.warn("[Overriden Back] thisParentStateID", thisParentStateID);
-				debug.warn("[Overriden Back] nextState", nextState);
-				debug.warn("[Overriden Back] prevState", prevState);
-				debug.groupEnd();
-				$('#' + thisParentStateID).trigger('unvisit');
-				$('#' + thisParentStateID).trigger('deconfigure');
-				$('#' + nextState).trigger('visiting');
+		$thisElement.attr("data-target-prev", prevState);
+		if ($thisElement.hasClass("back")) {
+			$thisElement.on("click", function() {
+				$("#" + thisParentStateID).trigger("unvisit");
+				$("#" + thisParentStateID).trigger("deconfigure");
+				$("#" + nextState).trigger("visiting");
 			});
-			// onclickActionsBack += "";
-			// onclickActionsBack += "";
-			// onclickActionsBack += "";
-			// onclickActions += onclickActionsShared + onclickActionsBack;
-		} else if ($thisElement.hasClass('next')) {
-			$thisElement.on('click', function() {
-				debug.group("[Overriden Next]");
-				debug.warn("[Overridden Next] thisParentStateID", thisParentStateID);
-				debug.warn("[Overridden Next] nextState", nextState);
-				debug.warn("[Overridden Next] prevState", prevState);
-				$('#' + thisParentStateID).trigger('unvisit');
-				debug.groupEnd();
-				$('#' + nextState).trigger('visiting');
+		} else if ($thisElement.hasClass("next")) {
+			$thisElement.on("click", function() {
+				$("#" + thisParentStateID).trigger("unvisit");
+				$("#" + nextState).trigger("visiting");
 			});
-			// onclickActionsNext += "$('#" + thisParentStateID + "').trigger('visited');";
-			// onclickActionsNext += "$('#" + nextState + "').trigger('visiting');";
-			// onclickActions += onclickActionsShared + onclickActionsNext;
 		} else {
-			$thisElement.on('click', function() {
-				debug.group("[Overriden Other]");
-				debug.warn("[Overridden Other] thisParentStateID", thisParentStateID);
-				debug.warn("[Overridden Other] nextState", nextState);
-				debug.warn("[Overridden Other] prevState", prevState);
-				debug.groupEnd();
-				$('#' + thisParentStateID).trigger('unvisit');
-				$('#' + nextState).trigger('visiting');
+			$thisElement.on("click", function() {
+				$("#" + thisParentStateID).trigger("unvisit");
+				$("#" + nextState).trigger("visiting");
 			});
-			// onclickActionsOther += "$('#" + thisParentStateID + "').trigger('unvisit');";
-			// onclickActionsOther += "$('#" + nextState + "').trigger('visiting');";
-			// onclickActions += onclickActionsShared + onclickActionsOther;
 		}
-		$thisElement.attr('onclick', 'debug.warn("Click overridden.");');
+		$thisElement.attr("onclick", '/* // console.warn("Click overridden."); */');
 	});
-
-
-	$('.button.custom.choose').each(function(index) {
+	$(".button.custom.choose").each(function(index) {
 		var $thisElement = $(this);
-		var thisID = $thisElement.attr('id');
-		var thisParentStateID = $thisElement.parents("[id^='state___'].state").attr('id');
+		var thisID = $thisElement.attr("id");
+		var thisParentStateID = $thisElement.parents("[id^='state___'].state").attr("id");
 		var stateToGoTo;
-		var theseClassNames = $thisElement.attr('class').split(' ');
+		var theseClassNames = $thisElement.attr("class").split(" ");
 		$.each(theseClassNames, function(index, value) {
-			if (value.beginsWith('gotostate_')) {
-				var stateToGoTo = 'state___' + value.split('gotostate_')[1];
-				$thisElement.attr('data-target-next', stateToGoTo);
+			if (value.beginsWith("gotostate_")) {
+				var stateToGoTo = "state___" + value.split("gotostate_")[1];
+				$thisElement.attr("data-target-next", stateToGoTo);
 			}
 		});
-		// var nextID = thisID.split('_goto_')[1];
-		var nextState = $thisElement.attr('data-target-next');
-		// var prevState = $thisElement.attr('data-target-prev');
-		// debug.debug("prevState", prevState);
-
-		// next actions
-
-		// $('#state___wait_email_preview_1').trigger('unvisit');
-		// $('#state___wait_email_preview_1').trigger('visited');
-		// $('state___split_has_mobile_choose').trigger('visiting');
-		// showDeep('#state___split_has_mobile_choose');
-		// hideDeep('#state___wait_email_preview_1');
-
-
-		// if (typeof prevState === 'undefined' || prevState === '') {
-		// }
+		var nextState = $thisElement.attr("data-target-next");
 		var prevState = $thisElement.parents(".state").attr("data-target-prev");
-		$thisElement.attr('data-target-prev', prevState);
-		// $thisElement.attr('onclick', 'showDeep(\'#' + nextState + '\'); hideDeep(\'#' + prevState + '\')');
-		// $thisElement.attr('onclick', 'showDeep(\'#' + nextState + '\'); hideDeep(\'#' + prevState + '\');');
-		// $thisElement.on('click', function() {
-		//     showDeep('#' + nextState);
-		//     hideDeep('#' + prevState);
-		// });
-		// var onclickActionsShared = "debug.warn('Button Clicked!'); ";
-		// var onclickActionsShared = "function(){debug.warn('prevState', prevState); }(); ";
-		// var onclickActionsShared = "function(){debug.warn('nextState', nextState); }(); ";
-		// var onclickActionsNext = "debug.warn('Next!'); ";
-		// var onclickActionsBack = "debug.warn('Back!'); ";
-		// var onclickActionsOther = "debug.warn('Other!'); ";
-		// var onclickActions = " ";
-
-		if ($thisElement.hasClass('back')) {
-			$thisElement.on('click', function() {
-				debug.group("[Overriden Back]");
-				debug.warn("[Overriden Back] thisParentStateID", thisParentStateID);
-				debug.warn("[Overriden Back] nextState", nextState);
-				debug.warn("[Overriden Back] prevState", prevState);
-				debug.groupEnd();
-				$('#' + thisParentStateID).trigger('unvisit');
-				$('#' + thisParentStateID).trigger('deconfigure');
-				$('#' + nextState).trigger('visiting');
+		$thisElement.attr("data-target-prev", prevState);
+		if ($thisElement.hasClass("back")) {
+			$thisElement.on("click", function() {
+				$("#" + thisParentStateID).trigger("unvisit");
+				$("#" + thisParentStateID).trigger("deconfigure");
+				$("#" + nextState).trigger("visiting");
 			});
-			// onclickActionsBack += "";
-			// onclickActionsBack += "";
-			// onclickActionsBack += "";
-			// onclickActions += onclickActionsShared + onclickActionsBack;
-		} else if ($thisElement.hasClass('next')) {
-			$thisElement.on('click', function() {
-				debug.group("[Overriden Next]");
-				debug.warn("[Overridden Next] thisParentStateID", thisParentStateID);
-				debug.warn("[Overridden Next] nextState", nextState);
-				debug.warn("[Overridden Next] prevState", prevState);
-				$('#' + thisParentStateID).trigger('unvisit');
-				debug.groupEnd();
-				$('#' + nextState).trigger('visiting');
+		} else if ($thisElement.hasClass("next")) {
+			$thisElement.on("click", function() {
+				$("#" + thisParentStateID).trigger("unvisit");
+				$("#" + nextState).trigger("visiting");
 			});
-			// onclickActionsNext += "$('#" + thisParentStateID + "').trigger('visited');";
-			// onclickActionsNext += "$('#" + nextState + "').trigger('visiting');";
-			// onclickActions += onclickActionsShared + onclickActionsNext;
 		} else {
-			$thisElement.on('click', function() {
-				debug.group("[Overriden Other]");
-				debug.warn("[Overridden Other] thisParentStateID", thisParentStateID);
-				debug.warn("[Overridden Other] nextState", nextState);
-				debug.warn("[Overridden Other] prevState", prevState);
-				debug.groupEnd();
-				$('#' + thisParentStateID).trigger('unvisit');
-				$('#' + nextState).trigger('visiting');
+			$thisElement.on("click", function() {
+				$("#" + thisParentStateID).trigger("unvisit");
+				$("#" + nextState).trigger("visiting");
 			});
-			// onclickActionsOther += "$('#" + thisParentStateID + "').trigger('unvisit');";
-			// onclickActionsOther += "$('#" + nextState + "').trigger('visiting');";
-			// onclickActions += onclickActionsShared + onclickActionsOther;
 		}
-		$thisElement.attr('onclick', 'debug.warn("Click overridden.");');
+		$thisElement.attr("onclick", '// console.warn("Click overridden.");');
 	});
-
-
-	// $(".autoproceed").each(function(index, element) {
-	// 	var stateToGoTo;
-	// 	var theseClassNames = $(element).attr('id').split('___');
-	// 	$.each(theseClassNames, function(index, value) {
-	// 		if (value.beginsWith('gotostate')) {
-	// 			var stateToGoTo = 'state___' + value.split('gotostate_')[1];
-	// 			$(element).attr('data-target-next', '#' + stateToGoTo)
-	// 		}
-	// 	});
-
-	// });
-
-	// state___icons___configured___shared___starts_hidden___ungroup_after_init___children_start_hidden
 	$(".state").each(function(index, element) {
-		$(element).find('.button').first().addClass('default').addClass('first');
-		$(element).find('.button').last().addClass('last');
+		$(element)
+			.find(".button").first().addClass("default").addClass("first");
+		$(element)
+			.find(".button").last().addClass("last");
 	});
 	$(".children_start_hidden").each(function(index, element) {
-		$(element).children().addClass('starts_hidden');
+		$(element).children().addClass("startshidden");
 	});
 	$(".children_whendropped_show").each(function(index, element) {
-		$(element).children().addClass('whendropped_show');
+		$(element).children().addClass("whendropped_show");
 	});
 	$(".ungroup_after_init").each(function(index, element) {
 		$(element).children().each(function(index2, element2) {
-			$(element2).insertAfter('#state___initial');
+			$(element2).insertAfter("#state___initial");
 		});
 	});
+	$(".starts_hidden").addClass("startshidden").removeClass("starts_hidden").addClass("removed-deprecated-starts_hidden");
+	$(".startshidden").addClass("hide").attr('data-startshidden', 'true');
+	$(".startshidden").addClass("hide").attr('data-startshidden', 'true');
 
-
-	$('.starts_hidden').addClass('hide');
-	$('.hide').hide();
-
-	$(".state").on("visiting", function(event) {
-
+	$(".hide").hide();
+	$(".state:not(.shared)").on("visiting", function(event) {
 		var $thisState = $(this);
-		var thisStateID = $thisState.attr('id');
-		var thisStateRoot = thisStateID.split('___')[1];
+		var thisStateID = $thisState.attr("id");
+		var thisStateName = $thisState.attr("data-name");
+		var thisStateRoot = thisStateID.split("___")[1];
 		showDeep(thisStateID);
-		debug.warn("[visit] thisStateID", thisStateID);
-
-
-		$(".state:not('#" + thisStateID + "')").removeClass('visiting').attr('data-visiting', 'false');
-		$thisState.attr('data-visiting', 'true').addClass('visiting');
-
-		$(".icon." + thisStateRoot + ":not(.visited)").removeClass('hide').show();
-		if ($thisState.hasClass('visited') === false) {
-			$thisState.trigger('visited');
+		$('body').attr('data-state-visiting-name', thisStateName);
+		$('body').attr('data-state-visiting-id', thisStateID);
+		$(".state:not('#" + thisStateID + "')").removeClass("visiting").attr("data-visiting", "false");
+		$thisState.attr("data-visiting", "true").addClass("visiting");
+		$(".icon." + thisStateRoot + ":not(.visited)").removeClass("hide").show();
+		if ($thisState.hasClass("visited") === false) {
+			$thisState.trigger("visited");
 		}
 
+		// console.log("$('#" + thisStateID + "');");
 	});
-
-	$(".state").on("unvisit", function(event) {
+	$(".state:not(.shared)").on("unvisit", function(event) {
 		var $thisState = $(this);
-		var thisStateID = $thisState.attr('id');
-		var thisStateRoot = thisStateID.split('___')[1];
-		debug.warn("[unvisit]  thisStateID", thisStateID);
+		var thisStateID = $thisState.attr("id");
+		var thisStateRoot = thisStateID.split("___")[1];
 		hideDeep(thisStateID);
-		$thisState.attr('data-visiting', 'false').removeClass('visiting');
-		$(".icon." + thisStateRoot + ".visited").addClass('hide').hide();
+		$thisState.attr("data-visiting", "false").removeClass("visiting");
+		$(".icon." + thisStateRoot + ".visited").addClass("hide").hide();
 	});
-
-
+	$(".state:not(.shared)").on("gotostate", function(event) {
+		var $thisState = $(this);
+		var thisStateID = $thisState.attr("id");
+		$(".state:not(.shared)").trigger('unvisit');
+		$thisState.trigger('visiting');
+		// var thisStateRoot = thisStateID.split("___")[1];
+		// hideDeep(thisStateID);
+		// $thisState.attr("data-visiting", "false").removeClass("visiting");
+		// $(".icon." + thisStateRoot + ".visited").addClass("hide").hide();
+	});
 	$(".state").on("configure", function(event) {
 		var $thisState = $(this);
-		var thisStateID = $thisState.attr('id');
-		var thisStateRoot = thisStateID.split('___')[1];
-		debug.warn("[configure]  thisStateID", thisStateID);
-		$thisState.attr('data-configuring', 'true').addClass('configuring');
-		$(".icon." + thisStateRoot + ".configured").removeClass('hide').show();
+		var thisStateID = $thisState.attr("id");
+		var thisStateRoot = thisStateID.split("___")[1];
+		$thisState.attr("data-configuring", "true").addClass("configuring");
+		$(".icon." + thisStateRoot + ".configured").removeClass("hide").show();
 	});
-	$(".state").on("deconfigure", function(event) {
+	$(".state:not(.shared)").on("deconfigure", function(event) {
 		var $thisState = $(this);
-		var thisStateID = $thisState.attr('id');
-		var thisStateRoot = thisStateID.split('___')[1];
-		debug.warn("[deconfigure]  thisStateID", thisStateID);
-		$thisState.attr('data-configuring', 'false').removeClass('configuring');
-		$(".icon." + thisStateRoot + ".visited").addClass('hide').hide();
-		$(".icon." + thisStateRoot + ".configured").addClass('hide').hide();
+		var thisStateID = $thisState.attr("id");
+		var thisStateRoot = thisStateID.split("___")[1];
+		$thisState.attr("data-configuring", "false").removeClass("configuring");
+		$(".icon." + thisStateRoot + ".visited").addClass("hide").hide();
+		$(".icon." + thisStateRoot + ".configured").addClass("hide").hide();
 	});
-
-
-	$(".state").on("visited", function(event) {
-
+	$(".state:not(.shared)").on("visited", function(event) {
 		var $thisState = $(this);
-		var thisStateID = $thisState.attr('id');
-		var thisStateRoot = thisStateID.split('___')[1];
-		debug.warn("[visited] thisStateID", thisStateID);
-
-
-		$thisState.attr('data-visited', 'true').addClass('visited');
-
-
+		var thisStateID = $thisState.attr("id");
+		var thisStateRoot = thisStateID.split("___")[1];
+		$thisState.attr("data-visited", "true").addClass("visited");
 	});
-
-
-
-
-
-	// showDeep('#state_email_preview_popup');
-
-
-	// showDeep("#state___email_preview_1");
-	$('.highlight').remove();
-	$("#state___1").trigger("visiting");
-	$("#state___email_preview_1").trigger("visiting");
-
-	// printHTML();
-	if ($('body').hasClass('dev') === true) {} else {
-		if (typeof init == 'function') {
+	$(".highlight").remove();
+	if ($("body").hasClass("dev") === true) {} else {
+		if (typeof init == "function") {
 			init();
 		}
 	}
+	$(".option").on("chooseoption", function(event, thingy) {
+		var $thisElement = $(this);
+		$thisElement.siblings('.option').each(function() {
+			hide($(this));
+		});
+		show($thisElement);
+		// console.debug("event", event);
+		// console.debug("thingy", thingy);
+		var $buttonCallingThis = $(thingy.currentTarget);
+		// console.debug("$(thingy.currentTarget)", $(thingy.currentTarget));
+		var buttonCallingThisName = $buttonCallingThis.attr('data-button-name');
+		// console.debug("buttonCallingThisName", buttonCallingThisName);
+		// $thisElement.parents().find('.dropdown:not(.option,.options)').trigger('click');
+		$thisElement.parents().find('.dropdown:not(.option,.options)').trigger('click').attr('data-option-shown', buttonCallingThisName);
+	});
+	$(".pane").on("showscope", function(event, thingy) {
+		var $thisElement = $(this);
+		$thisElement.siblings('.pane').each(function() {
+			hide($(this));
+		});
+		show($thisElement);
+		// console.debug("event", event);
+		// console.debug("thingy", thingy);
+		var $buttonCallingThis = $(thingy.currentTarget);
+		// console.debug("$(thingy.currentTarget)", $(thingy.currentTarget));
+		var buttonCallingThisName = $buttonCallingThis.attr('data-button-name');
+		// console.debug("buttonCallingThisName", buttonCallingThisName);
+		// $thisElement.parents().find('.dropdown:not(.pane,.panes)').trigger('click');
+		$thisElement.parents().find('.dropdown:not(.pane,.panes)').trigger('click').attr('data-pane-shown', buttonCallingThisName);
+	});
+
+
+	$(".button[data-target-gotostate]").each(function() {
+		var prevGotoStateValue = $(this).attr('data-target-gotostate');
+		$(this).attr('data-target-gotostate', 'state.' + prevGotoStateValue);
+	});
+
+	$('.button').each(function() {
+		var $thisElement = $(this);
+		var thisElementID = $thisElement.attr('id');
+		var thisButtonName = $thisElement.attr('data-button-name');
+
+
+		var thisElementHoverIndicator = $('.' + thisButtonName + '.hoverIndicator').attr('id');
+		var $thisElementHoverIndicators = $('.' + thisButtonName + '.hoverIndicator');
+		var $thisElementSelectedIndicators = $('.' + thisButtonName + '.selectedIndicator');
+
+		var thisButtonOnclickEventName = $thisElement.attr('data-event-onclick');
+		var thisButtonOnclickEventTargetName = $thisElement.attr('data-target-' + thisButtonOnclickEventName);
+
+		if (thisButtonOnclickEventTargetName === 'thisname') {
+			var newButtonOnclickEventTargetName = thisButtonName;
+			// console.debug("Giving the button thisButtonName a newButtonOnclickEventTargetName: " + newButtonOnclickEventTargetName);
+			$thisElement.attr('data-target-' + thisButtonOnclickEventName, thisButtonName);
+		}
+
+		$thisElement.on('mouseover', function() {
+			$thisElementHoverIndicators.each(function() {
+				console.log("$(this).attr('id')", $(this).attr('id'));
+				show($(this).attr('id'));
+			});
+			// console.debug("thisElementSelectedIndicator", thisElementSelectedIndicator);
+		}).on('mouseout', function() {
+			$thisElementHoverIndicators.each(function() {
+				console.log("$(this).attr('id')", $(this).attr('id'));
+				hide($(this).attr('id'));
+			});
+			hide(thisElementHoverIndicator);
+		}).on('click', function() {
+			$thisElementHoverIndicators.each(function() {
+				console.log("$(this).attr('id')", $(this).attr('id'));
+				show($(this).attr('id'));
+			});
+			$thisElementSelectedIndicators.each(function() {
+				console.log("$(this).attr('id')", $(this).attr('id'));
+				show($(this).attr('id'));
+			});
+			// debug.debug("thisElementSelectedIndicator", thisElementSelectedIndicator);
+		});
+	});
+
+	$('.button[data-event-onclick]').on('click', function(event) {
+		// console.debug("clicked!");
+		var $thisElement = $(this);
+		var thisButtonParentInstance = $thisElement.parents('.instance').attr('id');
+		var thisButtonOnclickEventName = $thisElement.attr('data-event-onclick');
+		var thisButtonDataClickInstance = $thisElement.attr('data-clickinstance');
+		var thisButtonOnclickEventTargetName = $thisElement.attr('data-target-' + thisButtonOnclickEventName);
+		// console.debug("thisButtonOnclickEventName", thisButtonOnclickEventName);
+		// console.debug("thisButtonOnclickEventTargetName", thisButtonOnclickEventTargetName);
+
+
+		if (typeof thisButtonDataClickInstance !== 'undefined') {
+			thisButtonParentInstance = 'instance___' + thisButtonDataClickInstance;
+		}
+		if (typeof thisButtonParentInstance !== 'undefined') {
+			console.debug("thisButtonParentInstance", thisButtonParentInstance);
+			console.debug("$('." + thisButtonOnclickEventTargetName + "', '#" + thisButtonParentInstance + "')");
+			$('.' + thisButtonOnclickEventTargetName, '#' + thisButtonParentInstance).trigger(thisButtonOnclickEventName, event);
+		} else {
+			$('.' + thisButtonOnclickEventTargetName).trigger(thisButtonOnclickEventName, event);
+		}
+
+	});
+
+	$('.button[data-event-onclick2]').on('click', function(event) {
+		// console.debug("clicked!");
+		var $thisElement = $(this);
+		var thisButtonParentInstance = $thisElement.parents('.instance').attr('id');
+		var thisButtonOnclickEventName = $thisElement.attr('data-event-onclick2');
+		var thisButtonOnclickEventTargetName = $thisElement.attr('data-target-' + thisButtonOnclickEventName);
+		// console.debug("thisButtonOnclickEventName", thisButtonOnclickEventName);
+		// console.debug("thisButtonOnclickEventTargetName", thisButtonOnclickEventTargetName);
+		if (typeof thisButtonParentInstance !== 'undefined') {
+			// console.debug("thisButtonParentInstance", thisButtonParentInstance);
+			$('.' + thisButtonOnclickEventTargetName, '#' + thisButtonParentInstance).trigger(thisButtonOnclickEventName, event);
+		} else {
+			$('.' + thisButtonOnclickEventTargetName, '.instance').trigger(thisButtonOnclickEventName, event);
+		}
+
+	});
+
+	// $("#state___1").trigger("visiting");
+	// $("#state___initial").trigger("visiting");
+	// $("#state___email_preview_1").trigger("visiting");
+
+
 };
 
 
 var hideOutlines = function hideOutlines() {
-	$('body').removeClass('show-draggable-outlines');
-}
+	$("body").removeClass("show-draggable-outlines");
+};
 
 var timeoutID = window.setTimeout(runIt, window.timeoutLength);
-var timeoutIdHideOutlines = window.setTimeout(hideOutlines, 5000);
+
+var timeoutIdHideOutlines = window.setTimeout(hideOutlines, 5e3);

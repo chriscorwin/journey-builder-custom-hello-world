@@ -171,3 +171,15 @@ body.dev #root div.group:hover, body.dev #root div.img:hover {
 #showDev{
 	display: none;
 }
+
+.boxsizingcontentbox {
+	box-sizing: content-box !important;
+	-webkit-box-sizing: content-box !important;
+	-moz-box-sizing: content-box !important;
+}
+
+.state {
+	top: 0;
+	left: 0;
+	position: absolute;
+}
