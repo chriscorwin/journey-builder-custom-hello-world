@@ -50,7 +50,7 @@ function workaround(req, res, next) {
 		next();
 	}
 
-	if ('/login' === req.url || '/fireEvent/helloWorld' === req.url) {
+	if ('/login' === req.url || '/fireEvent/helloWorld' === req.url || '/fireEvent/updateContact' === req.url) {
 		next();
 	}
 
@@ -58,7 +58,11 @@ function workaround(req, res, next) {
 		'/ixn/activities/hello-world/save/' === req.url ||
 		'/ixn/activities/hello-world/execute/' === req.url ||
 		'/ixn/activities/hello-world/publish/' === req.url ||
-		'/ixn/activities/hello-world/validate/' === req.url
+		'/ixn/activities/hello-world/validate/' === req.url ||
+		'/ixn/activities/update-contact/save/' === req.url ||
+		'/ixn/activities/update-contact/execute/' === req.url ||
+		'/ixn/activities/update-contact/publish/' === req.url ||
+		'/ixn/activities/update-contact/validate/' === req.url
 	) {
 		var buf = '';
 		req.on('data', function(chunk) {
@@ -118,6 +122,10 @@ app.post('/ixn/activities/hello-world/save/', activity.save);
 app.post('/ixn/activities/hello-world/validate/', activity.validate);
 app.post('/ixn/activities/hello-world/publish/', activity.publish);
 app.post('/ixn/activities/hello-world/execute/', activity.execute);
+app.post('/ixn/activities/update-contact/save/', activity.save);
+app.post('/ixn/activities/update-contact/validate/', activity.validate);
+app.post('/ixn/activities/update-contact/publish/', activity.publish);
+app.post('/ixn/activities/update-contact/execute/', activity.execute);
 
 // Custom Hello World Trigger Route
 app.post('/ixn/triggers/hello-world/', trigger.edit);
