@@ -50,7 +50,7 @@ define([], function() {
 
 		"edit": {
 			"uri": "https://quiet-crag-9311.herokuapp.com/ixn/activities/update-contact/",
-			"height": 400,
+			"height": 580,
 			"width": 588
 		}
 	};
