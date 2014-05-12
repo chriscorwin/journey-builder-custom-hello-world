@@ -6,7 +6,7 @@ define([], function() {
 		"partnerApiObjectTypeId": "IXN.CustomActivity.REST",
 		"lang": {
 			"en-US": {
-				"name": "Update Contact (RPD, ccorwin)",
+				"name": "Update Contact (RPD)",
 				"description": "Activity simply posts the data into an array for display on the App's home page."
 			}
 		},
