@@ -4,12 +4,6 @@
 #state___chooseCard
 {
 }
-#state___listView
-{
-}
-#state___listViewHighValCustomerChosen
-{
-}
 #ancestor___rpd__ungroupthis___1
 {
 }
@@ -121,132 +115,6 @@
 #highValCustomer____ancestor___rpd__onclick_gotostate_highValCustomer1___button
 {
 }
-#listView
-{
-    position: absolute;
-    left: 1px;
-    width: 1291px;
-    top: 1px;
-    height: 970px;
-    background-image: url(images/layer1Image6.png);
-    background-repeat: repeat;
-    background-position: 0px 0px;
-    border: none;
-}
-#medValCustomer____ancestor___rpd__onclick_gotostate_listViewMedValCustomerChosen___button___3
-{
-}
-#highValCustomer____ancestor___rpd__onclick_gotostate_listViewHighValCustomerChosen___button___
-{
-}
-#switchToCardView____rpd__onclick_gotostate_chooseCard___button___1
-{
-    position: absolute;
-    left: 1080px;
-    width: 20px;
-    top: 276px;
-    height: 22px;
-    background: rgb(0, 0, 0); /* fallback */
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    -webkit-border-radius: 4px 4px 4px 4px;
-       -moz-border-radius: 4px 4px 4px 4px;
-            border-radius: 4px 4px 4px 4px;
-}
-#masksNextButtonOnListView
-{
-    position: absolute;
-    left: 1063px;
-    width: 65px;
-    top: 843px;
-    height: 27px;
-    background: rgb(253, 253, 253); /* fallback */
-    background: rgba(253, 253, 253, 0.7);
-    border: none;
-    -webkit-border-radius: 4px 4px 4px 4px;
-       -moz-border-radius: 4px 4px 4px 4px;
-            border-radius: 4px 4px 4px 4px;
-}
-#createNewTriggerButton____rpd__onclick_gotostate_createTrigger1___button___medValCustomer___addTriggerButton___3
-{
-    position: absolute;
-    left: 202px;
-    width: 110px;
-    top: 776px;
-    height: 25px;
-    background: rgb(0, 0, 0); /* fallback */
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    -webkit-border-radius: 4px 4px 4px 4px;
-       -moz-border-radius: 4px 4px 4px 4px;
-            border-radius: 4px 4px 4px 4px;
-}
-#listView3
-{
-    position: absolute;
-    left: 1px;
-    width: 1291px;
-    top: 2px;
-    height: 970px;
-    background-image: url(images/layer1Image6.png);
-    background-repeat: repeat;
-    background-position: 0px 0px;
-    border: none;
-}
-#medValIsSelected2
-{
-    position: absolute;
-    left: 169px;
-    width: 922px;
-    top: 394px;
-    height: 25px;
-    background: rgb(63, 148, 204); /* fallback */
-    background: rgba(63, 148, 204, 0.2);
-    border: 1px solid rgb(63, 148, 204);
-    -webkit-border-radius: 1.5px 1.5px 1.5px 1.5px;
-       -moz-border-radius: 1.5px 1.5px 1.5px 1.5px;
-            border-radius: 1.5px 1.5px 1.5px 1.5px;
-}
-#medValCheckmark2
-{
-    position: absolute;
-    left: 175px;
-    width: 16px;
-    top: 403px;
-    height: 11px;
-    background-image: url(images/check.png);
-    background-repeat: no-repeat;
-    background-position: 0px 0px;
-    border: none;
-}
-#switchToCardView____rpd__onclick_gotostate_chooseCard___button___
-{
-    position: absolute;
-    left: 1080px;
-    width: 20px;
-    top: 276px;
-    height: 22px;
-    background: rgb(0, 0, 0); /* fallback */
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    -webkit-border-radius: 4px 4px 4px 4px;
-       -moz-border-radius: 4px 4px 4px 4px;
-            border-radius: 4px 4px 4px 4px;
-}
-#nextFromListHighValCustomer____rpd__onclick_gotostate_highValCustomer1___button
-{
-    position: absolute;
-    left: 1063px;
-    width: 65px;
-    top: 843px;
-    height: 27px;
-    background: rgb(0, 0, 0); /* fallback */
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    -webkit-border-radius: 4px 4px 4px 4px;
-       -moz-border-radius: 4px 4px 4px 4px;
-            border-radius: 4px 4px 4px 4px;
-}
 #ancestor___rpd__ungroupthis___2
 {
 }
@@ -321,66 +189,13 @@
        -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
             border-radius: 4.5px 4.5px 4.5px 4.5px;
 }
-#medValCustomer____hoverIndicator___3
-{
-    position: absolute;
-    left: 169px;
-    width: 922px;
-    top: 482px;
-    height: 25px;
-    background: rgb(63, 148, 204); /* fallback */
-    background: rgba(63, 148, 204, 0.2);
-    border: 1px solid rgb(63, 148, 204);
-    -webkit-border-radius: 1.5px 1.5px 1.5px 1.5px;
-       -moz-border-radius: 1.5px 1.5px 1.5px 1.5px;
-            border-radius: 1.5px 1.5px 1.5px 1.5px;
-}
-#medValCustomer___3
-{
-    position: absolute;
-    left: 169px;
-    width: 922px;
-    top: 482px;
-    height: 25px;
-    background: rgb(0, 0, 0); /* fallback */
-    background: rgba(0, 0, 0, 0);
-    border: 1px solid rgba(0, 0, 0, 0);
-    -webkit-border-radius: 1.5px 1.5px 1.5px 1.5px;
-       -moz-border-radius: 1.5px 1.5px 1.5px 1.5px;
-            border-radius: 1.5px 1.5px 1.5px 1.5px;
-}
-#highValCustomer____hoverIndicator___
-{
-    position: absolute;
-    left: 169px;
-    width: 922px;
-    top: 394px;
-    height: 25px;
-    background: rgb(63, 148, 204); /* fallback */
-    background: rgba(63, 148, 204, 0.2);
-    border: 1px solid rgb(63, 148, 204);
-    -webkit-border-radius: 1.5px 1.5px 1.5px 1.5px;
-       -moz-border-radius: 1.5px 1.5px 1.5px 1.5px;
-            border-radius: 1.5px 1.5px 1.5px 1.5px;
-}
-#highValCustomer___
-{
-    position: absolute;
-    left: 169px;
-    width: 922px;
-    top: 394px;
-    height: 25px;
-    background: rgb(0, 0, 0); /* fallback */
-    background: rgba(0, 0, 0, 0);
-    border: 1px solid rgba(0, 0, 0, 0);
-    -webkit-border-radius: 1.5px 1.5px 1.5px 1.5px;
-       -moz-border-radius: 1.5px 1.5px 1.5px 1.5px;
-            border-radius: 1.5px 1.5px 1.5px 1.5px;
-}
 #state___medValCustomer1
 {
 }
 #state___medValCustomer2
+{
+}
+#state___listView
 {
 }
 #state___listViewMedValCustomerChosen
@@ -680,6 +495,63 @@
     left: 1014px;
     width: 114px;
     top: 843px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#listView
+{
+    position: absolute;
+    left: 1px;
+    width: 1291px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image6.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#medValCustomer____ancestor___rpd__onclick_gotostate_listViewMedValCustomerChosen___button___3
+{
+}
+#switchToCardView____rpd__onclick_gotostate_chooseCard___button___1
+{
+    position: absolute;
+    left: 1080px;
+    width: 20px;
+    top: 276px;
+    height: 22px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#masksNextButtonOnListView
+{
+    position: absolute;
+    left: 1063px;
+    width: 65px;
+    top: 843px;
+    height: 27px;
+    background: rgb(253, 253, 253); /* fallback */
+    background: rgba(253, 253, 253, 0.7);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#createNewTriggerButton____rpd__onclick_gotostate_createTrigger1___button___medValCustomer___addTriggerButton___3
+{
+    position: absolute;
+    left: 202px;
+    width: 110px;
+    top: 776px;
     height: 25px;
     background: rgb(0, 0, 0); /* fallback */
     background: rgba(0, 0, 0, 0);
@@ -3007,7 +2879,7 @@
        -moz-border-radius: 2px 2px 2px 2px;
             border-radius: 2px 2px 2px 2px;
 }
-#save____button___rpd__onclick_gotostate_initial
+#save____rpd__onclick_gotostate_initial
 {
     position: absolute;
     left: 1010px;
@@ -3019,7 +2891,7 @@
     background-position: 1px 2px;
     border: none;
 }
-#changeTrigger1____rpd__onclick_gotostate_chooseCard___button___medValCustomer___createNewTriggerButton___nextFromListHighValCustomer___1
+#changeTrigger1____rpd__onclick_gotostate_chooseCard___button___medValCustomer___createNewTriggerButton___1
 {
     position: absolute;
     left: 1031px;
@@ -3033,7 +2905,7 @@
        -moz-border-radius: 4px 4px 4px 4px;
             border-radius: 4px 4px 4px 4px;
 }
-#cancel1____rpd__onclick_gotostate_initial___button___medValCustomer___addTriggerButton___highValCustomer___nextFromListHighValCustomer
+#cancel1____rpd__onclick_gotostate_initial___button___medValCustomer___addTriggerButton
 {
     position: absolute;
     left: 154px;
@@ -3046,6 +2918,34 @@
     -webkit-border-radius: 4px 4px 4px 4px;
        -moz-border-radius: 4px 4px 4px 4px;
             border-radius: 4px 4px 4px 4px;
+}
+#medValCustomer____hoverIndicator___3
+{
+    position: absolute;
+    left: 169px;
+    width: 922px;
+    top: 482px;
+    height: 25px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: 1px solid rgb(63, 148, 204);
+    -webkit-border-radius: 1.5px 1.5px 1.5px 1.5px;
+       -moz-border-radius: 1.5px 1.5px 1.5px 1.5px;
+            border-radius: 1.5px 1.5px 1.5px 1.5px;
+}
+#medValCustomer___3
+{
+    position: absolute;
+    left: 169px;
+    width: 922px;
+    top: 482px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    -webkit-border-radius: 1.5px 1.5px 1.5px 1.5px;
+       -moz-border-radius: 1.5px 1.5px 1.5px 1.5px;
+            border-radius: 1.5px 1.5px 1.5px 1.5px;
 }
 #chooseGroupBeeExtensions____hoverIndicator___
 {
