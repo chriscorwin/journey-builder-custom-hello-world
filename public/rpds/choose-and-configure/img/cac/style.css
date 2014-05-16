@@ -1,0 +1,3078 @@
+#state___initial
+{
+}
+#state___chooseCard
+{
+}
+#ancestor___rpd__ungroupthis___1
+{
+}
+#layer1
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksUnconfiguredTrigger
+{
+    position: absolute;
+    left: 317px;
+    width: 132px;
+    top: 322px;
+    height: 116px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iNjYiIHkxPSIwIiB4Mj0iNjYiIHkyPSIxMTYiPjxzdG9wIG9mZnNldD0iMC4xMyUiIHN0b3AtY29sb3I9IiNlZGVkZWUiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTMyIiBoZWlnaHQ9IjExNiIgZmlsbD0idXJsKCNnKSIgLz48L3N2Zz4=);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.13%, rgb(237, 237, 238)), color-stop(100%, rgb(248, 248, 248)));
+    background-image: -webkit-linear-gradient(top, rgb(237, 237, 238) 0.13%, rgb(248, 248, 248) 100%);
+    background-image:    -moz-linear-gradient(top, rgb(237, 237, 238) 0.13%, rgb(248, 248, 248) 100%);
+    background-image:     -ms-linear-gradient(top, rgb(237, 237, 238) 0.13%, rgb(248, 248, 248) 100%);
+    background-image:      -o-linear-gradient(top, rgb(237, 237, 238) 0.13%, rgb(248, 248, 248) 100%);
+    background-image:         linear-gradient(to bottom, rgb(237, 237, 238) 0.13%, rgb(248, 248, 248) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededee', endColorstr='#f8f8f8', GradientType=0);
+    background-repeat: no-repeat;
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#addTriggerButton____button___next___boxsizingcontentbox
+{
+    position: absolute;
+    left: 331px;
+    width: 105px;
+    top: 370px;
+    height: 14px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iNTIuNSIgeTE9IjAiIHgyPSI1Mi41IiB5Mj0iMjAiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzZjk0Y2MiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA0NzRiZCIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTA1IiBoZWlnaHQ9IjIwIiBmaWxsPSJ1cmwoI2cpIiAvPjwvc3ZnPg==);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(63, 148, 204)), color-stop(100%, rgb(4, 116, 189)));
+    background-image: -webkit-linear-gradient(top, rgb(63, 148, 204) 0%, rgb(4, 116, 189) 100%);
+    background-image:    -moz-linear-gradient(top, rgb(63, 148, 204) 0%, rgb(4, 116, 189) 100%);
+    background-image:     -ms-linear-gradient(top, rgb(63, 148, 204) 0%, rgb(4, 116, 189) 100%);
+    background-image:      -o-linear-gradient(top, rgb(63, 148, 204) 0%, rgb(4, 116, 189) 100%);
+    background-image:         linear-gradient(to bottom, rgb(63, 148, 204) 0%, rgb(4, 116, 189) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3f94cc', endColorstr='#0474bd', GradientType=0);
+    background-repeat: no-repeat;
+    border: none;
+    -webkit-box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.25);
+       -moz-box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.25);
+    font-size: 11px;
+    text-align: center;
+    font-family: ArialMT, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 3px 0;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#chooseCard
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image2.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#medValCustomer____ancestor___rpd__onclick_gotostate_medValCustomer1___button
+{
+}
+#switchToListView____rpd__onclick_gotostate_listView___button
+{
+    position: absolute;
+    left: 1059px;
+    width: 20px;
+    top: 276px;
+    height: 21px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#createNewTriggerButton____rpd__onclick_gotostate_createTrigger1___button___medValCustomer___addTriggerButton___2
+{
+    position: absolute;
+    left: 202px;
+    width: 110px;
+    top: 776px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#highValCustomer____ancestor___rpd__onclick_gotostate_highValCustomer1___button
+{
+}
+#ancestor___rpd__ungroupthis___2
+{
+}
+#state___highValCustomer1
+{
+}
+#state___highValCustomer2
+{
+}
+#state___highValCustomer3
+{
+}
+#state___highValCustomer4
+{
+}
+#state___shared
+{
+}
+#medValCustomer____hoverIndicator
+{
+    position: absolute;
+    left: 796px;
+    width: 284px;
+    top: 475px;
+    height: 138px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: 1px solid rgb(63, 148, 204);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#medValCustomer
+{
+    position: absolute;
+    left: 796px;
+    width: 284px;
+    top: 475px;
+    height: 138px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#highValCustomer____hoverIndicator
+{
+    position: absolute;
+    left: 795px;
+    width: 284px;
+    top: 321px;
+    height: 138px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: 1px solid rgb(63, 148, 204);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#highValCustomer
+{
+    position: absolute;
+    left: 795px;
+    width: 284px;
+    top: 321px;
+    height: 138px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#state___medValCustomer1
+{
+}
+#state___medValCustomer2
+{
+}
+#state___listView
+{
+}
+#state___listViewMedValCustomerChosen
+{
+}
+#state___createTrigger1
+{
+}
+#state___createTrigger2
+{
+}
+#state___createTrigger3
+{
+}
+#state___configureVIPsTrigger100
+{
+}
+#state___configureVIPsTrigger102
+{
+}
+#state___configureVIPsTrigger104
+{
+}
+#state___configureVIPsTrigger105
+{
+}
+#state___configureVIPsTrigger110
+{
+}
+#state___configureVIPsTrigger120
+{
+}
+#state___configureVIPsTrigger130
+{
+}
+#state___configureVIPsTrigger140
+{
+}
+#state___configureVIPsTrigger145
+{
+}
+#state___configureVIPsTrigger150
+{
+}
+#state___configureVIPsTrigger160
+{
+}
+#state___configureVIPsTrigger170
+{
+}
+#state___configureVIPsTrigger180
+{
+}
+#state___configureVIPsTrigger190
+{
+}
+#state___configureVIPsTrigger200
+{
+}
+#state___configureVIPsTrigger210
+{
+}
+#state___configureVIPsTrigger220
+{
+}
+#state___configureVIPsTrigger230
+{
+}
+#state___configureVIPsTrigger240
+{
+}
+#state___configureVIPsTrigger250
+{
+}
+#state___configureVIPsTrigger260
+{
+}
+#state___configureVIPsTrigger270
+{
+}
+#state___configureVIPsTrigger280
+{
+}
+#state___configureVIPsTrigger290
+{
+}
+#state___configureVIPsTrigger300
+{
+}
+#state___configureVIPsTriggerEnd
+{
+}
+#highValue100Image
+{
+    position: absolute;
+    left: 2px;
+    width: 1293px;
+    top: -1px;
+    height: 972px;
+    background-image: url(images/layer1Image10.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#goto____button___next___1
+{
+    position: absolute;
+    left: 187px;
+    width: 917px;
+    top: 414px;
+    height: 376px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#goto____button___next___hoverIndicator___1
+{
+    position: absolute;
+    left: 187px;
+    width: 917px;
+    top: 414px;
+    height: 376px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#highValueImage2
+{
+    position: absolute;
+    left: 2px;
+    width: 1293px;
+    top: -1px;
+    height: 972px;
+    background-image: url(images/layer1Image11.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#goto____button___next___2
+{
+    position: absolute;
+    left: 187px;
+    width: 919px;
+    top: 455px;
+    height: 336px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#goto____button___next___hoverIndicator___2
+{
+    position: absolute;
+    left: 187px;
+    width: 919px;
+    top: 455px;
+    height: 336px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#highValue3
+{
+    position: absolute;
+    left: 2px;
+    width: 1293px;
+    top: -1px;
+    height: 972px;
+    background-image: url(images/layer1Image12.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#goto____button___next___3
+{
+    position: absolute;
+    left: 1030px;
+    width: 65px;
+    top: 419px;
+    height: 27px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#goto____button___next___hoverIndicator___3
+{
+    position: absolute;
+    left: 1030px;
+    width: 65px;
+    top: 419px;
+    height: 27px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#highValue4
+{
+    position: absolute;
+    left: 2px;
+    width: 1291px;
+    top: -23px;
+    height: 994px;
+    background-image: url(images/layer1Image13.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#goto____button___back___4
+{
+    position: absolute;
+    left: 1030px;
+    width: 65px;
+    top: 419px;
+    height: 27px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#goto____button___rpd__onclick_gotostate_initial
+{
+    position: absolute;
+    left: 1013px;
+    width: 118px;
+    top: 842px;
+    height: 27px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#ancestor___startshidden___selectedIndicator
+{
+}
+#medValCustomer1
+{
+    position: absolute;
+    left: 2px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image3.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#chooseLocation____button___next
+{
+    position: absolute;
+    left: 307px;
+    width: 170px;
+    top: 528px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#medValCustomer2
+{
+    position: absolute;
+    left: 2px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image4.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#saveAndFinish1____rpd__onclick_gotostate_initial___button
+{
+    position: absolute;
+    left: 1014px;
+    width: 114px;
+    top: 843px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#listView
+{
+    position: absolute;
+    left: 1px;
+    width: 1291px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image6.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#medValCustomer____ancestor___rpd__onclick_gotostate_listViewMedValCustomerChosen___button___3
+{
+}
+#switchToCardView____rpd__onclick_gotostate_chooseCard___button___1
+{
+    position: absolute;
+    left: 1080px;
+    width: 20px;
+    top: 276px;
+    height: 22px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#masksNextButtonOnListView
+{
+    position: absolute;
+    left: 1063px;
+    width: 65px;
+    top: 843px;
+    height: 27px;
+    background: rgb(253, 253, 253); /* fallback */
+    background: rgba(253, 253, 253, 0.7);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#createNewTriggerButton____rpd__onclick_gotostate_createTrigger1___button___medValCustomer___addTriggerButton___3
+{
+    position: absolute;
+    left: 202px;
+    width: 110px;
+    top: 776px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#listView2
+{
+    position: absolute;
+    left: 1px;
+    width: 1291px;
+    top: 2px;
+    height: 970px;
+    background-image: url(images/layer1Image6.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#medValIsSelected
+{
+    position: absolute;
+    left: 169px;
+    width: 922px;
+    top: 482px;
+    height: 25px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: 1px solid rgb(63, 148, 204);
+    -webkit-border-radius: 1.5px 1.5px 1.5px 1.5px;
+       -moz-border-radius: 1.5px 1.5px 1.5px 1.5px;
+            border-radius: 1.5px 1.5px 1.5px 1.5px;
+}
+#medValCheckmark
+{
+    position: absolute;
+    left: 175px;
+    width: 16px;
+    top: 491px;
+    height: 11px;
+    background-image: url(images/check.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#switchToCardView____rpd__onclick_gotostate_chooseCard___button___2
+{
+    position: absolute;
+    left: 1080px;
+    width: 20px;
+    top: 276px;
+    height: 22px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#nextFromListMedValCustomer____rpd__onclick_gotostate_medValCustomer1___button
+{
+    position: absolute;
+    left: 1063px;
+    width: 65px;
+    top: 843px;
+    height: 27px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#createTrigger1
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image7.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#chooseGroupBeeExtensions____ancestor___rpd__onclick_gotostate_createTrigger2___button___
+{
+}
+#masksTheNextButton1
+{
+    position: absolute;
+    left: 1027px;
+    width: 63px;
+    top: 420px;
+    height: 27px;
+    background: rgb(253, 253, 253); /* fallback */
+    background: rgba(253, 253, 253, 0.7);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#createTrigger2
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image8.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#chooseGroupBeeExtensions____ancestor___rpd__onclick_gotostate_createTrigger1___button___2
+{
+}
+#chooseVIPs____ancestor___rpd__onclick_gotostate_createTrigger3___button___
+{
+}
+#masksTheNextButton2
+{
+    position: absolute;
+    left: 1027px;
+    width: 63px;
+    top: 420px;
+    height: 27px;
+    background: rgb(253, 253, 253); /* fallback */
+    background: rgba(253, 253, 253, 0.7);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#createTrigger
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image8.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#chooseGroupBeeExtensions____ancestor___rpd__onclick_gotostate_createTrigger1___button___
+{
+}
+#chooseVIPs____ancestor___rpd__onclick_gotostate_createTrigger3___button___2
+{
+}
+#vIPsCheckmark1
+{
+    position: absolute;
+    left: 208px;
+    width: 16px;
+    top: 575px;
+    height: 11px;
+    background-image: url(images/check.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#configureVIPsTrigger____ancestor___button___next
+{
+}
+#configureVipsTrigger1
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheConfigureCanvas
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#attsSearchBlankImage____dummy100
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchBlankImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#attsSearchBlankImage____button___next___pulseonactivation___100
+{
+    position: absolute;
+    left: 198px;
+    width: 218px;
+    top: 778px;
+    height: 21px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 10px 10px 10px 10px;
+       -moz-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+}
+#configureVipsTrigger13
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheConfigureCanvas13
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton13
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#attsSearchBlankImage____button___next___102
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchSelectedImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#configureVipsTrigger15
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheConfigureCanvas15
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton15
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#attsSearchBlankImageBackgroundImage
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchTwitterImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#attsSearchBlankImage____button___next___104
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 145px;
+    background-image: url(images/attsSearchTwitterImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#attsSearchBlankImage____button___next___hoverIndicator
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 145px;
+    background-image: url(images/attsSearchTwitter___hoverIndicatorImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#configureVipsTrigger14
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheConfigureCanvas14
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton14
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#attsSearchBlankImageBgImage
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchTwitterImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#attsSearchBlankImage____button___next___105
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 145px;
+    background-image: url(images/attsSearchTwitter___hoverIndicatorImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#followsOnTwitterIsBeingDragged____button___next___105
+{
+    position: absolute;
+    left: 190px;
+    width: 904px;
+    top: 499px;
+    height: 276px;
+    background-image: url(images/followsontwitterattributebeingdragged2.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger3
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder4
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas2
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton4
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#followsOnTwitterIsUnconfigured____button___next
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 221px;
+    background-image: url(images/fotUnconfiguredImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#attsSearchBlankImageBgImage2
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchTwitterImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#configureVipsTrigger
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder2
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas3
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton2
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#attsSearchBlankImageBgImage3
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchTwitterImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#followsOnTwitterOperatorsListIsShowing____button___next___120
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 221px;
+    background-image: url(images/fotOperatorOpen.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#followsOnTwitterOperatorsListIsShowing____button___next___hoverIndicator___120
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 221px;
+    background-image: url(images/fotOperatorOpenTrueHover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger2
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder3
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas16
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton3
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#attsSearchBlankImageBgImage4
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchTwitterImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#followsOnTwitterOperatorsListIsShowing____dummy
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 221px;
+    background-image: url(images/fotIsTrueConfigured.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#foo____button___next___pulseonactivation___130
+{
+    position: absolute;
+    left: 393px;
+    width: 23px;
+    top: 778px;
+    height: 21px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+}
+#configureVipsTrigger16
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder14
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas17
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton16
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#attsSearchBlankImageBgImage5
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchSelectedImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#followsOnTwitterOperatorsListIsShowing____dummy2
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 221px;
+    background-image: url(images/fotIsTrueConfigured.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#searchDob____button___next
+{
+    position: absolute;
+    left: 199px;
+    width: 192px;
+    top: 778px;
+    height: 21px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 10.5px 10.5px 10.5px 10.5px;
+       -moz-border-radius: 10.5px 10.5px 10.5px 10.5px;
+            border-radius: 10.5px 10.5px 10.5px 10.5px;
+}
+#configureVipsTrigger17
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder15
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas18
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton17
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dobShowing____button___next
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchDobImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#dobShowing____button___next___hoverIndicator
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchDob____hoverIndicatorImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#followsOnTwitterOperatorsListIsShowing____dummy3
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 221px;
+    background-image: url(images/fotIsTrueConfigured.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger4
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder5
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas4
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton5
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dobShowing____dummy
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchDob____hoverIndicatorImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#followsOnTwitterOperatorsListIsShowing____dummy4
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 221px;
+    background-image: url(images/fotIsTrueConfigured.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dobIsBeingDragged____button___next___150
+{
+    position: absolute;
+    left: 192px;
+    width: 345px;
+    top: 513px;
+    height: 162px;
+    background-image: url(images/dobIsBeingDraggedImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#configureVipsTrigger11
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder12
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas11
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton11
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dobShowing____dummy2
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchDobImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#dob____button___next
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 221px;
+    background-image: url(images/dobDropped.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dob____button___next___hoverIndicator
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 221px;
+    background-image: url(images/dobUnconfiguredHover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger12
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder13
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas12
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton12
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dobShowing____dummy3
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchDobImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#dob____button___next___170
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 303px;
+    background-image: url(images/dobOperatorOpen.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dob____button___next___hoverIndicator___170
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 303px;
+    background-image: url(images/dobOperatorOpenIsHover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger18
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder16
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas19
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton18
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dobShowing____dummy4
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchDobImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#dob____button___next___180
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 303px;
+    background-image: url(images/dobIsInputSelected.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger5
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder6
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas5
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton6
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dobShowing____dummy5
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchDobImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#dob____button___next___190
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 303px;
+    background-image: url(images/dobIs21.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dob____button___next___hoverIndicator___190
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 303px;
+    background-image: url(images/dobIs21Hover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger7
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder8
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas7
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton7
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dobShowing____dummy6
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchDobImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#dob____button___next___200
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 303px;
+    background-image: url(images/dobIs21IntervalOpen.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dob____button___next___hoverIndicator___200
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 303px;
+    background-image: url(images/dobIs21IntervalOpenYearsHover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger8
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder9
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas8
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton8
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dobShowing____dummy7
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchDobImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#dob____button___next___210
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 303px;
+    background-image: url(images/dobIs21YearsSelected.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dob____button___next___hoverIndicator___210
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 303px;
+    background-image: url(images/dobIs21YearsAwayConfiguredHover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger9
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder10
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas9
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton9
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dobShowing____dummy8
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchDobImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#dob____button___next___220
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 303px;
+    background-image: url(images/dobIs21YearsAwayModifierOpen.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dob____button___next___hoverIndicator___220
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 303px;
+    background-image: url(images/dobIs21YearsAwayModifierOpenAwayHover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger10
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder11
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas10
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton10
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#dobShowing____dummy9
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchDobImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#dobIsConfigured____dummy
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 303px;
+    background-image: url(images/dobIs21YearsAwayConfiguredHover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#foo____button___next___pulseonactivation___240
+{
+    position: absolute;
+    left: 393px;
+    width: 23px;
+    top: 778px;
+    height: 21px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+}
+#configureVipsTrigger19
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder17
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas20
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton19
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#attsSearchBlankImageBgImage6
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchBlankImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#followsOnTwitterOperatorsListIsShowing____dummy5
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 303px;
+    background-image: url(images/dobIs21YearsAwayConfiguredHover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#searchNto____button___next___240
+{
+    position: absolute;
+    left: 199px;
+    width: 192px;
+    top: 778px;
+    height: 21px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 10.5px 10.5px 10.5px 10.5px;
+       -moz-border-radius: 10.5px 10.5px 10.5px 10.5px;
+            border-radius: 10.5px 10.5px 10.5px 10.5px;
+}
+#configureVipsTrigger20
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder18
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas21
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton20
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#myNto____dummy
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchMyNtoImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#followsOnTwitterOperatorsListIsShowing____dummy6
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 302px;
+    background-image: url(images/dobIs21YearsAwayConfiguredHover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#myNto____button___next
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 198px;
+    background-image: url(images/attsSearchMyNtoImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#myNto____button___next___hoverIndicator
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 198px;
+    background-image: url(images/attsSearchMyNto____hoverIndicatorImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#configureVipsTrigger21
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder19
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas22
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton21
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#myNto____dummy2
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchMyNtoImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#followsOnTwitterOperatorsListIsShowing____dummy7
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 302px;
+    background-image: url(images/dobIs21YearsAwayConfiguredHover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#myNto____button___next2
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 198px;
+    background-image: url(images/attsSearchMyNtoImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#myNtoBeingDragged____button___next
+{
+    position: absolute;
+    left: 189px;
+    width: 662px;
+    top: 469px;
+    height: 302px;
+    background-image: url(images/myntoBeingDraggedImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger22
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder20
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas23
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton22
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#myNto____dummy3
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchMyNtoImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#myNto____button___next___270
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 302px;
+    background-image: url(images/myntoUnconfigured.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#myNto____button___next___hoverIndicator___270
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 302px;
+    background-image: url(images/myntoUnconfiguredHover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger23
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder21
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas24
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton23
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#myNto____dummy4
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchMyNtoImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#myNto____button___next___280
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 302px;
+    background-image: url(images/myntoUnconfiguredOperatorOpen.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#myNto____button___next___hoverIndicator___280
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 302px;
+    background-image: url(images/myntoUnconfiguredOperatorOpenGtHover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger24
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder22
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas25
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton24
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#myNto____dummy5
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchMyNtoImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#myNto____button___next___290
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 302px;
+    background-image: url(images/myntoUnconfiguredGtSelected.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#myNto____button___next___hoverIndicator___290
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 302px;
+    background-image: url(images/myntoUnconfiguredGtInputSelected.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger25
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder23
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas26
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheBackButton25
+{
+    position: absolute;
+    left: 1034px;
+    width: 48px;
+    top: 422px;
+    height: 22px;
+    background: rgb(252, 252, 252); /* fallback */
+    background: rgba(252, 252, 252, 0.5);
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#myNto____dummy6
+{
+    position: absolute;
+    left: 185px;
+    width: 248px;
+    top: 461px;
+    height: 352px;
+    background-image: url(images/attsSearchMyNtoImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#myNto____button___next___
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 302px;
+    background-image: url(images/myntoUnconfiguredGt60kConfigured.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#myNto____button___next___hoverIndicator___
+{
+    position: absolute;
+    left: 440px;
+    width: 662px;
+    top: 494px;
+    height: 302px;
+    background-image: url(images/myntoUnconfiguredGt60kConfiguredHover.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+       -moz-border-radius: 2px 2px 2px 2px;
+            border-radius: 2px 2px 2px 2px;
+}
+#configureVipsTrigger6
+{
+    position: absolute;
+    left: 1px;
+    width: 1290px;
+    top: 1px;
+    height: 970px;
+    background-image: url(images/layer1Image9.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#masksTheListUnder7
+{
+    position: absolute;
+    left: 189px;
+    width: 240px;
+    top: 494px;
+    height: 272px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masksTheConfigureCanvas6
+{
+    position: absolute;
+    left: 442px;
+    width: 652px;
+    top: 497px;
+    height: 218px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#changeTrigger1____rpd__onclick_gotostate_chooseCard___button___medValCustomer___createNewTriggerButton___1
+{
+    position: absolute;
+    left: 1031px;
+    width: 88px;
+    top: 221px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#cancel1____rpd__onclick_gotostate_initial___button___medValCustomer___addTriggerButton
+{
+    position: absolute;
+    left: 154px;
+    width: 59px;
+    top: 844px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#medValCustomer____hoverIndicator___3
+{
+    position: absolute;
+    left: 169px;
+    width: 922px;
+    top: 482px;
+    height: 25px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: 1px solid rgb(63, 148, 204);
+    -webkit-border-radius: 1.5px 1.5px 1.5px 1.5px;
+       -moz-border-radius: 1.5px 1.5px 1.5px 1.5px;
+            border-radius: 1.5px 1.5px 1.5px 1.5px;
+}
+#medValCustomer___3
+{
+    position: absolute;
+    left: 169px;
+    width: 922px;
+    top: 482px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    -webkit-border-radius: 1.5px 1.5px 1.5px 1.5px;
+       -moz-border-radius: 1.5px 1.5px 1.5px 1.5px;
+            border-radius: 1.5px 1.5px 1.5px 1.5px;
+}
+#chooseGroupBeeExtensions____hoverIndicator___
+{
+    position: absolute;
+    left: 204px;
+    width: 891px;
+    top: 532px;
+    height: 19px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: 1px solid rgb(63, 148, 204);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#chooseGroupBeeExtensions____
+{
+    position: absolute;
+    left: 204px;
+    width: 891px;
+    top: 532px;
+    height: 19px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#chooseGroupBeeExtensions____hoverIndicator___2
+{
+    position: absolute;
+    left: 204px;
+    width: 891px;
+    top: 532px;
+    height: 19px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: 1px solid rgb(63, 148, 204);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#chooseGroupBeeExtensions____2
+{
+    position: absolute;
+    left: 204px;
+    width: 891px;
+    top: 532px;
+    height: 19px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#chooseVIPs____hoverIndicator___
+{
+    position: absolute;
+    left: 204px;
+    width: 891px;
+    top: 569px;
+    height: 19px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: 1px solid rgb(63, 148, 204);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#chooseVIPs____
+{
+    position: absolute;
+    left: 204px;
+    width: 891px;
+    top: 569px;
+    height: 19px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#chooseGroupBeeExtensions____hoverIndicator___3
+{
+    position: absolute;
+    left: 204px;
+    width: 891px;
+    top: 532px;
+    height: 19px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: 1px solid rgb(63, 148, 204);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#chooseGroupBeeExtensions____3
+{
+    position: absolute;
+    left: 204px;
+    width: 891px;
+    top: 532px;
+    height: 19px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#chooseVIPs____hoverIndicator___2
+{
+    position: absolute;
+    left: 204px;
+    width: 891px;
+    top: 569px;
+    height: 19px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: 1px solid rgb(63, 148, 204);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#chooseVIPs____2
+{
+    position: absolute;
+    left: 204px;
+    width: 891px;
+    top: 569px;
+    height: 19px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#chooseVIPs____selectedIndicator___3
+{
+    position: absolute;
+    left: 204px;
+    width: 891px;
+    top: 569px;
+    height: 19px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: 1px solid rgb(63, 148, 204);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#configureVIPsTrigger____hoverIndicator___3
+{
+    position: absolute;
+    left: 1027px;
+    width: 61px;
+    top: 420px;
+    height: 25px;
+    background: rgb(63, 148, 204); /* fallback */
+    background: rgba(63, 148, 204, 0.2);
+    border: 1px solid rgb(63, 148, 204);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#configureVIPsTrigger____3
+{
+    position: absolute;
+    left: 1027px;
+    width: 61px;
+    top: 420px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
