@@ -1199,7 +1199,7 @@ var runIt = function runIt() {
 		var thisButtonDraggableEventName = $thisElement.attr('data-event-draggable');
 		var thisButtonDraggableEventTargetName = $thisElement.attr('data-target-' + thisButtonDraggableEventName);
 
-		var $dropTarget = $('[data-target-accepts="' + thisButtonName + '"');
+		var $dropTarget = $('[data-target-accepts="' + thisButtonName + '"]');
 
 		console.debug("$dropTarget", $dropTarget);
 		console.debug("thisElementID", thisElementID);
