@@ -1,0 +1,185 @@
+#layer1
+{
+    position: absolute;
+    left: 0px;
+    width: 0px;
+    top: 0px;
+    height: 0px;
+    background: none;
+    border: none;
+}
+#state___initial
+{
+}
+#ancestor___button___starts_hidden___clickcloses__siblingstartshidden
+{
+}
+#shared
+{
+}
+#backgroundImage1
+{
+    position: absolute;
+    left: 0px;
+    width: 808px;
+    top: -2px;
+    height: 529px;
+    background-image: url(images/backgroundImage1Image.png);
+    background-repeat: no-repeat;
+    background-position: 0px -1px;
+    border: none;
+}
+#panelLeftExtra
+{
+    position: absolute;
+    left: 17px;
+    width: 254px;
+    top: 52px;
+    height: 495px;
+    background-image: url(images/panelLeftExtraImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#text___blank_content_instructions___attrbucket___whendropped_hide
+{
+    position: absolute;
+    left: 410px;
+    width: 263px;
+    top: 109px;
+    height: 34px;
+    background-image: url(images/text___blank_content_instructionsImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px -6px;
+    border: none;
+}
+#group___junk
+{
+}
+#ancestor___button___dropson_attrbucket
+{
+}
+#group___children_start_hidden___children_whendropped_show
+{
+}
+#date___close
+{
+    position: absolute;
+    left: 780px;
+    width: 16px;
+    top: 76px;
+    height: 16px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#attrbucket
+{
+    position: absolute;
+    left: 290px;
+    width: 510px;
+    top: 68px;
+    height: 449px;
+}
+#life___selected___starts_hidden___whendropped_show
+{
+    position: absolute;
+    left: 13px;
+    width: 253px;
+    top: 95px;
+    height: 23px;
+    background-image: url(images/life___selected___starts_hiddenImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#life
+{
+    position: absolute;
+    left: 15px;
+    width: 251px;
+    top: 95px;
+    height: 23px;
+    background: none;
+    border: none;
+}
+#app___selected___starts_hidden___whendropped_show
+{
+    position: absolute;
+    left: 15px;
+    width: 251px;
+    top: 136px;
+    height: 25px;
+    background-image: url(images/app___selected___starts_hiddenImage.png);
+    background-repeat: no-repeat;
+    background-position: -2px -3px;
+    border: none;
+}
+#app
+{
+    position: absolute;
+    left: 15px;
+    width: 249px;
+    top: 140px;
+    height: 19px;
+    background: none;
+    border: none;
+}
+#date___selected___starts_hidden___whendropped_show
+{
+    position: absolute;
+    left: 14px;
+    width: 251px;
+    top: 287px;
+    height: 26px;
+    background-image: url(images/date___selected___starts_hiddenImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#date
+{
+    position: absolute;
+    left: 15px;
+    width: 249px;
+    top: 289px;
+    height: 23px;
+    background: none;
+    border: none;
+}
+#app___attrrow
+{
+    position: absolute;
+    left: 289px;
+    width: 512px;
+    top: 104px;
+    height: 26px;
+    background-image: url(images/app___whendroppedImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px -2px;
+    border: none;
+}
+#date___attrrow
+{
+    position: absolute;
+    left: 289px;
+    width: 512px;
+    top: 134px;
+    height: 28px;
+    background-image: url(images/date___whendroppedImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px -2px;
+    border: none;
+}
+#life___attrrow
+{
+    position: absolute;
+    left: 290px;
+    width: 512px;
+    top: 73px;
+    height: 25px;
+    background-image: url(images/life___whendroppedImage.png);
+    background-repeat: no-repeat;
+    background-position: -2px -3px;
+    border: none;
+}

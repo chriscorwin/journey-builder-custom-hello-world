@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <style type="text/css">
+    .cats .content-wrapper {
+        display: table;
+        height: 40px;
+        width: 100%;
+    }
+    .cats .content-wrapper p, .cats .content-wrapper .kittens {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        font-size: 11px;
+        outline: 1px solid pink;
+        text-align: right;
+    }
+    #editModeChooser p, #saveInfo p {
+        text-align: right;
+    }
+    </style>
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-8 col-sm-6 col-xs-12">
+                <input value="Maps are awesome sometimes">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6  col-xs-12">
+                <div id="saveInfo" class="row cats">
+                    <div class="col-md-9 col-sm-8 col-xs-9">
+                        <div class="content-wrapper">
+                            <p>Last saved Jan 11, 2014</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4  col-xs-3">
+                        <div class="content-wrapper">
+                            <p>
+                                <button type="button" class="btn btn-primary btn-sm " id="saveBtn">Save</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="editModeChooser" class="cats">
+                    <div class="content-wrapper">
+                        <div class="kittens">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs active" id="edit-mode">Edit</button>
+                                <button type="button" class="btn btn-default btn-xs" id="presentation-mode">Presentation Mode</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')
+    </script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="js/vendor/handlebars-v1.3.0.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/mousetrap.min.js"></script>
+    <script src="js/vendor/nudge.js"></script>
+</body>
+
+</html>

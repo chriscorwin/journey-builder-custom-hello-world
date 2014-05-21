@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="images/package-refinements/style.css">
+	<style>
+		body {
+		padding-top: 0px;
+		padding-bottom: 0px;
+		}
+
+		#root {
+		left: 0px;
+		top: 0px;
+		position: fixed;
+		}
+	</style>
+	
+
+
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/rpd.css"><!-- RPD specific CSS -->
+
+	<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+
+<body class="notdev">
+<!-- change body class to something else to take out of "dev" mode -->
+
+	<script id="file-input-partial" type="text/x-handlebars-template">
+		<input id="{{this}}" name="{{this}}" class="input-file {{this}}" type="file">
+		<span class="help-block">images must be in [RPD]/images/</span>
+	</script>
+
+	<script id="disabled-input-partial" type="text/x-handlebars-template">
+		<input type="text" class="{{name}}NameTxt form-control" value="{{value}}" disabled>
+	</script>
+
+	<script id="checkbox-partial" type="text/x-handlebars-template">
+		<div class="checkbox">
+			<label for="{{name}}">
+				<input type="checkbox" name="{{name}}" id="{{name}}" {{#if data-default}}data-default="{{data-default}}"{{/if}} value="true" class="{{name}}" {{#if value}}checked="checked"{{/if}}>
+				{{label}}
+			</label>
+		</div>
+	</script>
+
+	<script id="dropdown-input-partial" type="text/x-handlebars-template">
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="{{name}}Target">{{label}}:</label>
+			<div class="col-md-8">
+				<div class="input-group">
+					<div class="input-group-btn {{name}}TypeWrapper">
+					<button type="button" class="btn btn-default dropdown-toggle {{name}}Type" data-toggle="dropdown" {{#if typeValue}}value="{{typeValue}}"{{/if}}>
+						{{#if typeValue}}
+							{{typeValue}}('{{targetValue}}'); <span class="caret"></span>
+						{{else}}
+							Function <span class="caret"></span>
+						{{/if}}
+					</button>
+					<ul class="dropdown-menu pull-left">
+						<li><a href="#">Function <span class="caret"></span></a></li>
+						<li><a href="#" data-value="show">show('#elementSelector');</a></li>
+						<li><a href="#" data-value="hide">hide('#elementSelector');</a></li>
+						<li><a href="#" data-value="swapWith">swapWith('#elementSelector');</a></li>
+						<li><a href="#" data-value="hideGroupsExcept">hideGroupsExcept('#elementSelector');</a></li>
+						<li><a href="#" data-value="custom">[custom-function-name](this-element);</a></li>
+					</ul>
+					</div>
+					<input id="{{name}}Target" name="{{name}}Target" class="form-control {{name}}Target" placeholder="#elementSelector or custom-function-name" type="text" {{#if targetValue}}value="{{targetValue}}"{{/if}}>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script id="edit-image-template" type="text/x-handlebars-template">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">{{context}} Image</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal">
+					<fieldset>
+
+					<!-- File Button -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="elmImgFile">IMG File</label>
+						<div class="col-md-4">
+							{{#fileInput elmImgFileName name="elmImgFile"}}
+								{{> fileInputPartial}}
+							{{else}}
+								{{> disabledInputPartial}}
+							{{/fileInput}}
+						</div>
+					</div>
+
+
+					<!-- Hoverable -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="hoverFile">Hover File (optional)</label>
+						<div class="col-md-4">
+							{{#fileInput hoverFileName name="hoverFile"}}
+								{{> fileInputPartial}}
+							{{else}}
+								{{> disabledInputPartial}}
+							{{/fileInput}}
+						</div>
+					</div>
+
+					<!-- Drop Targettable -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="dropActiveFile">Drop Targettable File (optional)</label>
+						<div class="col-md-4">
+							{{#fileInput dropActiveFileName name="dropActiveFile"}}
+								{{> fileInputPartial}}
+							{{else}}
+								{{> disabledInputPartial}}
+							{{/fileInput}}
+						</div>
+					</div>
+
+					<!-- Drop Hoverable -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="dropHoverFile">Drop Hover File (optional)</label>
+						<div class="col-md-4">
+							{{#fileInput dropHoverFileName name="dropHoverFile"}}
+								{{> fileInputPartial}}
+							{{else}}
+								{{> disabledInputPartial}}
+							{{/fileInput}}
+						</div>
+					</div>
+
+
+					<!-- Hoverable -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="droppedFile">Dropped File (optional)</label>
+						<div class="col-md-4">
+							{{#fileInput droppedFileName name="droppedFile"}}
+								{{> fileInputPartial}}
+							{{else}}
+								{{> disabledInputPartial}}
+							{{/fileInput}}
+						</div>
+					</div>
+
+					<!-- ID -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="id">ID</label>
+						<div class="col-md-4">
+							<input id="id" name="id" type="text" class="form-control input-md elmID" required placeholder="Optional, will be generated if blank." value="{{#if id}}{{id}}{{/if}}">
+							<span class="help-block">ID for image element</span>
+						</div>
+					</div>
+
+					<!-- Classes-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="classes">Class(es)</label>
+						<div class="col-md-8">
+						<input id="classes" name="classes" type="text" placeholder="" class="form-control input-md classes" value="{{#if originalClasses}}{{originalClasses}}{{/if}}">
+						<span class="help-block">CSS classes for image element</span>
+						</div>
+					</div>
+
+					<!-- checkboxes -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="checkboxes">Simple Properties</label>
+						<div class="col-md-4">
+						<!-- hidable? -->
+						{{#setContext name="isHidable" value=isHidable label="Hidden"}}{{> checkboxPartial}}{{/setContext}}
+
+						<!-- retina? -->
+						{{#setContext name="isRetina" value=isRetina data-default="checked" label="Retina (shrink by 50%)"}}{{> checkboxPartial}}{{/setContext}}
+
+						<!-- resizable -->
+						{{#setContext name="isResizable" value=isResizable label="Resizable"}}{{> checkboxPartial}}{{/setContext}}
+
+						<!-- selectable? -->
+						<!--{{#setContext name="isSelectable" value=isSelectable label="Selectable"}}{{> checkboxPartial}}{{/setContext}}-->
+
+						<!-- draggable? -->
+						{{#setContext name="isDraggable" value=isDraggable label="Draggable"}}{{> checkboxPartial}}{{/setContext}}
+
+							<!-- Drag Image -->
+							<div class="form-group">
+								<div class="col-md-8">
+									{{#fileInput dragCloneFileName name="dragCloneFile"}}
+										{{> fileInputPartial}}
+									{{else}}
+										{{> disabledInputPartial}}
+									{{/fileInput}}
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Click Handling -->
+					{{#setContext name="clickHandler" typeValue=clickHandlerType targetValue=clickHandlerTarget label="Click Fires [function] on [element]"}}{{> dropdownInputPartial}}{{/setContext}}
+
+
+					<!-- Drop Zone -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="prependedcheckbox">Drop zone?</label>
+						<div class="col-md-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<input type="checkbox" name="isDroppable" id="isDroppable" class="isDroppable" value="true" {{#if isDroppable}}checked="checked"{{/if}}>
+							</span>
+							<input id="dropAccepts" name="dropAccepts" class="form-control dropAccepts" type="text" placeholder="elmClass" {{#if dropAccepts}}value="{{dropAccepts}}"{{/if}}>
+						</div>
+						<p class="help-block">What element(s) should be droppable on this drop zone?</p>
+						</div>
+					</div>
+
+					<!-- Drop Handling -->
+					{{#setContext name="dropHandler" typeValue=dropHandlerType targetValue=dropHandlerTarget label="Upon receiving drop, fire [function] on [element]"}}{{> dropdownInputPartial}}{{/setContext}}
+
+					</fieldset>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group addToElementWrapper">
+						<div class="input-group-btn">
+							{{#isEqual context v2="Add"}}
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary dropdown-toggle addToElement" data-toggle="dropdown">
+									Add to
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu pull-right wrapperElements">
+									{{#addToGroupDD}}{{/addToGroupDD}}
+								</ul>
+							{{else}}
+								<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+								<a href="#" class="btn btn-primary save"><span class="glyphicon glyphicon-floppy-disk"></span> Save</a>
+							{{/isEqual}}
+						</div>
+					</div>
+				</div><!-- /.modal-footer -->
+			</div>
+		</div>
+	</div>
+	</script>
+
+
+	<div class="modal fade" id="editImage">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+	<script id="edit-group-template" type="text/x-handlebars-template">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Add Group</h4>
+				</div>
+				<div class="modal-body">
+					 <form class="form-horizontal">
+					<fieldset>
+
+					<!-- BG IMG -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="bgImgFile">Background images File (optional)</label>
+						<div class="col-md-4">
+							{{#fileInput bgImgFileName name="bgImgFile"}}
+								{{> fileInputPartial}}
+							{{else}}
+								{{> disabledInputPartial}}
+							{{/fileInput}}
+						</div>
+					</div>
+
+					<!-- BG Size -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="bgsize">Background images Size</label>
+						<div class="col-md-4">
+							<select id="bgsize" name="bgsize" class="form-control bgsize">
+								<option value="auto">actual size</option>
+								<option value="cover">cover</option>
+								<option value="contain">contain</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="textinput">ID</label>
+						<div class="col-md-4">
+						<input id="textinput-group" name="textinput" type="text" class="form-control input-md elmID" required value="" placeholder="Optional, will be generated if blank.">
+
+						</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="classes">Class(es)</label>
+						<div class="col-md-8">
+						<input id="classes" name="classes" type="text" placeholder="" class="form-control input-md classes">
+						<span class="help-block">CSS classes for group element</span>
+						</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="bgcolor">background-color</label>
+						<div class="col-md-8">
+						<input id="bgcolor" name="bgcolor" type="text" placeholder="" class="form-control input-md bgcolor">
+						<span class="help-block">background-color of group div</span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="checkboxes"></label>
+						<div class="col-md-4">
+						<div class="checkbox">
+						<label for="checkboxes-0">
+							<input type="checkbox" name="checkboxes" id="checkboxes-0" value="hidden" class="isHidable">
+							Hidden
+						</label>
+						</div>
+						</div>
+					</div>
+
+
+					</fieldset>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group addToElementWrapper">
+						<div class="input-group-btn">
+							{{#isEqual context v2="Add"}}
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary dropdown-toggle addToElement" data-toggle="dropdown">
+									Add to
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu pull-right wrapperElements">
+									{{#addToGroupDD}}{{/addToGroupDD}}
+								</ul>
+							{{else}}
+								<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+								<a href="#" class="btn btn-primary save"><span class="glyphicon glyphicon-floppy-disk"></span> Save</a>
+							{{/isEqual}}
+						</div>
+					</div>
+				</div><!-- /.modal-footer -->
+	</script>
+
+	<div class="modal fade" id="editGroup">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<script id="image-template" type="text/x-handlebars-template">
+		<div
+			id="{{id}}"
+			class="{{classes}} img"
+			style="top: 0px; left: 0px;"
+			data-original-classes = "{{originalClasses}}"
+			data-src="images/{{elmImgFileName}}"
+			data-elm-img-file="{{elmImgFileName}}"
+			data-hover-file="{{hoverFileName}}"
+			data-drop-hover-file="{{dropHoverFileName}}"
+			data-drop-active-file="{{dropActiveFileName}}"
+			data-drop-dropped-file="{{droppedFileName}}"
+			data-hidable="{{#if isHidable}}true{{/if}}"
+			data-retina="{{#if isRetina}}true{{/if}}"
+			data-resizable="{{#if isResizable}}true{{/if}}"
+			data-selectable="{{#if isSelectable}}true{{/if}}"
+			data-draggable="{{#if isDraggable}}true{{/if}}"
+			data-drag-clone-img="{{dragCloneFileName}}"
+			data-click-handler-type="{{clickHandlerType}}"
+			data-click-handler-target="{{clickHandlerTarget}}"
+			data-droppable="{{#if isDroppable}}true{{/if}}"
+			data-drop-accepts="{{dropAccepts}}"
+			data-drop-handler-type="{{dropHandlerType}}"
+			data-drop-handler-target="{{dropHandlerTarget}}"
+			{{#if clickable}}onclick="{{clickHandler}}" {{/if}}
+		>{{#if isDraggable}}<img src="images/{{elmImgFileName}}" data-name="{{elmImgFileName}}" data-hover="{{hoverFileName}}"/>{{/if}}
+			<style id="style-for-{{id}}">
+				#{{id}}{
+					background-image: url(images/{{elmImgFileName}});
+				}{{#if dropActiveFile}}
+				#{{id}}.drop-state-active{
+					background-image: url(images/{{dropActiveFileName}});
+				}{{/if}}{{#if dropHoverFile}}
+				#{{id}}.drop-state-hover{
+					background-image: url(images/{{dropHoverFileName}});
+				}{{/if}}{{#if droppedFile}}
+				#{{id}}.drop-state-highlight{
+					background-image: url(images/{{droppedFileName}});
+				}{{/if}}{{#if hoverFile}}
+				#{{id}}:hover{
+					background-image: url(images/{{hoverFileName}});
+				}{{/if}}
+			</style>
+		</div>
+	</script>
+
+	<script id="group-template" type="text/x-handlebars-template">
+	<div id="{{id}}" class="group resizable {{classes}}" >
+		<style id="style-for-{{id}}">
+			#{{id}} {
+				width: 400px;
+				height: 200px;
+				background-color: {{bgcolor}};
+				background-image: url(images/{{bgImgFileName}});
+				background-size: {{bgsize}}
+			}
+		</style>
+	</div>
+	</script>
+
+	<script id="edit-bar-template" type="text/x-handlebars-template">
+		<div id="nudge-output">
+			<pre id="nudge-output-paragraph"></pre>
+			<div id="nudge-instructions">
+				Nudge with arrow keys<br>
+				Resize with I, K, J, L
+			</div>
+		</div>
+
+		<dl class="dl-horizontal">
+			<dt>id</dt><dd>{{id}}</dd>
+			<dt>class</dt><dd>{{class}}</dd>
+			<dt>img-src</dt><dd>{{elmImgFileName}}</dd>
+		</dl>
+		<a href="#" class="btn btn-block btn-default" data-toggle="modal" id="editElementBtn" data-target="#editImage" data-context="Edit"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+		<a href="#" class="btn btn-block btn-default" id="hideElementBtn"><span class="glyphicon glyphicon-eye-close"></span> Hide</a>
+		<a href="#" class="btn btn-block btn-danger" id="deleteElementBtn"><span class="glyphicon glyphicon-remove"></span> Delete</a>
+	</script>
+
+	<div class="container">
+		<!-- Example row of columns -->
+		<div class="row">
+			<div class="col-lg-12" id="canvas">
+				<div id="root" class="group">
+
+
+    <div id="state___shared" class=" state shared state___shared" data-name="state___shared" data-toggle="state" data-target-next="state___initial">
+        <div id="group4" class=" group4 group4" data-name="group4">
+        </div>
+        <div id="browserShellBlank" class=" browserShellBlank browserShellBlank" data-name="browserShellBlank">
+        </div>
+        <div id="startOver____ancestor___button___rpd__onclick_gotostate_initial" class="" data-ancestor="true" data-original-classnames="button startOver ancestor" data-applied-classnames=" ancestor button" data-applied-rdp-classnames=" onclick gotostate initial onclick-gotostate-initial" data-event-onclick="gotostate" data-target-gotostate="initial" data-name="startOver" data-archive-class="onclick gotostate initial onclick-gotostate-initial button startOver  ancestor">
+            <div id="startOver" class="startOver onclick gotostate initial onclick-gotostate-initial button startOver btn default first" data-descendant-of="#startOver____ancestor___button___rpd__onclick_gotostate_initial" data-event-onclick="gotostate" data-target-gotostate="state.initial" data-name="startOver" data-button-name="startOver">
+            </div>
+            <div id="startOver____hoverIndicator" class="hoverIndicator onclick gotostate initial onclick-gotostate-initial button startOver startshidden hide btn last" data-descendant-of="#startOver____ancestor___button___rpd__onclick_gotostate_initial" data-event-onclick="gotostate" data-target-gotostate="state.initial" data-name="startOver" data-button-name="startOver" data-startshidden="true" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <div id="state___initial" class=" state initial state___initial" data-name="state___initial" data-toggle="state" data-target-next="state___emailIsDropped" data-target-prev="state___shared">
+        <div id="browserShellStart" class=" browserShellStart browserShellStart" data-name="browserShellStart">
+        </div>
+        <div id="activities____hoverIndicator" class="hoverIndicator activities startshidden hide" data-name="activities" data-startshidden="true" style="display: none;">
+            <div id="masque1" class=" masque1 masque1" data-name="masque1">
+            </div>
+            <div id="masque" class=" masque masque" data-name="masque">
+            </div>
+            <div id="masque2" class=" masque2 masque2" data-name="masque2">
+            </div>
+            <div id="emailHoverThingggyggyyygy" class=" emailHoverThingggyggyyygy emailHoverThingggyggyyygy" data-name="emailHoverThingggyggyyygy">
+            </div>
+            <div id="lineMasque" class=" lineMasque lineMasque" data-name="lineMasque">
+            </div>
+        </div>
+        <div id="sendEmailDragger____hoverIndicator___dragHelper" class="hoverIndicator dragHelper sendEmailDragger startshidden hide" data-name="sendEmailDragger" data-startshidden="true" style="display: none;">
+        </div>
+        <div id="sendEmailDragger____rpd__draggable_dropson_activities__ondrop_gotostate_emailIsDropped___button___next" class="draggable dropson activities draggable-dropson-activities ondrop gotostate emailIsDropped ondrop-gotostate-emailIsDropped  button next sendEmailDragger btn default first last ui-draggable" data-event-draggable="dropson" data-target-dropson="activities" data-event-ondrop="gotostate" data-target-gotostate="state.emailIsDropped" data-name="sendEmailDragger" data-button-name="sendEmailDragger" data-event-onclick="gotostate">
+        </div>
+        <div id="activities____rpd__isdroptarget_accepts_sendEmailDragger" class="isdroptarget accepts sendEmailDragger isdroptarget-accepts-sendEmailDragger activities droppable ui-droppable" data-event-isdroptarget="accepts" data-target-accepts="sendEmailDragger" data-name="activities">
+        </div>
+    </div>
+    <div id="state___emailIsDropped" class="state emailIsDropped state___emailIsDropped group hide" data-name="state___emailIsDropped" data-toggle="state" data-target-next="state___emailIsConfiguring" data-target-prev="state___initial" style="display: none;">
+        <div id="emailIsDroppedBarsImage" class=" emailIsDroppedBarsImage emailIsDroppedBarsImage" data-name="emailIsDroppedBarsImage">
+        </div>
+        <div id="endAndExitImage" class=" endAndExitImage endAndExitImage" data-name="endAndExitImage">
+        </div>
+        <div id="emailActivity____ancestor___button___next" class="" data-ancestor="true" data-original-classnames="emailActivity" data-applied-classnames=" ancestor button next" data-name="emailActivity" data-archive-class="button next emailActivity ancestor">
+            <div id="emailActivity" class="emailActivity button next emailActivity btn default first" data-descendant-of="#emailActivity____ancestor___button___next" data-name="emailActivity" data-button-name="emailActivity" data-event-onclick="gotostate" data-target-gotostate="state.emailIsConfiguring">
+            </div>
+            <div id="emailActivity___hoverIndicator" class="emailActivity hoverIndicator button next emailActivity emailActivity___hoverIndicator startshidden hide btn last" data-descendant-of="#emailActivity____ancestor___button___next" data-name="emailActivity___hoverIndicator" data-button-name="emailActivity" data-startshidden="true" data-event-onclick="gotostate" data-target-gotostate="state.emailIsConfiguring" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <div id="state___emailIsConfiguring" class="state emailIsConfiguring state___emailIsConfiguring group hide" data-name="state___emailIsConfiguring" data-toggle="state" data-target-next="state___randomSplit3Dropping" data-target-prev="state___emailIsDropped" style="display: none;">
+        <div id="overlay" class=" overlay overlay" data-name="overlay">
+        </div>
+        <div id="skipEmailConfigure____ancestor___boxsizingcontentbox___button___next" class="" data-ancestor="true" data-original-classnames="skipEmailConfigure" data-applied-classnames=" ancestor boxsizingcontentbox button next" data-name="skipEmailConfigure" data-archive-class="boxsizingcontentbox button next skipEmailConfigure ancestor">
+            <div id="configureEmailModal____boxsizingcontentbox" class="boxsizingcontentbox boxsizingcontentbox button next skipEmailConfigure configureEmailModal btn default first last" data-descendant-of="#skipEmailConfigure____ancestor___boxsizingcontentbox___button___next" data-name="configureEmailModal" data-button-name="configureEmailModal" data-event-onclick="gotostate" data-target-gotostate="state.randomSplit3Dropping">
+                <div id="rectangle" class=" rectangle rectangle" data-name="rectangle">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="state___randomSplit3Dropping" class="state randomSplit3Dropping state___randomSplit3Dropping group hide" data-name="state___randomSplit3Dropping" data-toggle="state" data-target-next="state___randomSplitConfigureModal3" data-target-prev="state___emailIsConfiguring" style="display: none;">
+        <div id="emailIsDroppedBarsImage3" class=" emailIsDroppedBarsImage3 emailIsDroppedBarsImage3" data-name="emailIsDroppedBarsImage3">
+        </div>
+        <div id="endAndExitImage3" class=" endAndExitImage3 endAndExitImage3" data-name="endAndExitImage3">
+        </div>
+        <div id="emailActivityConfiguredImage3" class=" emailActivityConfiguredImage3 emailActivityConfiguredImage3" data-name="emailActivityConfiguredImage3">
+        </div>
+        <div id="rsactivities____hoverIndicator" class="hoverIndicator rsactivities startshidden hide" data-name="rsactivities" data-startshidden="true" style="display: none;">
+            <div id="rsHoverThingy" class=" rsHoverThingy rsHoverThingy" data-name="rsHoverThingy">
+            </div>
+        </div>
+        <div id="randomSplitDragger____hoverIndicator___dragHelper" class="hoverIndicator dragHelper randomSplitDragger startshidden hide" data-name="randomSplitDragger" data-startshidden="true" style="display: none;">
+        </div>
+        <div id="randomSplitDragger____rpd__draggable_dropson_activities__ondrop_gotostate_randomSplitConfigureModal3___button___next" class="draggable dropson activities draggable-dropson-activities ondrop gotostate randomSplitConfigureModal3 ondrop-gotostate-randomSplitConfigureModal3  button next randomSplitDragger btn default first last ui-draggable" data-event-draggable="dropson" data-target-dropson="activities" data-event-ondrop="gotostate" data-target-gotostate="state.randomSplitConfigureModal3" data-name="randomSplitDragger" data-button-name="randomSplitDragger" data-event-onclick="gotostate">
+        </div>
+        <div id="rsactivities____rpd__isdroptarget_accepts_randomSplitDragger" class="isdroptarget accepts randomSplitDragger isdroptarget-accepts-randomSplitDragger rsactivities droppable ui-droppable" data-event-isdroptarget="accepts" data-target-accepts="randomSplitDragger" data-name="rsactivities">
+        </div>
+    </div>
+    <div id="state___randomSplitConfigureModal3" class="state randomSplitConfigureModal3 state___randomSplitConfigureModal3 group hide" data-name="state___randomSplitConfigureModal3" data-toggle="state" data-target-next="state___dayViewHas3" data-target-prev="state___randomSplit3Dropping" style="display: none;">
+        <div id="overlay2" class=" overlay2 overlay2" data-name="overlay2">
+        </div>
+        <div id="randomSplitConfigureModal3Image2" class=" randomSplitConfigureModal3Image2 randomSplitConfigureModal3Image2" data-name="randomSplitConfigureModal3Image2">
+        </div>
+        <div id="doneConfiguringSplit3____button___next" class="button next doneConfiguringSplit3 btn default first" data-name="doneConfiguringSplit3" data-button-name="doneConfiguringSplit3" data-event-onclick="gotostate" data-target-gotostate="state.dayViewHas3">
+        </div>
+        <div id="gotoSplitConf8____button___rpd__onclick_gotostate_randomSplitConfigureModal8" class="onclick gotostate randomSplitConfigureModal8 onclick-gotostate-randomSplitConfigureModal8  button gotoSplitConf8 btn last" data-event-onclick="gotostate" data-target-gotostate="state.randomSplitConfigureModal8" data-name="gotoSplitConf8" data-button-name="gotoSplitConf8">
+        </div>
+    </div>
+    <div id="state___dayViewHas3" class="state dayViewHas3 state___dayViewHas3 group hide" data-name="state___dayViewHas3" data-toggle="state" data-target-next="state___flowViewHas3" data-target-prev="state___randomSplitConfigureModal3" style="display: none;">
+        <div id="dayViewPackage3" class=" dayViewPackage3 dayViewPackage3" data-name="dayViewPackage3">
+        </div>
+        <div id="overlayDayViewHas3____button___rpd__onclick_gotostate_dayView3" class="onclick gotostate dayView3 onclick-gotostate-dayView3  button overlayDayViewHas3 btn default first" data-event-onclick="gotostate" data-target-gotostate="state.dayView3" data-name="overlayDayViewHas3" data-button-name="overlayDayViewHas3">
+        </div>
+        <div id="miniFlow3Popover____ancestor" class="" data-ancestor="true" data-original-classnames="miniFlow3Popover" data-applied-classnames=" ancestor" data-name="miniFlow3Popover" data-archive-class="miniFlow3Popover ancestor">
+            <div id="packageHoverIndicatorPopoverImage" class=" packageHoverIndicatorPopoverImage miniFlow3Popover packageHoverIndicatorPopoverImage" data-descendant-of="#miniFlow3Popover____ancestor" data-name="packageHoverIndicatorPopoverImage">
+            </div>
+            <div id="miniFlow3" class=" miniFlow3 miniFlow3Popover miniFlow3" data-descendant-of="#miniFlow3Popover____ancestor" data-name="miniFlow3">
+            </div>
+            <div id="gotoFlowView3____button___next" class="button next miniFlow3Popover gotoFlowView3 btn" data-descendant-of="#miniFlow3Popover____ancestor" data-name="gotoFlowView3" data-button-name="gotoFlowView3" data-event-onclick="gotostate" data-target-gotostate="state.flowViewHas3">
+            </div>
+            <div id="closeDayViewHas3____button___rpd__onclick_gotostate_dayView3" class="onclick gotostate dayView3 onclick-gotostate-dayView3  button miniFlow3Popover closeDayViewHas3 btn last" data-descendant-of="#miniFlow3Popover____ancestor" data-event-onclick="gotostate" data-target-gotostate="state.dayView3" data-name="closeDayViewHas3" data-button-name="closeDayViewHas3">
+            </div>
+        </div>
+    </div>
+    <div id="state___flowViewHas3" class="state flowViewHas3 state___flowViewHas3 group hide" data-name="state___flowViewHas3" data-toggle="state" data-target-next="state___dayView3" data-target-prev="state___dayViewHas3" style="display: none;">
+        <div id="flowViewSplitHas3" class=" flowViewSplitHas3 flowViewSplitHas3" data-name="flowViewSplitHas3">
+        </div>
+        <div id="gotoDayView3____button___next" class="button next gotoDayView3 btn default first last" data-name="gotoDayView3" data-button-name="gotoDayView3" data-event-onclick="gotostate" data-target-gotostate="state.dayView3">
+        </div>
+    </div>
+    <div id="state___dayView3" class="state dayView3 state___dayView3 group hide" data-name="state___dayView3" data-toggle="state" data-target-next="state___randomSplitConfigureModal8" data-target-prev="state___flowViewHas3" style="display: none;">
+        <div id="dayViewPackage2" class=" dayViewPackage2 dayViewPackage2" data-name="dayViewPackage2">
+        </div>
+        <div id="emailIcon____rpd__onhover_gotostate_dayViewHas3___button" class="onhover gotostate dayViewHas3 onhover-gotostate-dayViewHas3  button emailIcon btn default first" data-event-onhover="gotostate" data-target-gotostate="state.dayViewHas3" data-name="emailIcon" data-button-name="emailIcon">
+        </div>
+        <div id="gotoFlowView3____button___rpd__onclick_gotostate_flowViewHas3" class="onclick gotostate flowViewHas3 onclick-gotostate-flowViewHas3  button gotoFlowView3 btn last" data-event-onclick="gotostate" data-target-gotostate="state.flowViewHas3" data-name="gotoFlowView3" data-button-name="gotoFlowView3">
+        </div>
+    </div>
+    <div id="state___randomSplitConfigureModal8" class="state randomSplitConfigureModal8 state___randomSplitConfigureModal8 group hide" data-name="state___randomSplitConfigureModal8" data-toggle="state" data-target-next="state___dayViewHas8" data-target-prev="state___dayView3" style="display: none;">
+        <div id="overlay3" class=" overlay3 overlay3" data-name="overlay3">
+        </div>
+        <div id="randomSplitConfigureModal8Image" class=" randomSplitConfigureModal8Image randomSplitConfigureModal8Image" data-name="randomSplitConfigureModal8Image">
+        </div>
+        <div id="doneConfiguringSplit8____button___next" class="button next doneConfiguringSplit8 btn default first" data-name="doneConfiguringSplit8" data-button-name="doneConfiguringSplit8" data-event-onclick="gotostate" data-target-gotostate="state.dayViewHas8">
+        </div>
+        <div id="gotoSplitConf3____button___rpd__onclick_gotostate_randomSplitConfigureModal3" class="onclick gotostate randomSplitConfigureModal3 onclick-gotostate-randomSplitConfigureModal3  button gotoSplitConf3 btn last" data-event-onclick="gotostate" data-target-gotostate="state.randomSplitConfigureModal3" data-name="gotoSplitConf3" data-button-name="gotoSplitConf3">
+        </div>
+    </div>
+    <div id="state___dayViewHas8" class="state dayViewHas8 state___dayViewHas8 group hide" data-name="state___dayViewHas8" data-toggle="state" data-target-next="state___flowViewHas8" data-target-prev="state___randomSplitConfigureModal8" style="display: none;">
+        <div id="dayViewPackage" class=" dayViewPackage dayViewPackage" data-name="dayViewPackage">
+        </div>
+        <div id="overlay" class=" overlay overlay" data-name="overlay">
+        </div>
+        <div id="miniFlow8Popover____ancestor" class="" data-ancestor="true" data-original-classnames="miniFlow8Popover" data-applied-classnames=" ancestor" data-name="miniFlow8Popover" data-archive-class="miniFlow8Popover ancestor">
+            <div id="packageHoverIndicatorPopoverImage2" class=" packageHoverIndicatorPopoverImage2 miniFlow8Popover packageHoverIndicatorPopoverImage2" data-descendant-of="#miniFlow8Popover____ancestor" data-name="packageHoverIndicatorPopoverImage2">
+            </div>
+            <div id="miniFlow8" class=" miniFlow8 miniFlow8Popover miniFlow8" data-descendant-of="#miniFlow8Popover____ancestor" data-name="miniFlow8">
+            </div>
+            <div id="gotoFlowView8____button___next" class="button next miniFlow8Popover gotoFlowView8 btn default first" data-descendant-of="#miniFlow8Popover____ancestor" data-name="gotoFlowView8" data-button-name="gotoFlowView8" data-event-onclick="gotostate" data-target-gotostate="state.flowViewHas8">
+            </div>
+            <div id="closeDayViewHas8____button___rpd__onclick_gotostate_dayView8" class="onclick gotostate dayView8 onclick-gotostate-dayView8  button miniFlow8Popover closeDayViewHas8 btn last" data-descendant-of="#miniFlow8Popover____ancestor" data-event-onclick="gotostate" data-target-gotostate="state.dayView8" data-name="closeDayViewHas8" data-button-name="closeDayViewHas8">
+            </div>
+        </div>
+    </div>
+    <div id="state___flowViewHas8" class="state flowViewHas8 state___flowViewHas8 group hide" data-name="state___flowViewHas8" data-toggle="state" data-target-next="state___dayView8" data-target-prev="state___dayViewHas8" style="display: none;">
+        <div id="flowViewSplitHas8" class=" flowViewSplitHas8 flowViewSplitHas8" data-name="flowViewSplitHas8">
+        </div>
+        <div id="gotoDayView8____button___next" class="button next gotoDayView8 btn default first last" data-name="gotoDayView8" data-button-name="gotoDayView8" data-event-onclick="gotostate" data-target-gotostate="state.dayView8">
+        </div>
+    </div>
+    <div id="state___dayView8" class="state dayView8 state___dayView8 group hide" data-name="state___dayView8" data-toggle="state" data-target-prev="state___flowViewHas8" style="display: none;">
+        <div id="dayViewPackage4" class=" dayViewPackage4 dayViewPackage4" data-name="dayViewPackage4">
+        </div>
+        <div id="emailIcon____rpd__onhover_gotostate_dayViewHas8___button" class="onhover gotostate dayViewHas8 onhover-gotostate-dayViewHas8  button emailIcon btn default first" data-event-onhover="gotostate" data-target-gotostate="state.dayViewHas8" data-name="emailIcon" data-button-name="emailIcon">
+        </div>
+        <div id="gotoFlowView8____button___rpd__onclick_gotostate_flowViewHas8" class="onclick gotostate flowViewHas8 onclick-gotostate-flowViewHas8  button gotoFlowView8 btn last" data-event-onclick="gotostate" data-target-gotostate="state.flowViewHas8" data-name="gotoFlowView8" data-button-name="gotoFlowView8">
+        </div>
+    </div>
+
+
+
+
+
+
+				</div><!-- /end "root" group -->
+			</div>
+		</div>
+		<!--hr>
+
+			<footer>
+				<p>&copy; ExactTarget 2014</p>
+			</footer-->
+	</div>
+	<!-- /container -->
+
+	<div id="pallet" class="dev-toolbar">
+		<span href="#" id="moveDev">
+			<span id="moveDevIcon" class="glyphicon glyphicon glyphicon glyphicon-move has-tooltip" title="Click and drag to re-position the dev toolbar." data-toggle="tooltip" data-placement="top"></span>
+			<a href="#" class="pull-right" id="hideDev">
+				<span class="glyphicon glyphicon-eye-close has-tooltip" title="Click to hide the dev toolbar." data-toggle="tooltip" data-placement="top"></span></a>
+		</span>
+		<a href="#" class="btn btn-block btn-primary" data-toggle="modal" data-target="#editImage" id="addElementBtn" data-context="Add">
+			<span class="glyphicon glyphicon-plus"></span> Add Element</a>
+		<a href="#" class="btn btn-block btn-default" data-toggle="modal" data-target="#editGroup" id="addGroupBtn" data-context="Add">
+			<span class="glyphicon glyphicon-plus-sign"></span> Add Group</a>
+		<a href="#" class="btn btn-block btn-default" id="showSource">
+			<span class="glyphicon glyphicon-sound-stereo"></span> Show Source</a>
+		<div id="editBar">
+
+		</div>
+	</div>
+
+<a href="#" class="btn" id="showDev" style="position: absolute; bottom: 5px"><span class="glyphicon glyphicon-eye-open"></span> Show Dev</a>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>
+	window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')
+	</script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="js/vendor/handlebars-v1.3.0.js"></script>
+
+	<script src="js/vendor/underscore.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/vendor/mousetrap.min.js"></script>
+	<script src="js/vendor/nudge.js"></script>
+	<script src="js/vendor/ba-debug.min.js"></script>
+
+	<script src="js/main.js"></script>
+	<script src="js/stock.js"></script>
+	<script src="js/rpd.js"></script><!-- RPD specific JS -->
+</body>
+
+</html>

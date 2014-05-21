@@ -1,0 +1,750 @@
+#state___shared
+{
+}
+#state___initial
+{
+}
+#state___emailIsDropped
+{
+}
+#state___emailIsConfiguring
+{
+}
+#state___randomSplit3Dropping
+{
+}
+#state___randomSplitConfigureModal3
+{
+}
+#state___dayViewHas3
+{
+}
+#state___flowViewHas3
+{
+}
+#state___dayView3
+{
+}
+#state___randomSplitConfigureModal8
+{
+}
+#state___dayViewHas8
+{
+}
+#state___flowViewHas8
+{
+}
+#state___dayView8
+{
+}
+#group4
+{
+}
+#browserShellBlank
+{
+    position: absolute;
+    left: 0px;
+    width: 1336px;
+    top: 0px;
+    height: 769px;
+    background-image: url(images/browserShellBlankImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#startOver____ancestor___button___rpd__onclick_gotostate_initial
+{
+}
+#browserShellStart
+{
+    position: absolute;
+    left: 0px;
+    width: 1336px;
+    top: 0px;
+    height: 769px;
+    background-image: url(images/browserShellStartImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#activities____hoverIndicator
+{
+}
+#sendEmailDragger____hoverIndicator___dragHelper
+{
+    position: absolute;
+    left: 10px;
+    width: 247px;
+    top: 274px;
+    height: 25px;
+    background-image: url(images/sendEmailButtonHoverIndicatorImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#sendEmailDragger____rpd__draggable_dropson_activities__ondrop_gotostate_emailIsDropped___button___next
+{
+    position: absolute;
+    left: 10px;
+    width: 247px;
+    top: 274px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#activities____rpd__isdroptarget_accepts_sendEmailDragger
+{
+    position: absolute;
+    left: 469px;
+    width: 328px;
+    top: 257px;
+    height: 90px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#emailIsDroppedBarsImage
+{
+    position: absolute;
+    left: 472px;
+    width: 374px;
+    top: 295px;
+    height: 21px;
+    background-image: url(images/emailIsDroppedBarsImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#endAndExitImage
+{
+    position: absolute;
+    left: 859px;
+    width: 25px;
+    top: 293px;
+    height: 25px;
+    background-image: url(images/endAndExitImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#emailActivity____ancestor___button___next
+{
+}
+#overlay
+{
+    position: absolute;
+    left: 0px;
+    width: 1336px;
+    top: 0px;
+    height: 769px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0.65);
+    border: none;
+}
+#skipEmailConfigure____ancestor___boxsizingcontentbox___button___next
+{
+}
+#emailIsDroppedBarsImage3
+{
+    position: absolute;
+    left: 472px;
+    width: 374px;
+    top: 295px;
+    height: 21px;
+    background-image: url(images/emailIsDroppedBarsImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#endAndExitImage3
+{
+    position: absolute;
+    left: 859px;
+    width: 25px;
+    top: 293px;
+    height: 25px;
+    background-image: url(images/endAndExitImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#emailActivityConfiguredImage3
+{
+    position: absolute;
+    left: 693px;
+    width: 36px;
+    top: 292px;
+    height: 41px;
+    background-image: url(images/emailActivityConfiguredImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#rsactivities____hoverIndicator
+{
+}
+#randomSplitDragger____hoverIndicator___dragHelper
+{
+    position: absolute;
+    left: 10px;
+    width: 247px;
+    top: 359px;
+    height: 25px;
+    background-image: url(images/randomSplitActivityButtonHoverIndicatorImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#randomSplitDragger____rpd__draggable_dropson_activities__ondrop_gotostate_randomSplitConfigureModal3___button___next
+{
+    position: absolute;
+    left: 10px;
+    width: 247px;
+    top: 359px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#rsactivities____rpd__isdroptarget_accepts_randomSplitDragger
+{
+    position: absolute;
+    left: 631px;
+    width: 166px;
+    top: 257px;
+    height: 90px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#overlay2
+{
+    position: absolute;
+    left: 0px;
+    width: 1336px;
+    top: 0px;
+    height: 769px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0.65);
+    border: none;
+}
+#randomSplitConfigureModal3Image2
+{
+    position: absolute;
+    left: 319px;
+    width: 699px;
+    top: 103px;
+    height: 286px;
+    background-image: url(images/randomSplitConfigureModal3ImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#doneConfiguringSplit3____button___next
+{
+    position: absolute;
+    left: 938px;
+    width: 50px;
+    top: 343px;
+    height: 21px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#gotoSplitConf8____button___rpd__onclick_gotostate_randomSplitConfigureModal8
+{
+    position: absolute;
+    left: 738px;
+    width: 55px;
+    top: 165px;
+    height: 34px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#dayViewPackage3
+{
+    position: absolute;
+    left: 434px;
+    width: 506px;
+    top: 198px;
+    height: 315px;
+    background-image: url(images/dayViewPackage3Image.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#overlayDayViewHas3____button___rpd__onclick_gotostate_dayView3
+{
+    position: absolute;
+    left: 0px;
+    width: 1336px;
+    top: 0px;
+    height: 769px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0.65);
+    border: none;
+}
+#miniFlow3Popover____ancestor
+{
+}
+#flowViewSplitHas3
+{
+    position: absolute;
+    left: 0px;
+    width: 1336px;
+    top: 120px;
+    height: 649px;
+    background-image: url(images/flowViewSplitHas3Image.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#gotoDayView3____button___next
+{
+    position: absolute;
+    left: 1103px;
+    width: 35px;
+    top: 126px;
+    height: 20px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#dayViewPackage2
+{
+    position: absolute;
+    left: 434px;
+    width: 506px;
+    top: 198px;
+    height: 315px;
+    background-image: url(images/dayViewPackage3Image.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#emailIcon____rpd__onhover_gotostate_dayViewHas3___button
+{
+    position: absolute;
+    left: 677px;
+    width: 65px;
+    top: 290px;
+    height: 46px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#gotoFlowView3____button___rpd__onclick_gotostate_flowViewHas3
+{
+    position: absolute;
+    left: 1137px;
+    width: 34px;
+    top: 126px;
+    height: 20px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#overlay3
+{
+    position: absolute;
+    left: 0px;
+    width: 1336px;
+    top: 0px;
+    height: 769px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0.65);
+    border: none;
+}
+#randomSplitConfigureModal8Image
+{
+    position: absolute;
+    left: 319px;
+    width: 699px;
+    top: 103px;
+    height: 286px;
+    background-image: url(images/randomSplitConfigureModal8ImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#doneConfiguringSplit8____button___next
+{
+    position: absolute;
+    left: 928px;
+    width: 68px;
+    top: 340px;
+    height: 26px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#gotoSplitConf3____button___rpd__onclick_gotostate_randomSplitConfigureModal3
+{
+    position: absolute;
+    left: 494px;
+    width: 55px;
+    top: 165px;
+    height: 34px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#dayViewPackage
+{
+    position: absolute;
+    left: 472px;
+    width: 522px;
+    top: 214px;
+    height: 555px;
+    background-image: url(images/dayViewPackage8Image.png);
+    background-repeat: no-repeat;
+    background-position: -15px 0px;
+    border: none;
+}
+#overlay
+{
+    position: absolute;
+    left: 0px;
+    width: 1336px;
+    top: 0px;
+    height: 769px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0.65);
+    border: none;
+}
+#miniFlow8Popover____ancestor
+{
+}
+#flowViewSplitHas8
+{
+    position: absolute;
+    left: 0px;
+    width: 1336px;
+    top: 120px;
+    height: 649px;
+    background-image: url(images/flowViewSplitHas8Image.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#gotoDayView8____button___next
+{
+    position: absolute;
+    left: 1103px;
+    width: 35px;
+    top: 126px;
+    height: 20px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#dayViewPackage4
+{
+    position: absolute;
+    left: 472px;
+    width: 522px;
+    top: 214px;
+    height: 555px;
+    background-image: url(images/dayViewPackage8Image.png);
+    background-repeat: no-repeat;
+    background-position: -15px 0px;
+    border: none;
+}
+#emailIcon____rpd__onhover_gotostate_dayViewHas8___button
+{
+    position: absolute;
+    left: 677px;
+    width: 65px;
+    top: 290px;
+    height: 46px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#gotoFlowView8____button___rpd__onclick_gotostate_flowViewHas8
+{
+    position: absolute;
+    left: 1137px;
+    width: 34px;
+    top: 126px;
+    height: 20px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#startOver
+{
+    position: absolute;
+    left: 202px;
+    width: 42px;
+    top: 151px;
+    height: 16px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#startOver____hoverIndicator
+{
+    position: absolute;
+    left: 202px;
+    width: 42px;
+    top: 151px;
+    height: 16px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMjEiIHkxPSIwIiB4Mj0iMjEiIHkyPSIxNiI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdlYjhlYiIgc3RvcC1vcGFjaXR5PSIwLjUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0ZjhiYmYiIHN0b3Atb3BhY2l0eT0iMC41Ii8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNDIiIGhlaWdodD0iMTYiIGZpbGw9InVybCgjZykiIC8+PC9zdmc+);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(126, 184, 235, 0.5)), color-stop(100%, rgba(79, 139, 191, 0.5)));
+    background-image: -webkit-linear-gradient(top, rgba(126, 184, 235, 0.5) 0%, rgba(79, 139, 191, 0.5) 100%);
+    background-image:    -moz-linear-gradient(top, rgba(126, 184, 235, 0.5) 0%, rgba(79, 139, 191, 0.5) 100%);
+    background-image:     -ms-linear-gradient(top, rgba(126, 184, 235, 0.5) 0%, rgba(79, 139, 191, 0.5) 100%);
+    background-image:      -o-linear-gradient(top, rgba(126, 184, 235, 0.5) 0%, rgba(79, 139, 191, 0.5) 100%);
+    background-image:         linear-gradient(to bottom, rgba(126, 184, 235, 0.5) 0%, rgba(79, 139, 191, 0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7eb8eb', endColorstr='#4f8bbf', GradientType=0);
+    background-repeat: no-repeat;
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#masque1
+{
+    position: absolute;
+    left: 792px;
+    width: 159px;
+    top: 225px;
+    height: 167px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masque
+{
+    position: absolute;
+    left: 952px;
+    width: 159px;
+    top: 225px;
+    height: 167px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#masque2
+{
+    position: absolute;
+    left: 632px;
+    width: 159px;
+    top: 252px;
+    height: 94px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#emailHoverThingggyggyyygy
+{
+    position: absolute;
+    left: 470px;
+    width: 327px;
+    top: 257px;
+    height: 89px;
+    background-image: url(images/emailIsDroppingImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#lineMasque
+{
+    position: absolute;
+    left: 951px;
+    width: 1px;
+    top: 228px;
+    height: 161px;
+    background: rgb(221, 221, 221);
+    border: none;
+}
+#emailActivity
+{
+    position: absolute;
+    left: 676px;
+    width: 68px;
+    top: 288px;
+    height: 48px;
+    background-image: url(images/emailActivityImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#emailActivity___hoverIndicator
+{
+    position: absolute;
+    left: 637px;
+    width: 142px;
+    top: 275px;
+    height: 115px;
+    background-image: url(images/emailActivity___hoverIndicatorImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#configureEmailModal____boxsizingcontentbox
+{
+}
+#rsHoverThingy
+{
+    position: absolute;
+    left: 630px;
+    width: 167px;
+    top: 266px;
+    height: 80px;
+    background-image: url(images/randomSplitIsDroppingImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#packageHoverIndicatorPopoverImage
+{
+    position: absolute;
+    left: 522px;
+    width: 379px;
+    top: 312px;
+    height: 257px;
+    background-image: url(images/packageHoverIndicatorPopoverImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#miniFlow3
+{
+    position: absolute;
+    left: 546px;
+    width: 231px;
+    top: 370px;
+    height: 90px;
+    background-image: url(images/miniFlow3Image.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#gotoFlowView3____button___next
+{
+    position: absolute;
+    left: 542px;
+    width: 111px;
+    top: 515px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#closeDayViewHas3____button___rpd__onclick_gotostate_dayView3
+{
+    position: absolute;
+    left: 856px;
+    width: 34px;
+    top: 325px;
+    height: 34px;
+    background-image: url(images/xout.png);
+    background-repeat: no-repeat;
+    background-position: 12px 11px;
+    border: none;
+    -webkit-border-radius: 17px 17px 17px 17px;
+       -moz-border-radius: 17px 17px 17px 17px;
+            border-radius: 17px 17px 17px 17px;
+}
+#packageHoverIndicatorPopoverImage2
+{
+    position: absolute;
+    left: 522px;
+    width: 379px;
+    top: 312px;
+    height: 257px;
+    background-image: url(images/packageHoverIndicatorPopoverImageImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#miniFlow8
+{
+    position: absolute;
+    left: 546px;
+    width: 230px;
+    top: 370px;
+    height: 118px;
+    background-image: url(images/miniFlow8Image.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#gotoFlowView8____button___next
+{
+    position: absolute;
+    left: 542px;
+    width: 111px;
+    top: 515px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#closeDayViewHas8____button___rpd__onclick_gotostate_dayView8
+{
+    position: absolute;
+    left: 856px;
+    width: 34px;
+    top: 325px;
+    height: 34px;
+    background-image: url(images/xout.png);
+    background-repeat: no-repeat;
+    background-position: 12px 11px;
+    border: none;
+    -webkit-border-radius: 17px 17px 17px 17px;
+       -moz-border-radius: 17px 17px 17px 17px;
+            border-radius: 17px 17px 17px 17px;
+}
+#rectangle
+{
+    position: absolute;
+    left: 270px;
+    width: 814px;
+    top: 119px;
+    height: 464px;
+    background-image: url(images/configureEmailStuff.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: 1px solid rgb(221, 221, 221);
+    -webkit-border-radius: 7.5px 7.5px 7.5px 7.5px;
+       -moz-border-radius: 7.5px 7.5px 7.5px 7.5px;
+            border-radius: 7.5px 7.5px 7.5px 7.5px;
+}
