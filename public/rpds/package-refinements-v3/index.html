@@ -24,7 +24,7 @@
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/rpd.css"><!-- RPD specific CSS -->
-	<link rel="stylesheet" href="images/prv3/style.css"><!-- RPD specific CSS -->
+	<link rel="stylesheet" href="images/prv4/style.css"><!-- RPD specific CSS -->
 
 	<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
@@ -450,45 +450,53 @@
 
 
     <div id="state___shared" class=" state shared state___shared" data-name="state___shared" data-toggle="state" data-target-next="state___initial">
-        <div id="layer" class=" layer layer" data-name="layer">
-        </div>
-        <div id="baseBg" class=" baseBg baseBg" data-name="baseBg">
-        </div>
-        <div id="startOver____ancestor___button___rpd__onclick_gotostate_initial" class="" data-ancestor="true" data-original-classnames="button startOver ancestor" data-applied-classnames=" ancestor button" data-applied-rdp-classnames=" onclick gotostate initial onclick-gotostate-initial" data-event-onclick="gotostate" data-target-gotostate="initial" data-name="startOver" data-archive-class="onclick gotostate initial onclick-gotostate-initial button startOver  ancestor">
-            <div id="startOver" class="startOver onclick gotostate initial onclick-gotostate-initial button startOver btn default first" data-descendant-of="#startOver____ancestor___button___rpd__onclick_gotostate_initial" data-event-onclick="gotostate" data-target-gotostate="state.initial" data-name="startOver" data-button-name="startOver">
-            </div>
-            <div id="startOver____hoverIndicator" class="hoverIndicator onclick gotostate initial onclick-gotostate-initial button startOver startshidden hide btn last" data-descendant-of="#startOver____ancestor___button___rpd__onclick_gotostate_initial" data-event-onclick="gotostate" data-target-gotostate="state.initial" data-name="startOver" data-button-name="startOver" data-startshidden="true" style="display: none;">
-            </div>
+        <div id="jbShellWithBlankCanvas" class=" jbShellWithBlankCanvas jbShellWithBlankCanvas" data-name="jbShellWithBlankCanvas">
         </div>
     </div>
-    <div id="state___initial" class=" state initial state___initial" data-name="state___initial" data-toggle="state" data-target-next="state___randomSplitModal2" data-target-prev="state___shared">
+    <div id="state___initial" class=" state initial state___initial" data-name="state___initial" data-toggle="state" data-target-next="state___rs2ModalIn" data-target-prev="state___shared">
+        <div id="emailConfigured" class=" emailConfigured emailConfigured" data-name="emailConfigured">
+        </div>
         <div id="rsactivities____hoverIndicator" class="hoverIndicator rsactivities startshidden hide" data-name="rsactivities" data-startshidden="true" style="display: none;">
             <div id="randomSplitDroppingHelper" class=" randomSplitDroppingHelper randomSplitDroppingHelper" data-name="randomSplitDroppingHelper">
+            </div>
+            <div id="randomSplitDroppingHelper2" class=" randomSplitDroppingHelper2 randomSplitDroppingHelper2" data-name="randomSplitDroppingHelper2">
             </div>
         </div>
         <div id="randomSplitDragger____hoverIndicator___dragHelper" class="hoverIndicator dragHelper randomSplitDragger startshidden hide" data-name="randomSplitDragger" data-startshidden="true" style="display: none;">
         </div>
-        <div id="randomSplitDragger____rpd__draggable_dropson_rsactivities__ondrop_gotostate_randomSplitModal2___button___next" class="draggable dropson rsactivities draggable-dropson-rsactivities ondrop gotostate randomSplitModal2 ondrop-gotostate-randomSplitModal2  button next randomSplitDragger btn default first last ui-draggable" data-event-draggable="dropson" data-target-dropson="rsactivities" data-event-ondrop="gotostate" data-target-gotostate="state.randomSplitModal2" data-name="randomSplitDragger" data-button-name="randomSplitDragger" data-event-onclick="gotostate" data-drag-clone-img="#randomSplitDragger____hoverIndicator___dragHelper">
+        <div id="randomSplitDragger____rpd__draggable_dropson_rsactivities__ondrop_gotostate_rs2ModalIn___button___next" class="draggable dropson rsactivities draggable-dropson-rsactivities ondrop gotostate rs2ModalIn ondrop-gotostate-rs2ModalIn  button next randomSplitDragger btn default first last ui-draggable" data-event-draggable="dropson" data-target-dropson="rsactivities" data-event-ondrop="gotostate" data-target-gotostate="state.rs2ModalIn" data-name="randomSplitDragger" data-button-name="randomSplitDragger" data-event-onclick="gotostate" data-drag-clone-img="#randomSplitDragger____hoverIndicator___dragHelper">
         </div>
         <div id="rsactivities____rpd__isdroptarget_accepts_randomSplitDragger" class="isdroptarget accepts randomSplitDragger isdroptarget-accepts-randomSplitDragger rsactivities droppable rpdDropTarget ui-droppable" data-event-isdroptarget="accepts" data-target-accepts="randomSplitDragger" data-name="rsactivities">
         </div>
     </div>
-    <div id="state___randomSplitModal2" class="state randomSplitModal2 state___randomSplitModal2 group hide" data-name="state___randomSplitModal2" data-toggle="state" data-target-next="state___dayViewFinal" data-target-prev="state___initial" style="display: none;">
+    <div id="state___rs2ModalIn" class="state rs2ModalIn state___rs2ModalIn group hide" data-name="state___rs2ModalIn" data-toggle="state" data-target-next="state___rs4ModalIn" data-target-prev="state___initial" style="display: none;">
+        <div id="overylay1" class=" overylay1 overylay1" data-name="overylay1">
+        </div>
         <div id="randomSplitModal" class=" randomSplitModal randomSplitModal" data-name="randomSplitModal">
-            <div id="randomSplitModal2" class=" randomSplitModal2 randomSplitModal2" data-name="randomSplitModal2">
+            <div id="rs2ModalIn" class=" rs2ModalIn rs2ModalIn" data-name="rs2ModalIn">
             </div>
-            <div id="gotoFinal____button___next" class="button next gotoFinal btn default first last" data-name="gotoFinal" data-button-name="gotoFinal" data-event-onclick="gotostate" data-target-gotostate="state.dayViewFinal">
+            <div id="gotoModal4____button___next" class="button next gotoModal4 btn default first last" data-name="gotoModal4" data-button-name="gotoModal4" data-event-onclick="gotostate" data-target-gotostate="state.rs4ModalIn">
             </div>
         </div>
     </div>
-    <div id="state___dayViewFinal" class="state dayViewFinal state___dayViewFinal group hide" data-name="state___dayViewFinal" data-toggle="state" data-target-prev="state___randomSplitModal2" style="display: none;">
-        <div id="dayViewFinal2" class=" dayViewFinal2 dayViewFinal2" data-name="dayViewFinal2">
+    <div id="state___rs4ModalIn" class="state rs4ModalIn state___rs4ModalIn group hide" data-name="state___rs4ModalIn" data-toggle="state" data-target-next="state___rs4" data-target-prev="state___rs2ModalIn" style="display: none;">
+        <div id="overylay2" class=" overylay2 overylay2" data-name="overylay2">
+        </div>
+        <div id="rs4ModalIn" class=" rs4ModalIn rs4ModalIn" data-name="rs4ModalIn">
+        </div>
+        <div id="gotoRs4____button___next" class="button next gotoRs4 btn default first last" data-name="gotoRs4" data-button-name="gotoRs4" data-event-onclick="gotostate" data-target-gotostate="state.rs4">
         </div>
     </div>
-
-
-
-
+    <div id="state___rs4" class="state rs4 state___rs4 group hide" data-name="state___rs4" data-toggle="state" data-target-prev="state___rs4ModalIn" style="display: none;">
+        <div id="bg" class=" bg bg" data-name="bg">
+        </div>
+        <div id="rs4" class=" rs4 rs4" data-name="rs4">
+        </div>
+        <div id="then" class=" then then" data-name="then">
+        </div>
+        <div id="times" class=" times times" data-name="times">
+        </div>
+    </div>
 
 
 
