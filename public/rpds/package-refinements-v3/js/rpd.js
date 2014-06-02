@@ -1292,7 +1292,7 @@ var runIt = function runIt() {
 		$dropTarget.droppable({
 			accept: '#' + thisElementID,
 			activeClass: "ui-state-default",
-			tolerance: "fit",
+			tolerance: "touch",
 			drop: function(event, ui) {
 				$(this)
 					.addClass("ui-state-highlight");
