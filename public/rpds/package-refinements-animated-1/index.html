@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		body {
+		padding-top: 0px;
+		padding-bottom: 0px;
+		}
+
+		#root {
+		left: 0px;
+		top: 0px;
+		position: fixed;
+		}
+	</style>
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/rpd.css"><!-- RPD specific CSS -->
+	<link rel="stylesheet" href="images/jb-shell-2/style.css"><!-- RPD specific CSS -->
+
+	<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+
+<body class="notdev"><!-- change body class to something else to take out of "dev" mode -->
+
+	<script id="file-input-partial" type="text/x-handlebars-template">
+		<input id="{{this}}" name="{{this}}" class="input-file {{this}}" type="file">
+		<span class="help-block">images must be in [RPD]/images/</span>
+	</script>
+
+	<script id="disabled-input-partial" type="text/x-handlebars-template">
+		<input type="text" class="{{name}}NameTxt form-control" value="{{value}}" disabled>
+	</script>
+
+	<script id="checkbox-partial" type="text/x-handlebars-template">
+		<div class="checkbox">
+			<label for="{{name}}">
+				<input type="checkbox" name="{{name}}" id="{{name}}" {{#if data-default}}data-default="{{data-default}}"{{/if}} value="true" class="{{name}}" {{#if value}}checked="checked"{{/if}}>
+				{{label}}
+			</label>
+		</div>
+	</script>
+
+	<script id="dropdown-input-partial" type="text/x-handlebars-template">
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="{{name}}Target">{{label}}:</label>
+			<div class="col-md-8">
+				<div class="input-group">
+					<div class="input-group-btn {{name}}TypeWrapper">
+					<button type="button" class="btn btn-default dropdown-toggle {{name}}Type" data-toggle="dropdown" {{#if typeValue}}value="{{typeValue}}"{{/if}}>
+						{{#if typeValue}}
+							{{typeValue}}('{{targetValue}}'); <span class="caret"></span>
+						{{else}}
+							Function <span class="caret"></span>
+						{{/if}}
+					</button>
+					<ul class="dropdown-menu pull-left">
+						<li><a href="#">Function <span class="caret"></span></a></li>
+						<li><a href="#" data-value="show">show('#elementSelector');</a></li>
+						<li><a href="#" data-value="hide">hide('#elementSelector');</a></li>
+						<li><a href="#" data-value="swapWith">swapWith('#elementSelector');</a></li>
+						<li><a href="#" data-value="hideGroupsExcept">hideGroupsExcept('#elementSelector');</a></li>
+						<li><a href="#" data-value="custom">[custom-function-name](this-element);</a></li>
+					</ul>
+					</div>
+					<input id="{{name}}Target" name="{{name}}Target" class="form-control {{name}}Target" placeholder="#elementSelector or custom-function-name" type="text" {{#if targetValue}}value="{{targetValue}}"{{/if}}>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script id="edit-image-template" type="text/x-handlebars-template">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">{{context}} Image</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal">
+					<fieldset>
+
+					<!-- File Button -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="elmImgFile">IMG File</label>
+						<div class="col-md-4">
+							{{#fileInput elmImgFileName name="elmImgFile"}}
+								{{> fileInputPartial}}
+							{{else}}
+								{{> disabledInputPartial}}
+							{{/fileInput}}
+						</div>
+					</div>
+
+
+					<!-- Hoverable -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="hoverFile">Hover File (optional)</label>
+						<div class="col-md-4">
+							{{#fileInput hoverFileName name="hoverFile"}}
+								{{> fileInputPartial}}
+							{{else}}
+								{{> disabledInputPartial}}
+							{{/fileInput}}
+						</div>
+					</div>
+
+					<!-- Drop Targettable -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="dropActiveFile">Drop Targettable File (optional)</label>
+						<div class="col-md-4">
+							{{#fileInput dropActiveFileName name="dropActiveFile"}}
+								{{> fileInputPartial}}
+							{{else}}
+								{{> disabledInputPartial}}
+							{{/fileInput}}
+						</div>
+					</div>
+
+					<!-- Drop Hoverable -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="dropHoverFile">Drop Hover File (optional)</label>
+						<div class="col-md-4">
+							{{#fileInput dropHoverFileName name="dropHoverFile"}}
+								{{> fileInputPartial}}
+							{{else}}
+								{{> disabledInputPartial}}
+							{{/fileInput}}
+						</div>
+					</div>
+
+
+					<!-- Hoverable -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="droppedFile">Dropped File (optional)</label>
+						<div class="col-md-4">
+							{{#fileInput droppedFileName name="droppedFile"}}
+								{{> fileInputPartial}}
+							{{else}}
+								{{> disabledInputPartial}}
+							{{/fileInput}}
+						</div>
+					</div>
+
+					<!-- ID -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="id">ID</label>
+						<div class="col-md-4">
+							<input id="id" name="id" type="text" class="form-control input-md elmID" required placeholder="Optional, will be generated if blank." value="{{#if id}}{{id}}{{/if}}">
+							<span class="help-block">ID for image element</span>
+						</div>
+					</div>
+
+					<!-- Classes-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="classes">Class(es)</label>
+						<div class="col-md-8">
+						<input id="classes" name="classes" type="text" placeholder="" class="form-control input-md classes" value="{{#if originalClasses}}{{originalClasses}}{{/if}}">
+						<span class="help-block">CSS classes for image element</span>
+						</div>
+					</div>
+
+					<!-- checkboxes -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="checkboxes">Simple Properties</label>
+						<div class="col-md-4">
+						<!-- hidable? -->
+						{{#setContext name="isHidable" value=isHidable label="Hidden"}}{{> checkboxPartial}}{{/setContext}}
+
+						<!-- retina? -->
+						{{#setContext name="isRetina" value=isRetina data-default="checked" label="Retina (shrink by 50%)"}}{{> checkboxPartial}}{{/setContext}}
+
+						<!-- resizable -->
+						{{#setContext name="isResizable" value=isResizable label="Resizable"}}{{> checkboxPartial}}{{/setContext}}
+
+						<!-- selectable? -->
+						<!--{{#setContext name="isSelectable" value=isSelectable label="Selectable"}}{{> checkboxPartial}}{{/setContext}}-->
+
+						<!-- draggable? -->
+						{{#setContext name="isDraggable" value=isDraggable label="Draggable"}}{{> checkboxPartial}}{{/setContext}}
+
+							<!-- Drag Image -->
+							<div class="form-group">
+								<div class="col-md-8">
+									{{#fileInput dragCloneFileName name="dragCloneFile"}}
+										{{> fileInputPartial}}
+									{{else}}
+										{{> disabledInputPartial}}
+									{{/fileInput}}
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Click Handling -->
+					{{#setContext name="clickHandler" typeValue=clickHandlerType targetValue=clickHandlerTarget label="Click Fires [function] on [element]"}}{{> dropdownInputPartial}}{{/setContext}}
+
+
+					<!-- Drop Zone -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="prependedcheckbox">Drop zone?</label>
+						<div class="col-md-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<input type="checkbox" name="isDroppable" id="isDroppable" class="isDroppable" value="true" {{#if isDroppable}}checked="checked"{{/if}}>
+							</span>
+							<input id="dropAccepts" name="dropAccepts" class="form-control dropAccepts" type="text" placeholder="elmClass" {{#if dropAccepts}}value="{{dropAccepts}}"{{/if}}>
+						</div>
+						<p class="help-block">What element(s) should be droppable on this drop zone?</p>
+						</div>
+					</div>
+
+					<!-- Drop Handling -->
+					{{#setContext name="dropHandler" typeValue=dropHandlerType targetValue=dropHandlerTarget label="Upon receiving drop, fire [function] on [element]"}}{{> dropdownInputPartial}}{{/setContext}}
+
+					</fieldset>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group addToElementWrapper">
+						<div class="input-group-btn">
+							{{#isEqual context v2="Add"}}
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary dropdown-toggle addToElement" data-toggle="dropdown">
+									Add to
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu pull-right wrapperElements">
+									{{#addToGroupDD}}{{/addToGroupDD}}
+								</ul>
+							{{else}}
+								<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+								<a href="#" class="btn btn-primary save"><span class="glyphicon glyphicon-floppy-disk"></span> Save</a>
+							{{/isEqual}}
+						</div>
+					</div>
+				</div><!-- /.modal-footer -->
+			</div>
+		</div>
+	</div>
+	</script>
+
+
+	<div class="modal fade" id="editImage">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+	<script id="edit-group-template" type="text/x-handlebars-template">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Add Group</h4>
+				</div>
+				<div class="modal-body">
+					 <form class="form-horizontal">
+					<fieldset>
+
+					<!-- BG IMG -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="bgImgFile">Background images File (optional)</label>
+						<div class="col-md-4">
+							{{#fileInput bgImgFileName name="bgImgFile"}}
+								{{> fileInputPartial}}
+							{{else}}
+								{{> disabledInputPartial}}
+							{{/fileInput}}
+						</div>
+					</div>
+
+					<!-- BG Size -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="bgsize">Background images Size</label>
+						<div class="col-md-4">
+							<select id="bgsize" name="bgsize" class="form-control bgsize">
+								<option value="auto">actual size</option>
+								<option value="cover">cover</option>
+								<option value="contain">contain</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="textinput">ID</label>
+						<div class="col-md-4">
+						<input id="textinput-group" name="textinput" type="text" class="form-control input-md elmID" required value="" placeholder="Optional, will be generated if blank.">
+
+						</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="classes">Class(es)</label>
+						<div class="col-md-8">
+						<input id="classes" name="classes" type="text" placeholder="" class="form-control input-md classes">
+						<span class="help-block">CSS classes for group element</span>
+						</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="bgcolor">background-color</label>
+						<div class="col-md-8">
+						<input id="bgcolor" name="bgcolor" type="text" placeholder="" class="form-control input-md bgcolor">
+						<span class="help-block">background-color of group div</span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="checkboxes"></label>
+						<div class="col-md-4">
+						<div class="checkbox">
+						<label for="checkboxes-0">
+							<input type="checkbox" name="checkboxes" id="checkboxes-0" value="hidden" class="isHidable">
+							Hidden
+						</label>
+						</div>
+						</div>
+					</div>
+
+
+					</fieldset>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group addToElementWrapper">
+						<div class="input-group-btn">
+							{{#isEqual context v2="Add"}}
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary dropdown-toggle addToElement" data-toggle="dropdown">
+									Add to
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu pull-right wrapperElements">
+									{{#addToGroupDD}}{{/addToGroupDD}}
+								</ul>
+							{{else}}
+								<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+								<a href="#" class="btn btn-primary save"><span class="glyphicon glyphicon-floppy-disk"></span> Save</a>
+							{{/isEqual}}
+						</div>
+					</div>
+				</div><!-- /.modal-footer -->
+	</script>
+
+	<div class="modal fade" id="editGroup">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<script id="image-template" type="text/x-handlebars-template">
+		<div
+			style="top: 0px; left: 0px;"
+			class="{{classes}} img"
+			data-original-classes = "{{originalClasses}}"
+			id="{{id}}"
+			data-src="images/{{elmImgFileName}}"
+			data-elm-img-file="{{elmImgFileName}}"
+			data-hover-file="{{hoverFileName}}"
+			data-drop-hover-file="{{dropHoverFileName}}"
+			data-drop-active-file="{{dropActiveFileName}}"
+			data-drop-dropped-file="{{droppedFileName}}"
+			data-hidable="{{#if isHidable}}true{{/if}}"
+			data-retina="{{#if isRetina}}true{{/if}}"
+			data-resizable="{{#if isResizable}}true{{/if}}"
+			data-selectable="{{#if isSelectable}}true{{/if}}"
+			data-draggable="{{#if isDraggable}}true{{/if}}"
+			data-drag-clone-img="{{dragCloneFileName}}"
+			data-click-handler-type="{{clickHandlerType}}"
+			data-click-handler-target="{{clickHandlerTarget}}"
+			data-droppable="{{#if isDroppable}}true{{/if}}"
+			data-drop-accepts="{{dropAccepts}}"
+			data-drop-handler-type="{{dropHandlerType}}"
+			data-drop-handler-target="{{dropHandlerTarget}}"
+			{{#if clickable}}onclick="{{clickHandler}}" {{/if}}
+		>{{#if isDraggable}}<img src="images/{{elmImgFileName}}" data-name="{{elmImgFileName}}" data-hover="{{hoverFileName}}"/>{{/if}}
+			<style id="style-for-{{id}}">
+				#{{id}}{
+					background-image: url(images/{{elmImgFileName}});
+				}{{#if dropActiveFile}}
+				#{{id}}.drop-state-active{
+					background-image: url(images/{{dropActiveFileName}});
+				}{{/if}}{{#if dropHoverFile}}
+				#{{id}}.drop-state-hover{
+					background-image: url(images/{{dropHoverFileName}});
+				}{{/if}}{{#if droppedFile}}
+				#{{id}}.drop-state-highlight{
+					background-image: url(images/{{droppedFileName}});
+				}{{/if}}{{#if hoverFile}}
+				#{{id}}:hover{
+					background-image: url(images/{{hoverFileName}});
+				}{{/if}}
+			</style>
+		</div>
+	</script>
+
+	<script id="group-template" type="text/x-handlebars-template">
+	<div id="{{id}}" class="group resizable {{classes}}" >
+		<style id="style-for-{{id}}">
+			#{{id}} {
+				width: 400px;
+				height: 200px;
+				background-color: {{bgcolor}};
+				background-image: url(images/{{bgImgFileName}});
+				background-size: {{bgsize}}
+			}
+		</style>
+	</div>
+	</script>
+
+	<script id="edit-bar-template" type="text/x-handlebars-template">
+		<div id="nudge-output">
+			<pre id="nudge-output-paragraph"></pre>
+			<div id="nudge-instructions">
+				Nudge with arrow keys<br>
+				Resize with I, K, J, L
+			</div>
+		</div>
+
+		<dl class="dl-horizontal">
+			<dt>id</dt><dd>{{id}}</dd>
+			<dt>class</dt><dd>{{class}}</dd>
+			<dt>img-src</dt><dd>{{elmImgFileName}}</dd>
+		</dl>
+		<a href="#" class="btn btn-block btn-default" data-toggle="modal" id="editElementBtn" data-target="#editImage" data-context="Edit"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+		<a href="#" class="btn btn-block btn-default" id="hideElementBtn"><span class="glyphicon glyphicon-eye-close"></span> Hide</a>
+		<a href="#" class="btn btn-block btn-danger" id="deleteElementBtn"><span class="glyphicon glyphicon-remove"></span> Delete</a>
+	</script>
+
+	<div class="container">
+		<!-- Example row of columns -->
+		<div class="row">
+			<div class="col-lg-12" id="canvas">
+				<div id="root" class="group">
+
+
+    <div id="state___shared" class=" state shared state___shared" data-name="state___shared" data-toggle="state" data-target-next="state___initial">
+        <div id="header____ancestor___boxsizingcontentbox" class="" data-ancestor="true" data-original-classnames="header" data-applied-classnames=" ancestor boxsizingcontentbox" data-name="header" data-archive-class="boxsizingcontentbox header ancestor">
+            <div id="headerBg" class=" headerBg boxsizingcontentbox header headerBg" data-descendant-of="#header____ancestor___boxsizingcontentbox" data-name="headerBg">
+            </div>
+            <div id="timelineGrabberWrapper" class=" timelineGrabberWrapper boxsizingcontentbox header timelineGrabberWrapper" data-descendant-of="#header____ancestor___boxsizingcontentbox" data-name="timelineGrabberWrapper">
+            </div>
+            <div id="viewToolbar" class=" viewToolbar boxsizingcontentbox header viewToolbar" data-descendant-of="#header____ancestor___boxsizingcontentbox" data-name="viewToolbar">
+            </div>
+        </div>
+        <div id="sidebar____ancestor___boxsizingcontentbox" class="" data-ancestor="true" data-original-classnames="sidebar" data-applied-classnames=" ancestor boxsizingcontentbox" data-name="sidebar" data-archive-class="boxsizingcontentbox sidebar ancestor">
+            <div id="sidebarBg" class=" sidebarBg boxsizingcontentbox sidebar sidebarBg" data-descendant-of="#sidebar____ancestor___boxsizingcontentbox" data-name="sidebarBg">
+            </div>
+            <div id="sidebarCollapseButton" class=" sidebarCollapseButton boxsizingcontentbox sidebar sidebarCollapseButton" data-descendant-of="#sidebar____ancestor___boxsizingcontentbox" data-name="sidebarCollapseButton">
+            </div>
+            <div id="activities____ancestor___boxsizingcontentbox" class="" data-descendant-of="#sidebar____ancestor___boxsizingcontentbox" data-ancestor="true" data-original-classnames="boxsizingcontentbox sidebar activities" data-applied-classnames=" ancestor boxsizingcontentbox" data-name="activities" data-archive-class="boxsizingcontentbox boxsizingcontentbox sidebar activities ancestor">
+                <div id="activitiesBg" class=" activitiesBg boxsizingcontentbox boxsizingcontentbox sidebar activities activitiesBg" data-descendant-of="#activities____ancestor___boxsizingcontentbox" data-name="activitiesBg">
+                </div>
+                <div id="activitiesDragers____ancestor" class="" data-descendant-of="#activities____ancestor___boxsizingcontentbox" data-ancestor="true" data-original-classnames="boxsizingcontentbox boxsizingcontentbox sidebar activities activitiesDragers" data-applied-classnames=" ancestor" data-name="activitiesDragers" data-archive-class="boxsizingcontentbox boxsizingcontentbox sidebar activities activitiesDragers ancestor">
+                    <div id="updateDraggerImage2" class=" updateDraggerImage2 boxsizingcontentbox boxsizingcontentbox sidebar activities activitiesDragers updateDraggerImage2" data-descendant-of="#activitiesDragers____ancestor" data-name="updateDraggerImage2">
+                    </div>
+                    <div id="engagementDraggerIamge2" class=" engagementDraggerIamge2 boxsizingcontentbox boxsizingcontentbox sidebar activities activitiesDragers engagementDraggerIamge2" data-descendant-of="#activitiesDragers____ancestor" data-name="engagementDraggerIamge2">
+                    </div>
+                    <div id="randomDraggerImage2" class=" randomDraggerImage2 boxsizingcontentbox boxsizingcontentbox sidebar activities activitiesDragers randomDraggerImage2" data-descendant-of="#activitiesDragers____ancestor" data-name="randomDraggerImage2">
+                    </div>
+                    <div id="decisionDraggerImage2" class=" decisionDraggerImage2 boxsizingcontentbox boxsizingcontentbox sidebar activities activitiesDragers decisionDraggerImage2" data-descendant-of="#activitiesDragers____ancestor" data-name="decisionDraggerImage2">
+                    </div>
+                    <div id="emailDraggerImage2" class=" emailDraggerImage2 boxsizingcontentbox boxsizingcontentbox sidebar activities activitiesDragers emailDraggerImage2" data-descendant-of="#activitiesDragers____ancestor" data-name="emailDraggerImage2">
+                    </div>
+                </div>
+            </div>
+            <div id="actions____ancestor___boxsizingcontentbox" class="" data-descendant-of="#sidebar____ancestor___boxsizingcontentbox" data-ancestor="true" data-original-classnames="boxsizingcontentbox sidebar actions" data-applied-classnames=" ancestor boxsizingcontentbox" data-name="actions" data-archive-class="boxsizingcontentbox boxsizingcontentbox sidebar actions ancestor">
+                <div id="actionsBg" class=" actionsBg boxsizingcontentbox boxsizingcontentbox sidebar actions actionsBg" data-descendant-of="#actions____ancestor___boxsizingcontentbox" data-name="actionsBg">
+                </div>
+            </div>
+        </div>
+        <div id="topNav____ancestor___boxsizingcontentbox" class="" data-ancestor="true" data-original-classnames="topNav" data-applied-classnames=" ancestor boxsizingcontentbox" data-name="topNav" data-archive-class="boxsizingcontentbox topNav ancestor">
+            <div id="topNavBar" class=" topNavBar boxsizingcontentbox topNav topNavBar" data-descendant-of="#topNav____ancestor___boxsizingcontentbox" data-name="topNavBar">
+            </div>
+            <div id="currentApplicationName" class=" currentApplicationName boxsizingcontentbox topNav currentApplicationName" data-descendant-of="#topNav____ancestor___boxsizingcontentbox" data-name="currentApplicationName">
+            </div>
+        </div>
+        <div id="mainCanvas____ancestor___boxsizingcontentbox" class="" data-ancestor="true" data-original-classnames="mainCanvas" data-applied-classnames=" ancestor boxsizingcontentbox" data-name="mainCanvas" data-archive-class="boxsizingcontentbox mainCanvas ancestor">
+            <div id="mainCanvasAreaBg" class=" mainCanvasAreaBg boxsizingcontentbox mainCanvas mainCanvasAreaBg" data-descendant-of="#mainCanvas____ancestor___boxsizingcontentbox" data-name="mainCanvasAreaBg">
+            </div>
+            <div id="triggerSummary____ancestor" class="" data-descendant-of="#mainCanvas____ancestor___boxsizingcontentbox" data-ancestor="true" data-original-classnames="boxsizingcontentbox mainCanvas triggerSummary" data-applied-classnames=" ancestor" data-name="triggerSummary" data-archive-class="boxsizingcontentbox mainCanvas triggerSummary ancestor">
+                <div id="triggerSummaryBackground" class=" triggerSummaryBackground boxsizingcontentbox mainCanvas triggerSummary triggerSummaryBackground" data-descendant-of="#triggerSummary____ancestor" data-name="triggerSummaryBackground">
+                </div>
+                <div id="triggerSummaryBackground2" class=" triggerSummaryBackground2 boxsizingcontentbox mainCanvas triggerSummary triggerSummaryBackground2" data-descendant-of="#triggerSummary____ancestor" data-name="triggerSummaryBackground2">
+                </div>
+            </div>
+            <div id="jbDays____ancestor___jbday___jbcolumn___boxsizingcontentbox" class="" data-descendant-of="#mainCanvas____ancestor___boxsizingcontentbox" data-ancestor="true" data-original-classnames="boxsizingcontentbox mainCanvas jbDays" data-applied-classnames=" ancestor jbday jbcolumn boxsizingcontentbox" data-name="jbDays" data-archive-class="jbday jbcolumn boxsizingcontentbox boxsizingcontentbox mainCanvas jbDays ancestor">
+                <div id="day0" class=" day0 jbday jbcolumn boxsizingcontentbox boxsizingcontentbox mainCanvas jbDays day0" data-descendant-of="#jbDays____ancestor___jbday___jbcolumn___boxsizingcontentbox" data-name="day0">
+                </div>
+                <div id="day1" class=" day1 jbday jbcolumn boxsizingcontentbox boxsizingcontentbox mainCanvas jbDays day1" data-descendant-of="#jbDays____ancestor___jbday___jbcolumn___boxsizingcontentbox" data-name="day1">
+                </div>
+                <div id="day2" class=" day2 jbday jbcolumn boxsizingcontentbox boxsizingcontentbox mainCanvas jbDays day2" data-descendant-of="#jbDays____ancestor___jbday___jbcolumn___boxsizingcontentbox" data-name="day2">
+                </div>
+                <div id="day3" class=" day3 jbday jbcolumn boxsizingcontentbox boxsizingcontentbox mainCanvas jbDays day3" data-descendant-of="#jbDays____ancestor___jbday___jbcolumn___boxsizingcontentbox" data-name="day3">
+                </div>
+                <div id="day4" class=" day4 jbday jbcolumn boxsizingcontentbox boxsizingcontentbox mainCanvas jbDays day4" data-descendant-of="#jbDays____ancestor___jbday___jbcolumn___boxsizingcontentbox" data-name="day4">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="state___initial" class=" state initial state___initial" data-name="state___initial" data-toggle="state" data-target-next="state___rsModal2" data-target-prev="state___shared">
+        <div id="emailConfigured" class=" emailConfigured emailConfigured" data-name="emailConfigured">
+        </div>
+        <div id="rsactivities____hoverIndicator" class="hoverIndicator rsactivities startshidden pleaseHide" data-name="rsactivities" data-startshidden="true" style="opacity: 0; display: none;">
+            <div id="randomSplitDroppingHelper" class=" randomSplitDroppingHelper randomSplitDroppingHelper" data-name="randomSplitDroppingHelper">
+            </div>
+        </div>
+        <div id="randomSplitDragger" class=" randomSplitDragger randomSplitDragger" data-name="randomSplitDragger">
+        </div>
+        <div id="randomSplitDragger____hoverIndicator___dragHelper" class="hoverIndicator dragHelper randomSplitDragger startshidden pleaseHide" data-name="randomSplitDragger" data-startshidden="true" style="opacity: 0; display: none;">
+        </div>
+        <div id="randomSplitDragger____rpd__draggable_dropson_rsactivities__ondrop_gotostate_rsModal2___button___next___xglowscta___xglows" class="draggable dropson rsactivities draggable-dropson-rsactivities ondrop gotostate rsModal2 ondrop-gotostate-rsModal2  button next xglowscta xglows randomSplitDragger btn default first last ui-draggable" data-event-draggable="dropson" data-target-dropson="rsactivities" data-event-ondrop="gotostate" data-target-gotostate="state.rsModal2" data-name="randomSplitDragger" data-button-name="randomSplitDragger" data-event-onclick="gotostate" data-drag-clone-img="#randomSplitDragger____hoverIndicator___dragHelper">
+        </div>
+        <div id="rsactivities____rpd__isdroptarget_accepts_randomSplitDragger" class="isdroptarget accepts randomSplitDragger isdroptarget-accepts-randomSplitDragger rsactivities droppable rpdDropTarget ui-droppable" data-event-isdroptarget="accepts" data-target-accepts="randomSplitDragger" data-name="rsactivities">
+        </div>
+    </div>
+    <div id="state___rsModal2" class="state rsModal2 state___rsModal2 group startshidden pleaseHide" data-name="state___rsModal2" data-toggle="state" data-target-next="state___rsModal4" data-target-prev="state___initial" data-startshidden="true" style="opacity: 0; display: none;">
+        <div id="overylay1" class=" overylay1 overylay1" data-name="overylay1">
+        </div>
+        <div id="randomSplitModal" class=" randomSplitModal randomSplitModal" data-name="randomSplitModal">
+            <div id="group2" class=" group2 group2" data-name="group2">
+                <div id="mainModalBg" class=" mainModalBg mainModalBg" data-name="mainModalBg">
+                </div>
+                <div id="modalHeaderBg" class=" modalHeaderBg modalHeaderBg" data-name="modalHeaderBg">
+                </div>
+                <div id="mainModalBg3" class=" mainModalBg3 mainModalBg3" data-name="mainModalBg3">
+                </div>
+            </div>
+            <div id="chooseRsButtons____ancestor___boxsizingcontentbox" class="" data-ancestor="true" data-original-classnames="chooseRsButtons" data-applied-classnames=" ancestor boxsizingcontentbox" data-name="chooseRsButtons" data-archive-class="boxsizingcontentbox chooseRsButtons ancestor">
+                <div id="chooseRs____button___2" class="button 2 boxsizingcontentbox chooseRsButtons chooseRs btn default first" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text" class=" text text" data-name="text">
+                    2
+                    </div>
+                    <div id="oval" class=" oval oval" data-name="oval">
+                    </div>
+                </div>
+                <div id="chooseRs____button___3" class="button 3 boxsizingcontentbox chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text2" class=" text2 text2" data-name="text2">
+                    3
+                    </div>
+                    <div id="oval4" class=" oval4 oval4" data-name="oval4">
+                    </div>
+                </div>
+                <div id="chooseRs____button___next___4" class="button next 4 boxsizingcontentbox chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox" data-name="chooseRs" data-button-name="chooseRs" data-event-onclick="gotostate" data-target-gotostate="state.rsModal4">
+                    <div id="text3" class=" text3 text3" data-name="text3">
+                    4
+                    </div>
+                    <div id="oval5" class=" oval5 oval5" data-name="oval5">
+                    </div>
+                </div>
+                <div id="chooseRs____button___5" class="button 5 boxsizingcontentbox chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text4" class=" text4 text4" data-name="text4">
+                    5
+                    </div>
+                    <div id="oval6" class=" oval6 oval6" data-name="oval6">
+                    </div>
+                </div>
+                <div id="chooseRs____button___6" class="button 6 boxsizingcontentbox chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text5" class=" text5 text5" data-name="text5">
+                    6
+                    </div>
+                    <div id="oval2" class=" oval2 oval2" data-name="oval2">
+                    </div>
+                </div>
+                <div id="chooseRs____button___7" class="button 7 boxsizingcontentbox chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text6" class=" text6 text6" data-name="text6">
+                    7
+                    </div>
+                    <div id="oval3" class=" oval3 oval3" data-name="oval3">
+                    </div>
+                </div>
+                <div id="chooseRs____button___8" class="button 8 boxsizingcontentbox chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text7" class=" text7 text7" data-name="text7">
+                    8
+                    </div>
+                    <div id="oval7" class=" oval7 oval7" data-name="oval7">
+                    </div>
+                </div>
+                <div id="chooseRs____button___9" class="button 9 boxsizingcontentbox chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text8" class=" text8 text8" data-name="text8">
+                    9
+                    </div>
+                    <div id="oval8" class=" oval8 oval8" data-name="oval8">
+                    </div>
+                </div>
+                <div id="chooseRs____button___10" class="button 10 boxsizingcontentbox chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text9" class=" text9 text9" data-name="text9">
+                    10
+                    </div>
+                    <div id="oval9" class=" oval9 oval9" data-name="oval9">
+                    </div>
+                </div>
+            </div>
+            <div id="rsBar" class=" rsBar rsBar" data-name="rsBar">
+                <div id="roundedRectangle" class=" roundedRectangle roundedRectangle" data-name="roundedRectangle">
+                </div>
+                <div id="roundedRectangle2" class=" roundedRectangle2 roundedRectangle2" data-name="roundedRectangle2">
+                </div>
+            </div>
+        </div>
+        <div id="gotoRs4____button___next___2" class="button next 2 gradient gotoRs4 btn last" data-name="gotoRs4" data-button-name="gotoRs4" data-event-onclick="gotostate" data-target-gotostate="state.rsModal4">
+        </div>
+    </div>
+    <div id="state___rsModal4" class="state rsModal4 state___rsModal4 group startshidden pleaseHide" data-name="state___rsModal4" data-toggle="state" data-target-next="state___rs4" data-target-prev="state___rsModal2" data-startshidden="true" style="opacity: 0; display: none;">
+        <div id="overylay" class=" overylay overylay" data-name="overylay">
+        </div>
+        <div id="randomSplitModal2" class=" randomSplitModal2 randomSplitModal2" data-name="randomSplitModal2">
+            <div id="group3" class=" group3 group3" data-name="group3">
+                <div id="mainModalBg2" class=" mainModalBg2 mainModalBg2" data-name="mainModalBg2">
+                </div>
+                <div id="modalHeaderBg2" class=" modalHeaderBg2 modalHeaderBg2" data-name="modalHeaderBg2">
+                </div>
+                <div id="mainModalBg4" class=" mainModalBg4 mainModalBg4" data-name="mainModalBg4">
+                </div>
+            </div>
+            <div id="chooseRsButtons____ancestor___boxsizingcontentbox2" class="" data-ancestor="true" data-original-classnames="chooseRsButtons" data-applied-classnames=" ancestor boxsizingcontentbox2" data-name="chooseRsButtons" data-archive-class="boxsizingcontentbox2 chooseRsButtons ancestor">
+                <div id="chooseRs____button___" class="button  boxsizingcontentbox2 chooseRsButtons chooseRs btn default first" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox2" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text10" class=" text10 text10" data-name="text10">
+                    2
+                    </div>
+                    <div id="oval10" class=" oval10 oval10" data-name="oval10">
+                    </div>
+                </div>
+                <div id="chooseRs____button___4" class="button 4 boxsizingcontentbox2 chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox2" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text11" class=" text11 text11" data-name="text11">
+                    3
+                    </div>
+                    <div id="oval11" class=" oval11 oval11" data-name="oval11">
+                    </div>
+                </div>
+                <div id="chooseRs____button___next___" class="button next  boxsizingcontentbox2 chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox2" data-name="chooseRs" data-button-name="chooseRs" data-event-onclick="gotostate" data-target-gotostate="state.rs4">
+                    <div id="text12" class=" text12 text12" data-name="text12">
+                    4
+                    </div>
+                    <div id="oval12" class=" oval12 oval12" data-name="oval12">
+                    </div>
+                </div>
+                <div id="chooseRs____button___11" class="button 11 boxsizingcontentbox2 chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox2" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text13" class=" text13 text13" data-name="text13">
+                    5
+                    </div>
+                    <div id="oval13" class=" oval13 oval13" data-name="oval13">
+                    </div>
+                </div>
+                <div id="chooseRs____button___12" class="button 12 boxsizingcontentbox2 chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox2" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text14" class=" text14 text14" data-name="text14">
+                    6
+                    </div>
+                    <div id="oval14" class=" oval14 oval14" data-name="oval14">
+                    </div>
+                </div>
+                <div id="chooseRs____button___13" class="button 13 boxsizingcontentbox2 chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox2" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text15" class=" text15 text15" data-name="text15">
+                    7
+                    </div>
+                    <div id="oval15" class=" oval15 oval15" data-name="oval15">
+                    </div>
+                </div>
+                <div id="chooseRs____button___14" class="button 14 boxsizingcontentbox2 chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox2" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text16" class=" text16 text16" data-name="text16">
+                    8
+                    </div>
+                    <div id="oval16" class=" oval16 oval16" data-name="oval16">
+                    </div>
+                </div>
+                <div id="chooseRs____button___15" class="button 15 boxsizingcontentbox2 chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox2" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text17" class=" text17 text17" data-name="text17">
+                    9
+                    </div>
+                    <div id="oval17" class=" oval17 oval17" data-name="oval17">
+                    </div>
+                </div>
+                <div id="chooseRs____button___16" class="button 16 boxsizingcontentbox2 chooseRsButtons chooseRs btn" data-descendant-of="#chooseRsButtons____ancestor___boxsizingcontentbox2" data-name="chooseRs" data-button-name="chooseRs">
+                    <div id="text18" class=" text18 text18" data-name="text18">
+                    10
+                    </div>
+                    <div id="oval18" class=" oval18 oval18" data-name="oval18">
+                    </div>
+                </div>
+            </div>
+            <div id="rsBar3" class=" rsBar3 rsBar3" data-name="rsBar3">
+                <div id="roundedRectangle3" class=" roundedRectangle3 roundedRectangle3" data-name="roundedRectangle3">
+                </div>
+                <div id="roundedRectangle4" class=" roundedRectangle4 roundedRectangle4" data-name="roundedRectangle4">
+                </div>
+                <div id="roundedRectangle5" class=" roundedRectangle5 roundedRectangle5" data-name="roundedRectangle5">
+                </div>
+                <div id="roundedRectangle6" class=" roundedRectangle6 roundedRectangle6" data-name="roundedRectangle6">
+                </div>
+            </div>
+        </div>
+        <div id="gotoRs4____button___next___" class="button next  gradient gotoRs4 btn last" data-name="gotoRs4" data-button-name="gotoRs4" data-event-onclick="gotostate" data-target-gotostate="state.rs4">
+        </div>
+    </div>
+    <div id="state___rs4" class="state rs4 state___rs4 group startshidden pleaseHide" data-name="state___rs4" data-toggle="state" data-target-prev="state___rsModal4" data-startshidden="true" style="opacity: 0; display: none;">
+        <div id="bg" class=" bg bg" data-name="bg">
+        </div>
+        <div id="activity_bar_active2" class=" activity_bar_active2 activity_bar_active2" data-name="activity_bar_active2">
+        </div>
+        <div id="rs4" class=" rs4 rs4" data-name="rs4">
+        </div>
+        <div id="then" class=" then then" data-name="then">
+        </div>
+        <div id="times" class=" times times" data-name="times">
+        </div>
+        <div id="email_activity_configured2" class=" email_activity_configured2 email_activity_configured2" data-name="email_activity_configured2">
+        </div>
+        <div id="random_split_configured___rpd__onshow_trigger_slideJbDays" class=" onshow trigger slideJbDays onshow-trigger-slideJbDays  random_split_configured random_split_configured___rpd__onshow_trigger_slideJbDays" data-event-onshow="trigger" data-target-trigger="slideJbDays" data-name="random_split_configured___rpd__onshow_trigger_slideJbDays">
+        </div>
+    </div>
+
+
+
+
+    </div><!-- /end "root" group -->
+			</div>
+		</div>
+		<!--hr>
+
+			<footer>
+				<p>&copy; ExactTarget 2014</p>
+			</footer-->
+	</div>
+	<!-- /container -->
+
+	<div id="pallet" class="dev-toolbar">
+		<span href="#" id="moveDev">
+			<span id="moveDevIcon" class="glyphicon glyphicon glyphicon glyphicon-move has-tooltip" title="Click and drag to re-position the dev toolbar." data-toggle="tooltip" data-placement="top"></span>
+			<a href="#" class="pull-right" id="hideDev">
+				<span class="glyphicon glyphicon-eye-close has-tooltip" title="Click to hide the dev toolbar." data-toggle="tooltip" data-placement="top"></span></a>
+		</span>
+		<a href="#" class="btn btn-block btn-primary" data-toggle="modal" data-target="#editImage" id="addElementBtn" data-context="Add">
+			<span class="glyphicon glyphicon-plus"></span> Add Element</a>
+		<a href="#" class="btn btn-block btn-default" data-toggle="modal" data-target="#editGroup" id="addGroupBtn" data-context="Add">
+			<span class="glyphicon glyphicon-plus-sign"></span> Add Group</a>
+		<a href="#" class="btn btn-block btn-default" id="showSource">
+			<span class="glyphicon glyphicon-sound-stereo"></span> Show Source</a>
+		<div id="editBar">
+
+		</div>
+	</div>
+
+<a href="#" class="btn" id="showDev" style="position: absolute; bottom: 5px"><span class="glyphicon glyphicon-eye-open"></span> Show Dev</a>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>
+	window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')
+	</script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="js/vendor/handlebars-v1.3.0.js"></script>
+
+	<script src="js/vendor/jquery.velocity.min.js"></script>
+	<script src="js/vendor/velocity.ui.js"></script>
+	<script src="js/vendor/velocity.extras.ui.js"></script>
+	<script src="js/vendor/underscore.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/vendor/mousetrap.min.js"></script>
+	<script src="js/vendor/nudge.js"></script>
+	<script src="js/vendor/ba-debug.min.js"></script>
+
+	<script src="js/stock.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/rpd.js"></script><!-- RPD specific JS -->
+</body>
+
+</html>
