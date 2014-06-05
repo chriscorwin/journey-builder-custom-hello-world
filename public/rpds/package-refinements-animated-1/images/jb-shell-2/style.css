@@ -168,88 +168,8 @@
        -moz-border-radius: 4px 4px 4px 4px;
             border-radius: 4px 4px 4px 4px;
 }
-#bg
+#rsConfigured_______rpd__onshow_trigger_slideJbDays
 {
-    position: absolute;
-    left: 472px;
-    width: 808px;
-    top: 186px;
-    height: 572px;
-    background: rgb(0, 0, 0); /* fallback */
-    background: rgba(0, 0, 0, 0);
-    border: none;
-}
-#activity_bar_active2
-{
-    position: absolute;
-    left: 659px;
-    width: 114px;
-    top: 287px;
-    height: 28px;
-    background-image: url(images/activity_bar_activeImage.png);
-    background-repeat: no-repeat;
-    background-position: -884px 0px;
-    border: none;
-}
-#rs4
-{
-    position: absolute;
-    left: 533px;
-    width: 267px;
-    top: 288px;
-    height: 280px;
-    background-image: url(images/rs4Image.png);
-    background-repeat: repeat;
-    background-position: 0px 0px;
-    border: none;
-}
-#then
-{
-    position: absolute;
-    left: 572px;
-    width: 73px;
-    top: 291px;
-    height: 20px;
-    background-image: url(images/thenImage.png);
-    background-repeat: repeat;
-    background-position: 0px 0px;
-    border: none;
-}
-#times
-{
-    position: absolute;
-    left: 688px;
-    width: 68px;
-    top: 291px;
-    height: 275px;
-    background-image: url(images/image.png);
-    background-repeat: no-repeat;
-    background-position: 0px 0px;
-    border: none;
-}
-#email_activity_configured2
-{
-    position: absolute;
-    left: 531px;
-    width: 39px;
-    top: 288px;
-    height: 27px;
-    background-image: url(images/email_activity_configuredImage.png);
-    background-repeat: repeat;
-    background-position: 0px 0px;
-    border: none;
-}
-#random_split_configured___rpd__onshow_trigger_slideJbDays
-{
-    position: absolute;
-    left: 644px;
-    width: 31px;
-    top: 286px;
-    height: 31px;
-    background-image: url(images/random_split_configuredImage.png);
-    background-repeat: repeat;
-    background-position: 0px 0px;
-    border: none;
 }
 #headerBg
 {
@@ -389,6 +309,42 @@
 }
 #rsBar3
 {
+}
+#rs4
+{
+    position: absolute;
+    left: 533px;
+    width: 267px;
+    top: 288px;
+    height: 280px;
+    background-image: url(images/rs4Image.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#then
+{
+    position: absolute;
+    left: 572px;
+    width: 73px;
+    top: 291px;
+    height: 20px;
+    background-image: url(images/thenImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#times
+{
+    position: absolute;
+    left: 688px;
+    width: 68px;
+    top: 291px;
+    height: 275px;
+    background-image: url(images/image.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
 }
 #activitiesBg
 {
