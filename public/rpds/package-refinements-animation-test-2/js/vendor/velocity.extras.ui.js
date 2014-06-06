@@ -25,24 +25,29 @@
 	var effects = {
 		/* Animate.css */
 		"move.slideRight": {
-			defaultDuration: 800,
+			defaultDuration: 500,
 			calls: [
 				[{
 						left: '+=50px'
 					},
-					1.25
+					0.25
 				],
 				[{
-						left: '-=13px'
+						left: '-=14px'
 					},
-					1.25
+					0.25
 				],
 				[{
-						left: '+=3px'
+						left: '+=4px'
 					},
-					1.25
+					0.25
 				]
-			]
+			],
+			reset: {
+				transformPerspective: 0
+			}
+			// calls: [
+			// ]
 		}
 	};
 

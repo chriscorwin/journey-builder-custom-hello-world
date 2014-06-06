@@ -993,20 +993,24 @@ var slideJbDays = function slideJbDays() {
 	debug.debug("zeroWidth", zeroWidth);
 	debug.debug("zeroNewWidth", zeroNewWidth);
 
-	$otherJbDays.velocity("move.slideRight", {
-		stagger: 25,
-		drag: true,
-		backwards: false,
-		complete: function() {
-			debug.debug('done!');
-		}
-	});
+
 	$firstJbDay.velocity({
 		width: zeroNewWidth
-	}, [1000, 10]);
+	}, {
+		duration: 25,
+		complete: function() {
+			$otherJbDays.velocity("move.slideRight", {
+				stagger: false,
+				drag: false,
+				backwards: false
+			});
+		}
+	});
 	$('.uicentered', $firstJbDay).velocity({
 		left: '+=' + (activityWidth / 2)
-	}, 250);
+	}, {
+		duration: [250, 500]
+	});
 
 	// window.setTimeout(function() {}, 500)
 	// window.setTimeout(function() {
