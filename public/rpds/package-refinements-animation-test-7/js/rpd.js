@@ -22,7 +22,14 @@ var executeFunctionByName = function executeFunctionByName(functionName, context
 	for (var i = 0; i < namespaces.length; i++) {
 		context = context[namespaces[i]];
 	}
-	return context[func].apply(context, args);
+	if (typeof(context[func]) === "function") {
+		// safe to use the function
+		return context[func].apply(context, args);
+	} else {
+		console.warn("[executeFunctionByName] was told to execute `" + func + "`` but it does not exist.")
+	}
+
+
 }
 
 
@@ -223,6 +230,23 @@ var rpdShow = function rpdShow(el) {
 	// $thisElement.hasClass('pleaseHide').show();
 
 	// console.groupEnd();
+};
+
+var rpdFadeOut = function rpdFadeOut( /* args */ ) {
+	$("body").hasClass("dev");
+	if ($("body").hasClass("dev")) {
+		return;
+	}
+
+	var args = Array.prototype.slice.call(arguments, 0);
+	console.group("[rpdFadeOut] args", args);
+	window.rpdFadeOutArgs = args;
+	var elementToFadeOutID = rpdFadeOutArgs[0][0]['elementID'];
+	window.setTimeout(function() {
+		hide(elementToFadeOutID);
+	}, 2500);
+
+	console.groupEnd();
 };
 
 var toggle = function toggle(el) {
