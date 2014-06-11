@@ -1,0 +1,2151 @@
+#state___initial
+{
+}
+#state___icons___configured___shared___starts_hidden___ungroup_after_init___children_start_hidden
+{
+}
+#state___icons___configured___visited___shared___starts_hidden___ungroup_after_init___children_start_hidden
+{
+}
+#state___divider
+{
+}
+#state___email_preview_1
+{
+}
+#state___wait_email_preview_1
+{
+}
+#state___split_has_mobile_yes_chosen
+{
+}
+#state___split_has_mobile_no_chosen
+{
+}
+#state___sms_preview
+{
+}
+#state___wait_before_split_choose_a_b_c_d
+{
+}
+#state___split_choose_a_b_c_d
+{
+}
+#state___split_a_chosen
+{
+}
+#state___split_a_wait
+{
+}
+#state___sms_preview_2A
+{
+}
+#state___split_a_end
+{
+}
+#state___split_b_chosen
+{
+}
+#state___split_b_wait
+{
+}
+#state___sms_preview_2B
+{
+}
+#state___split_b_end
+{
+}
+#state___split_c_chosen
+{
+}
+#state___split_c_wait
+{
+}
+#state___sms_preview_2C
+{
+}
+#state___split_c_end
+{
+}
+#state___split_d_chosen
+{
+}
+#state___sms_preview_2D
+{
+}
+#state___split_d_end
+{
+}
+#state___email_preview_no_mobile_1
+{
+}
+#state___email_preview_no_mobile_end
+{
+}
+#state___initial___shared___do_not_hide___children_inherit_classnames
+{
+}
+#icon___activity___email___configured___email_preview_1
+{
+    position: absolute;
+    left: 53px;
+    width: 39px;
+    top: 102px;
+    height: 28px;
+    background-image: url(images/email_activity_configuredImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___decision___configured___split_has_mobile_choose___split_has_mobile_yes_chosen___split_has_mobile_no_chosen
+{
+    position: absolute;
+    left: 490px;
+    width: 31px;
+    top: 101px;
+    height: 31px;
+    background-image: url(images/decision_split_configuredImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___decision___configured___split_has_mobile_yes_chosen___state___sms_preview
+{
+    position: absolute;
+    left: 522px;
+    width: 29px;
+    top: 106px;
+    height: 18px;
+    background-image: url(images/yes_badge_configuredImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___sms___configured___sms_preview
+{
+    position: absolute;
+    left: 554px;
+    width: 34px;
+    top: 101px;
+    height: 29px;
+    background-image: url(images/phone_activity_configuredImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___split___random___configured___split_choose_a_b_c_d___split_a_chosen___split_b_chosen___split_c_chosen___split_d_chosen
+{
+    position: absolute;
+    left: 654px;
+    width: 31px;
+    top: 100px;
+    height: 31px;
+    background-image: url(images/random_split_configuredImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___configured___sms_preview_2A
+{
+    position: absolute;
+    left: 1189px;
+    width: 34px;
+    top: 103px;
+    height: 29px;
+    background-image: url(images/phone_activity_configuredImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___badge___25___configured___split_a_chosen___split_a_wait
+{
+    position: absolute;
+    left: 685px;
+    width: 29px;
+    top: 106px;
+    height: 18px;
+    background-image: url(images/image25_percent_badge_configuredImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___badge___25___configured___split_b_chosen___split_b_wait
+{
+    position: absolute;
+    left: 685px;
+    width: 29px;
+    top: 323px;
+    height: 18px;
+    background-image: url(images/image25_percent_badge_configuredImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___configured___sms_preview_2B
+{
+    position: absolute;
+    left: 1032px;
+    width: 35px;
+    top: 319px;
+    height: 29px;
+    background-image: url(images/phone_activity_configuredImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___badge___25___configured___split_c_chosen___split_c_wait
+{
+    position: absolute;
+    left: 685px;
+    width: 29px;
+    top: 530px;
+    height: 18px;
+    background-image: url(images/image25_percent_badge_configuredImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___configured___sms_preview_2C
+{
+    position: absolute;
+    left: 877px;
+    width: 34px;
+    top: 525px;
+    height: 29px;
+    background-image: url(images/phone_activity_configuredImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___badge___25___configured___split_d_chosen___sms_preview_2D___split_d_wait
+{
+    position: absolute;
+    left: 685px;
+    width: 29px;
+    top: 733px;
+    height: 18px;
+    background-image: url(images/image25_percent_badge_configuredImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___configured___sms_preview_2D
+{
+    position: absolute;
+    left: 726px;
+    width: 35px;
+    top: 730px;
+    height: 29px;
+    background-image: url(images/phone_activity_configuredImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___badge___no___configured___split_has_mobile_no_chosen___email_preview_no_mobile_1
+{
+    position: absolute;
+    left: 523px;
+    width: 27px;
+    top: 940px;
+    height: 17px;
+    background-image: url(images/yes_badge_configuredImage2.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___email___configured___email_preview_no_mobile_1
+{
+    position: absolute;
+    left: 562px;
+    width: 39px;
+    top: 935px;
+    height: 27px;
+    background-image: url(images/email_activity_configuredImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___end_and_exit___configured___split_a_end
+{
+    position: absolute;
+    left: 1241px;
+    width: 118px;
+    top: 100px;
+    height: 36px;
+    background-image: url(images/end_and_exit_configured.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___end_and_exit___configured___split_b_end
+{
+    position: absolute;
+    left: 1071px;
+    width: 118px;
+    top: 316px;
+    height: 36px;
+    background-image: url(images/end_and_exit_configured.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___end_and_exit___configured___split_c_end
+{
+    position: absolute;
+    left: 921px;
+    width: 118px;
+    top: 524px;
+    height: 36px;
+    background-image: url(images/end_and_exit_configured.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___end_and_exit___configured___split_d_end
+{
+    position: absolute;
+    left: 767px;
+    width: 118px;
+    top: 726px;
+    height: 36px;
+    background-image: url(images/end_and_exit_configured.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___end_and_exit___configured___email_preview_no_mobile_1
+{
+    position: absolute;
+    left: 608px;
+    width: 118px;
+    top: 935px;
+    height: 36px;
+    background-image: url(images/end_and_exit_configured.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___email___configured___visited___email_preview_1
+{
+    position: absolute;
+    left: 46px;
+    width: 48px;
+    top: 91px;
+    height: 38px;
+    background-image: url(images/configured_iconImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___decision___configured___visited___split_has_mobile_yes_chosen___split_has_mobile_no_chosen___split_has_mobile_choose
+{
+    position: absolute;
+    left: 486px;
+    width: 36px;
+    top: 91px;
+    height: 40px;
+    background-image: url(images/configured_iconImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___sms___configured___visited___sms_preview
+{
+    position: absolute;
+    left: 544px;
+    width: 45px;
+    top: 91px;
+    height: 39px;
+    background-image: url(images/configured_iconImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___split___random___configured___visited___split_choose_a_b_c_d___split_a_chosen___split_b_chosen___split_c_chosen___split_d_chosen
+{
+    position: absolute;
+    left: 649px;
+    width: 39px;
+    top: 91px;
+    height: 39px;
+    background-image: url(images/configured_iconImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___configured___visited___sms_preview_2A
+{
+    position: absolute;
+    left: 1179px;
+    width: 49px;
+    top: 94px;
+    height: 38px;
+    background-image: url(images/configured_iconImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___configured___visited___sms_preview_2B
+{
+    position: absolute;
+    left: 1022px;
+    width: 49px;
+    top: 310px;
+    height: 38px;
+    background-image: url(images/configured_iconImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___configured___visited___sms_preview_2C
+{
+    position: absolute;
+    left: 867px;
+    width: 49px;
+    top: 516px;
+    height: 38px;
+    background-image: url(images/configured_iconImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___configured___visited___sms_preview_2D
+{
+    position: absolute;
+    left: 715px;
+    width: 49px;
+    top: 721px;
+    height: 38px;
+    background-image: url(images/configured_iconImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___email___configured___visited___email_preview_no_mobile_1
+{
+    position: absolute;
+    left: 555px;
+    width: 53px;
+    top: 924px;
+    height: 37px;
+    background-image: url(images/configured_iconImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#rectangle
+{
+    position: absolute;
+    left: 14px;
+    width: 33px;
+    top: 1382px;
+    height: 10px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#group___email_preview_1___is_popup___starts_hidden
+{
+}
+#group___wait_email_preview_1___is_popup___starts_hidden
+{
+}
+#group___split_has_mobile_yes_chosen___is_popup___starts_hidden
+{
+}
+#group___split_has_mobile_no_chosen___is_popup___starts_hidden
+{
+}
+#group___sms_preview___is_popup___starts_hidden___path__has_mobile_yes
+{
+}
+#group___wait_before_split_choose_a_b_c_d___is_popup___starts_hidden___path__has_mobile_yes
+{
+}
+#group___split_chose___is_popup___starts_hidden___path__has_mobile_yes
+{
+}
+#button___choose_split_a___gotostate_split_a_chosen
+{
+    position: absolute;
+    left: 513px;
+    width: 63px;
+    top: 176px;
+    height: 28px;
+    background-image: url(images/next_buttonImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 72px;
+    border: none;
+}
+#button___choose_split_b___gotostate_split_b_chosen
+{
+    position: absolute;
+    left: 581px;
+    width: 63px;
+    top: 176px;
+    height: 28px;
+    background-image: url(images/next_buttonImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 72px;
+    border: none;
+}
+#button___choose_split_c___gotostate_split_c_chosen
+{
+    position: absolute;
+    left: 658px;
+    width: 46px;
+    top: 174px;
+    height: 28px;
+    background-image: url(images/next_buttonImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 72px;
+    border: none;
+}
+#button___choose_split_d___gotostate_split_d_chosen
+{
+    position: absolute;
+    left: 721px;
+    width: 47px;
+    top: 176px;
+    height: 28px;
+    background-image: url(images/next_buttonImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 72px;
+    border: none;
+}
+#group___split_a_chosen___is_popup___starts_hidden___path__has_mobile_yes__split_a
+{
+}
+#button___a_a___back___hasclick___gotostate_split_a_chosen
+{
+    position: absolute;
+    left: 514px;
+    width: 62px;
+    top: 176px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___a_b___back___hasclick___gotostate_split_b_chosen
+{
+    position: absolute;
+    left: 586px;
+    width: 62px;
+    top: 176px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___a_c___back___hasclick___gotostate_split_c_chosen
+{
+    position: absolute;
+    left: 658px;
+    width: 59px;
+    top: 174px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___a_d___back___hasclick___gotostate_split_d_chosen
+{
+    position: absolute;
+    left: 722px;
+    width: 59px;
+    top: 176px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#group___split_a_wait___is_popup___starts_hidden___path__has_mobile__yes
+{
+}
+#group___sms_preview_2A___is_popup___starts_hidden___path__has_mobile__yes
+{
+}
+#group___end_a___is_popup___starts_hidden___path__has_mobile_yes__split_a
+{
+}
+#group___splid_b_chosen___is_popup___starts_hidden___path__has_mobile_yes__split_b
+{
+}
+#button___b_a___back___hasclick___gotostate_split_a_chosen
+{
+    position: absolute;
+    left: 510px;
+    width: 67px;
+    top: 175px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___b_b___back___hasclick___gotostate_split_b_chosen
+{
+    position: absolute;
+    left: 582px;
+    width: 74px;
+    top: 175px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___b_c___back___hasclick___gotostate_split_c_chosen
+{
+    position: absolute;
+    left: 659px;
+    width: 63px;
+    top: 174px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___b_d___back___hasclick___gotostate_split_d_chosen
+{
+    position: absolute;
+    left: 725px;
+    width: 64px;
+    top: 175px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#group___split_b_wait___is_popup___starts_hidden___path__has_mobile__yes
+{
+}
+#group___sms_preview_2B___is_popup___starts_hidden___path__has_mobile__yes
+{
+}
+#group___end_b___is_popup___starts_hidden___path__has_mobile_yes__split_b
+{
+}
+#group___split_c_chosen___is_popup___starts_hidden___path__has_mobile_yes__split_c
+{
+}
+#button___c_a___back___hasclick___gotostate_split_a_chosen
+{
+    position: absolute;
+    left: 510px;
+    width: 66px;
+    top: 176px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___c_b___back___hasclick___gotostate_split_b_chosen
+{
+    position: absolute;
+    left: 588px;
+    width: 66px;
+    top: 174px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___c_c___back___hasclick___gotostate_split_c_chosen
+{
+    position: absolute;
+    left: 665px;
+    width: 52px;
+    top: 174px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___c_d___back___hasclick___gotostate_split_d_chosen
+{
+    position: absolute;
+    left: 726px;
+    width: 62px;
+    top: 176px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#group___split_c_wait___is_popup___starts_hidden___path__has_mobile__yes
+{
+}
+#group___sms_preview_2C___is_popup___starts_hidden___path__has_mobile__yes
+{
+}
+#group___end_c___is_popup___starts_hidden___path__has_mobile_yes__split_b
+{
+}
+#group___split_d_chosen___is_popup___starts_hidden___path__has_mobile_yes__split_d
+{
+}
+#button___d_a___back___hasclick___gotostate_split_a_chosen
+{
+    position: absolute;
+    left: 513px;
+    width: 66px;
+    top: 175px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___d_b___back___hasclick___gotostate_split_b_chosen
+{
+    position: absolute;
+    left: 588px;
+    width: 66px;
+    top: 175px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___d_c___back___hasclick___gotostate_split_c_chosen
+{
+    position: absolute;
+    left: 663px;
+    width: 55px;
+    top: 175px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___d_d___back___hasclick___gotostate_split_d_chosen
+{
+    position: absolute;
+    left: 724px;
+    width: 60px;
+    top: 176px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#group___sms_preview_2D___is_popup___starts_hidden___path__has_mobile__yes
+{
+}
+#group___end_d___is_popup___starts_hidden___path__has_mobile_yes__split_d
+{
+}
+#group___email_preview_no_mobile_1___is_popup___starts_hidden
+{
+}
+#group___email_preview_no_mobile_end___is_popup___starts_hidden___path__has_mobile_no_chosen__email_preview_no_mobile_1
+{
+}
+#receipt_activity_bar_group
+{
+}
+#receipt_activity_bar_c_group
+{
+}
+#receipt_activity_bar_b_group
+{
+}
+#receipt_activity_bar_a_group
+{
+}
+#receipt_activity_bar_yes_group
+{
+}
+#has_moble_yes_random_split_line_d
+{
+    position: absolute;
+    left: 666px;
+    width: 35px;
+    top: 535px;
+    height: 208px;
+    background-image: url(images/has_moble_yes_random_split_line_dImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#has_moble_yes_random_split_line_c
+{
+    position: absolute;
+    left: 666px;
+    width: 35px;
+    top: 332px;
+    height: 209px;
+    background-image: url(images/has_moble_yes_random_split_line_cImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#has_moble_yes_random_split_line_b
+{
+    position: absolute;
+    left: 666px;
+    width: 35px;
+    top: 127px;
+    height: 207px;
+    background-image: url(images/has_moble_yes_random_split_line_bImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#has_mobile_no_line
+{
+    position: absolute;
+    left: 504px;
+    width: 35px;
+    top: 127px;
+    height: 824px;
+    background-image: url(images/thinVerticalLine.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___email
+{
+    position: absolute;
+    left: 54px;
+    width: 39px;
+    top: 102px;
+    height: 28px;
+    background-image: url(images/email_activityImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#label___acivity___email
+{
+    position: absolute;
+    left: 25px;
+    width: 96px;
+    top: 136px;
+    height: 50px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(136, 136, 136);
+}
+#icon___activity___split___decsion
+{
+    position: absolute;
+    left: 490px;
+    width: 31px;
+    top: 101px;
+    height: 31px;
+    background-image: url(images/decision_splitImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___badge___yes
+{
+    position: absolute;
+    left: 522px;
+    width: 29px;
+    top: 106px;
+    height: 18px;
+    background-image: url(images/yes_badgeImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___sms
+{
+    position: absolute;
+    left: 554px;
+    width: 34px;
+    top: 101px;
+    height: 29px;
+    background-image: url(images/phone_activityImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#message___activity___sms
+{
+    position: absolute;
+    left: 515px;
+    width: 96px;
+    top: 134px;
+    height: 50px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(136, 136, 136);
+}
+#icon___split___random
+{
+    position: absolute;
+    left: 654px;
+    width: 31px;
+    top: 100px;
+    height: 31px;
+    background-image: url(images/random_splitImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#label___split___a
+{
+    position: absolute;
+    left: 685px;
+    width: 27px;
+    top: 89px;
+    height: 11px;
+    background: none;
+    border: none;
+    font-size: 10px;
+    text-align: center;
+    font-family: ArialMT, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: rgb(102, 102, 102);
+}
+#icon___badge___25___A
+{
+    position: absolute;
+    left: 685px;
+    width: 29px;
+    top: 106px;
+    height: 18px;
+    background-image: url(images/image25_percent_badgeImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___sms__2A
+{
+    position: absolute;
+    left: 1189px;
+    width: 34px;
+    top: 103px;
+    height: 29px;
+    background-image: url(images/phone_activityImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#label___sms___2A
+{
+    position: absolute;
+    left: 1150px;
+    width: 107px;
+    top: 134px;
+    height: 50px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(136, 136, 136);
+}
+#icon___activity___split_a_end
+{
+    position: absolute;
+    left: 1241px;
+    width: 118px;
+    top: 100px;
+    height: 36px;
+    background-image: url(images/end_and_exitImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#label___split___b
+{
+    position: absolute;
+    left: 685px;
+    width: 28px;
+    top: 307px;
+    height: 11px;
+    background: none;
+    border: none;
+    font-size: 10px;
+    text-align: center;
+    font-family: ArialMT, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: rgb(102, 102, 102);
+}
+#icon___badge___25___B
+{
+    position: absolute;
+    left: 685px;
+    width: 29px;
+    top: 323px;
+    height: 18px;
+    background-image: url(images/image25_percent_badgeImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___sms___2B
+{
+    position: absolute;
+    left: 1032px;
+    width: 35px;
+    top: 319px;
+    height: 29px;
+    background-image: url(images/phone_activityImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#label___sms___2B
+{
+    position: absolute;
+    left: 989px;
+    width: 108px;
+    top: 352px;
+    height: 50px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(136, 136, 136);
+}
+#activity___end_and_exit___2B
+{
+    position: absolute;
+    left: 1071px;
+    width: 118px;
+    top: 316px;
+    height: 36px;
+    background-image: url(images/end_and_exitImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#label___split___c
+{
+    position: absolute;
+    left: 685px;
+    width: 27px;
+    top: 514px;
+    height: 11px;
+    background: none;
+    border: none;
+    font-size: 10px;
+    text-align: center;
+    font-family: ArialMT, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: rgb(102, 102, 102);
+}
+#icon___badge___25___C
+{
+    position: absolute;
+    left: 685px;
+    width: 29px;
+    top: 530px;
+    height: 18px;
+    background-image: url(images/image25_percent_badgeImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___sms___2C
+{
+    position: absolute;
+    left: 877px;
+    width: 34px;
+    top: 525px;
+    height: 29px;
+    background-image: url(images/phone_activityImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#label___sms___2C
+{
+    position: absolute;
+    left: 831px;
+    width: 113px;
+    top: 557px;
+    height: 50px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(136, 136, 136);
+}
+#activity___end_and_exit___2C
+{
+    position: absolute;
+    left: 921px;
+    width: 118px;
+    top: 523px;
+    height: 36px;
+    background-image: url(images/end_and_exitImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#label___split___d
+{
+    position: absolute;
+    left: 686px;
+    width: 26px;
+    top: 718px;
+    height: 11px;
+    background: none;
+    border: none;
+    font-size: 10px;
+    text-align: center;
+    font-family: ArialMT, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: rgb(102, 102, 102);
+}
+#icon___badge___25___D
+{
+    position: absolute;
+    left: 685px;
+    width: 29px;
+    top: 733px;
+    height: 18px;
+    background-image: url(images/image25_percent_badgeImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___activity___sms___2D
+{
+    position: absolute;
+    left: 726px;
+    width: 35px;
+    top: 730px;
+    height: 29px;
+    background-image: url(images/phone_activityImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#has_mobile_yes_phone_activity_label_d
+{
+    position: absolute;
+    left: 682px;
+    width: 108px;
+    top: 762px;
+    height: 50px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(136, 136, 136);
+}
+#activity___end_and_exit___2D
+{
+    position: absolute;
+    left: 767px;
+    width: 118px;
+    top: 726px;
+    height: 36px;
+    background-image: url(images/end_and_exitImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#icon___badge___no
+{
+    position: absolute;
+    left: 523px;
+    width: 27px;
+    top: 940px;
+    height: 17px;
+    background-image: url(images/yes_badgeImage2.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#label___activity___email___NoMobile
+{
+    position: absolute;
+    left: 530px;
+    width: 105px;
+    top: 963px;
+    height: 50px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(136, 136, 136);
+}
+#icon___activity___email___email_preview_no_mobile_1
+{
+    position: absolute;
+    left: 563px;
+    width: 39px;
+    top: 935px;
+    height: 27px;
+    background-image: url(images/email_activityImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#activity___end_and_exit___email_preview_no_mobile_1
+{
+    position: absolute;
+    left: 608px;
+    width: 118px;
+    top: 934px;
+    height: 36px;
+    background-image: url(images/end_and_exitImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#promo_email_popup
+{
+    position: absolute;
+    left: -98px;
+    width: 333px;
+    top: 118px;
+    height: 272px;
+    background-image: url(images/email_preview_popupImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___email_preview_1___next
+{
+    position: absolute;
+    left: 104px;
+    width: 103px;
+    top: 352px;
+    height: 24px;
+    background: none;
+    border: none;
+}
+#email_preview_popup_back_button
+{
+    position: absolute;
+    left: -84px;
+    width: 36px;
+    top: 360px;
+    height: 13px;
+    background: none;
+    border: none;
+}
+#popupBgEmailWait
+{
+    position: absolute;
+    left: 220px;
+    width: 187px;
+    top: 118px;
+    height: 143px;
+    background-image: url(images/wait_3_days_popupImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___wait_email_preview_1___next
+{
+    position: absolute;
+    left: 287px;
+    width: 103px;
+    top: 224px;
+    height: 24px;
+    background: none;
+    border: none;
+}
+#button___wait_email_preview_1___back
+{
+    position: absolute;
+    left: 238px;
+    width: 36px;
+    top: 232px;
+    height: 13px;
+    background: none;
+    border: none;
+}
+#popupHasMobileYesChosen
+{
+    position: absolute;
+    left: 334px;
+    width: 333px;
+    top: 118px;
+    height: 228px;
+    background-image: url(images/has_mobile_decision_split_popup_yesImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___yes_chosen___next___gotostate_sms_preview
+{
+    position: absolute;
+    left: 582px;
+    width: 56px;
+    top: 306px;
+    height: 24px;
+    background: none;
+    border: none;
+}
+#button___yes_chosen_no___next
+{
+    position: absolute;
+    left: 475px;
+    width: 118px;
+    top: 256px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___yes_chosen___back___gotostate_email_preview_1
+{
+    position: absolute;
+    left: 352px;
+    width: 36px;
+    top: 313px;
+    height: 12px;
+    background: none;
+    border: none;
+}
+#popupHasMobileNoChosen
+{
+    position: absolute;
+    left: 334px;
+    width: 333px;
+    top: 118px;
+    height: 228px;
+    background-image: url(images/has_mobile_decision_split_popup_noImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___no_chosen___next___gotostate_email_preview_no_mobile_1
+{
+    position: absolute;
+    left: 582px;
+    width: 59px;
+    top: 306px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#button___no_chosen_yes___back
+{
+    position: absolute;
+    left: 353px;
+    width: 118px;
+    top: 255px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___no_chosen___back___gotostate_email_preview_1
+{
+    position: absolute;
+    left: 352px;
+    width: 36px;
+    top: 313px;
+    height: 12px;
+    background: none;
+    border: none;
+}
+#sms_preview_popup
+{
+    position: absolute;
+    left: 360px;
+    width: 414px;
+    top: 117px;
+    height: 296px;
+    background-image: url(images/mobile_review_msg_1Image.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___sms_preview___next
+{
+    position: absolute;
+    left: 650px;
+    width: 106px;
+    top: 351px;
+    height: 27px;
+    background: none;
+    border: none;
+}
+#button___sms_preview___back___hasclick___gotostate_split_has_mobile_yes_chosen
+{
+    position: absolute;
+    left: 378px;
+    width: 36px;
+    top: 361px;
+    height: 13px;
+    background: none;
+    border: none;
+}
+#wait_before_split_choose_a_b_c_d_popup
+{
+    position: absolute;
+    left: 511px;
+    width: 187px;
+    top: 117px;
+    height: 143px;
+    background-image: url(images/wait_1_dayImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___wait_before_split_choose_a_b_c_d___next
+{
+    position: absolute;
+    left: 578px;
+    width: 103px;
+    top: 223px;
+    height: 21px;
+    background: none;
+    border: none;
+}
+#button___wait_before_split_choose_a_b_c_d___back___hasclick___gotostate_sms_preview
+{
+    position: absolute;
+    left: 529px;
+    width: 42px;
+    top: 231px;
+    height: 12px;
+    background: none;
+    border: none;
+}
+#random_split_popup
+{
+    position: absolute;
+    left: 498px;
+    width: 346px;
+    top: 117px;
+    height: 154px;
+    background-image: url(images/random_split_popupImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#diabled___button___split_choose___next___hasclick___gotostate_sms_preview
+{
+    position: absolute;
+    left: 769px;
+    width: 56px;
+    top: 234px;
+    height: 24px;
+    background: none;
+    border: none;
+}
+#button___split_choose___back___hasclick___gotostate_sms_preview
+{
+    position: absolute;
+    left: 517px;
+    width: 60px;
+    top: 242px;
+    height: 12px;
+    background: none;
+    border: none;
+}
+#masks_next_button
+{
+    position: absolute;
+    left: 765px;
+    width: 75px;
+    top: 227px;
+    height: 36px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMzcuNSIgeTE9IjAiIHgyPSIzNy41IiB5Mj0iMzYiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC41OTEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC41MzMiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI3NSIgaGVpZ2h0PSIzNiIgZmlsbD0idXJsKCNnKSIgLz48L3N2Zz4=);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.591)), color-stop(100%, rgba(255, 255, 255, 0.533)));
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.591) 0%, rgba(255, 255, 255, 0.533) 100%);
+    background-image:    -moz-linear-gradient(top, rgba(255, 255, 255, 0.591) 0%, rgba(255, 255, 255, 0.533) 100%);
+    background-image:     -ms-linear-gradient(top, rgba(255, 255, 255, 0.591) 0%, rgba(255, 255, 255, 0.533) 100%);
+    background-image:      -o-linear-gradient(top, rgba(255, 255, 255, 0.591) 0%, rgba(255, 255, 255, 0.533) 100%);
+    background-image:         linear-gradient(to bottom, rgba(255, 255, 255, 0.591) 0%, rgba(255, 255, 255, 0.533) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+    background-repeat: no-repeat;
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#random_split_a_chosen_popup
+{
+    position: absolute;
+    left: 498px;
+    width: 346px;
+    top: 117px;
+    height: 154px;
+    background-image: url(images/random_split_a_chosenImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___next___hasclick___gotostate_split_a_wait
+{
+    position: absolute;
+    left: 768px;
+    width: 58px;
+    top: 233px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___back___hasclick___gotostate_sms_preview
+{
+    position: absolute;
+    left: 514px;
+    width: 42px;
+    top: 234px;
+    height: 27px;
+    background: none;
+    border: none;
+}
+#popupA
+{
+    position: absolute;
+    left: 824px;
+    width: 187px;
+    top: 117px;
+    height: 143px;
+    background-image: url(images/wait_4_days_popupImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___next___a
+{
+    position: absolute;
+    left: 891px;
+    width: 108px;
+    top: 222px;
+    height: 27px;
+    background: none;
+    border: none;
+}
+#button___a___back___hasclick___gotostate_split_choose_a_b_c_d
+{
+    position: absolute;
+    left: 842px;
+    width: 36px;
+    top: 231px;
+    height: 13px;
+    background: none;
+    border: none;
+}
+#popup___sms_preview_2A
+{
+    position: absolute;
+    left: 998px;
+    width: 413px;
+    top: 124px;
+    height: 295px;
+    background-image: url(images/sms_preview_2a_popupImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___next___sms_preview_2A
+{
+    position: absolute;
+    left: 1288px;
+    width: 104px;
+    top: 359px;
+    height: 23px;
+    background: none;
+    border: none;
+}
+#button___back___sms_preview_2A___gotostate_split_choose_a_b_c_d
+{
+    position: absolute;
+    left: 1016px;
+    width: 35px;
+    top: 368px;
+    height: 14px;
+    background: none;
+    border: none;
+}
+#popupEndA
+{
+    position: absolute;
+    left: 1100px;
+    width: 323px;
+    top: 116px;
+    height: 154px;
+    background-image: url(images/end_and_exit_popupImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___a_end___next___hasclick___gotostate_initial
+{
+    position: absolute;
+    left: 1290px;
+    width: 121px;
+    top: 233px;
+    height: 26px;
+    background: none;
+    border: none;
+}
+#button___a_end___end___hasclick___gotostate_initial
+{
+    position: absolute;
+    left: 1196px;
+    width: 90px;
+    top: 234px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#button___a_end___back___hasclick___gotostate_sms_preview_2A
+{
+    position: absolute;
+    left: 1106px;
+    width: 61px;
+    top: 234px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#popupBChosen
+{
+    position: absolute;
+    left: 498px;
+    width: 346px;
+    top: 117px;
+    height: 154px;
+    background-image: url(images/random_split_b_chosenImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___b___next___hasclick___gotostate_split_b_wait
+{
+    position: absolute;
+    left: 748px;
+    width: 90px;
+    top: 233px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___b___back___hasclick___gotostate_sms_preview
+{
+    position: absolute;
+    left: 504px;
+    width: 75px;
+    top: 236px;
+    height: 24px;
+    background: none;
+    border: none;
+}
+#popupB
+{
+    position: absolute;
+    left: 718px;
+    width: 187px;
+    top: 339px;
+    height: 143px;
+    background-image: url(images/wait_3_days_popupImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___next___b
+{
+    position: absolute;
+    left: 785px;
+    width: 106px;
+    top: 444px;
+    height: 27px;
+    background: none;
+    border: none;
+}
+#button___b___back___hasclick___gotostate_split_choose_a_b_c_d
+{
+    position: absolute;
+    left: 736px;
+    width: 36px;
+    top: 453px;
+    height: 13px;
+    background: none;
+    border: none;
+}
+#popup___sms_preview_2B
+{
+    position: absolute;
+    left: 840px;
+    width: 414px;
+    top: 337px;
+    height: 296px;
+    background-image: url(images/sms_preview_2b_popupImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___next___sms_preview_2B
+{
+    position: absolute;
+    left: 1129px;
+    width: 104px;
+    top: 570px;
+    height: 28px;
+    background: none;
+    border: none;
+}
+#button___back___sms_preview_SB___gotostate_split_choose_a_b_c_d
+{
+    position: absolute;
+    left: 848px;
+    width: 77px;
+    top: 575px;
+    height: 23px;
+    background: none;
+    border: none;
+}
+#popupEndB
+{
+    position: absolute;
+    left: 930px;
+    width: 323px;
+    top: 337px;
+    height: 154px;
+    background-image: url(images/end_and_exit_popupImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___b_end___next___hasclick___gotostate_initial
+{
+    position: absolute;
+    left: 1121px;
+    width: 121px;
+    top: 452px;
+    height: 31px;
+    background: none;
+    border: none;
+}
+#button___b_end___end___hasclick___gotostate_initial
+{
+    position: absolute;
+    left: 1025px;
+    width: 93px;
+    top: 455px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#button___b_end___back___hasclick___gotostate_sms_preview_2B
+{
+    position: absolute;
+    left: 939px;
+    width: 77px;
+    top: 457px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#popupCChosen
+{
+    position: absolute;
+    left: 498px;
+    width: 346px;
+    top: 117px;
+    height: 154px;
+    background-image: url(images/random_split_c_chosenImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___c___next___hasclick___gotostate_split_c_wait
+{
+    position: absolute;
+    left: 770px;
+    width: 55px;
+    top: 235px;
+    height: 23px;
+    background: none;
+    border: none;
+}
+#button___c___back___hasclick___gotostate_sms_preview
+{
+    position: absolute;
+    left: 502px;
+    width: 70px;
+    top: 231px;
+    height: 31px;
+    background: none;
+    border: none;
+}
+#popupC
+{
+    position: absolute;
+    left: 683px;
+    width: 187px;
+    top: 546px;
+    height: 143px;
+    background-image: url(images/wait_2_days_popupImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___next___c
+{
+    position: absolute;
+    left: 751px;
+    width: 101px;
+    top: 652px;
+    height: 23px;
+    background: none;
+    border: none;
+}
+#button___c___back___hasclick___gotostate_split_choose_a_b_c_d
+{
+    position: absolute;
+    left: 701px;
+    width: 36px;
+    top: 652px;
+    height: 23px;
+    background: none;
+    border: none;
+}
+#popup___sms_preview_2C
+{
+    position: absolute;
+    left: 687px;
+    width: 414px;
+    top: 545px;
+    height: 296px;
+    background-image: url(images/sms_preview_2c_popupImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___next___sms_preview_2C
+{
+    position: absolute;
+    left: 977px;
+    width: 106px;
+    top: 779px;
+    height: 27px;
+    background: none;
+    border: none;
+}
+#button___back___sms_preview_2C___gotostate_split_choose_a_b_c_d
+{
+    position: absolute;
+    left: 695px;
+    width: 54px;
+    top: 785px;
+    height: 21px;
+    background: none;
+    border: none;
+}
+#popupEndC
+{
+    position: absolute;
+    left: 782px;
+    width: 323px;
+    top: 544px;
+    height: 154px;
+    background-image: url(images/end_and_exit_popupImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___c_end___next___hasclick___gotostate_initial
+{
+    position: absolute;
+    left: 978px;
+    width: 109px;
+    top: 661px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#button___c_end___end___hasclick___gotostate_initial
+{
+    position: absolute;
+    left: 882px;
+    width: 82px;
+    top: 661px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#button___c_end___back___hasclick___gotostate_sms_preview_2C
+{
+    position: absolute;
+    left: 793px;
+    width: 58px;
+    top: 661px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#popupD
+{
+    position: absolute;
+    left: 498px;
+    width: 346px;
+    top: 117px;
+    height: 154px;
+    background-image: url(images/random_split_d_chosenImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___d___next___hasclick___gotostate_sms_preview_2D
+{
+    position: absolute;
+    left: 769px;
+    width: 57px;
+    top: 233px;
+    height: 26px;
+    background: none;
+    border: none;
+}
+#button___d___back___hasclick___gotostate_sms_preview
+{
+    position: absolute;
+    left: 510px;
+    width: 50px;
+    top: 234px;
+    height: 24px;
+    background: none;
+    border: none;
+}
+#popup___sms_preview_2D
+{
+    position: absolute;
+    left: 531px;
+    width: 413px;
+    top: 749px;
+    height: 295px;
+    background-image: url(images/sms_preview_2d_popupImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___next___sms_preview_2D
+{
+    position: absolute;
+    left: 823px;
+    width: 100px;
+    top: 985px;
+    height: 23px;
+    background: none;
+    border: none;
+}
+#button___back___sms_preview_2D___gotostate_split_choose_a_b_c_d
+{
+    position: absolute;
+    left: 541px;
+    width: 52px;
+    top: 988px;
+    height: 23px;
+    background: none;
+    border: none;
+}
+#popupEndD
+{
+    position: absolute;
+    left: 621px;
+    width: 323px;
+    top: 749px;
+    height: 154px;
+    background-image: url(images/end_and_exit_popupImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___d_end___next___gotostate_initial
+{
+    position: absolute;
+    left: 817px;
+    width: 106px;
+    top: 866px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#button___d_end___end___gotostate_initial
+{
+    position: absolute;
+    left: 717px;
+    width: 90px;
+    top: 866px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#button___d_end___back___gotostate_sms_preview_2D
+{
+    position: absolute;
+    left: 631px;
+    width: 58px;
+    top: 866px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#has_mobile_no_email_preview_popup
+{
+    position: absolute;
+    left: 409px;
+    width: 333px;
+    top: 951px;
+    height: 272px;
+    background-image: url(images/email_preview_popupImage.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___next___email_preview_no_mobile_1
+{
+    position: absolute;
+    left: 611px;
+    width: 101px;
+    top: 1187px;
+    height: 21px;
+    background: none;
+    border: none;
+}
+#button___back___email_preview_no_mobile_1___gotostate_split_has_mobile_no_chosen
+{
+    position: absolute;
+    left: 416px;
+    width: 53px;
+    top: 1187px;
+    height: 21px;
+    background: none;
+    border: none;
+}
+#popupEndD2
+{
+    position: absolute;
+    left: 465px;
+    width: 323px;
+    top: 949px;
+    height: 154px;
+    background-image: url(images/end_and_exit_popupImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#button___activate_program___next___gotostate_initial
+{
+    position: absolute;
+    left: 661px;
+    width: 109px;
+    top: 1066px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#button___end_preview___back___email_preview_no_mobile_end___gotostate_initial
+{
+    position: absolute;
+    left: 568px;
+    width: 79px;
+    top: 1066px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#button___back___email_preview_no_mobile_end
+{
+    position: absolute;
+    left: 476px;
+    width: 58px;
+    top: 1066px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+#receipt_activity_bar2_right_point
+{
+    position: absolute;
+    left: 475px;
+    width: 13px;
+    top: 102px;
+    height: 26px;
+    background-image: url(images/activity_bar_point_right.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#receipt_activity_bar2_rectangle
+{
+    position: absolute;
+    left: 72px;
+    width: 403px;
+    top: 102px;
+    height: 26px;
+    background: rgb(191, 218, 236);
+    border: none;
+}
+#receipt_activity_bar2_right_point5
+{
+    position: absolute;
+    left: 861px;
+    width: 13px;
+    top: 526px;
+    height: 26px;
+    background-image: url(images/activity_bar_point_right.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#receipt_activity_bar2_rectangle4
+{
+    position: absolute;
+    left: 669px;
+    width: 192px;
+    top: 526px;
+    height: 26px;
+    background: rgb(191, 218, 236);
+    border: none;
+}
+#receipt_activity_bar2_right_point4
+{
+    position: absolute;
+    left: 1011px;
+    width: 13px;
+    top: 319px;
+    height: 26px;
+    background-image: url(images/activity_bar_point_right.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#receipt_activity_bar2_rectangle3
+{
+    position: absolute;
+    left: 668px;
+    width: 343px;
+    top: 319px;
+    height: 26px;
+    background: rgb(191, 218, 236);
+    border: none;
+}
+#receipt_activity_bar2_right_point3
+{
+    position: absolute;
+    left: 1170px;
+    width: 13px;
+    top: 102px;
+    height: 26px;
+    background-image: url(images/activity_bar_point_right.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#receipt_activity_bar2_rectangle2
+{
+    position: absolute;
+    left: 668px;
+    width: 502px;
+    top: 102px;
+    height: 26px;
+    background: rgb(191, 218, 236);
+    border: none;
+}
+#receipt_activity_bar2_right_point2
+{
+    position: absolute;
+    left: 638px;
+    width: 13px;
+    top: 102px;
+    height: 26px;
+    background-image: url(images/activity_bar_point_right.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#receipt_activity_bar2_rectangle6
+{
+    position: absolute;
+    left: 562px;
+    width: 76px;
+    top: 102px;
+    height: 26px;
+    background: rgb(191, 218, 236);
+    border: none;
+}
