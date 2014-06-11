@@ -13,6 +13,15 @@
 #state___ucdActivity2
 {
 }
+#state___ucdActivity3
+{
+}
+#state___emailActivity2
+{
+}
+#state___final
+{
+}
 #mainCanvas____ancestor___boxsizingcontentbox
 {
 }
@@ -25,7 +34,7 @@
 #topNav____ancestor___boxsizingcontentbox
 {
 }
-#bottomMasque____ancestor___boxsizingcontentbox2
+#bottomMasque____ancestor___boxsizingcontentbox
 {
 }
 #activityBars____ancestor___startshidden___activityBar
@@ -37,8 +46,34 @@
 #activities____ancestor___activityIcon___icon___startshidden
 {
 }
+#startingInstructions____rpd__onshow_trigger_rpdFadeOut
+{
+    position: absolute;
+    left: 19px;
+    width: 694px;
+    top: 275px;
+    height: 402px;
+    background-image: url(images/startImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
 #ucdDropTarget____hoverIndicator
 {
+}
+#ucdDropTarget____rpd__isdroptarget_accepts_ucdDragger
+{
+    position: absolute;
+    left: 551px;
+    width: 130px;
+    top: 234px;
+    height: 358px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
 }
 #ucdDragger
 {
@@ -67,7 +102,7 @@
        -moz-border-radius: 3px 3px 3px 3px;
             border-radius: 3px 3px 3px 3px;
 }
-#ucdDragger____rpd__draggable_dropson_ucdDropTarget__ondrop_gotostate_ucdActivity1___button___next
+#ucdDragger____button___next___rpd__draggable_dropson_ucdDropTarget__ondrop_gotostate_next
 {
     position: absolute;
     left: 20px;
@@ -76,32 +111,6 @@
     height: 24px;
     background: rgb(0, 0, 0); /* fallback */
     background: rgba(0, 0, 0, 0);
-    border: none;
-}
-#ucdDropTarget____rpd__isdroptarget_accepts_ucdDragger
-{
-    position: absolute;
-    left: 471px;
-    width: 240px;
-    top: 234px;
-    height: 358px;
-    background: rgb(0, 0, 0); /* fallback */
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    -webkit-border-radius: 4px 4px 4px 4px;
-       -moz-border-radius: 4px 4px 4px 4px;
-            border-radius: 4px 4px 4px 4px;
-}
-#startingInstructions____rpd__onshow_trigger_rpdFadeOut
-{
-    position: absolute;
-    left: 19px;
-    width: 694px;
-    top: 275px;
-    height: 402px;
-    background-image: url(images/startImage.png);
-    background-repeat: no-repeat;
-    background-position: 0px 0px;
     border: none;
 }
 #ucdActivity1____rpd__onshow_trigger_slideJbDays
@@ -137,7 +146,7 @@
        -moz-border-radius: 3px 3px 3px 3px;
             border-radius: 3px 3px 3px 3px;
 }
-#engageDragger1____button___next___rpd__draggable_dropson_engageDropTarget1__ondrop_gotostate_engageSplitActivity1
+#engageDragger1____button___next___rpd__draggable_dropson_engageDropTarget1__ondrop_gotostate_next
 {
     position: absolute;
     left: 20px;
@@ -195,7 +204,7 @@
        -moz-border-radius: 3px 3px 3px 3px;
             border-radius: 3px 3px 3px 3px;
 }
-#ucdDragger2____rpd__draggable_dropson_ucdDropTarget__ondrop_gotostate_ucdActivity2___button___next
+#ucdDragger2____rpd__draggable_dropson_ucdDropTarget__ondrop_gotostate_next___button___next
 {
     position: absolute;
     left: 20px;
@@ -223,15 +232,139 @@
 #ucdActivity2____rpd__onshow_trigger_slideJbDays
 {
 }
-#roundedRectangle7
+#ucdDropTarget3____hoverIndicator
+{
+}
+#ucdDragger3
 {
     position: absolute;
-    left: 522px;
-    width: 294px;
-    top: 71px;
-    height: 40px;
-    background: rgb(255, 255, 255);
+    left: 21px;
+    width: 224px;
+    top: 531px;
+    height: 24px;
+    background-image: url(images/ucdDraggerImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdDragger3____hoverIndicator___dragHelper
+{
+    position: absolute;
+    left: 21px;
+    width: 224px;
+    top: 531px;
+    height: 24px;
+    background-image: url(images/ucdDraggerHelperImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#ucdDragger3____rpd__draggable_dropson_ucdDropTarget__ondrop_gotostate_next___button___next
+{
+    position: absolute;
+    left: 20px;
+    width: 224px;
+    top: 531px;
+    height: 24px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#ucdDropTarget3____rpd__isdroptarget_accepts_ucdDragger3
+{
+    position: absolute;
+    left: 471px;
+    width: 357px;
+    top: 234px;
+    height: 358px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#ucdActivity3____rpd__onshow_trigger_fixActivityBars
+{
+}
+#emailDropTarget1____hoverIndicator
+{
+}
+#emailDragger1
+{
+    position: absolute;
+    left: 22px;
+    width: 224px;
+    top: 362px;
+    height: 24px;
+    background-image: url(images/emailDraggerImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#emailDragger1____hoverIndicator___dragHelper
+{
+    position: absolute;
+    left: 22px;
+    width: 224px;
+    top: 362px;
+    height: 24px;
+    background-image: url(images/emailDraggerHelperImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#emailDragger1____rpd__draggable_dropson_ucdDropTarget__ondrop_gotostate_next___button___next
+{
+    position: absolute;
+    left: 22px;
+    width: 224px;
+    top: 362px;
+    height: 24px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#emailDropTarget1____rpd__isdroptarget_accepts_emailDragger1
+{
+    position: absolute;
+    left: 471px;
+    width: 477px;
+    top: 234px;
+    height: 152px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#emailActivity2____rpd__onshow_trigger_slideJbDays
+{
+}
+#fin____boxsizingcontentbox
+{
+    position: absolute;
+    left: 472px;
+    width: 66px;
+    top: 79px;
+    height: 11px;
+    background: rgb(233, 135, 27);
     border: 1px solid rgb(0, 0, 0);
+    -webkit-box-shadow: 0px 0px 3.5px 0 rgba(135, 144, 153, 0.828);
+       -moz-box-shadow: 0px 0px 3.5px 0 rgba(135, 144, 153, 0.828);
+            box-shadow: 0px 0px 3.5px 0 rgba(135, 144, 153, 0.828);
+    font-size: 12px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    padding: 5px 0;
     -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
        -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
             border-radius: 4.5px 4.5px 4.5px 4.5px;
@@ -239,9 +372,9 @@
 #mainCanvasAreaBg
 {
     position: absolute;
-    left: 272px;
+    left: 273px;
     width: 1005px;
-    top: 186px;
+    top: 187px;
     height: 572px;
     background: rgb(255, 255, 255);
     border: 1px solid rgb(193, 193, 193);
@@ -252,9 +385,9 @@
 #eTOrangeBg
 {
     position: absolute;
-    left: 471px;
+    left: 472px;
     width: 833px;
-    top: 185px;
+    top: 186px;
     height: 575px;
     background: rgb(204, 204, 204);
     border: none;
@@ -268,65 +401,65 @@
 #day0
 {
     position: absolute;
-    left: 471px;
-    width: 120px;
-    top: 186px;
+    left: 472px;
+    width: 160px;
+    top: 187px;
     height: 576px;
 }
 #day1
 {
     position: absolute;
-    left: 590px;
-    width: 120px;
-    top: 186px;
+    left: 631px;
+    width: 160px;
+    top: 187px;
     height: 576px;
 }
 #day2
 {
     position: absolute;
-    left: 709px;
-    width: 120px;
-    top: 186px;
+    left: 790px;
+    width: 160px;
+    top: 187px;
     height: 576px;
 }
 #day3
 {
     position: absolute;
-    left: 828px;
-    width: 120px;
-    top: 186px;
+    left: 949px;
+    width: 160px;
+    top: 187px;
     height: 576px;
 }
 #day4
 {
     position: absolute;
-    left: 947px;
-    width: 120px;
-    top: 186px;
+    left: 1108px;
+    width: 160px;
+    top: 187px;
     height: 576px;
 }
 #day5
 {
     position: absolute;
-    left: 1066px;
-    width: 120px;
-    top: 186px;
+    left: 1267px;
+    width: 160px;
+    top: 187px;
     height: 576px;
 }
 #day6
 {
     position: absolute;
-    left: 1185px;
-    width: 120px;
-    top: 186px;
+    left: 1427px;
+    width: 160px;
+    top: 187px;
     height: 576px;
 }
 #headerBg
 {
     position: absolute;
-    left: -2px;
+    left: -1px;
     width: 1279px;
-    top: -2px;
+    top: -1px;
     height: 118px;
     background: rgb(240, 240, 240);
     border: 1px solid rgb(193, 193, 193);
@@ -334,9 +467,9 @@
 #timelineGrabberWrapper
 {
     position: absolute;
-    left: -2px;
+    left: -1px;
     width: 1279px;
-    top: 151px;
+    top: 152px;
     height: 34px;
     background: rgb(224, 224, 224);
     border: 1px solid rgb(193, 193, 193);
@@ -344,9 +477,9 @@
 #viewToolbar
 {
     position: absolute;
-    left: -1px;
+    left: 0px;
     width: 1279px;
-    top: 117px;
+    top: 118px;
     height: 33px;
     background: rgb(240, 240, 240);
     border: 1px solid rgb(193, 193, 193);
@@ -354,9 +487,9 @@
 #sidebarBg
 {
     position: absolute;
-    left: -1px;
+    left: 0px;
     width: 261px;
-    top: 117px;
+    top: 118px;
     height: 641px;
     background: rgb(240, 240, 240);
     border: 1px solid rgb(193, 193, 193);
@@ -364,9 +497,9 @@
 #sidebarCollapseButton
 {
     position: absolute;
-    left: 261px;
+    left: 262px;
     width: 10px;
-    top: 117px;
+    top: 118px;
     height: 641px;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCIgeTE9IjMyMSIgeDI9IjExIiB5Mj0iMzIxIj48c3RvcCBvZmZzZXQ9IjM2LjE5OCUiIHN0b3AtY29sb3I9IiNmMGYwZjAiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iODYuOTEyJSIgc3RvcC1jb2xvcj0iI2RlZGVkZSIgc3RvcC1vcGFjaXR5PSIxIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjY2NjY2NjIiBzdG9wLW9wYWNpdHk9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMSIgaGVpZ2h0PSI2NDIiIGZpbGw9InVybCgjZykiIC8+PC9zdmc+);
     background-image: -webkit-gradient(linear, left top, right top, color-stop(36.198%, rgb(240, 240, 240)), color-stop(86.912%, rgb(222, 222, 222)), color-stop(100%, rgb(204, 204, 204)));
@@ -385,41 +518,23 @@
 #actions____ancestor___boxsizingcontentbox
 {
 }
-#topNavBar
+#jBHeader____ancestor___boxsizingcontentbox
 {
-    position: absolute;
-    left: -1px;
-    width: 1280px;
-    top: -1px;
-    height: 32px;
-    background: rgb(48, 59, 68);
-    border: none;
-    -webkit-box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.249);
-       -moz-box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.249);
-            box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.249);
 }
-#currentApplicationName
+#frame
 {
     position: absolute;
-    left: 17px;
-    width: 200px;
-    top: -1px;
-    height: 36px;
-    background: rgb(233, 135, 27);
-    border: none;
-    -webkit-box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.249);
-       -moz-box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.249);
-            box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.249);
-    -webkit-border-radius: 0 0 4px 4px;
-       -moz-border-radius: 0 0 4px 4px;
-            border-radius: 0 0 4px 4px;
+    left: 0px;
+    width: 1280px;
+    top: 0px;
+    height: 46px;
 }
 #bottomMasque
 {
     position: absolute;
-    left: -11px;
+    left: -10px;
     width: 1299px;
-    top: 758px;
+    top: 759px;
     height: 39px;
     background: rgb(255, 255, 255);
     border: 1px solid rgb(193, 193, 193);
@@ -433,9 +548,9 @@
 #emailActivityBar____activityBar
 {
     position: absolute;
-    left: 531px;
-    width: 17px;
-    top: 267px;
+    left: 552px;
+    width: 10px;
+    top: 268px;
     height: 14px;
 }
 #ucdActivity1____ancestor
@@ -444,70 +559,103 @@
 #ucdActivity1____activitybar
 {
     position: absolute;
-    left: 651px;
-    width: 13px;
-    top: 267px;
+    left: 632px;
+    width: 10px;
+    top: 268px;
     height: 14px;
 }
 #engageSplitActivity1____ancestor
 {
 }
-#engageSplitActivity1____activityBar___1
+#engageSplitActivity1____activityBar
 {
     position: absolute;
-    left: 729px;
+    left: 712px;
     width: 10px;
-    top: 267px;
+    top: 268px;
     height: 14px;
 }
-#engageSplitActivity1____activityBar___
+#engageSplitActivity1____activityBar___ucdActivity2StopsFor
 {
     position: absolute;
-    left: 729px;
+    left: 712px;
     width: 10px;
-    top: 337px;
+    top: 338px;
+    height: 14px;
+}
+#ucdActivity2____ancestor___ucdActivity3StopsFor
+{
+}
+#ucdActivity2____activitybar
+{
+    position: absolute;
+    left: 791px;
+    width: 10px;
+    top: 268px;
+    height: 14px;
+}
+#ucdActivity3____ancestor___emailActivity2StopsFor
+{
+}
+#ucdActivity3____activitybar
+{
+    position: absolute;
+    left: 791px;
+    width: 10px;
+    top: 338px;
+    height: 14px;
+}
+#emailAcitivy2____ancestor
+{
+}
+#emailActivity2____activitybar
+{
+    position: absolute;
+    left: 871px;
+    width: 10px;
+    top: 268px;
     height: 14px;
 }
 #engageSplitActivity1____verticalBar
 {
     position: absolute;
-    left: 728px;
+    left: 712px;
     width: 3px;
-    top: 267px;
+    top: 268px;
     height: 84px;
     background: rgb(205, 205, 205);
-    border: none;
-}
-#initial____email
-{
-    position: absolute;
-    left: 511px;
-    width: 40px;
-    top: 261px;
-    height: 25px;
-    background-image: url(images/sendEmailActivityImageConfiguredImage.png);
-    background-repeat: no-repeat;
-    background-position: 2px 0px;
     border: none;
 }
 #initial____end
 {
     position: absolute;
-    left: 631px;
+    left: 692px;
     width: 40px;
-    top: 256px;
+    top: 257px;
     height: 35px;
     background-image: url(images/group1ObjectImage.png);
     background-repeat: no-repeat;
     background-position: 0px 0px;
     border: none;
 }
+#initial____email
+{
+    position: absolute;
+    left: 532px;
+    width: 40px;
+    top: 262px;
+    height: 25px;
+    background-image: url(images/sendEmailActivityImageConfiguredImage.png);
+    background-repeat: no-repeat;
+    background-position: 2px 0px;
+    border: none;
+}
 #ucdActivity1
 {
     position: absolute;
-    left: 631px;
+    left: 612px;
     width: 40px;
-    top: 257px;
+    top: 258px;
     height: 35px;
     background-image: url(images/updateContactActivityImageImage.png);
     background-repeat: no-repeat;
@@ -517,43 +665,67 @@
 #engageSplitActivity1
 {
     position: absolute;
-    left: 709px;
+    left: 691px;
     width: 40px;
-    top: 262px;
+    top: 263px;
     height: 23px;
     background-image: url(images/engageActivityImageImage.png);
     background-repeat: no-repeat;
     background-position: 9px 0px;
     border: none;
 }
-#engageSplitActivity1____end___
-{
-    position: absolute;
-    left: 749px;
-    width: 40px;
-    top: 326px;
-    height: 35px;
-    background-image: url(images/group1ObjectImage.png);
-    background-repeat: no-repeat;
-    background-position: 0px 0px;
-    border: none;
-}
 #ucdActivity2
 {
     position: absolute;
-    left: 749px;
+    left: 770px;
     width: 40px;
-    top: 257px;
+    top: 258px;
     height: 35px;
     background-image: url(images/updateContactActivityImageImage.png);
     background-repeat: no-repeat;
     background-position: 2px 0px;
     border: none;
 }
+#ucdActivity3
+{
+    position: absolute;
+    left: 770px;
+    width: 40px;
+    top: 328px;
+    height: 35px;
+    background-image: url(images/updateContactActivityImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 2px 0px;
+    border: none;
+}
+#emailActivity2
+{
+    position: absolute;
+    left: 852px;
+    width: 40px;
+    top: 262px;
+    height: 25px;
+    background-image: url(images/sendEmailActivityImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 2px 0px;
+    border: none;
+}
+#engageSplitActivity1____end___
+{
+    position: absolute;
+    left: 850px;
+    width: 40px;
+    top: 327px;
+    height: 35px;
+    background-image: url(images/group1ObjectImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
 #ucdDraggerDroppingHelper3
 {
     position: absolute;
-    left: 539px;
+    left: 569px;
     width: 65px;
     top: 233px;
     height: 103px;
@@ -562,10 +734,10 @@
     background-position: 0px 0px;
     border: none;
 }
-#ucdDraggerDroppingHelper7
+#engageDragger1DroppingHelper
 {
     position: absolute;
-    left: 658px;
+    left: 649px;
     width: 65px;
     top: 233px;
     height: 103px;
@@ -577,7 +749,31 @@
 #ucdDraggerDroppingHelper2
 {
     position: absolute;
-    left: 739px;
+    left: 729px;
+    width: 65px;
+    top: 233px;
+    height: 103px;
+    background-image: url(images/smallDropTarget.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdDraggerDroppingHelper
+{
+    position: absolute;
+    left: 729px;
+    width: 65px;
+    top: 293px;
+    height: 103px;
+    background-image: url(images/smallDropTarget.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#droppingHelper4
+{
+    position: absolute;
+    left: 809px;
     width: 65px;
     top: 233px;
     height: 103px;
@@ -589,9 +785,9 @@
 #triggerSummaryBackground
 {
     position: absolute;
-    left: 272px;
+    left: 273px;
     width: 198px;
-    top: 186px;
+    top: 187px;
     height: 572px;
     background: rgb(255, 255, 255);
     border: 1px solid rgb(193, 193, 193);
@@ -599,9 +795,9 @@
 #triggerSummaryBackground2
 {
     position: absolute;
-    left: 273px;
+    left: 274px;
     width: 198px;
-    top: 247px;
+    top: 248px;
     height: 100px;
     background: rgb(229, 229, 229);
     border: none;
@@ -632,7 +828,7 @@
 #dayHeader0____uicentered
 {
     position: absolute;
-    left: 1.25%;
+    left: 13.438%;
     width: 117px;
     top: 1px;
     height: 22px;
@@ -667,13 +863,13 @@
 #dayHeader1____uicentered
 {
     position: absolute;
-    left: 1.25%;
+    left: 13.438%;
     width: 117px;
     top: 1px;
     height: 22px;
     background-image: url(images/dayZero1Image.png);
     background-repeat: no-repeat;
-    background-position: -120px 0px;
+    background-position: -121px 0px;
     border: none;
 }
 #dayColumn2
@@ -702,13 +898,13 @@
 #dayHeader2____uicentered
 {
     position: absolute;
-    left: 1.25%;
+    left: 20.313%;
     width: 117px;
     top: 1px;
     height: 22px;
     background-image: url(images/dayZero1Image.png);
     background-repeat: no-repeat;
-    background-position: -240px 0px;
+    background-position: -241px 0px;
     border: none;
 }
 #dayColumn3
@@ -737,13 +933,13 @@
 #dayHeader3____uicentered
 {
     position: absolute;
-    left: 1.25%;
+    left: 13.438%;
     width: 117px;
     top: 1px;
     height: 22px;
     background-image: url(images/dayZero1Image.png);
     background-repeat: no-repeat;
-    background-position: -360px 0px;
+    background-position: -361px 0px;
     border: none;
 }
 #dayColumn4
@@ -772,13 +968,13 @@
 #dayHeader4____uicentered___4
 {
     position: absolute;
-    left: 1.25%;
+    left: 13.438%;
     width: 117px;
     top: 1px;
     height: 22px;
     background-image: url(images/dayZero1Image.png);
     background-repeat: no-repeat;
-    background-position: -480px 0px;
+    background-position: -481px 0px;
     border: none;
 }
 #dayColumn5
@@ -807,13 +1003,13 @@
 #dayHeader5____uicentered___5
 {
     position: absolute;
-    left: 1.25%;
+    left: 13.438%;
     width: 117px;
     top: 1px;
     height: 22px;
     background-image: url(images/dayZero1Image.png);
     background-repeat: no-repeat;
-    background-position: -600px 0px;
+    background-position: -601px 0px;
     border: none;
 }
 #dayColumn6
@@ -842,21 +1038,21 @@
 #dayHeader6____uicentered___6
 {
     position: absolute;
-    left: 1.25%;
+    left: 13.438%;
     width: 117px;
     top: 1px;
     height: 22px;
     background-image: url(images/dayZero1Image.png);
     background-repeat: no-repeat;
-    background-position: -720px 0px;
+    background-position: -721px 0px;
     border: none;
 }
 #activitiesBg
 {
     position: absolute;
-    left: 10px;
+    left: 11px;
     width: 238px;
-    top: 292px;
+    top: 293px;
     height: 314px;
     background: rgb(255, 255, 255);
     border: 1px solid rgb(109, 169, 231);
@@ -870,15 +1066,67 @@
 #actionsBg
 {
     position: absolute;
-    left: 10px;
+    left: 11px;
     width: 238px;
-    top: 146px;
+    top: 147px;
     height: 145px;
     background: rgb(223, 240, 255);
     border: 1px solid rgb(109, 169, 231);
     -webkit-border-radius: 6.5px 6.5px 0 0;
        -moz-border-radius: 6.5px 6.5px 0 0;
             border-radius: 6.5px 6.5px 0 0;
+}
+#border
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: rgb(103, 103, 103);
+    border: 1px solid rgb(103, 103, 103);
+}
+#cloudWrapper
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 1px;
+    bottom: 0px;
+    background: rgb(226, 111, 9);
+    border: 1px solid rgb(226, 111, 9);
+}
+#cloud
+{
+    position: absolute;
+    left: 2px;
+    width: 38px;
+    top: 1px;
+    height: 42px;
+    background-image: url(images/jbHeader.png);
+    background-repeat: repeat;
+    background-position: 0px -2px;
+    border: none;
+}
+#appName
+{
+    position: absolute;
+    left: 40px;
+    width: 168px;
+    top: 6px;
+    height: 38px;
+    background: rgb(62, 62, 62);
+    border: 1px solid rgb(62, 62, 62);
+}
+#toolbar
+{
+    position: absolute;
+    left: 209px;
+    right: 0px;
+    top: 6px;
+    height: 38px;
+    background: rgb(77, 77, 77);
+    border: 1px solid rgb(77, 77, 77);
 }
 #emailActivityBar____activityBarLine
 {
@@ -924,7 +1172,7 @@
     background-position: 0px 0px;
     border: none;
 }
-#engageSplitActivity1____activityBarLine___1
+#engageSplitActivity1____activityBarLine
 {
     position: absolute;
     left: 0px;
@@ -934,7 +1182,7 @@
     background: rgb(205, 205, 205);
     border: none;
 }
-#engageSplitActivity1____activityBarTip___1
+#engageSplitActivity1____activityBarTip
 {
     position: absolute;
     right: 0px;
@@ -946,7 +1194,7 @@
     background-position: 0px 0px;
     border: none;
 }
-#engageSplitActivity1____activityBarLine___
+#engageSplitActivity1____activityBarLine___ucdActivity2StopsFor
 {
     position: absolute;
     left: 0px;
@@ -956,7 +1204,73 @@
     background: rgb(205, 205, 205);
     border: none;
 }
-#engageSplitActivity1____activityBarTip___
+#engageSplitActivity1____activityBarTip___ucdActivity2StopsFor
+{
+    position: absolute;
+    right: 0px;
+    width: 7px;
+    top: 0px;
+    height: 14px;
+    background-image: url(images/activityTipSmallImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdActivity2____activityBarLine
+{
+    position: absolute;
+    left: 0px;
+    right: 7px;
+    top: 0px;
+    height: 14px;
+    background: rgb(205, 205, 205);
+    border: none;
+}
+#ucdActivity2____activityBarTip
+{
+    position: absolute;
+    right: 0px;
+    width: 7px;
+    top: 0px;
+    height: 14px;
+    background-image: url(images/activityTipSmallImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdActivity3____activityBarLine
+{
+    position: absolute;
+    left: 0px;
+    right: 7px;
+    top: 0px;
+    height: 14px;
+    background: rgb(205, 205, 205);
+    border: none;
+}
+#ucdActivity3____activityBarTip
+{
+    position: absolute;
+    right: 0px;
+    width: 7px;
+    top: 0px;
+    height: 14px;
+    background-image: url(images/activityTipSmallImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#emailActivity2____activitybarLine
+{
+    position: absolute;
+    left: 0px;
+    right: 7px;
+    top: 0px;
+    height: 14px;
+    background: rgb(205, 205, 205);
+    border: none;
+}
+#emailActivity2____activitybarTip
 {
     position: absolute;
     right: 0px;
@@ -971,9 +1285,9 @@
 #updateDraggerImage2
 {
     position: absolute;
-    left: 21px;
+    left: 22px;
     width: 224px;
-    top: 531px;
+    top: 532px;
     height: 24px;
     background-image: url(images/updateDraggerImageImage.png);
     background-repeat: no-repeat;
@@ -986,9 +1300,9 @@
 #engagementDraggerIamge2
 {
     position: absolute;
-    left: 21px;
+    left: 22px;
     width: 224px;
-    top: 474px;
+    top: 475px;
     height: 24px;
     background-image: url(images/engagementDraggerIamgeImage.png);
     background-repeat: no-repeat;
@@ -1001,9 +1315,9 @@
 #randomDraggerImage2
 {
     position: absolute;
-    left: 21px;
+    left: 22px;
     width: 224px;
-    top: 446px;
+    top: 447px;
     height: 24px;
     background-image: url(images/randomDraggerImageImage.png);
     background-repeat: no-repeat;
@@ -1016,9 +1330,9 @@
 #decisionDraggerImage2
 {
     position: absolute;
-    left: 21px;
+    left: 22px;
     width: 224px;
-    top: 418px;
+    top: 419px;
     height: 24px;
     background-image: url(images/decisionDraggerImageImage.png);
     background-repeat: no-repeat;
@@ -1031,9 +1345,9 @@
 #emailDraggerImage2
 {
     position: absolute;
-    left: 21px;
+    left: 22px;
     width: 224px;
-    top: 361px;
+    top: 362px;
     height: 24px;
     background-image: url(images/emailDraggerImageImage.png);
     background-repeat: no-repeat;

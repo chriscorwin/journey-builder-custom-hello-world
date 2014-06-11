@@ -26,7 +26,7 @@ var executeFunctionByName = function executeFunctionByName(functionName, context
 		// safe to use the function
 		return context[func].apply(context, args);
 	} else {
-		console.warn("[executeFunctionByName] was told to execute `" + func + "`` but it does not exist.")
+		// console.warn("[executeFunctionByName] was told to execute `" + func + "`` but it does not exist.")
 	}
 
 
@@ -106,6 +106,8 @@ var hide = function hide(el) {
 		}
 	}
 
+	$thisElement.addClass('pleaseHide');
+
 	$thisElement.velocity("fadeOut", {
 		translateZ: 0,
 		stagger: true,
@@ -115,7 +117,6 @@ var hide = function hide(el) {
 		/* Logs all the animated divs. */
 		complete: function(elements) {
 			// console.log(elements);
-			elements.removeClass('pleaseHide');
 		}
 	});
 	// $thisElement.addClass('pleaseHide');
@@ -160,8 +161,9 @@ var rpdShow = function rpdShow(el) {
 	}
 
 
+
 	if ($thisElement.hasClass('activityBar') === true) {
-		console.log('showing activity bar!');
+		// console.log('showing activity bar!');
 		var initialWidth = $thisElement.width();
 		// $thisElement.velocity({
 		// 	width: 0,
@@ -181,15 +183,32 @@ var rpdShow = function rpdShow(el) {
 			/* Logs all the animated divs. */
 			complete: function(elements) {
 				// console.log(elements);
-				elements.removeClass('pleaseHide');
+				$thisElement.removeClass('pleaseHide');
 			}
 		});
 
+		var numberOfTimes = 4;
+		console.debug("numberOfTimes", numberOfTimes);
+		console.debug("thisElementID", thisElementID);
 
+		var lookForElementID = $('.activityBar:not(.pleaseHide):last').attr('id');
+
+		var someClassNames = $('#' + lookForElementID).attr('class');
+
+		console.debug("lookForElementID", lookForElementID);
+		console.debug("someClassNames", someClassNames);
+		if (typeof lookForElementID !== 'undefined' && lookForElementID !== thisElementID) {
+			// if ($('.activityBar:not(.pleaseHide):last').attr('id') === thisElementID) {
+
+			numberOfTimes = 4;
+			console.debug("numberOfTimes", numberOfTimes);
+		}
+		var newWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
+		console.debug("newWidth", newWidth);
 		$thisElement.velocity({
 			properties: {
 				translateZ: 0, // Force HA by animating a 3D property
-				width: ((activityWidth * 3) - (activityWidth / 2))
+				width: newWidth
 			},
 			options: {
 				duration: 250,
@@ -198,6 +217,12 @@ var rpdShow = function rpdShow(el) {
 				queue: false
 			}
 		});
+		$thisElement.removeClass('pleaseHide');
+
+
+		// if ($thisElement.attr('id') === $('.activityBar:visible:not(:last)').attr('id')) {} else {
+
+		// }
 
 
 	} else {
@@ -211,10 +236,10 @@ var rpdShow = function rpdShow(el) {
 			/* Logs all the animated divs. */
 			complete: function(elements) {
 				// console.log(elements);
-				elements.removeClass('pleaseHide');
 			}
 		});
 	}
+
 
 	if ($thisElement.data('event-onshow') == 'trigger') {
 		thisElementName = $thisElement.data('name');
@@ -239,14 +264,15 @@ var rpdFadeOut = function rpdFadeOut( /* args */ ) {
 	}
 
 	var args = Array.prototype.slice.call(arguments, 0);
-	console.group("[rpdFadeOut] args", args);
+	// console.group("[rpdFadeOut] args", args);
 	window.rpdFadeOutArgs = args;
 	var elementToFadeOutID = rpdFadeOutArgs[0][0]['elementID'];
-	window.setTimeout(function() {
-		hide(elementToFadeOutID);
-	}, 2500);
+	$('#' + elementToFadeOutID).velocity("callout.tadaThenFadeOut");
+	// window.setTimeout(function() {
+	// 	hide(elementToFadeOutID);
+	// }, 2500);
 
-	console.groupEnd();
+	// console.groupEnd();
 };
 
 var toggle = function toggle(el) {
@@ -734,7 +760,7 @@ var applyRdpClassNamesToElement = function applyRdpClassNamesToElement(e, pseudo
 	var isAncestor = false;
 	var existingClassNames = $thisElement.attr('class') || '';
 	var classNames = '';
-	var dataAttribhutes = {};
+	var dataAttributes = {};
 	if ($thisElement.hasClass('ancestor')) {
 		isAncestor = true;
 	}
@@ -769,7 +795,7 @@ var applyRdpClassNamesToElement = function applyRdpClassNamesToElement(e, pseudo
 				// if (actionToTake === 'gotostate') {
 				// 	stateToGoTo = $('#state___' + onWhatItemName).attr('id');
 				// 	classNames = classNames + ' ' + 'gotostate';
-				// 	dataAttribhutes['data-target-next'] = stateToGoTo;
+				// 	dataAttributes['data-target-next'] = stateToGoTo;
 				// } else {
 				// 	// stateToGoTo = $('#state___' + onWhatItemName).attr('id');
 				// }
@@ -777,12 +803,12 @@ var applyRdpClassNamesToElement = function applyRdpClassNamesToElement(e, pseudo
 				classNames = classNames + ' ' + actionToTake;
 				classNames = classNames + ' ' + onWhatItemName;
 				classNames = classNames + ' ' + theEvent + '-' + actionToTake + '-' + onWhatItemName;
-				dataAttribhutes['data-event-' + theEvent] = actionToTake;
+				dataAttributes['data-event-' + theEvent] = actionToTake;
 				if (onWhatItemName === 'thisname') {
 					var potentialName = getElementName($thisElement.attr('id'));
 					// console.debug("potentialName", potentialName);
 				}
-				dataAttribhutes['data-target-' + actionToTake] = onWhatItemName;
+				dataAttributes['data-target-' + actionToTake] = onWhatItemName;
 				// console.debug("theEvent", theEvent);
 				// console.debug("actionToTake", actionToTake);
 				// console.debug("onWhatItemName", onWhatItemName);
@@ -800,11 +826,11 @@ var applyRdpClassNamesToElement = function applyRdpClassNamesToElement(e, pseudo
 				classNames = classNames + ' ' + actionToTake;
 				classNames = classNames + ' ' + onWhatItemName;
 				classNames = classNames + ' ' + theEvent + '-' + actionToTake + '-' + onWhatItemName;
-				dataAttribhutes['data-event-' + theEvent] = actionToTake;
+				dataAttributes['data-event-' + theEvent] = actionToTake;
 				if (onWhatItemName === 'thisname') {
 					var potentialName = getElementName($thisElement.attr('id'));
 				}
-				dataAttribhutes['data-target-' + actionToTake] = onWhatItemName;
+				dataAttributes['data-target-' + actionToTake] = onWhatItemName;
 				// console.debug("theEvent", theEvent);
 				// console.debug("actionToTake", actionToTake);
 				// console.debug("onWhatItemName", onWhatItemName);
@@ -817,18 +843,36 @@ var applyRdpClassNamesToElement = function applyRdpClassNamesToElement(e, pseudo
 					var actionToTake = clickStatementArray[1];
 					var onWhatItemName = clickStatementArray[2];
 				}
+				if (onWhatItemName === 'next') {
+					// console.debug("onWhatItemName", onWhatItemName);
+					var $thisElementParentState = $thisElement.closest('.state');
+					var $thisElementNextState = $thisElementParentState.next("div[id^='state___']");
+
+
+					var thisElementNextStateID = $thisElementNextState.attr('id');
+					var thisElementNextStateName = splitIntoParams(thisElementNextStateID).name;
+
+					// onWhatItemName = $thisElementNextState.data('name');
+					// console.debug("$thisElementParentState.attr('id')", $thisElementParentState.attr('id'));
+					// console.debug("thisElementNextStateID", thisElementNextStateID);
+					// console.debug("thisElementNextStateName", thisElementNextStateName);
+
+					onWhatItemName = thisElementNextStateName;
+
+					// console.debug("onWhatItemName, after", onWhatItemName);
+					// alert('onWhatItemName is was "next", is: ' + onWhatItemName);
+				}
 				classNames = classNames + ' ' + theEvent;
 				classNames = classNames + ' ' + actionToTake;
 				classNames = classNames + ' ' + onWhatItemName;
 				classNames = classNames + ' ' + theEvent + '-' + actionToTake + '-' + onWhatItemName;
-				dataAttribhutes['data-event-' + theEvent] = actionToTake;
+				dataAttributes['data-event-' + theEvent] = actionToTake;
 				if (onWhatItemName === 'thisname') {
 					var potentialName = getElementName($thisElement.attr('id'));
 				}
-				dataAttribhutes['data-target-' + actionToTake] = onWhatItemName;
+				dataAttributes['data-target-' + actionToTake] = onWhatItemName;
 				// console.debug("theEvent", theEvent);
 				// console.debug("actionToTake", actionToTake);
-				// console.debug("onWhatItemName", onWhatItemName);
 
 			} else if (value.beginsWith("is") === true) {
 
@@ -850,11 +894,11 @@ var applyRdpClassNamesToElement = function applyRdpClassNamesToElement(e, pseudo
 				classNames = classNames + ' ' + actionToTake;
 				classNames = classNames + ' ' + onWhatItemName;
 				classNames = classNames + ' ' + theEvent + '-' + actionToTake + '-' + onWhatItemName;
-				dataAttribhutes['data-event-' + theEvent] = actionToTake;
+				dataAttributes['data-event-' + theEvent] = actionToTake;
 				if (onWhatItemName === 'thisname') {
 					var potentialName = getElementName($thisElement.attr('id'));
 				}
-				dataAttribhutes['data-target-' + actionToTake] = onWhatItemName;
+				dataAttributes['data-target-' + actionToTake] = onWhatItemName;
 				// console.debug("theEvent", theEvent);
 				// console.debug("actionToTake", actionToTake);
 				// console.debug("onWhatItemName", onWhatItemName);
@@ -867,7 +911,7 @@ var applyRdpClassNamesToElement = function applyRdpClassNamesToElement(e, pseudo
 				optionToChoose = "dropdown___option___ROOT-GOES-HERE___" + optionToChoose.join("_");
 
 				classNames = classNames + ' ' + 'chooseoption';
-				dataAttribhutes['data-target-option'] = optionToChoose;
+				dataAttributes['data-target-option'] = optionToChoose;
 
 
 			} else if (value.beginsWith("gotostate")) {
@@ -876,7 +920,7 @@ var applyRdpClassNamesToElement = function applyRdpClassNamesToElement(e, pseudo
 				stateToGoTo = "state___" + stateToGoTo.join("_");
 
 				classNames = classNames + ' ' + 'gotostate';
-				dataAttribhutes['data-target-next-deprecated'] = stateToGoTo;
+				dataAttributes['data-target-next-deprecated'] = stateToGoTo;
 
 			} else {
 				if (value.contains("_") === true) {
@@ -888,7 +932,7 @@ var applyRdpClassNamesToElement = function applyRdpClassNamesToElement(e, pseudo
 						classNames = classNames + ' ' + paramName;
 						classNames = classNames + ' ' + paramValue;
 						classNames = classNames + ' ' + paramName + '-' + paramValue;
-						dataAttribhutes['data-' + paramName] = paramValue;
+						dataAttributes['data-' + paramName] = paramValue;
 						// console.debug("paramName", paramName);
 						// console.debug("paramValue", paramValue);
 					}
@@ -919,7 +963,7 @@ var applyRdpClassNamesToElement = function applyRdpClassNamesToElement(e, pseudo
 			$thisElement.addClass('ancestor');
 			$thisElement.children().attr('class', (cleanedClassNames + ' ' + cleanedExistingClassNames)).attr('data-descendant-of', '#' + $thisElement.attr('id'));
 		}
-		$.each(dataAttribhutes, function(index, value) {
+		$.each(dataAttributes, function(index, value) {
 			$thisElement.attr(index, value);
 			if (isAncestor) {
 				$thisElement.children().attr(index, value);
@@ -1085,7 +1129,7 @@ var passChildrenAttributesFromID = function passChildrenAttributesFromID(selecto
 var slideJbDays = function slideJbDays( /* args */ ) {
 
 	var args = Array.prototype.slice.call(arguments, 0);
-	// console.group("[slideJbDays] args", args);
+	console.group("[slideJbDays] args", args);
 	window.slideJbDaysArgs = args;
 
 
@@ -1095,7 +1139,7 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 	var zeroWidth = $firstJbDay.width();
 
 
-	var numberOfTimes = 3;
+	var numberOfTimes = 2;
 
 	var zeroNewWidth = (zeroWidth + (activityWidth * numberOfTimes))
 
@@ -1168,17 +1212,31 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 		}
 	});
 
-	// $('.end.icon:visible').velocity({
-	// 	properties: {
-	// 		translateZ: 0, // Force HA by animating a 3D property
-	// 		left: '+=' + (activityWidth * numberOfTimes) + 'px'
-	// 	},
-	// 	options: {
-	// 		duration: 150,
-	// 		easing: [0.17, 0.67, 0.83, 0.67],
-	// 		delay: 260
-	// 	}
-	// });
+	var newActivityBarWidth = ((activityWidth * numberOfTimes) - (activityWidth / 2));
+	// var newActivityBarWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
+	console.debug("numberOfTimes", numberOfTimes);
+	console.debug("newActivityBarWidth", newActivityBarWidth);
+	console.debug("passedElementName", passedElementName);
+
+	var excludeBarID = $(".activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)").last().attr('id');
+	var $theActivityBars = $("#" + excludeBarID + ", .activityBar:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)");
+	// var $theActivityBars = $("#" + excludeBarID + ", .activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)");
+
+	console.debug("$theActivityBars", $theActivityBars);
+	$theActivityBars.velocity({
+		properties: {
+			translateZ: 0, // Force HA by animating a 3D property
+			width: newActivityBarWidth
+		},
+		options: {
+			duration: 300,
+			easing: [0.17, 0.67, 0.83, 0.67],
+			delay: 0
+		}
+	});
+
+
+
 	$firstJbDay.velocity({
 		properties: {
 			translateZ: 0, // Force HA by animating a 3D property
@@ -1201,10 +1259,14 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 				switch (passedElementName) {
 					case 'ucdActivity1':
 						console.log('It is ucdActivity1');
+						var newWidth = ((activityWidth * numberOfTimes) + (activityWidth + 10));
+						// var newWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
+						console.debug("numberOfTimes", numberOfTimes);
+						console.debug("newWidth", newWidth);
 						$('.' + passedElementName + '.activityBar').velocity({
 							properties: {
 								translateZ: 0, // Force HA by animating a 3D property
-								width: ((activityWidth * 3) - (activityWidth / 2))
+								width: newWidth
 							},
 							options: {
 								duration: 300,
@@ -1215,10 +1277,14 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 						break;
 					case 'engageSplitActivity1':
 						console.log('It is engageSplitActivity1');
-						$('#ucdActivity1____activitybar').velocity({
+						var newWidth = ((activityWidth * numberOfTimes) + (activityWidth + 10));
+						// var newWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
+						console.debug("numberOfTimes", numberOfTimes);
+						console.debug("newWidth", newWidth);
+						$('.' + passedElementName + '.activityBar').velocity({
 							properties: {
 								translateZ: 0, // Force HA by animating a 3D property
-								width: ((activityWidth * 2) - (activityWidth / 4))
+								width: newWidth
 							},
 							options: {
 								duration: 300,
@@ -1226,9 +1292,36 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 								delay: 0
 							}
 						});
+						// $('#ucdActivity1____activitybar').velocity({
+						// 	properties: {
+						// 		translateZ: 0, // Force HA by animating a 3D property
+						// 		width: ((activityWidth * 2) - (activityWidth / 4))
+						// 	},
+						// 	options: {
+						// 		duration: 300,
+						// 		easing: [0.17, 0.67, 0.83, 0.67],
+						// 		delay: 0
+						// 	}
+						// });
 
 						break;
 					default:
+						console.log('It is ' + passedElementName + " (default case)");
+						var newWidth = (((activityWidth * numberOfTimes) * 2) + (activityWidth + 10));
+						// var newWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
+						console.debug("numberOfTimes", numberOfTimes);
+						console.debug("newWidth", newWidth);
+						$('.' + passedElementName + 'StopsFor.activityBar').velocity({
+							properties: {
+								translateZ: 0, // Force HA by animating a 3D property
+								width: newWidth
+							},
+							options: {
+								duration: 300,
+								easing: [0.17, 0.67, 0.83, 0.67],
+								delay: 0
+							}
+						});
 						break;
 				}
 			}
@@ -1249,7 +1342,198 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 
 
 
-	// console.groupEnd();
+	console.groupEnd();
+};
+var fixActivityBars = function fixActivityBars( /* args */ ) {
+
+	var args = Array.prototype.slice.call(arguments, 0);
+	console.group("[fixActivityBars] args", args);
+	window.fixActivityBarsArgs = args;
+
+
+	var $jbDays = $('[data-name="jbDays"]').children()
+	var $firstJbDay = $jbDays.first()
+	var $otherJbDays = $jbDays.not(':first')
+	var zeroWidth = $firstJbDay.width();
+
+
+	var numberOfTimes = 2;
+
+	// var zeroNewWidth = (zeroWidth + (activityWidth * numberOfTimes))
+	var zeroNewWidth = zeroWidth
+
+	// console.debug("zeroWidth", zeroWidth);
+	// console.debug("zeroNewWidth", zeroNewWidth);
+
+	var passedElementName = args[0][0]['elementName'];
+	var passedElementID = args[0][0]['elementID'];
+
+
+
+
+
+	// $('.end.icon:visible').velocity({
+	// 	properties: {
+	// 		translateZ: 0, // Force HA by animating a 3D property
+	// 		left: '+=' + ((activityWidth * numberOfTimes) + 10) + 'px'
+	// 	},
+	// 	options: {
+	// 		duration: 250,
+	// 		easing: [0.17, 0.67, 0.83, 0.67],
+	// 		delay: 0
+	// 	}
+	// }).velocity({
+	// 	properties: {
+	// 		translateZ: 0, // Force HA by animating a 3D property
+	// 		left: '-=' + 20 + 'px'
+	// 	},
+	// 	options: {
+	// 		duration: 125,
+	// 		easing: [0.17, 0.67, 0.83, 0.67]
+	// 	}
+	// }).velocity({
+	// 	properties: {
+	// 		translateZ: 0, // Force HA by animating a 3D property
+	// 		left: '+=' + 10 + 'px'
+	// 	},
+	// 	options: {
+	// 		duration: 125,
+	// 		easing: [0.17, 0.67, 0.83, 0.67]
+	// 	}
+	// });
+
+	var newActivityBarWidth = ((activityWidth * numberOfTimes) - (activityWidth / 2));
+	// var newActivityBarWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
+	console.debug("numberOfTimes", numberOfTimes);
+	console.debug("newActivityBarWidth", newActivityBarWidth);
+	console.debug("passedElementName", passedElementName);
+
+	var excludeBarID = $(".activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)").last().attr('id');
+	var $theActivityBars = $("#" + excludeBarID + ", .activityBar:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)");
+	// var $theActivityBars = $("#" + excludeBarID + ", .activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)");
+
+	console.debug("$theActivityBars", $theActivityBars);
+	$theActivityBars.velocity({
+		properties: {
+			translateZ: 0, // Force HA by animating a 3D property
+			width: newActivityBarWidth
+		},
+		options: {
+			duration: 300,
+			easing: [0.17, 0.67, 0.83, 0.67],
+			delay: 0
+		}
+	});
+
+
+
+	$firstJbDay.velocity({
+		properties: {
+			translateZ: 0, // Force HA by animating a 3D property
+			width: zeroNewWidth
+		},
+		options: {
+			duration: 150,
+			easing: [1000, 50],
+			complete: function() {
+
+
+				$('.uicentered', $firstJbDay).velocity({
+					translateZ: 0, // Force HA by animating a 3D property
+					left: '+=' + (activityWidth / 2)
+				}, {
+					delay: 25,
+					duration: [250, 500]
+				});
+
+				switch (passedElementName) {
+					case 'ucdActivity1':
+						console.log('It is ucdActivity1');
+						var newWidth = ((activityWidth * numberOfTimes) + (activityWidth + 10));
+						// var newWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
+						console.debug("numberOfTimes", numberOfTimes);
+						console.debug("newWidth", newWidth);
+						$('.' + passedElementName + '.activityBar').velocity({
+							properties: {
+								translateZ: 0, // Force HA by animating a 3D property
+								width: newWidth
+							},
+							options: {
+								duration: 300,
+								easing: [0.17, 0.67, 0.83, 0.67],
+								delay: 0
+							}
+						});
+						break;
+					case 'engageSplitActivity1':
+						console.log('It is engageSplitActivity1');
+						var newWidth = ((activityWidth * numberOfTimes) + (activityWidth + 10));
+						// var newWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
+						console.debug("numberOfTimes", numberOfTimes);
+						console.debug("newWidth", newWidth);
+						$('.' + passedElementName + '.activityBar').velocity({
+							properties: {
+								translateZ: 0, // Force HA by animating a 3D property
+								width: newWidth
+							},
+							options: {
+								duration: 300,
+								easing: [0.17, 0.67, 0.83, 0.67],
+								delay: 0
+							}
+						});
+						// $('#ucdActivity1____activitybar').velocity({
+						// 	properties: {
+						// 		translateZ: 0, // Force HA by animating a 3D property
+						// 		width: ((activityWidth * 2) - (activityWidth / 4))
+						// 	},
+						// 	options: {
+						// 		duration: 300,
+						// 		easing: [0.17, 0.67, 0.83, 0.67],
+						// 		delay: 0
+						// 	}
+						// });
+
+						break;
+					default:
+						console.log('It is ' + passedElementName + " (default case)");
+						var newWidth = ((((activityWidth * numberOfTimes) * 2) - activityWidth) + 10);
+						// var newWidth = (((activityWidth * numberOfTimes) * 2) + (activityWidth + 10));
+						// var newWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
+						console.debug("numberOfTimes", numberOfTimes);
+						console.debug("newWidth", newWidth);
+						$('.' + passedElementName + 'StopsFor.activityBar').velocity({
+							properties: {
+								translateZ: 0, // Force HA by animating a 3D property
+								width: newWidth
+							},
+							options: {
+								duration: 300,
+								easing: [0.17, 0.67, 0.83, 0.67],
+								delay: 0
+							}
+						});
+						break;
+				}
+			}
+		}
+	});
+
+	// $otherJbDays.velocity("move.slideRight", {
+	// 	stagger: false,
+	// 	drag: false,
+	// 	backwards: false,
+	// 	
+	// });
+
+	// $('#bar1____activitybar___1').velocity({
+	// 	width: ('+=' + activityWidth + 'px')
+	// }, [250, 15])
+
+
+
+
+	console.groupEnd();
 };
 
 
@@ -1816,7 +2100,7 @@ var runIt = function runIt() {
 		$jbDays = $('[data-name="jbDays"]').children()
 		$firstJbDay = $jbDays.first()
 		$otherJbDays = $jbDays.not(':first')
-		activityWidth = ($firstJbDay.width() / 3)
+		activityWidth = ($firstJbDay.width() / 4)
 		zeroWidth = $firstJbDay.width()
 		zeroNewWidth = (zeroWidth + activityWidth)
 
@@ -1826,7 +2110,6 @@ var runIt = function runIt() {
 		// console.debug("zeroNewWidth", zeroNewWidth);
 
 	}
-
 
 	// $('.button.next:visible').css({
 	// 	border: '1px solid limegreen'

@@ -52,34 +52,95 @@
 			// calls: [
 			// ]
 		},
+
 		/* Animate.css */
-			"move.slideRight3": {
-				defaultDuration: 800,
-				calls: [
-					[{
-							translateZ: 0, // Force HA by animating a 3D property
-							left: '+=50px'
-						},
-						0.3
-					],
-					[{
-							translateZ: 0, // Force HA by animating a 3D property
-							left: '-=20px'
-						},
-						0.35
-					],
-					[{
-							translateZ: 0, // Force HA by animating a 3D property
-							left: '+=10px'
-						},
-						0.35
-					]
+		"callout.tadaThenFadeOut": {
+			defaultDuration: 1000,
+			calls: [
+				[{
+						scaleX: 0.97,
+						scaleY: 0.97,
+						rotateZ: -0.3
+					},
+					0.10
 				],
-				reset: {
-					transformPerspective: 0
-				}
-				// calls: [
-				// ]
+				[{
+						scaleX: 1.03,
+						scaleY: 1.03,
+						rotateZ: 0.3
+					},
+					0.10
+				],
+				[{
+						scaleX: 1.03,
+						scaleY: 1.03,
+						rotateZ: -0.3
+					},
+					0.10, 3
+				],
+				[{
+						scaleX: 1,
+						scaleY: 1,
+						rotateZ: 0
+					},
+					0.20
+				],
+				[{
+						opacity: 1,
+						rotateZ: 0
+					},
+					0.05
+				],
+				[{
+						opacity: 0.55,
+						rotateZ: 0
+					},
+					0.20
+				],
+				[{
+						opacity: 0.55,
+						rotateZ: 0
+					},
+					2.6
+				],
+				[{
+						opacity: 0,
+						rotateZ: 0
+					},
+					0.2
+				]
+			]
+		},
+
+
+		/* Animate.css */
+		"move.slideRight3": {
+			defaultDuration: 800,
+			calls: [
+				[{
+						translateZ: 0, // Force HA by animating a 3D property
+						left: '+=50px'
+					},
+					0.3
+				],
+				[{
+						translateZ: 0, // Force HA by animating a 3D property
+						left: '-=20px'
+					},
+					0.35
+				],
+				[{
+						translateZ: 0, // Force HA by animating a 3D property
+						left: '+=10px'
+					},
+					0.35
+				]
+			],
+			reset: {
+				transformPerspective: 0
+			}
+			// calls: [
+			// ]
 		},
 		/* Animate.css */
 		"move.slideRight2": {
