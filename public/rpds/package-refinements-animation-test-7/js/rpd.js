@@ -207,7 +207,7 @@ var rpdShow = function rpdShow(el) {
 		console.debug("newWidth", newWidth);
 		$thisElement.velocity({
 			properties: {
-				translateZ: 0, // Force HA by animating a 3D property
+				translateZ: 0,
 				width: newWidth
 			},
 			options: {
@@ -1123,8 +1123,6 @@ var passChildrenAttributesFromID = function passChildrenAttributesFromID(selecto
 	// });
 };
 
-/* Later on in your code, trigger the sequence: */
-/* Note: As normal, you may optionally pass in options. */
 
 var slideJbDays = function slideJbDays( /* args */ ) {
 
@@ -1154,7 +1152,7 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 
 	$otherJbDays.velocity({
 		properties: {
-			translateZ: 0, // Force HA by animating a 3D property
+			translateZ: 0,
 			left: '+=' + ((activityWidth * numberOfTimes) + 10) + 'px'
 		},
 		options: {
@@ -1164,7 +1162,7 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 		}
 	}).velocity({
 		properties: {
-			translateZ: 0, // Force HA by animating a 3D property
+			translateZ: 0,
 			left: '-=' + 20 + 'px'
 		},
 		options: {
@@ -1173,7 +1171,7 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 		}
 	}).velocity({
 		properties: {
-			translateZ: 0, // Force HA by animating a 3D property
+			translateZ: 0,
 			left: '+=' + 10 + 'px'
 		},
 		options: {
@@ -1184,7 +1182,7 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 
 	$('.end.icon:visible').velocity({
 		properties: {
-			translateZ: 0, // Force HA by animating a 3D property
+			translateZ: 0,
 			left: '+=' + ((activityWidth * numberOfTimes) + 10) + 'px'
 		},
 		options: {
@@ -1194,7 +1192,7 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 		}
 	}).velocity({
 		properties: {
-			translateZ: 0, // Force HA by animating a 3D property
+			translateZ: 0,
 			left: '-=' + 20 + 'px'
 		},
 		options: {
@@ -1203,7 +1201,7 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 		}
 	}).velocity({
 		properties: {
-			translateZ: 0, // Force HA by animating a 3D property
+			translateZ: 0,
 			left: '+=' + 10 + 'px'
 		},
 		options: {
@@ -1211,6 +1209,49 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 			easing: [0.17, 0.67, 0.83, 0.67]
 		}
 	});
+
+
+
+	var $centeredThing = $('.uicentered', $firstJbDay);
+	var centeredThingWidth = $centeredThing.width();
+	// this thing gets moved with the first day, so we just have to re-center it
+	var centeredThingNewLeft = ((zeroNewWidth - zeroWidth) / 2);
+
+
+	$centeredThing.velocity({
+		properties: {
+			translateZ: 0,
+			left: '+=' + (centeredThingNewLeft) + 'px'
+			// left: '+=' + (centeredThingNewLeft + 2) + 'px'
+		},
+		options: {
+			duration: 550,
+			easing: [2.17, 1.67, 0.83, 0.67],
+			delay: 125
+		}
+	});
+	// }).velocity({
+	// 	properties: {
+	// 		translateZ: 0,
+	// 		left: '-=' + (4) + 'px'
+	// 	},
+	// 	options: {
+	// 		duration: 75,
+	// 		easing: [0.17, 0.67, 0.83, 0.67]
+	// 	}
+	// }).velocity({
+	// 	properties: {
+	// 		translateZ: 0,
+	// 		left: '+=' + 4 + 'px'
+	// 	},
+	// 	options: {
+	// 		duration: 400,
+	// 		easing: [0.17, 0.67, 0.83, 0.67]
+	// 	}
+	// });
+
+
+
 
 	var newActivityBarWidth = ((activityWidth * numberOfTimes) - (activityWidth / 2));
 	// var newActivityBarWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
@@ -1225,7 +1266,7 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 	console.debug("$theActivityBars", $theActivityBars);
 	$theActivityBars.velocity({
 		properties: {
-			translateZ: 0, // Force HA by animating a 3D property
+			translateZ: 0,
 			width: newActivityBarWidth
 		},
 		options: {
@@ -1237,9 +1278,11 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 
 
 
+
+
 	$firstJbDay.velocity({
 		properties: {
-			translateZ: 0, // Force HA by animating a 3D property
+			translateZ: 0,
 			width: zeroNewWidth
 		},
 		options: {
@@ -1247,14 +1290,6 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 			easing: [1000, 50],
 			complete: function() {
 
-
-				$('.uicentered', $firstJbDay).velocity({
-					translateZ: 0, // Force HA by animating a 3D property
-					left: '+=' + (activityWidth / 2)
-				}, {
-					delay: 25,
-					duration: [250, 500]
-				});
 
 				switch (passedElementName) {
 					case 'ucdActivity1':
@@ -1265,7 +1300,7 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 						console.debug("newWidth", newWidth);
 						$('.' + passedElementName + '.activityBar').velocity({
 							properties: {
-								translateZ: 0, // Force HA by animating a 3D property
+								translateZ: 0,
 								width: newWidth
 							},
 							options: {
@@ -1283,7 +1318,7 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 						console.debug("newWidth", newWidth);
 						$('.' + passedElementName + '.activityBar').velocity({
 							properties: {
-								translateZ: 0, // Force HA by animating a 3D property
+								translateZ: 0,
 								width: newWidth
 							},
 							options: {
@@ -1294,7 +1329,7 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 						});
 						// $('#ucdActivity1____activitybar').velocity({
 						// 	properties: {
-						// 		translateZ: 0, // Force HA by animating a 3D property
+						// 		translateZ: 0,
 						// 		width: ((activityWidth * 2) - (activityWidth / 4))
 						// 	},
 						// 	options: {
@@ -1313,7 +1348,7 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 						console.debug("newWidth", newWidth);
 						$('.' + passedElementName + 'StopsFor.activityBar').velocity({
 							properties: {
-								translateZ: 0, // Force HA by animating a 3D property
+								translateZ: 0,
 								width: newWidth
 							},
 							options: {
@@ -1344,6 +1379,9 @@ var slideJbDays = function slideJbDays( /* args */ ) {
 
 	console.groupEnd();
 };
+
+
+
 var fixActivityBars = function fixActivityBars( /* args */ ) {
 
 	var args = Array.prototype.slice.call(arguments, 0);
@@ -1370,38 +1408,6 @@ var fixActivityBars = function fixActivityBars( /* args */ ) {
 
 
 
-
-
-	// $('.end.icon:visible').velocity({
-	// 	properties: {
-	// 		translateZ: 0, // Force HA by animating a 3D property
-	// 		left: '+=' + ((activityWidth * numberOfTimes) + 10) + 'px'
-	// 	},
-	// 	options: {
-	// 		duration: 250,
-	// 		easing: [0.17, 0.67, 0.83, 0.67],
-	// 		delay: 0
-	// 	}
-	// }).velocity({
-	// 	properties: {
-	// 		translateZ: 0, // Force HA by animating a 3D property
-	// 		left: '-=' + 20 + 'px'
-	// 	},
-	// 	options: {
-	// 		duration: 125,
-	// 		easing: [0.17, 0.67, 0.83, 0.67]
-	// 	}
-	// }).velocity({
-	// 	properties: {
-	// 		translateZ: 0, // Force HA by animating a 3D property
-	// 		left: '+=' + 10 + 'px'
-	// 	},
-	// 	options: {
-	// 		duration: 125,
-	// 		easing: [0.17, 0.67, 0.83, 0.67]
-	// 	}
-	// });
-
 	var newActivityBarWidth = ((activityWidth * numberOfTimes) - (activityWidth / 2));
 	// var newActivityBarWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
 	console.debug("numberOfTimes", numberOfTimes);
@@ -1415,7 +1421,7 @@ var fixActivityBars = function fixActivityBars( /* args */ ) {
 	console.debug("$theActivityBars", $theActivityBars);
 	$theActivityBars.velocity({
 		properties: {
-			translateZ: 0, // Force HA by animating a 3D property
+			translateZ: 0,
 			width: newActivityBarWidth
 		},
 		options: {
@@ -1424,113 +1430,6 @@ var fixActivityBars = function fixActivityBars( /* args */ ) {
 			delay: 0
 		}
 	});
-
-
-
-	$firstJbDay.velocity({
-		properties: {
-			translateZ: 0, // Force HA by animating a 3D property
-			width: zeroNewWidth
-		},
-		options: {
-			duration: 150,
-			easing: [1000, 50],
-			complete: function() {
-
-
-				$('.uicentered', $firstJbDay).velocity({
-					translateZ: 0, // Force HA by animating a 3D property
-					left: '+=' + (activityWidth / 2)
-				}, {
-					delay: 25,
-					duration: [250, 500]
-				});
-
-				switch (passedElementName) {
-					case 'ucdActivity1':
-						console.log('It is ucdActivity1');
-						var newWidth = ((activityWidth * numberOfTimes) + (activityWidth + 10));
-						// var newWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
-						console.debug("numberOfTimes", numberOfTimes);
-						console.debug("newWidth", newWidth);
-						$('.' + passedElementName + '.activityBar').velocity({
-							properties: {
-								translateZ: 0, // Force HA by animating a 3D property
-								width: newWidth
-							},
-							options: {
-								duration: 300,
-								easing: [0.17, 0.67, 0.83, 0.67],
-								delay: 0
-							}
-						});
-						break;
-					case 'engageSplitActivity1':
-						console.log('It is engageSplitActivity1');
-						var newWidth = ((activityWidth * numberOfTimes) + (activityWidth + 10));
-						// var newWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
-						console.debug("numberOfTimes", numberOfTimes);
-						console.debug("newWidth", newWidth);
-						$('.' + passedElementName + '.activityBar').velocity({
-							properties: {
-								translateZ: 0, // Force HA by animating a 3D property
-								width: newWidth
-							},
-							options: {
-								duration: 300,
-								easing: [0.17, 0.67, 0.83, 0.67],
-								delay: 0
-							}
-						});
-						// $('#ucdActivity1____activitybar').velocity({
-						// 	properties: {
-						// 		translateZ: 0, // Force HA by animating a 3D property
-						// 		width: ((activityWidth * 2) - (activityWidth / 4))
-						// 	},
-						// 	options: {
-						// 		duration: 300,
-						// 		easing: [0.17, 0.67, 0.83, 0.67],
-						// 		delay: 0
-						// 	}
-						// });
-
-						break;
-					default:
-						console.log('It is ' + passedElementName + " (default case)");
-						var newWidth = ((((activityWidth * numberOfTimes) * 2) - activityWidth) + 10);
-						// var newWidth = (((activityWidth * numberOfTimes) * 2) + (activityWidth + 10));
-						// var newWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
-						console.debug("numberOfTimes", numberOfTimes);
-						console.debug("newWidth", newWidth);
-						$('.' + passedElementName + 'StopsFor.activityBar').velocity({
-							properties: {
-								translateZ: 0, // Force HA by animating a 3D property
-								width: newWidth
-							},
-							options: {
-								duration: 300,
-								easing: [0.17, 0.67, 0.83, 0.67],
-								delay: 0
-							}
-						});
-						break;
-				}
-			}
-		}
-	});
-
-	// $otherJbDays.velocity("move.slideRight", {
-	// 	stagger: false,
-	// 	drag: false,
-	// 	backwards: false,
-	// 	
-	// });
-
-	// $('#bar1____activitybar___1').velocity({
-	// 	width: ('+=' + activityWidth + 'px')
-	// }, [250, 15])
-
-
 
 
 	console.groupEnd();

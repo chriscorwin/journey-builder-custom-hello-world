@@ -2,6 +2,16 @@
    Author's custom styles
    ========================================================================== */
 
+
+body {
+	/* border: 1px solid limegreen; */
+	/* width: 1280px; */
+	/* height: 760px; */
+	/* overflow: hidden; */
+	/* position: absolute; */
+}
+
+
 /* make it obviouser what is clickable */
 .clickable, .hoverable, .clickable {
 	cursor: pointer;
