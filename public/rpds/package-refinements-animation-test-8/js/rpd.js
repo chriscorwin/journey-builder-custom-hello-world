@@ -893,27 +893,54 @@ var slideJbDays = function slideJbDays() {
 	// 		easing: [0.17, 0.67, 0.83, 0.67]
 	// 	}
 	// });
-	var newActivityBarWidth = activityWidth * numberOfTimes - activityWidth / 2;
+	// var newActivityBarWidth = activityWidth * numberOfTimes - activityWidth / 2;
+	// // var newActivityBarWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
+	// debug.debug("numberOfTimes", numberOfTimes);
+	// debug.debug("newActivityBarWidth", newActivityBarWidth);
+	// debug.debug("passedElementName", passedElementName);
+	// var excludeBarID = $(".activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)").last().attr("id");
+	// var $theActivityBars = $("#" + excludeBarID + ", .activityBar:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)");
+	// // var $theActivityBars = $("#" + excludeBarID + ", .activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)");
+	// debug.debug("$theActivityBars", $theActivityBars);
+	// $theActivityBars.velocity({
+	// 	properties: {
+	// 		translateZ: 0,
+	// 		width: newActivityBarWidth
+	// 	},
+	// 	options: {
+	// 		duration: 125,
+	// 		easing: [.17, .67, .83, .67],
+	// 		delay: 750,
+	// 		queue: true
+	// 	}
+	// });
+
+
+
+
+	var newActivityBarWidth = ((activityWidth * numberOfTimes) - (activityWidth / 2));
 	// var newActivityBarWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
-	debug.debug("numberOfTimes", numberOfTimes);
-	debug.debug("newActivityBarWidth", newActivityBarWidth);
-	debug.debug("passedElementName", passedElementName);
-	var excludeBarID = $(".activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)").last().attr("id");
+	console.debug("numberOfTimes", numberOfTimes);
+	console.debug("newActivityBarWidth", newActivityBarWidth);
+	console.debug("passedElementName", passedElementName);
+
+	var excludeBarID = $(".activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)").last().attr('id');
 	var $theActivityBars = $("#" + excludeBarID + ", .activityBar:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)");
 	// var $theActivityBars = $("#" + excludeBarID + ", .activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)");
-	debug.debug("$theActivityBars", $theActivityBars);
+
+	console.debug("$theActivityBars", $theActivityBars);
 	$theActivityBars.velocity({
 		properties: {
 			translateZ: 0,
 			width: newActivityBarWidth
 		},
 		options: {
-			duration: 125,
-			easing: [.17, .67, .83, .67],
-			delay: 750,
-			queue: true
+			duration: 300,
+			easing: [0.17, 0.67, 0.83, 0.67],
+			delay: 0
 		}
 	});
+
 
 	debug.group("[slideJbDays] animations here:");
 
