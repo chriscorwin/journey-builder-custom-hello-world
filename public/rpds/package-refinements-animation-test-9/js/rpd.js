@@ -913,7 +913,7 @@ var slideJbDays = function slideJbDays() {
 			width: zeroNewWidth
 		},
 		options: {
-			duration: 250,
+			duration: 0,
 			complete: function() {
 
 
@@ -933,7 +933,7 @@ var slideJbDays = function slideJbDays() {
 							options: {
 								duration: 300,
 								easing: [.17, .67, .83, .67],
-								delay: 0
+								delay: 250
 							}
 						});
 						debug.groupEnd();
@@ -953,7 +953,7 @@ var slideJbDays = function slideJbDays() {
 							options: {
 								duration: 300,
 								easing: [.17, .67, .83, .67],
-								delay: 0
+								delay: 250
 							}
 						});
 						// $('#ucdActivity1____activitybar').velocity({
@@ -984,7 +984,7 @@ var slideJbDays = function slideJbDays() {
 							options: {
 								duration: 300,
 								easing: [.17, .67, .83, .67],
-								delay: 0
+								delay: 250
 							}
 						});
 						debug.groupEnd();
