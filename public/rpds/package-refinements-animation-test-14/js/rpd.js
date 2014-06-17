@@ -437,16 +437,14 @@ var rpdFadeOut = function rpdFadeOut( /* args */) {
 	var elementToFadeOutID = rpdFadeOutArgs[0][0]["elementID"];
 	console.debug("elementToFadeOutID", elementToFadeOutID);
 
-	if (typeof elementToFadeOutID === "string" && el.beginsWith("#") === false && el.beginsWith(".") === false) {
+	if (typeof elementToFadeOutID === "string" && elementToFadeOutID.beginsWith("#") === false && elementToFadeOutID.beginsWith(".") === false) {
 		elementToFadeOutID = "#" + elementToFadeOutID;
-		thisElementName = "[data-name='" + el + "']";
-	} else if (typeof el === "string" && el.beginsWith("#") === true) {
 	}
 
 
+	console.debug("elementToFadeOutID", elementToFadeOutID);
 
 	$(elementToFadeOutID).velocity("callout.tadaThenFadeOut");
-	console.debug("$(elementToFadeOutID)", $('#' + elementToFadeOutID));
 	console.groupEnd();
 };
 
