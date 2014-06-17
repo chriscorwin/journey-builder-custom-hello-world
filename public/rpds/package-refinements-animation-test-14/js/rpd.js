@@ -402,32 +402,52 @@ var rpdShow = function rpdShow(el) {
 				duration: 250
 			}, {
 				/* Logs all the animated divs. */
-				complete: function(elements) {}
-			});
-		}
-		if ($thisElement.data("event-onshow") == "trigger") {
-			thisElementName = $thisElement.data("name");
-			$thisElement.trigger("rpdShow", {
-				elementID: thisElementID,
-				elementName: thisElementName
+				complete: function(elements) {
+
+					if ($thisElement.data("event-onshow") == "trigger") {
+						thisElementName = $thisElement.data("name");
+						$thisElement.trigger("rpdShow", {
+							elementID: thisElementID,
+							elementName: thisElementName
+						});
+					}
+				}
 			});
 		}
 	}
 
+	if ($thisElement.data("event-onshow") == "trigger") {
+		thisElementName = $thisElement.data("name");
+		$thisElement.trigger("rpdShow", {
+			elementID: thisElementID,
+			elementName: thisElementName
+		});
+	}
 		// console.groupEnd();
 
 };
 
-var rpdFadeOut = function rpdFadeOut() {
-	$("body").hasClass("dev");
+var rpdFadeOut = function rpdFadeOut( /* args */) {
 	if ($("body").hasClass("dev")) {
 		return;
 	}
 	var args = Array.prototype.slice.call(arguments, 0);
-	// console.group("[rpdFadeOut] args", args);
+	console.group("[rpdFadeOut]");
 	window.rpdFadeOutArgs = args;
 	var elementToFadeOutID = rpdFadeOutArgs[0][0]["elementID"];
-	$("#" + elementToFadeOutID).velocity("callout.tadaThenFadeOut");
+	console.debug("elementToFadeOutID", elementToFadeOutID);
+
+	if (typeof elementToFadeOutID === "string" && el.beginsWith("#") === false && el.beginsWith(".") === false) {
+		elementToFadeOutID = "#" + elementToFadeOutID;
+		thisElementName = "[data-name='" + el + "']";
+	} else if (typeof el === "string" && el.beginsWith("#") === true) {
+	}
+
+
+
+	$(elementToFadeOutID).velocity("callout.tadaThenFadeOut");
+	console.debug("$(elementToFadeOutID)", $('#' + elementToFadeOutID));
+	console.groupEnd();
 };
 
 var toggle = function toggle(el) {
@@ -1819,15 +1839,16 @@ var runIt = function runIt() {
 		$("." + thisButtonOnclickEventTargetName).trigger(thisButtonOnclickEventName, event);
 	});
 	$("[data-event-onshow]").on("rpdShow", function() {
-		// console.group("[data-event-onshow].on(rpdShow)");
+		console.group("[data-event-onshow].on(rpdShow)");
 		var args = Array.prototype.slice.call(arguments, 1);
-		// console.debug("[data-event-onshow].on(rpdShow) args", args);
+		console.debug("[data-event-onshow].on(rpdShow) args", args);
 		var $thisElement = $(this);
 		var thisButtonEventName = $thisElement.attr("data-event-onshow");
 		var thisButtonEventTargetName = $thisElement.attr("data-target-" + thisButtonEventName);
 		// console.debug("thisButtonEventName", thisButtonEventName);
 		// console.debug("thisButtonEventTargetName", thisButtonEventTargetName);
 		executeFunctionByName(thisButtonEventTargetName, window, args);
+		console.groupEnd();
 	});
 	$(".draggable.dropson").each(function() {
 		var $thisElement = $(this);
