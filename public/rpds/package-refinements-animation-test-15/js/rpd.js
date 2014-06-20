@@ -19,8 +19,8 @@ var bounce = false;
 
 // bounce = true;
 if (bounce === true) {
-	var primaryActivitiesAnimationDuration = (1500);
-	var primaryActivitiesAnimationEasing = [300, 25];
+	var primaryActivitiesAnimationDuration = (2200);
+	var primaryActivitiesAnimationEasing = [400, 20];
 
 }
 
@@ -995,6 +995,38 @@ var passChildrenAttributesFromID = function passChildrenAttributesFromID(selecto
 
 
 
+var fixActivityBarsLabels = function fixActivityBarsLabels($bars, activityWidth, newWidth) {
+
+
+	if (newWidth > (activityWidth * 2)) {
+		console.log('more!')
+		$bars.each(function() {
+			var $thisActivityBar = $(this);
+			if ($thisActivityBar.children().find('.activityBarText.text').text() !== '1 day') {
+				$thisActivityBar.children().find('.activityBarText.text').velocity('fadeOut', {
+					complete: function() {
+						$thisActivityBar.children().find('.activityBarText.text').text('1 day').velocity('fadeIn')
+					}
+				})
+			}
+		})
+	} else {
+		console.log('less!')
+		$bars.each(function() {
+			var $thisActivityBar = $(this);
+			if ($thisActivityBar.children().find('.activityBarText.text').text() !== 'then') {
+				$thisActivityBar.children().find('.activityBarText.text').velocity('fadeOut', {
+					complete: function() {
+						$thisActivityBar.children().find('.activityBarText.text').text('then').velocity('fadeIn')
+					}
+				})
+			}
+		})
+
+	}
+
+}
+
 var animateActivityBars = function animateActivityBars(activityWidth, numberOfTimes, adjustActivityBarsBy, passedElementName) {
 	var args = Array.prototype.slice.call(arguments, 0);
 
@@ -1022,32 +1054,35 @@ var animateActivityBars = function animateActivityBars(activityWidth, numberOfTi
 
 	// console.debug("args", args);
 
-	if (newActivityBarWidth > (activityWidth * 2)) {
-		console.log('more!')
-		$theActivityBars.each(function() {
-			var $thisActivityBar = $(this);
-			if ($thisActivityBar.children().find('.activityBarText.text').text() !== '1 d') {
-				$thisActivityBar.children().find('.activityBarText.text').velocity('fadeOut', {
-					complete: function() {
-						$thisActivityBar.children().find('.activityBarText.text').text('1 d').velocity('fadeIn')
-					}
-				})
-			}
-		})
-	} else {
-		console.log('less!')
-		$theActivityBars.each(function() {
-			var $thisActivityBar = $(this);
-			if ($thisActivityBar.children().find('.activityBarText.text').text() !== 'then') {
-				$thisActivityBar.children().find('.activityBarText.text').velocity('fadeOut', {
-					complete: function() {
-						$thisActivityBar.children().find('.activityBarText.text').text('then').velocity('fadeIn')
-					}
-				})
-			}
-		})
 
-	}
+	fixActivityBarsLabels($theActivityBars, activityWidth, newActivityBarWidth)
+
+	// if (newActivityBarWidth > (activityWidth * 2)) {
+	// 	console.log('more!')
+	// 	$theActivityBars.each(function() {
+	// 		var $thisActivityBar = $(this);
+	// 		if ($thisActivityBar.children().find('.activityBarText.text').text() !== '1 d') {
+	// 			$thisActivityBar.children().find('.activityBarText.text').velocity('fadeOut', {
+	// 				complete: function() {
+	// 					$thisActivityBar.children().find('.activityBarText.text').text('1 d').velocity('fadeIn')
+	// 				}
+	// 			})
+	// 		}
+	// 	})
+	// } else {
+	// 	console.log('less!')
+	// 	$theActivityBars.each(function() {
+	// 		var $thisActivityBar = $(this);
+	// 		if ($thisActivityBar.children().find('.activityBarText.text').text() !== 'then') {
+	// 			$thisActivityBar.children().find('.activityBarText.text').velocity('fadeOut', {
+	// 				complete: function() {
+	// 					$thisActivityBar.children().find('.activityBarText.text').text('then').velocity('fadeIn')
+	// 				}
+	// 			})
+	// 		}
+	// 	})
+
+	// }
 
 	$theActivityBars.velocity({
 		properties: {
@@ -1380,33 +1415,39 @@ var slideJbDaysBackwards = function slideJbDaysBackwards() {
 		}
 	});
 
-	var newActivityBarWidth = ((activityWidth * numberOfTimes - activityWidth / 2) + adjustActivityBarsBy);
-	// var newActivityBarWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
-	// console.debug("numberOfTimes", numberOfTimes);
-	// console.debug("newActivityBarWidth", newActivityBarWidth);
-	// console.debug("passedElementName", passedElementName);
-	var excludeBarID = $(".activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)").last().attr("id");
-	var $theActivityBars = $("#" + excludeBarID + ", .activityBar:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)");
-	// var $theActivityBars = $("#" + excludeBarID + ", .activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)");
-	// console.debug("$theActivityBars", $theActivityBars);
-	$theActivityBars.velocity({
-		properties: {
-			translateZ: 0,
-			width: newActivityBarWidth
-		},
-		options: {
-			duration: primaryActivitiesAnimationDuration,
-			easing: primaryActivitiesAnimationEasing,
-			delay: primaryActivitiesAnimationDelay,
-			// delay: 250
-		}
-	});
 
+	animateActivityBars(activityWidth, numberOfTimes, adjustActivityBarsBy, passedElementName)
+
+	// var newActivityBarWidth = ((activityWidth * numberOfTimes - activityWidth / 2) + adjustActivityBarsBy);
+	// // var newActivityBarWidth = ((activityWidth * numberOfTimes) - ((activityWidth / 2) + 10));
+	// // console.debug("numberOfTimes", numberOfTimes);
+	// // console.debug("newActivityBarWidth", newActivityBarWidth);
+	// // console.debug("passedElementName", passedElementName);
+	// var excludeBarID = $(".activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)").last().attr("id");
+	// var $theActivityBars = $("#" + excludeBarID + ", .activityBar:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)");
+	// // var $theActivityBars = $("#" + excludeBarID + ", .activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, :last)");
+	// // console.debug("$theActivityBars", $theActivityBars);
+	// $theActivityBars.velocity({
+	// 	properties: {
+	// 		translateZ: 0,
+	// 		width: newActivityBarWidth
+	// 	},
+	// 	options: {
+	// 		duration: primaryActivitiesAnimationDuration,
+	// 		easing: primaryActivitiesAnimationEasing,
+	// 		delay: primaryActivitiesAnimationDelay,
+	// 		// delay: 250
+	// 	}
+	// });
 
 
 
 	var $theActivityBars2 = $(".activityBar." + passedElementName + ", .activityBar." + passedElementName + "StopsFor, .activityBar:last");
 	var newActivityBarWidth2 = ((activityWidth * numberOfTimes) + (activityWidth) + adjustActivityBarsBy);
+
+	fixActivityBarsLabels($theActivityBars2, activityWidth, newActivityBarWidth2)
+
+
 	console.debug("$theActivityBars2", $theActivityBars2);
 	console.debug("newActivityBarWidth2", newActivityBarWidth2);
 	$theActivityBars2.velocity({
