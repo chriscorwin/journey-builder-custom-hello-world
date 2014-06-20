@@ -1,0 +1,1652 @@
+#state___shared
+{
+}
+#ancestor___rpd__ungroupthis___3
+{
+}
+#mainCanvas____ancestor___boxsizingcontentbox
+{
+}
+#header____ancestor___boxsizingcontentbox
+{
+}
+#sidebar____ancestor___boxsizingcontentbox
+{
+}
+#topNav____ancestor___boxsizingcontentbox
+{
+}
+#bottomMasque____ancestor___boxsizingcontentbox
+{
+}
+#canvasActivities____ancestor___rpd__ungroupthis___1
+{
+}
+#state___initial
+{
+}
+#state___ucdActivity1
+{
+}
+#state___engageSplitActivity1
+{
+}
+#state___ucdActivity2
+{
+}
+#state___ucdActivity3
+{
+}
+#state___emailActivity2
+{
+}
+#state___emailActivity3
+{
+}
+#state___final
+{
+}
+#mainCanvasAreaBg
+{
+    position: absolute;
+    left: 273px;
+    width: 1005px;
+    top: 187px;
+    height: 572px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+}
+#triggerSummary____ancestor
+{
+}
+#eTOrangeBg
+{
+    position: absolute;
+    left: 472px;
+    width: 833px;
+    top: 186px;
+    height: 575px;
+    background: rgb(204, 204, 204);
+    border: none;
+    -webkit-box-shadow: 0px 0px 7px 0 rgba(0, 0, 0, 0.85) inset;
+       -moz-box-shadow: 0px 0px 7px 0 rgba(0, 0, 0, 0.85) inset;
+            box-shadow: 0px 0px 7px 0 rgba(0, 0, 0, 0.85) inset;
+}
+#jbDays____ancestor___jbday___jbcolumn___boxsizingcontentbox
+{
+}
+#day0
+{
+    position: absolute;
+    left: 472px;
+    width: 160px;
+    top: 187px;
+    height: 576px;
+}
+#day1
+{
+    position: absolute;
+    left: 631px;
+    width: 160px;
+    top: 187px;
+    height: 576px;
+}
+#day2
+{
+    position: absolute;
+    left: 790px;
+    width: 160px;
+    top: 187px;
+    height: 576px;
+}
+#day3
+{
+    position: absolute;
+    left: 949px;
+    width: 160px;
+    top: 187px;
+    height: 576px;
+}
+#day4
+{
+    position: absolute;
+    left: 1108px;
+    width: 160px;
+    top: 187px;
+    height: 576px;
+}
+#day5
+{
+    position: absolute;
+    left: 1267px;
+    width: 160px;
+    top: 187px;
+    height: 576px;
+}
+#day6
+{
+    position: absolute;
+    left: 1427px;
+    width: 160px;
+    top: 187px;
+    height: 576px;
+}
+#headerBg
+{
+    position: absolute;
+    left: -1px;
+    width: 1279px;
+    top: -1px;
+    height: 118px;
+    background: rgb(240, 240, 240);
+    border: 1px solid rgb(193, 193, 193);
+}
+#timelineGrabberWrapper
+{
+    position: absolute;
+    left: -1px;
+    width: 1279px;
+    top: 152px;
+    height: 34px;
+    background: rgb(224, 224, 224);
+    border: 1px solid rgb(193, 193, 193);
+}
+#viewToolbar
+{
+    position: absolute;
+    left: 0px;
+    width: 1279px;
+    top: 118px;
+    height: 33px;
+    background: rgb(240, 240, 240);
+    border: 1px solid rgb(193, 193, 193);
+}
+#sidebarBg
+{
+    position: absolute;
+    left: 0px;
+    width: 261px;
+    top: 118px;
+    height: 641px;
+    background: rgb(240, 240, 240);
+    border: 1px solid rgb(193, 193, 193);
+}
+#sidebarCollapseButton
+{
+    position: absolute;
+    left: 262px;
+    width: 10px;
+    top: 118px;
+    height: 641px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCIgeTE9IjMyMSIgeDI9IjExIiB5Mj0iMzIxIj48c3RvcCBvZmZzZXQ9IjM2LjE5OCUiIHN0b3AtY29sb3I9IiNmMGYwZjAiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iODYuOTEyJSIgc3RvcC1jb2xvcj0iI2RlZGVkZSIgc3RvcC1vcGFjaXR5PSIxIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjY2NjY2NjIiBzdG9wLW9wYWNpdHk9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMSIgaGVpZ2h0PSI2NDIiIGZpbGw9InVybCgjZykiIC8+PC9zdmc+);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(36.198%, rgb(240, 240, 240)), color-stop(86.912%, rgb(222, 222, 222)), color-stop(100%, rgb(204, 204, 204)));
+    background-image: -webkit-linear-gradient(left, rgb(240, 240, 240) 36.198%, rgb(222, 222, 222) 86.912%, rgb(204, 204, 204) 100%);
+    background-image:    -moz-linear-gradient(left, rgb(240, 240, 240) 36.198%, rgb(222, 222, 222) 86.912%, rgb(204, 204, 204) 100%);
+    background-image:     -ms-linear-gradient(left, rgb(240, 240, 240) 36.198%, rgb(222, 222, 222) 86.912%, rgb(204, 204, 204) 100%);
+    background-image:      -o-linear-gradient(left, rgb(240, 240, 240) 36.198%, rgb(222, 222, 222) 86.912%, rgb(204, 204, 204) 100%);
+    background-image:         linear-gradient(to right, rgb(240, 240, 240) 36.198%, rgb(222, 222, 222) 86.912%, rgb(204, 204, 204) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#cccccc', GradientType=1);
+    background-repeat: no-repeat;
+    border: 1px solid rgb(193, 193, 193);
+}
+#activities____ancestor___boxsizingcontentbox
+{
+}
+#actions____ancestor___boxsizingcontentbox
+{
+}
+#jBHeader____ancestor___boxsizingcontentbox
+{
+}
+#jBHeaderFrame____ancestor___boxsizingcontentbox
+{
+    position: absolute;
+    left: 0px;
+    width: 1280px;
+    top: 0px;
+    height: 46px;
+}
+#bottomMasque
+{
+    position: absolute;
+    left: -10px;
+    width: 1299px;
+    top: 759px;
+    height: 39px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+    -webkit-box-shadow: 0px 1.5px 3px 0 rgba(0, 0, 0, 0.249);
+       -moz-box-shadow: 0px 1.5px 3px 0 rgba(0, 0, 0, 0.249);
+            box-shadow: 0px 1.5px 3px 0 rgba(0, 0, 0, 0.249);
+}
+#activityBars____ancestor___shared___startshidden___activityBar
+{
+}
+#activityBars____ancestor___startshidden___activityBar
+{
+}
+#verticalBars____ancestor___shared___startshidden___verticalBar
+{
+}
+#activities____ancestor___shared___activityIcon___icon___startshidden
+{
+}
+#activities____ancestor___activityIcon___icon___startshidden
+{
+}
+#ucdDropTarget____hoverIndicator
+{
+}
+#ucdDropTarget____rpd__isdroptarget_accepts_ucdDragger
+{
+    position: absolute;
+    left: 569px;
+    width: 68px;
+    top: 233px;
+    height: 104px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#ucdDragger
+{
+    position: absolute;
+    left: 21px;
+    width: 224px;
+    top: 531px;
+    height: 24px;
+    background-image: url(images/ucdDraggerImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdDragger____hoverIndicator___dragHelper
+{
+    position: absolute;
+    left: 21px;
+    width: 224px;
+    top: 531px;
+    height: 24px;
+    background-image: url(images/ucdDraggerHelperImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#ucdDragger____button___next___rpd__draggable_dropson_ucdDropTarget__ondrop_gotostate_next
+{
+    position: absolute;
+    left: 20px;
+    width: 224px;
+    top: 531px;
+    height: 24px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#ucdActivity1____rpd__onshow_trigger_slideJbDays
+{
+}
+#engageDropTarget1____hoverIndicator
+{
+}
+#engageDragger1
+{
+    position: absolute;
+    left: 21px;
+    width: 224px;
+    top: 474px;
+    height: 24px;
+    background-image: url(images/engageDraggerImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#engageDragger1____hoverIndicator___dragHelper
+{
+    position: absolute;
+    left: 21px;
+    width: 224px;
+    top: 474px;
+    height: 24px;
+    background-image: url(images/engageSplitDragHelperImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#engageDragger1____button___next___rpd__draggable_dropson_engageDropTarget1__ondrop_gotostate_next
+{
+    position: absolute;
+    left: 20px;
+    width: 224px;
+    top: 474px;
+    height: 24px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#engageDropTarget1____rpd__isdroptarget_accepts_engageDragger1
+{
+    position: absolute;
+    left: 473px;
+    width: 357px;
+    top: 236px;
+    height: 94px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#engageSplitActivity1____rpd__onshow_trigger_slideJbDays
+{
+}
+#ucdDropTarget2____hoverIndicator
+{
+}
+#ucdDragger2
+{
+    position: absolute;
+    left: 21px;
+    width: 224px;
+    top: 531px;
+    height: 24px;
+    background-image: url(images/ucdDraggerImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdDragger2____hoverIndicator___dragHelper
+{
+    position: absolute;
+    left: 21px;
+    width: 224px;
+    top: 531px;
+    height: 24px;
+    background-image: url(images/ucdDraggerHelperImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#ucdDragger2____rpd__draggable_dropson_ucdDropTarget__ondrop_gotostate_next___button___next
+{
+    position: absolute;
+    left: 20px;
+    width: 224px;
+    top: 531px;
+    height: 24px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#ucdDropTarget2____rpd__isdroptarget_accepts_ucdDragger2
+{
+    position: absolute;
+    left: 471px;
+    width: 240px;
+    top: 234px;
+    height: 358px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#ucdActivity2____rpd__onshow_trigger_slideJbDays
+{
+}
+#ucdDropTarget3____hoverIndicator
+{
+}
+#ucdDragger3
+{
+    position: absolute;
+    left: 21px;
+    width: 224px;
+    top: 531px;
+    height: 24px;
+    background-image: url(images/ucdDraggerImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdDragger3____hoverIndicator___dragHelper
+{
+    position: absolute;
+    left: 21px;
+    width: 224px;
+    top: 531px;
+    height: 24px;
+    background-image: url(images/ucdDraggerHelperImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#ucdDragger3____rpd__draggable_dropson_ucdDropTarget__ondrop_gotostate_next___button___next
+{
+    position: absolute;
+    left: 20px;
+    width: 224px;
+    top: 531px;
+    height: 24px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#ucdDropTarget3____rpd__isdroptarget_accepts_ucdDragger3
+{
+    position: absolute;
+    left: 471px;
+    width: 357px;
+    top: 234px;
+    height: 358px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#ucdActivity3____rpd__onshow_trigger_fixActivityBars
+{
+}
+#emailDropTarget1____hoverIndicator
+{
+}
+#emailDragger1
+{
+    position: absolute;
+    left: 22px;
+    width: 224px;
+    top: 362px;
+    height: 24px;
+    background-image: url(images/emailDraggerImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#emailDragger1____hoverIndicator___dragHelper
+{
+    position: absolute;
+    left: 22px;
+    width: 224px;
+    top: 362px;
+    height: 24px;
+    background-image: url(images/emailDraggerHelperImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#emailDragger1____rpd__draggable_dropson_ucdDropTarget__ondrop_gotostate_next___button___next
+{
+    position: absolute;
+    left: 22px;
+    width: 224px;
+    top: 362px;
+    height: 24px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#emailDropTarget1____rpd__isdroptarget_accepts_emailDragger1
+{
+    position: absolute;
+    left: 471px;
+    width: 477px;
+    top: 234px;
+    height: 152px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#emailActivity2____rpd__onshow_trigger_slideJbDays
+{
+}
+#removeEmailActivity2____button___next
+{
+    position: absolute;
+    left: 854px;
+    width: 36px;
+    top: 262px;
+    height: 25px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#removeEmailActivity2____hoverIndicator___button___next
+{
+}
+#emailActivity3____rpd__onshow_trigger_slideJbDaysBackwards
+{
+}
+#triggerSummaryBackground
+{
+    position: absolute;
+    left: 273px;
+    width: 198px;
+    top: 187px;
+    height: 572px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+}
+#triggerSummaryBackground2
+{
+    position: absolute;
+    left: 274px;
+    width: 198px;
+    top: 248px;
+    height: 100px;
+    background: rgb(229, 229, 229);
+    border: none;
+}
+#dayColumn0
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 574px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+    -webkit-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+       -moz-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+            box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+}
+#dayHeaderBg0
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 25px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+}
+#dayHeader0____uicentered
+{
+    position: absolute;
+    left: 13.438%;
+    width: 117px;
+    top: 1px;
+    height: 22px;
+    background-image: url(images/dayZero1Image.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#dayColumn1
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 574px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+    -webkit-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+       -moz-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+            box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+}
+#dayHeaderBg1
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 25px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+}
+#dayHeader1____uicentered
+{
+    position: absolute;
+    left: 13.438%;
+    width: 117px;
+    top: 1px;
+    height: 22px;
+    background-image: url(images/dayZero1Image.png);
+    background-repeat: no-repeat;
+    background-position: -121px 0px;
+    border: none;
+}
+#dayColumn2
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 574px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+    -webkit-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+       -moz-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+            box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+}
+#dayHeaderBg2
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 25px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+}
+#dayHeader2____uicentered
+{
+    position: absolute;
+    left: 20.313%;
+    width: 117px;
+    top: 1px;
+    height: 22px;
+    background-image: url(images/dayZero1Image.png);
+    background-repeat: no-repeat;
+    background-position: -241px 0px;
+    border: none;
+}
+#dayColumn3
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 574px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+    -webkit-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+       -moz-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+            box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+}
+#dayHeaderBg3
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 25px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+}
+#dayHeader3____uicentered
+{
+    position: absolute;
+    left: 13.438%;
+    width: 117px;
+    top: 1px;
+    height: 22px;
+    background-image: url(images/dayZero1Image.png);
+    background-repeat: no-repeat;
+    background-position: -361px 0px;
+    border: none;
+}
+#dayColumn4
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 574px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+    -webkit-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+       -moz-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+            box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+}
+#dayHeaderBg4
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 25px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+}
+#dayHeader4____uicentered___4
+{
+    position: absolute;
+    left: 13.438%;
+    width: 117px;
+    top: 1px;
+    height: 22px;
+    background-image: url(images/dayZero1Image.png);
+    background-repeat: no-repeat;
+    background-position: -481px 0px;
+    border: none;
+}
+#dayColumn5
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 574px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+    -webkit-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+       -moz-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+            box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+}
+#dayHeaderBg5
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 25px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+}
+#dayHeader5____uicentered___5
+{
+    position: absolute;
+    left: 13.438%;
+    width: 117px;
+    top: 1px;
+    height: 22px;
+    background-image: url(images/dayZero1Image.png);
+    background-repeat: no-repeat;
+    background-position: -601px 0px;
+    border: none;
+}
+#dayColumn6
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 574px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+    -webkit-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+       -moz-box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+            box-shadow: 2.5px 0px 8px 0 rgba(0, 0, 0, 0.583);
+}
+#dayHeaderBg6
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 25px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+}
+#dayHeader6____uicentered___6
+{
+    position: absolute;
+    left: 13.438%;
+    width: 117px;
+    top: 1px;
+    height: 22px;
+    background-image: url(images/dayZero1Image.png);
+    background-repeat: no-repeat;
+    background-position: -721px 0px;
+    border: none;
+}
+#activitiesBg
+{
+    position: absolute;
+    left: 11px;
+    width: 238px;
+    top: 293px;
+    height: 314px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(109, 169, 231);
+    -webkit-border-radius: 0 0 6.5px 6.5px;
+       -moz-border-radius: 0 0 6.5px 6.5px;
+            border-radius: 0 0 6.5px 6.5px;
+}
+#activitiesDragers____ancestor
+{
+}
+#actionsBg
+{
+    position: absolute;
+    left: 11px;
+    width: 238px;
+    top: 147px;
+    height: 145px;
+    background: rgb(223, 240, 255);
+    border: 1px solid rgb(109, 169, 231);
+    -webkit-border-radius: 6.5px 6.5px 0 0;
+       -moz-border-radius: 6.5px 6.5px 0 0;
+            border-radius: 6.5px 6.5px 0 0;
+}
+#border
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: rgb(103, 103, 103);
+    border: 1px solid rgb(103, 103, 103);
+}
+#cloudWrapper
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 1px;
+    bottom: 0px;
+    background: rgb(226, 111, 9);
+    border: 1px solid rgb(226, 111, 9);
+}
+#cloud
+{
+    position: absolute;
+    left: 2px;
+    width: 38px;
+    top: 1px;
+    height: 42px;
+    background-image: url(images/jbHeader.png);
+    background-repeat: repeat;
+    background-position: 0px -2px;
+    border: none;
+}
+#appName
+{
+    position: absolute;
+    left: 40px;
+    width: 168px;
+    top: 6px;
+    height: 38px;
+    background: rgb(62, 62, 62);
+    border: 1px solid rgb(62, 62, 62);
+}
+#toolbar
+{
+    position: absolute;
+    left: 209px;
+    right: 0px;
+    top: 6px;
+    height: 38px;
+    background: rgb(77, 77, 77);
+    border: 1px solid rgb(77, 77, 77);
+}
+#emailActivity____ancestor___initial
+{
+}
+#emailActivity____activityBarLabel
+{
+    position: absolute;
+    left: 20px;
+    width: 57px;
+    top: 1px;
+    height: 20px;
+}
+#emailActivityBar____activityBar
+{
+    position: absolute;
+    left: 552px;
+    width: 78px;
+    top: 263px;
+    height: 23px;
+}
+#ucdActivity1____ancestor
+{
+}
+#ucdActivity1____activityBarLabel2
+{
+    position: absolute;
+    left: 20px;
+    width: 57px;
+    top: 1px;
+    height: 20px;
+}
+#ucdActivity1____activitybar
+{
+    position: absolute;
+    left: 632px;
+    width: 78px;
+    top: 263px;
+    height: 23px;
+}
+#engageSplitActivity1____ancestor
+{
+}
+#engageSplitActivity1____activityBarLabel
+{
+    position: absolute;
+    left: 20px;
+    width: 57px;
+    top: 1px;
+    height: 20px;
+}
+#engageSplitActivity1____activityBar
+{
+    position: absolute;
+    left: 712px;
+    width: 78px;
+    top: 263px;
+    height: 23px;
+}
+#engageSplitActivity1____activityBarLabel2
+{
+    position: absolute;
+    left: 20px;
+    width: 57px;
+    top: 1px;
+    height: 20px;
+}
+#engageSplitActivity1____activityBar___ucdActivity2StopsFor
+{
+    position: absolute;
+    left: 712px;
+    width: 78px;
+    top: 333px;
+    height: 23px;
+}
+#ucdActivity2____ancestor___ucdActivity3StopsFor___emailActivity3StopsFor
+{
+}
+#ucdActivity2____activityBarLabel
+{
+    position: absolute;
+    left: 21px;
+    width: 57px;
+    top: 1px;
+    height: 20px;
+}
+#ucdActivity2____activityBar
+{
+    position: absolute;
+    left: 791px;
+    width: 78px;
+    top: 263px;
+    height: 23px;
+}
+#ucdActivity3____ancestor___emailActivity2StopsFor___emailActivity3StopsFor
+{
+}
+#ucdActivity3____activityBarLabel
+{
+    position: absolute;
+    left: 21px;
+    width: 57px;
+    top: 1px;
+    height: 20px;
+}
+#ucdActivity3____activityBar
+{
+    position: absolute;
+    left: 791px;
+    width: 78px;
+    top: 333px;
+    height: 23px;
+}
+#emailActivity2____ancestor___emailActivity3StopsFor
+{
+}
+#emailActivity2____activityBarLabel
+{
+    position: absolute;
+    left: 31px;
+    width: 57px;
+    top: 1px;
+    height: 20px;
+}
+#emailActivity2____activityBar
+{
+    position: absolute;
+    left: 871px;
+    width: 120px;
+    top: 263px;
+    height: 23px;
+}
+#engageSplitActivity1____verticalBar
+{
+    position: absolute;
+    left: 712px;
+    width: 3px;
+    top: 268px;
+    height: 84px;
+    background: rgb(214, 214, 214);
+    border: none;
+}
+#initial____email
+{
+    position: absolute;
+    left: 532px;
+    width: 40px;
+    top: 262px;
+    height: 25px;
+    background-image: url(images/sendEmailActivityImageConfiguredImage.png);
+    background-repeat: no-repeat;
+    background-position: 2px 0px;
+    border: none;
+}
+#initial____end
+{
+    position: absolute;
+    left: 692px;
+    width: 40px;
+    top: 257px;
+    height: 35px;
+    background-image: url(images/group1ObjectImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdActivity1
+{
+    position: absolute;
+    left: 612px;
+    width: 40px;
+    top: 258px;
+    height: 35px;
+    background-image: url(images/updateContactActivityImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 2px 0px;
+    border: none;
+}
+#engageSplitActivity1
+{
+    position: absolute;
+    left: 691px;
+    width: 40px;
+    top: 263px;
+    height: 23px;
+    background-image: url(images/engageActivityImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 9px 0px;
+    border: none;
+}
+#ucdActivity2
+{
+    position: absolute;
+    left: 770px;
+    width: 40px;
+    top: 258px;
+    height: 35px;
+    background-image: url(images/updateContactActivityImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 2px 0px;
+    border: none;
+}
+#ucdActivity3
+{
+    position: absolute;
+    left: 770px;
+    width: 40px;
+    top: 328px;
+    height: 35px;
+    background-image: url(images/updateContactActivityImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 2px 0px;
+    border: none;
+}
+#engageSplitActivity1____end___
+{
+    position: absolute;
+    left: 850px;
+    width: 40px;
+    top: 327px;
+    height: 35px;
+    background-image: url(images/group1ObjectImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#emailActivity2____emailActivity3
+{
+    position: absolute;
+    left: 852px;
+    width: 40px;
+    top: 262px;
+    height: 25px;
+    background-image: url(images/sendEmailActivityImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 2px 0px;
+    border: none;
+}
+#ucdDraggerDroppingHelper3
+{
+    position: absolute;
+    left: 569px;
+    width: 68px;
+    top: 233px;
+    height: 104px;
+    background-image: url(images/smallDropTarget.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#engageDragger1DroppingHelper
+{
+    position: absolute;
+    left: 648px;
+    width: 68px;
+    top: 233px;
+    height: 104px;
+    background-image: url(images/smallDropTarget.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdDraggerDroppingHelper2
+{
+    position: absolute;
+    left: 729px;
+    width: 68px;
+    top: 233px;
+    height: 104px;
+    background-image: url(images/smallDropTarget.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdDraggerDroppingHelper
+{
+    position: absolute;
+    left: 809px;
+    width: 68px;
+    top: 293px;
+    height: 104px;
+    background-image: url(images/smallDropTarget.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#droppingHelper4
+{
+    position: absolute;
+    left: 809px;
+    width: 68px;
+    top: 233px;
+    height: 104px;
+    background-image: url(images/smallDropTarget.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#targetMasque
+{
+    position: absolute;
+    left: 854px;
+    width: 42px;
+    top: 257px;
+    height: 30px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+#deleteIcon2
+{
+    position: absolute;
+    left: 873px;
+    width: 18px;
+    top: 259px;
+    height: 18px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+    -webkit-box-shadow: 0px 0px 3.5px 0 rgba(135, 144, 153, 0.828);
+       -moz-box-shadow: 0px 0px 3.5px 0 rgba(135, 144, 153, 0.828);
+            box-shadow: 0px 0px 3.5px 0 rgba(135, 144, 153, 0.828);
+    -webkit-border-radius: 4.5px 4.5px 4.5px 4.5px;
+       -moz-border-radius: 4.5px 4.5px 4.5px 4.5px;
+            border-radius: 4.5px 4.5px 4.5px 4.5px;
+}
+#deleteIcon
+{
+    position: absolute;
+    left: 875px;
+    width: 16px;
+    top: 260px;
+    height: 16px;
+    background-image: url(images/deleteIconImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#updateDraggerImage2
+{
+    position: absolute;
+    left: 22px;
+    width: 224px;
+    top: 532px;
+    height: 24px;
+    background-image: url(images/updateDraggerImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#engagementDraggerIamge2
+{
+    position: absolute;
+    left: 22px;
+    width: 224px;
+    top: 475px;
+    height: 24px;
+    background-image: url(images/engagementDraggerIamgeImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#randomDraggerImage2
+{
+    position: absolute;
+    left: 22px;
+    width: 224px;
+    top: 447px;
+    height: 24px;
+    background-image: url(images/randomDraggerImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#decisionDraggerImage2
+{
+    position: absolute;
+    left: 22px;
+    width: 224px;
+    top: 419px;
+    height: 24px;
+    background-image: url(images/decisionDraggerImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#emailDraggerImage2
+{
+    position: absolute;
+    left: 22px;
+    width: 224px;
+    top: 362px;
+    height: 24px;
+    background-image: url(images/emailDraggerImageImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#emailActivityBar____activityBarLine
+{
+    position: absolute;
+    left: 0px;
+    right: 9px;
+    top: 0px;
+    height: 23px;
+    background: rgb(198, 225, 243);
+    border: none;
+}
+#emailActivityBar____activityBarTip
+{
+    position: absolute;
+    right: 0px;
+    width: 9px;
+    top: 0px;
+    height: 23px;
+    background-image: url(images/activityBarTipRightConfiguredImage2.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#emailActivity____activityBarIcon
+{
+    position: absolute;
+    left: 0px;
+    width: 14px;
+    top: 3px;
+    height: 15px;
+    background-image: url(images/waitClockSmallImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#emailActivity____activityBarText___text___rpd__isvariabletext_varname_selfname___boxsizingcontentbox___letterspacingthin___
+{
+    position: absolute;
+    left: 15px;
+    width: 27px;
+    top: 0px;
+    height: 13px;
+    background: none;
+    border: none;
+    text-shadow: 0px 1px 0.5px rgba(255, 255, 255, 0.474);
+    font-size: 10px;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: rgb(64, 119, 177);
+    padding: 3.5px 0;
+}
+#ucdActivity1____activityBarLine
+{
+    position: absolute;
+    left: 0px;
+    right: 9px;
+    top: 0px;
+    height: 23px;
+    background: rgb(214, 214, 214);
+    border: none;
+}
+#ucdActivity1____activityBarTip
+{
+    position: absolute;
+    right: 0px;
+    width: 9px;
+    top: 0px;
+    height: 23px;
+    background-image: url(images/activityBarTipRightImage2.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdActivity1____activityBarIcon___
+{
+    position: absolute;
+    left: 0px;
+    width: 14px;
+    top: 3px;
+    height: 15px;
+    background-image: url(images/waitClockSmallUnconfiguredImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdActivity1____activityBarText___text___rpd__isvariabletext_varname_selfname___boxsizingcontentbox___letterspacingthin___
+{
+    position: absolute;
+    left: 15px;
+    width: 27px;
+    top: 0px;
+    height: 13px;
+    background: none;
+    border: none;
+    text-shadow: 0px 1px 0.5px rgba(255, 255, 255, 0.474);
+    font-size: 10px;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: rgb(135, 144, 153);
+    padding: 3.5px 0;
+}
+#engageSplitActivity1____activityBarLine
+{
+    position: absolute;
+    left: 0px;
+    right: 9px;
+    top: 0px;
+    height: 23px;
+    background: rgb(214, 214, 214);
+    border: none;
+}
+#engageSplitActivity1____activityBarTip
+{
+    position: absolute;
+    right: 0px;
+    width: 9px;
+    top: 0px;
+    height: 23px;
+    background-image: url(images/activityBarTipRightImage2.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#engageSplitActivity1____activityBarLine___ucdActivity2StopsFor
+{
+    position: absolute;
+    left: 0px;
+    right: 9px;
+    top: 0px;
+    height: 23px;
+    background: rgb(214, 214, 214);
+    border: none;
+}
+#engageSplitActivity1____activityBarTip___ucdActivity2StopsFor
+{
+    position: absolute;
+    right: 0px;
+    width: 9px;
+    top: 0px;
+    height: 23px;
+    background-image: url(images/activityBarTipRightImage2.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#engageSplitActivity1____activityBarIcon___
+{
+    position: absolute;
+    left: 0px;
+    width: 14px;
+    top: 3px;
+    height: 15px;
+    background-image: url(images/waitClockSmallUnconfiguredImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#engageSplitActivity1____activityBarText___text___rpd__isvariabletext_varname_selfname___boxsizingcontentbox___letterspacingthin___
+{
+    position: absolute;
+    left: 15px;
+    width: 27px;
+    top: 0px;
+    height: 13px;
+    background: none;
+    border: none;
+    text-shadow: 0px 1px 0.5px rgba(255, 255, 255, 0.474);
+    font-size: 10px;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: rgb(135, 144, 153);
+    padding: 3.5px 0;
+}
+#engageSplitActivity1____activityBarIcon___2
+{
+    position: absolute;
+    left: 0px;
+    width: 14px;
+    top: 3px;
+    height: 15px;
+    background-image: url(images/waitClockSmallUnconfiguredImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#engageSplitActivity1____activityBarText___text___rpd__isvariabletext_varname_selfname___boxsizingcontentbox___letterspacingthin___2
+{
+    position: absolute;
+    left: 15px;
+    width: 27px;
+    top: 0px;
+    height: 13px;
+    background: none;
+    border: none;
+    text-shadow: 0px 1px 0.5px rgba(255, 255, 255, 0.474);
+    font-size: 10px;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: rgb(135, 144, 153);
+    padding: 3.5px 0;
+}
+#ucdActivity2____activityBarLine
+{
+    position: absolute;
+    left: 0px;
+    right: 9px;
+    top: 0px;
+    height: 23px;
+    background: rgb(214, 214, 214);
+    border: none;
+}
+#ucdActivity2____activityBarTip
+{
+    position: absolute;
+    right: 0px;
+    width: 9px;
+    top: 0px;
+    height: 23px;
+    background-image: url(images/activityBarTipRightImage2.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdActivity2____activityBarIcon___
+{
+    position: absolute;
+    left: 0px;
+    width: 14px;
+    top: 3px;
+    height: 15px;
+    background-image: url(images/waitClockSmallUnconfiguredImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdActivity2____activityBarText___text___rpd__isvariabletext_varname_selfname___boxsizingcontentbox___letterspacingthin___
+{
+    position: absolute;
+    left: 15px;
+    width: 27px;
+    top: 0px;
+    height: 13px;
+    background: none;
+    border: none;
+    text-shadow: 0px 1px 0.5px rgba(255, 255, 255, 0.474);
+    font-size: 10px;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: rgb(135, 144, 153);
+    padding: 3.5px 0;
+}
+#ucdActivity3____activityBarLine
+{
+    position: absolute;
+    left: 0px;
+    right: 9px;
+    top: 0px;
+    height: 23px;
+    background: rgb(214, 214, 214);
+    border: none;
+}
+#ucdActivity3____activityBarTip
+{
+    position: absolute;
+    right: 0px;
+    width: 9px;
+    top: 0px;
+    height: 23px;
+    background-image: url(images/activityBarTipRightImage2.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdActivity3____activityBarIcon___
+{
+    position: absolute;
+    left: 0px;
+    width: 14px;
+    top: 3px;
+    height: 15px;
+    background-image: url(images/waitClockSmallUnconfiguredImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#ucdActivity3____activityBarText___text___rpd__isvariabletext_varname_selfname___boxsizingcontentbox___letterspacingthin___
+{
+    position: absolute;
+    left: 15px;
+    width: 27px;
+    top: 0px;
+    height: 13px;
+    background: none;
+    border: none;
+    text-shadow: 0px 1px 0.5px rgba(255, 255, 255, 0.474);
+    font-size: 10px;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: rgb(135, 144, 153);
+    padding: 3.5px 0;
+}
+#emailActivity2____activityBarLine
+{
+    position: absolute;
+    left: 0px;
+    right: 9px;
+    top: 0px;
+    height: 23px;
+    background: rgb(214, 214, 214);
+    border: none;
+}
+#emailActivity2____activityBarTip
+{
+    position: absolute;
+    right: 0px;
+    width: 9px;
+    top: 0px;
+    height: 23px;
+    background-image: url(images/activityBarTipRightImage2.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#emailActivity2____activityBarIcon___
+{
+    position: absolute;
+    left: 0px;
+    width: 14px;
+    top: 3px;
+    height: 15px;
+    background-image: url(images/waitClockSmallUnconfiguredImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#emailActivity2____activityBarText___text___rpd__isvariabletext_varname_selfname___boxsizingcontentbox___letterspacingthin___
+{
+    position: absolute;
+    left: 15px;
+    width: 27px;
+    top: 0px;
+    height: 13px;
+    background: none;
+    border: none;
+    text-shadow: 0px 1px 0.5px rgba(255, 255, 255, 0.474);
+    font-size: 10px;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: rgb(135, 144, 153);
+    padding: 3.5px 0;
+}
