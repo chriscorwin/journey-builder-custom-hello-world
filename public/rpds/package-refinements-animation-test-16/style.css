@@ -1397,27 +1397,22 @@
 #emailActivity3____rpd__onshow_trigger_slideJbDaysBackwards
 {
 }
-#day0Waits____button___next___rpd__onclick_gotostate_next
+#editDuration____hoverIndicator
 {
-    position: absolute;
-    left: 474px;
-    width: 396px;
-    top: 189px;
-    height: 21px;
-    background: rgb(109, 169, 231); /* fallback */
-    background: rgba(109, 169, 231, 0.7);
-    border: 1px solid rgb(180, 255, 29);
 }
-#day0Waits____hoverIndicator
+#editDuration____button___next
 {
     position: absolute;
-    left: 473px;
-    width: 315px;
-    top: 188px;
-    height: 23px;
-    background: rgb(233, 135, 27); /* fallback */
-    background: rgba(233, 135, 27, 0.4);
-    border: 1px solid rgb(0, 0, 0);
+    left: 587px;
+    width: 12px;
+    top: 268px;
+    height: 12px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 6px 6px 6px 6px;
+       -moz-border-radius: 6px 6px 6px 6px;
+            border-radius: 6px 6px 6px 6px;
 }
 #durationModal____rpd__onshow_trigger_showModalOverlay
 {
@@ -1461,7 +1456,7 @@
 #durationModal____2
 {
 }
-#gotoRs4____button___next___4
+#uhhhh____button___rpd__onhide_trigger_hideModalOverlay__onclick_gotostate_next
 {
     position: absolute;
     left: 911px;
@@ -1490,7 +1485,7 @@
     position: absolute;
     left: 502px;
     width: 398px;
-    top: 231px;
+    top: 221px;
     height: 66px;
     background: none;
     border: none;
@@ -1509,7 +1504,7 @@
     background: rgb(193, 193, 193);
     border: none;
 }
-#hideModal____rpd__onshow_trigger_hideModalOverlay
+#slideThings____rpd__onshow_trigger_adjustActivitiesForDuration1
 {
 }
 #triggerSummaryBackground
@@ -2189,6 +2184,28 @@
     top: 256px;
     height: 16px;
     background-image: url(images/deleteIconImage.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+}
+#hoverBgMasque
+{
+    position: absolute;
+    left: 587px;
+    width: 20px;
+    top: 268px;
+    height: 12px;
+    background: rgb(198, 225, 243);
+    border: none;
+}
+#hoverImage
+{
+    position: absolute;
+    left: 587px;
+    width: 12px;
+    top: 268px;
+    height: 12px;
+    background-image: url(images/edithover.png);
     background-repeat: no-repeat;
     background-position: 0px 0px;
     border: none;

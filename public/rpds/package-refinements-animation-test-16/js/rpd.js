@@ -20,7 +20,7 @@ var bounce = false;
 // bounce = true;
 if (bounce === true) {
 	var primaryActivitiesAnimationDuration = (2200);
-	var primaryActivitiesAnimationEasing = [400, 20];
+	var primaryActivitiesAnimationEasing = [900, 20];
 
 }
 
@@ -36,24 +36,31 @@ var tertiaryActivitiesAnimationEasing = 0;
 
 var executeFunctionByName = function executeFunctionByName(functionName, context) {
 	var args = Array.prototype.slice.call(arguments, 2);
-	// console.group("[executeFunctionByName] args", args);
+	// console.log("[executeFunctionByName]");
+	// console.log("args: %o", args);
+	// console.warn("[executeFunctionByName] functionName before split: " + functionName);
 	var namespaces = functionName.split(".");
+	// console.warn("[executeFunctionByName] namespaces: " + namespaces);
 	var func = namespaces.pop();
 	for (var i = 0; i < namespaces.length; i++) {
 		context = context[namespaces[i]];
 	}
 	try {
 		// may throw three exceptions
+		// console.warn("[executeFunctionByName] trying, functionName: " + functionName);
+		// console.warn("[executeFunctionByName] trying, func: " + func);
 		if (typeof context[func] === "function") {
 			// safe to use the function
 			return context[func].apply(context, args);
 		} else {
 			// console.warn("[executeFunctionByName] was passed `" + functionName + "` but it is not a function we can find.");
+			// console.warn("[executeFunctionByName] was passed `" + func + "` but it is not a function we can find.");
 		}
 	} catch (e) {
 		// statements to handle any unspecified exceptions
 		// console.error(e); // pass exception object to error handler
 	} finally {
+		// console.warn("[executeFunctionByName] finished.");
 		// console.groupEnd();
 	}
 };
@@ -254,13 +261,15 @@ var hide = function hide(el) {
 				complete: function(elements) {}
 			});
 		}
-		if ($thisElement.data("event-hide") == "trigger") {
+
+		if ($thisElement.data("event-onhide") == "trigger") {
 			thisElementName = $thisElement.data("name");
 			$thisElement.trigger("hide", {
 				elementID: thisElementID,
 				elementName: thisElementName
 			});
 		}
+
 	}
 
 	// console.groupEnd();
@@ -269,11 +278,93 @@ var hide = function hide(el) {
 
 
 var showModalOverlay = function showModalOverlay(el) {
-	$("#overlay____ismodaloverlay___startshidden").velocity("fadeIn")
+	$("#overlay____ismodaloverlay___startshidden").velocity("fadeIn", {
+		duration: (primaryActivitiesAnimationDuration / 3),
+		easing: primaryActivitiesAnimationEasing,
+		delay: primaryActivitiesAnimationDelay,
+	})
+	$("body").addClass("modalIsShowing")
 };
 
 var hideModalOverlay = function hideModalOverlay(el) {
-	$("#overlay____ismodaloverlay___startshidden").velocity("fadeOut")
+	// doTheModalOverlayHide()
+	$("body").removeClass("modalIsShowing")
+	window.setTimeout(doTheModalOverlayHide, 125)
+};
+
+var doTheModalOverlayHide = function doTheModalOverlayHide() {
+	// console.log("hiding overlay")
+	$("#overlay____ismodaloverlay___startshidden").velocity("fadeOut", {
+		duration: (primaryActivitiesAnimationDuration / 3),
+		easing: primaryActivitiesAnimationEasing,
+		delay: primaryActivitiesAnimationDelay,
+	})
+};
+
+var adjustActivitiesForDuration1 = function adjustActivitiesForDuration1(el) {
+	// var $activityStuffExceptInitial = $(".activityBar:not(.initial), .activityIcon:not(.initial), .activityIcon.initial.end, .verticalBar")
+	$(".activityBar:not(.initial), .activityIcon:not(.initial), .activityIcon.initial.end, .verticalBar").velocity({
+		left: "+=" + (activityWidth + (activityWidth / 2)) + "px"
+	}, {
+		duration: primaryActivitiesAnimationDuration,
+		easing: primaryActivitiesAnimationEasing,
+		delay: primaryActivitiesAnimationDelay,
+	})
+
+
+	$("#dayHeader0____uicentered").velocity({
+		left: "13.438%"
+	}, {
+		duration: primaryActivitiesAnimationDuration,
+		easing: primaryActivitiesAnimationEasing,
+		delay: primaryActivitiesAnimationDelay,
+	})
+
+
+	$("#day0").velocity({
+		width: "160px"
+	}, {
+		duration: primaryActivitiesAnimationDuration,
+		easing: primaryActivitiesAnimationEasing,
+		delay: primaryActivitiesAnimationDelay,
+	})
+
+
+	$("#day1").velocity({
+		width: "300px",
+		left: "631px"
+	}, {
+		duration: primaryActivitiesAnimationDuration,
+		easing: primaryActivitiesAnimationEasing,
+		delay: primaryActivitiesAnimationDelay,
+	})
+
+
+	$('[data-name="jbDays"]').children().not(".day0, .day1").velocity({
+		left: "-=" + 100 + "px"
+	}, {
+		duration: primaryActivitiesAnimationDuration,
+		easing: primaryActivitiesAnimationEasing,
+		delay: primaryActivitiesAnimationDelay,
+	})
+
+
+	$("#dayHeader1____uicentered").velocity({
+		left: "93.2125px"
+	}, {
+		duration: primaryActivitiesAnimationDuration,
+		easing: primaryActivitiesAnimationEasing,
+		delay: primaryActivitiesAnimationDelay,
+	})
+
+
+	$("#emailActivityBar____activityBar").velocity({
+		width: "113px"
+	}, {
+		duration: primaryActivitiesAnimationDuration,
+		easing: primaryActivitiesAnimationEasing,
+		delay: primaryActivitiesAnimationDelay,
+	})
 };
 
 
@@ -350,7 +441,7 @@ var rpdShow = function rpdShow(el) {
 				// console.debug("numberOfTimes", numberOfTimes);
 			}
 			var newWidth = (activityWidth * numberOfTimes) + Math.ceil(activityWidth / numberOfTimes)
-			console.debug("newWidth", newWidth);
+			// console.debug("newWidth", newWidth);
 
 			$thisElement.velocity({
 				translateZ: 0,
@@ -440,20 +531,20 @@ var rpdFadeOut = function rpdFadeOut( /* args */ ) {
 		return;
 	}
 	var args = Array.prototype.slice.call(arguments, 0);
-	console.group("[rpdFadeOut]");
+	// console.group("[rpdFadeOut]");
 	window.rpdFadeOutArgs = args;
 	var elementToFadeOutID = rpdFadeOutArgs[0][0]["elementID"];
-	console.debug("elementToFadeOutID", elementToFadeOutID);
+	// console.debug("elementToFadeOutID", elementToFadeOutID);
 
 	if (typeof elementToFadeOutID === "string" && elementToFadeOutID.beginsWith("#") === false && elementToFadeOutID.beginsWith(".") === false) {
 		elementToFadeOutID = "#" + elementToFadeOutID;
 	}
 
 
-	console.debug("elementToFadeOutID", elementToFadeOutID);
+	// console.debug("elementToFadeOutID", elementToFadeOutID);
 
 	$(elementToFadeOutID).velocity("callout.tadaThenFadeOut");
-	console.groupEnd();
+	// console.groupEnd();
 };
 
 var toggle = function toggle(el) {
@@ -621,9 +712,13 @@ var hideDeep = function hideDeep(el) {
 };
 
 var hideState = function hideState(el) {
-	$("body").hasClass("dev");
 	if ($("body").hasClass("dev")) {
 		return;
+	}
+	var modalIsShowing = false;
+	if ($("body").hasClass("modalIsShowing")) {
+		console.log("modal is showing, delay more")
+		modalIsShowing = true;
 	}
 	var thisElement = el,
 		thisElementID = "",
@@ -646,14 +741,32 @@ var hideState = function hideState(el) {
 			thisElementID = $thisElement.attr("id");
 		}
 	}
-
-	$thisElement.velocity("transition.slideRightOut", {
+	$("[data-event-onhide]", thisElementID).trigger('hide')
+	hidePopupsInElement(thisElementID);
+	var transitionToUse = "transition.slideRightOut";
+	var velocityOptions = {
 		stagger: 100,
 		drag: true,
-		duration: 250
-	});
+		duration: 250, 
+		complete: function(){
+		}
+	}
+	if (modalIsShowing === true) {
+		// console.log("modal is showing, go slooower")
+		transitionToUse = "fadeOut"
+		velocityOptions.stagger = 1200
+		velocityOptions.drag = true
+		velocityOptions.duration = 125
+		$thisElement.velocity({opacity: 0}, {
+			delay: 125,
+			display: false
+		});
+		
+	} else {
+		$thisElement.velocity(transitionToUse, velocityOptions);
+	}
+
 	// $thisElement.addClass("hide").hide();
-	hidePopupsInElement(thisElementID);
 };
 
 var showPopupsInElement = function showPopupsInElement(el) {
@@ -689,16 +802,16 @@ var showPopupsInElement = function showPopupsInElement(el) {
 		}
 	}
 	var $popupToShow = $theElement.find('.is_popup');
-	if($popupToShow.length !== 0) {
+	if ($popupToShow.length !== 0) {
 		var popupToShowID = $theElement.find('.is_popup').attr('id');
 
 		rpdShow(popupToShowID);
 
 
-		_.delay(function(event){
+		_.delay(function(event) {
 
 
-	        var $elementToScrollTo = $popupToShow.find('div[id*="popup"]');
+			var $elementToScrollTo = $popupToShow.find('div[id*="popup"]');
 			var elementToScrollToID = $elementToScrollTo.attr('id');
 
 
@@ -734,7 +847,7 @@ var showPopupsInElement = function showPopupsInElement(el) {
 					left: (((offsetLeft) * -1) + (elementToScrollToWidth / 4))
 				}
 			});
-		
+
 		}, 500, event);
 	}
 
@@ -795,12 +908,12 @@ var hidePopupsInElement = function hidePopupsInElement(el) {
 	} else {
 
 		var $popupToShow = $thisElement.find('.is_popup');
-		if($popupToShow.length !== 0) {
+		if ($popupToShow.length !== 0) {
 			var popupToHideID = $thisElement.find('.is_popup').attr('id');
 
 			hide(popupToHideID)
 		}
-	// $thisElement.find('.group.is_popup').addClass('hide').hide();
+		// $thisElement.find('.group.is_popup').addClass('hide').hide();
 	}
 
 
@@ -1041,6 +1154,7 @@ var applyRdpClassNamesToElement = function applyRdpClassNamesToElement(e, pseudo
 					var potentialName = getElementName($thisElement.attr("id"));
 				}
 				dataAttributes["data-target-" + actionToTake] = onWhatItemName;
+				// dataAttributes["data-target-" + theEvent + "-" + actionToTake] = onWhatItemName;
 			} else if (value.beginsWith("is") === true) {
 				// followsOnTwitter____attributesListItem___button___rpd__isdrop_dropson_expressionDropTarget__ondrop_gotostate_configureVIPsTrigger3___hoverIndicator
 				// the pattern is onclick2_actionToTake_onWhatItemName
@@ -1166,7 +1280,7 @@ var fixActivityBarsLabels = function fixActivityBarsLabels($bars, activityWidth,
 
 
 	if (newWidth > (activityWidth * 2)) {
-		console.log('more!')
+		// console.log('more!')
 		$bars.each(function() {
 			var $thisActivityBar = $(this);
 			if ($thisActivityBar.children().find('.activityBarText.text').text() !== '1 day') {
@@ -1178,7 +1292,7 @@ var fixActivityBarsLabels = function fixActivityBarsLabels($bars, activityWidth,
 			}
 		})
 	} else {
-		console.log('less!')
+		// console.log('less!')
 		$bars.each(function() {
 			var $thisActivityBar = $(this);
 			if ($thisActivityBar.children().find('.activityBarText.text').text() !== 'then') {
@@ -1197,27 +1311,27 @@ var fixActivityBarsLabels = function fixActivityBarsLabels($bars, activityWidth,
 var animateActivityBars = function animateActivityBars(activityWidth, numberOfTimes, adjustActivityBarsBy, passedElementName) {
 	var args = Array.prototype.slice.call(arguments, 0);
 
-	console.group("[animateActivityBars] %O", args);
+	// console.group("[animateActivityBars] %O", args);
 
 	var newActivityBarWidth = (((activityWidth * numberOfTimes) - (activityWidth / 2)) + adjustActivityBarsBy);
-	console.debug("numberOfTimes", numberOfTimes);
-	console.debug("newActivityBarWidth", newActivityBarWidth);
-	console.debug("passedElementName", passedElementName);
+	// console.debug("numberOfTimes", numberOfTimes);
+	// console.debug("newActivityBarWidth", newActivityBarWidth);
+	// console.debug("passedElementName", passedElementName);
 
 
 
 
-	console.debug("$('.activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, .activityBar:visible:last)').last()", $(".activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, .activityBar:visible:last)").last());
+	// console.debug("$('.activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, .activityBar:visible:last)').last()", $(".activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, .activityBar:visible:last)").last());
 	var excludeBarID, $theActivityBars, theActivityBarsSelector = ".activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor)";
 	if ($(".activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, .activityBar:visible:last)").last().length !== 0) {
 		excludeBarID = "#" + $(".activityBar:visible:not(." + passedElementName + ", ." + passedElementName + "StopsFor, .activityBar:visible:last)").last().attr('id');
 		theActivityBarsSelector = excludeBarID + ", " + theActivityBarsSelector;
 	}
-	console.log('$("' + theActivityBarsSelector + '")');
+	// console.log('$("' + theActivityBarsSelector + '")');
 	$theActivityBars = $(theActivityBarsSelector);
 
 	// console.trace()
-	console.log("%cAcitvity Bars %o is %d long", "color:orange; background:blue; font-size: 16pt", $theActivityBars, $theActivityBars.length);
+	// console.log("%cAcitvity Bars %o is %d long", "color:orange; background:blue; font-size: 16pt", $theActivityBars, $theActivityBars.length);
 
 	// console.debug("args", args);
 
@@ -1225,7 +1339,7 @@ var animateActivityBars = function animateActivityBars(activityWidth, numberOfTi
 	fixActivityBarsLabels($theActivityBars, activityWidth, newActivityBarWidth)
 
 	// if (newActivityBarWidth > (activityWidth * 2)) {
-	// 	console.log('more!')
+	// 	// console.log('more!')
 	// 	$theActivityBars.each(function() {
 	// 		var $thisActivityBar = $(this);
 	// 		if ($thisActivityBar.children().find('.activityBarText.text').text() !== '1 d') {
@@ -1237,7 +1351,7 @@ var animateActivityBars = function animateActivityBars(activityWidth, numberOfTi
 	// 		}
 	// 	})
 	// } else {
-	// 	console.log('less!')
+	// 	// console.log('less!')
 	// 	$theActivityBars.each(function() {
 	// 		var $thisActivityBar = $(this);
 	// 		if ($thisActivityBar.children().find('.activityBarText.text').text() !== 'then') {
@@ -1263,7 +1377,7 @@ var animateActivityBars = function animateActivityBars(activityWidth, numberOfTi
 			queue: false
 		}
 	});
-	console.groupEnd()
+	// console.groupEnd()
 
 };
 
@@ -1272,7 +1386,7 @@ var animateActivityBars = function animateActivityBars(activityWidth, numberOfTi
 
 var slideJbDays = function slideJbDays() {
 	var args = Array.prototype.slice.call(arguments, 0);
-	console.group("[slideJbDays] %O", args);
+	// console.group("[slideJbDays] %O", args);
 	window.slideJbDaysArgs = args;
 	var $jbDays = $('[data-name="jbDays"]').children();
 	var $firstJbDay = $jbDays.first();
@@ -1292,7 +1406,7 @@ var slideJbDays = function slideJbDays() {
 
 
 
-	console.groupCollapsed("[slideJbDays] animations here:");
+	// console.groupCollapsed("[slideJbDays] animations here:");
 
 	$firstJbDay.velocity({
 		properties: {
@@ -1308,7 +1422,7 @@ var slideJbDays = function slideJbDays() {
 			}
 		}
 	});
-	console.groupEnd();
+	// console.groupEnd();
 
 
 
@@ -1363,10 +1477,10 @@ var slideJbDays = function slideJbDays() {
 			// console.group("It is " + passedElementName + " (default case).");
 			var newWidth = (activityWidth * numberOfTimes * 2 + (activityWidth + 10) + adjustActivityBarsBy);
 			// console.debug("numberOfTimes", numberOfTimes);
-			console.debug("newWidth", newWidth);
-			console.debug("adjustActivityBarsBy", adjustActivityBarsBy);
+			// console.debug("newWidth", newWidth);
+			// console.debug("adjustActivityBarsBy", adjustActivityBarsBy);
 			var $theActivityBars = $("." + passedElementName + "StopsFor.activityBar:visible");
-			console.debug("$theActivityBars", $theActivityBars);
+			// console.debug("$theActivityBars", $theActivityBars);
 			$theActivityBars.velocity({
 				properties: {
 					translateZ: 0,
@@ -1452,7 +1566,7 @@ var slideJbDays = function slideJbDays() {
 	// console.debug("args", args);
 
 	// if (newActivityBarWidth > (activityWidth * 2)) {
-	// 	console.log('more!')
+	// 	// console.log('more!')
 	// 	$theActivityBars.each(function() {
 	// 		var $thisActivityBar = $(this);
 	// 		if ($thisActivityBar.children().find('.activityBarText.text').text() !== '1 d') {
@@ -1464,7 +1578,7 @@ var slideJbDays = function slideJbDays() {
 	// 		}
 	// 	})
 	// } else {
-	// 	console.log('less!')
+	// 	// console.log('less!')
 	// 	$theActivityBars.each(function() {
 	// 		var $thisActivityBar = $(this);
 	// 		if ($thisActivityBar.children().find('.activityBarText.text').text() !== 'then') {
@@ -1615,8 +1729,8 @@ var slideJbDaysBackwards = function slideJbDaysBackwards() {
 	fixActivityBarsLabels($theActivityBars2, activityWidth, newActivityBarWidth2)
 
 
-	console.debug("$theActivityBars2", $theActivityBars2);
-	console.debug("newActivityBarWidth2", newActivityBarWidth2);
+	// console.debug("$theActivityBars2", $theActivityBars2);
+	// console.debug("newActivityBarWidth2", newActivityBarWidth2);
 	$theActivityBars2.velocity({
 		properties: {
 			translateZ: 0,
@@ -1735,7 +1849,7 @@ var slideJbDaysBackwards = function slideJbDaysBackwards() {
 
 var fixActivityBars = function fixActivityBars() {
 	var args = Array.prototype.slice.call(arguments, 0);
-	console.group("[fixActivityBars] %O", args);
+	// console.group("[fixActivityBars] %O", args);
 	window.fixActivityBarsArgs = args;
 	var $jbDays = $('[data-name="jbDays"]').children();
 	var $firstJbDay = $jbDays.first();
@@ -1755,7 +1869,7 @@ var fixActivityBars = function fixActivityBars() {
 
 	animateActivityBars(activityWidth, numberOfTimes, adjustActivityBarsBy, passedElementName)
 
-	console.groupEnd();
+	// console.groupEnd();
 };
 
 var runIt = function runIt() {
@@ -2086,7 +2200,7 @@ var runIt = function runIt() {
 			$thisElement.attr("data-target-" + thisButtonOnclickEventName, thisButtonName);
 		}
 		$thisElement.on("mouseenter", function() {
-			console.debug("$thisElementHoverIndicators", $thisElementHoverIndicators);
+			// console.debug("$thisElementHoverIndicators", $thisElementHoverIndicators);
 			$thisElementHoverIndicators.velocity("fadeIn", {
 				stagger: 100,
 				drag: true,
@@ -2121,8 +2235,13 @@ var runIt = function runIt() {
 		var thisButtonOnclickEventName = $thisElement.attr("data-event-onclick");
 		var thisButtonDataClickInstance = $thisElement.attr("data-clickinstance");
 		var thisButtonOnclickEventTargetName = $thisElement.attr("data-target-" + thisButtonOnclickEventName);
-		// console.debug("thisButtonOnclickEventName", thisButtonOnclickEventName);
-		// console.debug("thisButtonOnclickEventTargetName", thisButtonOnclickEventTargetName);
+		var args = Array.prototype.slice.call(arguments, 1);
+		// console.debug("[data-event-onshow].on(rpdShow) args", args);
+		var $thisElement = $(this);
+		var thisButtonEventName = $thisElement.attr("data-event-onshow");
+		var thisButtonEventTargetName = $thisElement.attr("data-target-" + thisButtonEventName);
+		console.debug("thisButtonOnclickEventName", thisButtonOnclickEventName);
+		console.debug("thisButtonOnclickEventTargetName", thisButtonOnclickEventTargetName);
 		var thisButtonEventName = $thisElement.attr("data-event-onclick");
 		var thisButtonEventTargetName = $thisElement.attr("data-target-" + thisButtonEventName);
 		if (typeof thisButtonDataClickInstance !== "undefined") {
@@ -2135,7 +2254,13 @@ var runIt = function runIt() {
 		} else {
 			$("." + thisButtonOnclickEventTargetName).trigger(thisButtonOnclickEventName, event);
 		}
-		executeFunctionByName(thisButtonEventTargetName, window);
+		if(thisButtonOnclickEventName === "trigger") {
+			// console.log("Going to 'click' on `thisButtonEventTargetName` (" + thisButtonEventTargetName + ")")
+			executeFunctionByName(thisButtonEventTargetName, window, args);
+		}
+
+
+
 	});
 	$(".button[data-event-onclick]").on("dropped", function(event) {
 		var $thisElement = $(this);
@@ -2144,16 +2269,28 @@ var runIt = function runIt() {
 		$("." + thisButtonOnclickEventTargetName).trigger(thisButtonOnclickEventName, event);
 	});
 	$("[data-event-onshow]").on("rpdShow", function() {
-		console.group("[data-event-onshow].on(rpdShow)");
+		// console.group("[data-event-onshow].on(rpdShow)");
 		var args = Array.prototype.slice.call(arguments, 1);
-		console.debug("[data-event-onshow].on(rpdShow) args", args);
+		// console.debug("[data-event-onshow].on(rpdShow) args", args);
 		var $thisElement = $(this);
 		var thisButtonEventName = $thisElement.attr("data-event-onshow");
 		var thisButtonEventTargetName = $thisElement.attr("data-target-" + thisButtonEventName);
 		// console.debug("thisButtonEventName", thisButtonEventName);
 		// console.debug("thisButtonEventTargetName", thisButtonEventTargetName);
 		executeFunctionByName(thisButtonEventTargetName, window, args);
-		console.groupEnd();
+		// console.groupEnd();
+	});
+	$("[data-event-onhide]").on("hide", function() {
+		// console.group("[data-event-onshow].on(rpdShow)");
+		var args = Array.prototype.slice.call(arguments, 1);
+		// console.debug("[data-event-onshow].on(rpdShow) args", args);
+		var $thisElement = $(this);
+		var thisButtonEventName = $thisElement.attr("data-event-onhide");
+		var thisButtonEventTargetName = $thisElement.attr("data-target-" + thisButtonEventName);
+		// console.debug("thisButtonEventName", thisButtonEventName);
+		// console.debug("thisButtonEventTargetName", thisButtonEventTargetName);
+		executeFunctionByName(thisButtonEventTargetName, window, args);
+		// console.groupEnd();
 	});
 	$(".draggable.dropson").each(function() {
 		var $thisElement = $(this);
@@ -2259,7 +2396,7 @@ var runIt = function runIt() {
 	// });
 	// $("#state___1").trigger("visiting");
 	// $(".jbday.jbcolumn").each(function(index, value) {
-	// 	console.log(index);
+	// 	// console.log(index);
 	// 	$(this).velocity({
 	// 		left: '+=' + ((activityWidth / 2) * index) + 'px',
 	// 		width: '+=' + ((activityWidth / 2)) + 'px'
