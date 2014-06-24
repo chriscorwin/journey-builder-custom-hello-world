@@ -365,6 +365,8 @@ var adjustActivitiesForDuration1 = function adjustActivitiesForDuration1(el) {
 		easing: primaryActivitiesAnimationEasing,
 		delay: primaryActivitiesAnimationDelay,
 	})
+
+	fixActivityBarsLabels($("#emailActivityBar____activityBar"), activityWidth, 113)
 };
 
 

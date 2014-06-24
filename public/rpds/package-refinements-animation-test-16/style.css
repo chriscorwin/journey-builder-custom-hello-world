@@ -1417,7 +1417,58 @@
 #durationModal____rpd__onshow_trigger_showModalOverlay
 {
 }
-#gotoRs4____button___next___3
+#rectangle4
+{
+    position: absolute;
+    left: 502px;
+    width: 398px;
+    top: 221px;
+    height: 66px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+}
+#rectangle5
+{
+    position: absolute;
+    left: 469px;
+    width: 1px;
+    top: 155px;
+    height: 154px;
+    background: rgb(193, 193, 193);
+    border: none;
+}
+#uhhhh____button___rpd__onclick_gotostate_next___2
+{
+    position: absolute;
+    left: 911px;
+    width: 49px;
+    top: 340px;
+    height: 20px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMjQuNSIgeTE9IjAiIHgyPSIyNC41IiB5Mj0iMjAiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM2Y2E4ZTYiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQwNzdiMSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNDkiIGhlaWdodD0iMjAiIGZpbGw9InVybCgjZykiIC8+PC9zdmc+);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(108, 168, 230)), color-stop(100%, rgb(64, 119, 177)));
+    background-image: -webkit-linear-gradient(top, rgb(108, 168, 230) 0%, rgb(64, 119, 177) 100%);
+    background-image:    -moz-linear-gradient(top, rgb(108, 168, 230) 0%, rgb(64, 119, 177) 100%);
+    background-image:     -ms-linear-gradient(top, rgb(108, 168, 230) 0%, rgb(64, 119, 177) 100%);
+    background-image:      -o-linear-gradient(top, rgb(108, 168, 230) 0%, rgb(64, 119, 177) 100%);
+    background-image:         linear-gradient(to bottom, rgb(108, 168, 230) 0%, rgb(64, 119, 177) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6ca8e6', endColorstr='#4077b1', GradientType=0);
+    background-repeat: no-repeat;
+    border: none;
+    -webkit-box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.45);
+       -moz-box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.45);
+            box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.45);
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+#durationModal____3
+{
+}
+#uhhhh____button___rpd__onhide_trigger_hideModalOverlay__onclick_gotostate_next
 {
     position: absolute;
     left: 911px;
@@ -1451,57 +1502,6 @@
     background-image: url(images/durationModalImage.png);
     background-repeat: no-repeat;
     background-position: 0px 16px;
-    border: none;
-}
-#durationModal____2
-{
-}
-#uhhhh____button___rpd__onhide_trigger_hideModalOverlay__onclick_gotostate_next
-{
-    position: absolute;
-    left: 911px;
-    width: 49px;
-    top: 340px;
-    height: 20px;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMjQuNSIgeTE9IjAiIHgyPSIyNC41IiB5Mj0iMjAiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM2Y2E4ZTYiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQwNzdiMSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNDkiIGhlaWdodD0iMjAiIGZpbGw9InVybCgjZykiIC8+PC9zdmc+);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(108, 168, 230)), color-stop(100%, rgb(64, 119, 177)));
-    background-image: -webkit-linear-gradient(top, rgb(108, 168, 230) 0%, rgb(64, 119, 177) 100%);
-    background-image:    -moz-linear-gradient(top, rgb(108, 168, 230) 0%, rgb(64, 119, 177) 100%);
-    background-image:     -ms-linear-gradient(top, rgb(108, 168, 230) 0%, rgb(64, 119, 177) 100%);
-    background-image:      -o-linear-gradient(top, rgb(108, 168, 230) 0%, rgb(64, 119, 177) 100%);
-    background-image:         linear-gradient(to bottom, rgb(108, 168, 230) 0%, rgb(64, 119, 177) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6ca8e6', endColorstr='#4077b1', GradientType=0);
-    background-repeat: no-repeat;
-    border: none;
-    -webkit-box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.45);
-       -moz-box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.45);
-            box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.45);
-    -webkit-border-radius: 4px 4px 4px 4px;
-       -moz-border-radius: 4px 4px 4px 4px;
-            border-radius: 4px 4px 4px 4px;
-}
-#rectangle4
-{
-    position: absolute;
-    left: 502px;
-    width: 398px;
-    top: 221px;
-    height: 66px;
-    background: none;
-    border: none;
-    font-size: 14px;
-    text-align: left;
-    font-family: Helvetica, sans-serif;
-    color: rgb(0, 0, 0);
-}
-#rectangle5
-{
-    position: absolute;
-    left: 469px;
-    width: 1px;
-    top: 155px;
-    height: 154px;
-    background: rgb(193, 193, 193);
     border: none;
 }
 #slideThings____rpd__onshow_trigger_adjustActivitiesForDuration1
@@ -2210,16 +2210,16 @@
     background-position: 0px 0px;
     border: none;
 }
-#modalBgJunks1
-{
-}
-#chooseDuraationButtons____ancestor___boxsizingcontentbox
-{
-}
 #modalBgJunks
 {
 }
 #chooseDuraationButtons____ancestor___boxsizingcontentbox2
+{
+}
+#modalBgJunks1
+{
+}
+#chooseDuraationButtons____ancestor___boxsizingcontentbox
 {
 }
 #updateDraggerImage2
@@ -2647,54 +2647,6 @@
     color: rgb(135, 144, 153);
     padding: 3.5px 0;
 }
-#mainModalBg1
-{
-    position: absolute;
-    left: 300px;
-    width: 679px;
-    top: 103px;
-    height: 267px;
-    background: rgb(255, 255, 255);
-    border: 1px solid rgb(135, 144, 153);
-    -webkit-border-radius: 7.5px 7.5px 7.5px 7.5px;
-       -moz-border-radius: 7.5px 7.5px 7.5px 7.5px;
-            border-radius: 7.5px 7.5px 7.5px 7.5px;
-}
-#modalHeaderBg1
-{
-    position: absolute;
-    left: 300px;
-    width: 679px;
-    top: 102px;
-    height: 38px;
-    background: rgb(240, 240, 240);
-    border: 1px solid rgb(135, 144, 153);
-    -webkit-border-radius: 7.5px 7.5px 0 0;
-       -moz-border-radius: 7.5px 7.5px 0 0;
-            border-radius: 7.5px 7.5px 0 0;
-}
-#mainModalBg6
-{
-    position: absolute;
-    left: 300px;
-    width: 679px;
-    top: 329px;
-    height: 41px;
-    background: rgb(240, 240, 240);
-    border: 1px solid rgb(135, 144, 153);
-    -webkit-border-radius: 0 0 7.5px 7.5px;
-       -moz-border-radius: 0 0 7.5px 7.5px;
-            border-radius: 0 0 7.5px 7.5px;
-}
-#chooseDuration____button___1
-{
-}
-#chooseDuration____button___2
-{
-}
-#chooseDuration____next___button___3
-{
-}
 #mainModalBg5
 {
     position: absolute;
@@ -2740,74 +2692,58 @@
 #chooseDuration____button___3
 {
 }
-#chooseDuration____next___button___
+#chooseDuration____next___button
 {
 }
-#text21
+#mainModalBg1
 {
     position: absolute;
-    left: 351px;
-    width: 140px;
-    top: 186px;
-    height: 10px;
-    background: rgb(0, 0, 0); /* fallback */
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    font-size: 12px;
-    text-align: left;
-    font-family: Helvetica, sans-serif;
-    color: rgb(0, 0, 0);
-    padding: 7px 0;
-    -webkit-border-radius: 3px 3px 3px 3px;
-       -moz-border-radius: 3px 3px 3px 3px;
-            border-radius: 3px 3px 3px 3px;
-}
-#oval19
-{
-    position: absolute;
-    left: 322px;
-    width: 20px;
-    top: 187px;
-    height: 20px;
-    background: rgb(64, 119, 177);
-    border: 1px solid rgb(193, 193, 193);
-    -webkit-border-radius: 50%;
-       -moz-border-radius: 50%;
-            border-radius: 50%;
-}
-#text22
-{
-    position: absolute;
-    left: 351px;
-    width: 140px;
-    top: 226px;
-    height: 10px;
-    background: rgb(0, 0, 0); /* fallback */
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    font-size: 12px;
-    text-align: left;
-    font-family: Helvetica, sans-serif;
-    color: rgb(0, 0, 0);
-    padding: 7px 0;
-    -webkit-border-radius: 3px 3px 3px 3px;
-       -moz-border-radius: 3px 3px 3px 3px;
-            border-radius: 3px 3px 3px 3px;
-}
-#oval20
-{
-    position: absolute;
-    left: 322px;
-    width: 20px;
-    top: 227px;
-    height: 20px;
+    left: 300px;
+    width: 679px;
+    top: 103px;
+    height: 267px;
     background: rgb(255, 255, 255);
-    border: 1px solid rgb(193, 193, 193);
-    -webkit-border-radius: 50%;
-       -moz-border-radius: 50%;
-            border-radius: 50%;
+    border: 1px solid rgb(135, 144, 153);
+    -webkit-border-radius: 7.5px 7.5px 7.5px 7.5px;
+       -moz-border-radius: 7.5px 7.5px 7.5px 7.5px;
+            border-radius: 7.5px 7.5px 7.5px 7.5px;
 }
-#text23
+#modalHeaderBg1
+{
+    position: absolute;
+    left: 300px;
+    width: 679px;
+    top: 102px;
+    height: 38px;
+    background: rgb(240, 240, 240);
+    border: 1px solid rgb(135, 144, 153);
+    -webkit-border-radius: 7.5px 7.5px 0 0;
+       -moz-border-radius: 7.5px 7.5px 0 0;
+            border-radius: 7.5px 7.5px 0 0;
+}
+#mainModalBg6
+{
+    position: absolute;
+    left: 300px;
+    width: 679px;
+    top: 329px;
+    height: 41px;
+    background: rgb(240, 240, 240);
+    border: 1px solid rgb(135, 144, 153);
+    -webkit-border-radius: 0 0 7.5px 7.5px;
+       -moz-border-radius: 0 0 7.5px 7.5px;
+            border-radius: 0 0 7.5px 7.5px;
+}
+#chooseDuration____next___button___3
+{
+}
+#chooseDuration____button___2
+{
+}
+#chooseDuration____rpd__onhide_trigger_hideModalOverlay___button___1
+{
+}
+#text26
 {
     position: absolute;
     left: 351px;
@@ -2826,12 +2762,44 @@
        -moz-border-radius: 3px 3px 3px 3px;
             border-radius: 3px 3px 3px 3px;
 }
-#oval21
+#oval24
 {
     position: absolute;
     left: 322px;
     width: 20px;
     top: 267px;
+    height: 20px;
+    background: rgb(64, 119, 177);
+    border: 1px solid rgb(193, 193, 193);
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+}
+#text25
+{
+    position: absolute;
+    left: 351px;
+    width: 140px;
+    top: 226px;
+    height: 10px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 12px;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    padding: 7px 0;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#oval23
+{
+    position: absolute;
+    left: 322px;
+    width: 20px;
+    top: 227px;
     height: 20px;
     background: rgb(255, 255, 255);
     border: 1px solid rgb(193, 193, 193);
@@ -2871,39 +2839,7 @@
        -moz-border-radius: 50%;
             border-radius: 50%;
 }
-#text25
-{
-    position: absolute;
-    left: 351px;
-    width: 140px;
-    top: 226px;
-    height: 10px;
-    background: rgb(0, 0, 0); /* fallback */
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    font-size: 12px;
-    text-align: left;
-    font-family: Helvetica, sans-serif;
-    color: rgb(0, 0, 0);
-    padding: 7px 0;
-    -webkit-border-radius: 3px 3px 3px 3px;
-       -moz-border-radius: 3px 3px 3px 3px;
-            border-radius: 3px 3px 3px 3px;
-}
-#oval23
-{
-    position: absolute;
-    left: 322px;
-    width: 20px;
-    top: 227px;
-    height: 20px;
-    background: rgb(255, 255, 255);
-    border: 1px solid rgb(193, 193, 193);
-    -webkit-border-radius: 50%;
-       -moz-border-radius: 50%;
-            border-radius: 50%;
-}
-#text26
+#text23
 {
     position: absolute;
     left: 351px;
@@ -2922,12 +2858,76 @@
        -moz-border-radius: 3px 3px 3px 3px;
             border-radius: 3px 3px 3px 3px;
 }
-#oval24
+#oval21
 {
     position: absolute;
     left: 322px;
     width: 20px;
     top: 267px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+}
+#text22
+{
+    position: absolute;
+    left: 351px;
+    width: 140px;
+    top: 226px;
+    height: 10px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 12px;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    padding: 7px 0;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#oval20
+{
+    position: absolute;
+    left: 322px;
+    width: 20px;
+    top: 227px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(193, 193, 193);
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+}
+#text21
+{
+    position: absolute;
+    left: 351px;
+    width: 140px;
+    top: 186px;
+    height: 10px;
+    background: rgb(0, 0, 0); /* fallback */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 12px;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    padding: 7px 0;
+    -webkit-border-radius: 3px 3px 3px 3px;
+       -moz-border-radius: 3px 3px 3px 3px;
+            border-radius: 3px 3px 3px 3px;
+}
+#oval19
+{
+    position: absolute;
+    left: 322px;
+    width: 20px;
+    top: 187px;
     height: 20px;
     background: rgb(64, 119, 177);
     border: 1px solid rgb(193, 193, 193);
